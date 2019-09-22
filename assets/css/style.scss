@@ -11,7 +11,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #FFD700;
+	color: #FFBE00;
 }
 
 body {
@@ -30,4 +30,31 @@ body {
 
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
+}
+
+table {
+  border-collapse: collapse;
+  align-self: center;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  background-color: #000000;
+  color: #FFD700;
+  text-align: left;
+}
+
+th, td {
+  padding: 11px;
 }
