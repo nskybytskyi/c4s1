@@ -62,4 +62,4 @@
 
 Здесь будут публиковаться мои решения задач (так как это единственно,е чего нет в бесплатной версии курса):
 
-1. Introduction &amp; Renewal theory: [pdf]](hse/1_sol.pdf)
+1. Introduction &amp; Renewal theory: [pdf](hse/1_sol.pdf)
