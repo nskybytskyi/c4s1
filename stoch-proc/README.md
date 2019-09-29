@@ -63,7 +63,7 @@
 
 Course's homepage on MIT OCW: [link](https://ocw.mit.edu/courses/mathematics/18-445-introduction-to-stochastic-processes-spring-2015/), _by Dr. Hao Wu_
 
-You can also download the compact archive: [7-zip](18-445-Introduction-to-Stochastic-Processes-Spring'15/all.7z)
+<!-- You can also download the compact archive: [7-zip](18-445-Introduction-to-Stochastic-Processes-Spring'15/all.7z) -->
 
 23 lectures (presentations), 5 problemsets (with solutions).
 
