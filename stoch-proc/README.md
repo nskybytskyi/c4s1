@@ -31,7 +31,7 @@
 
 - У п'ятницю на першій парі в аудиторії 40.
 
-- (_На непарних тижнях_) у п'ятницю на третій парі в аудиторії 42.
+- (_На непарних тижнях_&thinsp;) у п'ятницю на третій парі в аудиторії 42.
 
 <a id="%D0%97%D0%B0%D0%BB%D1%96%D0%BA"></a>
 #### Залік
@@ -44,16 +44,16 @@
 <a id="%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B0"></a>
 #### Основна (рекомендована)
 
-- Оксендаль Б. &mdash; _Стохастические дифференциальные уравнения_. Мир, 2003&nbsp;г., 410&nbsp;с.: [djvu](Оксендаль-Б.-Стохастические-дифференциальные-уравнения-Мир-2003.djvu)
-- Ламперти, Джон &mdash; _Случайные процессы_. Вища школа, 1983&nbsp;г., 227&nbsp;с.: [djvu](Ламперти,-Джон-Случайные-процессы.-Обзор-математической-теории-Вища-школа-1983.djvu)
-- Булинский А.В., Ширяев А.Н. &mdash; _Теория случайных процессов_. Физматлит, 2005&nbsp;г., 402&nbsp;с.: [pdf](Булинский-А.В.,-Ширяев-А.Н.-Теория-случайных-процессов-Физматлит-2005.pdf)
+- Оксендаль Б. &mdash; _Стохастические дифференциальные уравнения_&thinsp;. Мир, 2003&nbsp;г., 410&nbsp;с.: [djvu](Оксендаль-Б.-Стохастические-дифференциальные-уравнения-Мир-2003.djvu)
+- Ламперти, Джон &mdash; _Случайные процессы_&thinsp;. Вища школа, 1983&nbsp;г., 227&nbsp;с.: [djvu](Ламперти,-Джон-Случайные-процессы.-Обзор-математической-теории-Вища-школа-1983.djvu)
+- Булинский А.В., Ширяев А.Н. &mdash; _Теория случайных процессов_&thinsp;. Физматлит, 2005&nbsp;г., 402&nbsp;с.: [pdf](Булинский-А.В.,-Ширяев-А.Н.-Теория-случайных-процессов-Физматлит-2005.pdf)
 
 <a id="%D0%94%D0%BE%D0%B4%D0%B0%D1%82%D0%BA%D0%BE%D0%B2%D0%B0-%D0%B7%D0%B0-%D0%B1%D0%B0%D0%B6%D0%B0%D0%BD%D0%BD%D1%8F%D0%BC"></a>
 #### Додаткова (за бажанням)
 
-- Гихман И.И., Скороход А.В. &mdash; _Введение в теорию случайных процессов_. Физматлит, 1977&nbsp;г., 570&nbsp;с.: [pdf](Гихман-И.И.,-Скороход-А.В.-Введение-теорию-случайных-процессов-Физматлит-1977.pdf)
-- Скороход А.В. &mdash; _Лекції з теорії випадкових процесів_. Либідь, 1990&nbsp;г., 168&nbsp;с.: [pdf](Скороход-А.В.-Лекції-з-теорії-випадкових-процесів-Либідь-1990.pdf)
-- Розанов Ю.А. &mdash; _Случайные процессы_. Наука, 1979&nbsp;г., 185&nbsp;с.: [djvu](Розанов-Ю.А.-Случайные-процессы-Наука-1979.djvu)
+- Гихман И.И., Скороход А.В. &mdash; _Введение в теорию случайных процессов_&thinsp;. Физматлит, 1977&nbsp;г., 570&nbsp;с.: [pdf](Гихман-И.И.,-Скороход-А.В.-Введение-теорию-случайных-процессов-Физматлит-1977.pdf)
+- Скороход А.В. &mdash; _Лекції з теорії випадкових процесів_&thinsp;. Либідь, 1990&nbsp;г., 168&nbsp;с.: [pdf](Скороход-А.В.-Лекції-з-теорії-випадкових-процесів-Либідь-1990.pdf)
+- Розанов Ю.А. &mdash; _Случайные процессы_&thinsp;. Наука, 1979&nbsp;г., 185&nbsp;с.: [djvu](Розанов-Ю.А.-Случайные-процессы-Наука-1979.djvu)
 
 <a id="%D0%97%D0%BE%D0%B2%D0%BD%D1%96%D1%88%D0%BD%D1%96-%D0%BA%D1%83%D1%80%D1%81%D0%B8"></a>
 ### Зовнішні курси
@@ -61,9 +61,7 @@
 <a id="mit"></a>
 #### MIT
 
-Course's homepage on MIT OCW: [link](https://ocw.mit.edu/courses/mathematics/18-445-introduction-to-stochastic-processes-spring-2015/).
-
-_by Dr. Hao Wu_
+Course's homepage on MIT OCW: [link](https://ocw.mit.edu/courses/mathematics/18-445-introduction-to-stochastic-processes-spring-2015/), _by Dr. Hao Wu_
 
 You can also download the compact archive: [7-zip](18-445-Introduction-to-Stochastic-Processes-Spring'15/all.7z)
 
@@ -72,9 +70,7 @@ You can also download the compact archive: [7-zip](18-445-Introduction-to-Stocha
 <a id="ut-austin"></a>
 #### UT Austin
 
-Lecture notes: [link](https://web.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf)
-
-_by Gordan Žitković_
+Lecture notes: [link](https://web.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf), _by Gordan Žitković_
 
 Some newer lectures also available via the following [link](https://web.ma.utexas.edu/users/gordanz/lecture_notes_page.html)
 
