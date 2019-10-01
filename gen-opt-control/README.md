@@ -3,7 +3,7 @@
 <!-- MarkdownTOC -->
 
 - [Логістика](#%D0%9B%D0%BE%D0%B3%D1%96%D1%81%D1%82%D0%B8%D0%BA%D0%B0)
-	- [Матеріали](#%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8)
+    - [Матеріали](#%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8)
 
 <!-- /MarkdownTOC -->
 
@@ -19,6 +19,8 @@
 <a id="%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8"></a>
 ### Матеріали
 
-Лекція 17 вересня: [pdf](lecture-01.pdf)
+Лекція 17&nbsp;вересня: [pdf](lecture-01.pdf)
 
-Лекція 24 вересня: [pdf](lecture-02.pdf)
+Лекція 24&nbsp;вересня: [pdf](lecture-02.pdf)
+
+Лекція 1&nbsp;жовтня: [pdf](lecture-03.pdf)
