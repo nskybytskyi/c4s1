@@ -19,8 +19,12 @@
 <a id="%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8"></a>
 ### Матеріали
 
+Всі лекції: [pdf](lectures.pdf)
+
 Лекція 17&nbsp;вересня: [pdf](lecture-01.pdf)
 
 Лекція 24&nbsp;вересня: [pdf](lecture-02.pdf)
 
 Лекція 1&nbsp;жовтня: [pdf](lecture-03.pdf)
+
+Лекція 8&nbsp;жовтня: [pdf](lecture-04.pdf)
