@@ -24,5 +24,7 @@
 Посібник: [pdf](Посібник-17.pdf)
 
 Презентація задачі з неперервними спостереженнями та дискретними моделюючими функціями: 
-- синя тема[pdf](codm-presentation-default.pdf)
-- жовта тема[pdf](codm-presentation-crane.pdf)
+
+- синя тема: [pdf](codm-presentation-default.pdf)
+
+- жовта тема: [pdf](codm-presentation-crane.pdf)
