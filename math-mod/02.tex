@@ -1,0 +1,174 @@
+\title[Дискретно сумовні СЛАР]
+{\S1.2. Дискретно сумовні системи \\ лінійних алгебраїчних рівнянь}
+
+%% first slide
+\begin{frame}
+    \titlepage
+\end{frame}
+%% first slide
+
+%% slide 01
+\begin{mframe}{Постановка задачі}
+    Розглянемо узагальнення розв'язку СЛАР $A x = b$ з попередньої лекції на
+    дискретно сумовну СЛАР:
+    \begin{equation}
+        \label{eq:1.9}
+        \Sum_{i = 1}^N A_i x_i = b,
+    \end{equation}
+    де $A_i \in \mathbb{R}^{m \times n}$ --- відомі матриці,
+    $x_i \in \mathbb{R}^n$ --- невідомі вектори, $b \in \mathbb{R}^m$ ---
+    відомий вектор. \medskip
+    
+    Як і звичайні СЛАР, дискретно сумовна СЛАР може мати або не мати обернення
+    (однозначне або множину обернень). В останньому випадку, як і для звичайних
+    СЛАР, обмежимося середньоквадратичним наближенням до такого обернення.
+\end{mframe}
+%% slide 01
+
+%% slide 02
+\begin{mframe}{Множина розв'язків}
+    Введемо множину
+    \begin{equation}
+        \label{eq:1.10}
+        \Omega_x = \left\{ (x_1, \ldots, x_N): 
+        \left\| \Sum_{i = 1}^N A_i x_i - b \right\|^2 = \min_{z_1, \ldots, z_N}
+        \left\| \Sum_{i = 1}^N A_i z_i - b \right\|^2 \right\}.
+    \end{equation}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.12}
+        x_i \in \Big\{ A_i^\intercal P_1^+ b + v_i - A_i^\intercal P_1^+ A_v 
+        \Big| v_i \in \mathbb{R}^n \Big\},
+    \end{equation}
+    де
+    \begin{equation*}
+        P_1 = \Sum_{i = 1}^N A_i A_i^\intercal, \quad A_v = 
+        \Sum_{i = 1}^N A_i v_i.
+    \end{equation*}
+\end{mframe}
+%% slide 02
+
+%% slide 03
+\begin{mframe}{Виділення однозначного розв'язку}
+    За неоднозначності $\Omega_x$ виділимо з неї вектори $\bar x_i$ такі, що
+    \begin{equation}
+        \label{eq:1.11}
+        \bar x_i = \Argmin_{(x_1, \ldots, x_N) \in \Omega_x} \|x_i\|^2.
+    \end{equation}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.14}
+        \bar x_i = A_i^\intercal P_1^+ b.
+    \end{equation}
+\end{mframe}
+%% slide 03
+
+%% slide 04
+\begin{mframe}{Однозначність і точність розв'язку}
+    Розв'язки $\bar x_i$ СЛАР \eqref{eq:1.9} будуть однозначними, якщо
+    \begin{equation}
+        \label{eq:1.13}
+        \det \begin{bmatrix}
+            A_1^\intercal A_1 & A_1^\intercal A_2 & \cdots & A_1^\intercal A_N\\
+            A_2^\intercal A_1 & A_2^\intercal A_2 & \cdots & A_2^\intercal A_N\\
+            \vdots & \vdots & \ddots & \vdots \\
+            A_N^\intercal A_1 & A_N^\intercal A_2 & \cdots & A_N^\intercal A_N
+        \end{bmatrix} > 0.
+    \end{equation}
+
+    Точність розв'язку оцінюється величиною
+    \begin{equation}
+        \label{eq:1.15}
+        \varepsilon^2 = \min_{(x_1, \ldots, x_N) \in \Omega_x}
+        \left\| \Sum_{i = 1}^N A_i x_i - b \right\|^2 =
+        b^\intercal b - b^\intercal P_1 P_1^+ b.
+    \end{equation}
+\end{mframe}
+%% slide 04
+
+%% slide 05
+\begin{mframe}{У напрямку інтегральної задачі}
+    Розглянемо задачу
+    \begin{equation}
+        \label{eq:1.16}
+        \Sum_{i = 1}^N A(t_i) x(t_i) = b,
+    \end{equation}
+    де $A: \mathbb{R} \to \mathbb{R}^{m \times n}$ --- відома матрично-значна
+    функція скалярного аргументу, $x: \mathbb{R} \to \mathbb{R}^n$ --- невідома
+    вектор-функція скалярного аргументу, $b \in \mathbb{R}^m$ --- відомий
+    вектор. Моменти часу $t_i$ цілком конкретні і фіксовані. \medskip
+    
+    Цілком очевидно, що вона еквівалентна попередній задачі, тому просто
+    наведемо для неї аналогічні результати.
+\end{mframe}
+%% slide 05
+
+%% slide 06
+\begin{mframe}{Множина розв'язків}
+    Введемо множину
+    \begin{multline}
+        \label{eq:1.17}
+        \Omega_x = \left\{ x(t_i), i = \overline{1,N}: 
+        \left\| \Sum_{i = 1}^N A(t_i) x(t_i) - b \right\|^2 \right. = \\ 
+        = \left. \min_{z(t_i), i = \overline{1,N}} 
+        \left\| \Sum_{i = 1}^N A(t_i) z(t_i) - b \right\|^2 \right\}.
+    \end{multline}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.19}
+        x(t_i) \in \Big\{ A^\intercal(t_i) P_1^+ b + v(t_i) - A^\intercal(t_i) 
+        P_1^+ A_v \Big| v: \mathbb{R} \to \mathbb{R}^n \Big\},
+    \end{equation}
+    де
+    \begin{equation*}
+        P_1 = \Sum_{i = 1}^N A(t_i) A^\intercal(t_i), \quad
+        A_v = \Sum_{i = 1}^N A(t_i) v(t_i).
+    \end{equation*}
+\end{mframe}
+%% slide 06
+
+%% slide 07
+\begin{mframe}{Виділення однозначного розв'язку}
+    За неоднозначності $\Omega_x$ виділимо з неї вектори $\bar x(t_i)$ такі, що
+    \begin{equation}
+        \label{eq:1.18}
+        \bar x(t_i) = 
+        \Argmin_{(x(t_i), i = \overline{1, N}) \in \Omega_x} \|x(t_i)\|^2.
+    \end{equation}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.20}
+        \bar x(t_i) = A^\intercal(t_i) P_1^+ b.
+    \end{equation}
+\end{mframe}
+%% slide 07
+
+%% slide 08
+\begin{mframe}{Однозначність і точність розв'язку}
+    Розв'язки $\bar x(t_i)$ СЛАР \eqref{eq:1.16} будуть однозначними, якщо
+    \begin{equation}
+        \label{eq:1.21}
+        \det \begin{bmatrix}
+            A^\intercal(t_1) A(t_1) & A^\intercal(t_1) A(t_2) & \cdots & 
+                A^\intercal(t_1) A(t_N) \\
+            A^\intercal(t_2) A(t_1) & A^\intercal(t_2) A(t_2) & \cdots & 
+                A^\intercal(t_2) A(t_N) \\
+            \vdots & \vdots & \ddots & \vdots \\
+            A^\intercal(t_N) A(t_1) & A^\intercal(t_N) A(t_2) & \cdots & 
+                A^\intercal(t_N) A(t_N)
+        \end{bmatrix} > 0.
+    \end{equation}
+
+    Точність розв'язку оцінюється величиною
+    \begin{equation}
+        \label{eq:1.22}
+        \varepsilon^2 = \min_{(x(t_i), i = \overline{1, N}) \in \Omega_x} 
+        \left\| \Sum_{i = 1}^N A(t_i) x(t_i) - b \right\|^2 =
+        b^\intercal b - b^\intercal P_1 P_1^+ b.
+    \end{equation}
+\end{mframe}
+%% slide 08

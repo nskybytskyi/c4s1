@@ -1,0 +1,152 @@
+\title[Дискретно розподільні СЛАР]
+{\S1.3. Дискретно розподільні системи \\ лінійних алгебраїчних рівнянь}
+
+%% first slide
+\begin{frame}
+    \titlepage
+\end{frame}
+%% first slide
+
+%% slide 01
+\begin{mframe}{Постановка задачі}
+    Продовжимо узагальнювати псевдообернення СЛАР, цього разу для задачі
+    \begin{equation}
+        \label{eq:1.23}
+        B_i x = b_i, \quad i = \overline{1, N},
+    \end{equation}
+    де $x \in \mathbb{R}^n$ --- невідомий вектор,
+    $B_i \in \mathbb{R}^{m \times n}$ --- відомі матриці,
+    $b_i \in \mathbb{R}^m$ --- відомі вектори.
+\end{mframe}
+%% slide 01
+
+%% slide 02
+\begin{mframe}{Множина розв'язків}
+    Введемо множину
+    \begin{equation}
+        \label{eq:1.24}
+        \Omega_x = \left\{ x \in \mathbb{R}^n: \Sum_{i = 1}^N 
+        \|B_i x - b_i\|^2 = \min_{z \in \mathbb{R}^n} 
+        \Sum_{i = 1}^N \|B_i z - b_i\|^2 \right\}.
+    \end{equation}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.26a}
+        \Omega_x = \Big\{ P_2^+ B_b + v - P_2^+ P_2 v \Big| 
+        v \in \mathbb{R}^n \Big\},
+    \end{equation}
+    де
+    \begin{equation*}
+        P_2 = \Sum_{i = 1}^N B_i^\intercal B_i, \quad B_b = 
+        \Sum_{i = 1}^N B_i^\intercal b_i.
+    \end{equation*}
+\end{mframe}
+%% slide 02
+
+%% slide 03
+\begin{mframe}{Виділення однозначного розв'язку}
+    За неоднозначності $\Omega_x$ виділимо з неї вектор $\bar x$ такий, що
+    \begin{equation}
+        \label{eq:1.25}
+        \bar x = \Argmin_{x \in \Omega_x} \|x\|^2.
+    \end{equation}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.27a}
+        \bar x = P_2^+ B_b.
+    \end{equation}
+\end{mframe}
+%% slide 03
+
+%% slide 04
+\begin{mframe}{Однозначність і точність розв'язку}
+    Розв'язок $\bar x$ СЛАР \eqref{eq:1.23} буде однозначним, якщо
+    \begin{equation}
+        \label{eq:1.28}
+        \det P_2 > 0.
+    \end{equation}
+
+    Точність розв'язку оцінюється величиною
+    \begin{equation}
+        \label{eq:1.22}
+        \varepsilon^2 = \Sum_{i = 1}^N b_i^\intercal b_i - 
+        B_b^\intercal P_2^+ B_b.
+    \end{equation}
+\end{mframe}
+%% slide 04
+
+%% slide 05
+\begin{mframe}{У напрямку функціональної задачі}
+    Розглянемо задачу
+    \begin{equation}
+        \label{eq:1.30}
+        B(t_i) x = b(t_i),
+    \end{equation}
+    де $B: \mathbb{R} \to \mathbb{R}^{m \times n}$ --- відома матрично-значна
+    функція скалярного аргументу, $x \in \mathbb{R}^n$ --- невідомий вектор,
+    $b: \mathbb{R} \to \mathbb{R}^m$ --- відома вектор-функція скалярного
+    аргументу. Моменти часу $t_i$ цілком конкретні і фіксовані. \medskip
+    
+    Цілком очевидно, що вона еквівалентна попередній задачі, тому просто
+    наведемо для неї аналогічні результати.
+\end{mframe}
+%% slide 05
+
+%% slide 06
+\begin{mframe}{Множина розв'язків}
+    Введемо множину
+    \begin{equation}
+        \label{eq:1.31}
+        \Omega_x = \left\{ x \in \mathbb{R}^n: \Sum_{i = 1}^N 
+        \|B(t_i) x - b(t_i)\|^2 = \min_{z \in \mathbb{R}^n} 
+        \Sum_{i = 1}^N \|B(t_i) z - b(t_i)\|^2 \right\}.
+    \end{equation}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.26b}
+        \Omega_x = \Big\{ P_2^+ B_b + v - P_2^+ P_2 v \Big| 
+        v \in \mathbb{R}^n \Big\},
+    \end{equation}
+    де
+    \begin{equation*}
+        P_2 = \Sum_{i = 1}^N B^\intercal(t_i) B(t_i), \quad B_b = 
+        \Sum_{i = 1}^N B^\intercal(t_i) b(t_i).
+    \end{equation*}
+\end{mframe}
+%% slide 06
+
+%% slide 07
+\begin{mframe}{Виділення однозначного розв'язку}
+    За неоднозначності $\Omega_x$ виділимо з неї вектор $\bar x$ такий, що
+    \begin{equation}
+        \label{eq:1.32}
+        \bar x = \Argmin_{x \in \Omega_x} \|x\|^2.
+    \end{equation}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.27b}
+        \bar x = P_2^+ B_b.
+    \end{equation}
+\end{mframe}
+%% slide 07
+
+%% slide 08
+\begin{mframe}{Однозначність і точність розв'язку}
+    Розв'язок $\bar x$ СЛАР \eqref{eq:1.30} буде однозначним, якщо
+    \begin{equation}
+        \label{eq:1.33}
+        \det P_2 > 0.
+    \end{equation}
+
+    Точність розв'язку оцінюється величиною
+    \begin{equation}
+        \label{eq:1.34}
+        \varepsilon^2 = \Sum_{i = 1}^N b^\intercal(t_i) b(t_i) - 
+        sB_b^\intercal P_2^+ B_b.
+    \end{equation}
+\end{mframe}
+%% slide 08

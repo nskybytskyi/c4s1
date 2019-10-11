@@ -1,0 +1,186 @@
+\title[Псевдообернення СЛАР]
+{\S1.1. Псевдообернення систем \\ лінійних алгебраїчних рівнянь}
+
+%% first slide
+\begin{frame}
+    \titlepage
+\end{frame}
+%% first slide
+
+
+%% slide 01
+\begin{mframe}{Постановка задачі}
+    Розглянемо СЛАР вигляду:
+    \begin{equation}
+        \label{eq:1.1}
+        A x = b,
+    \end{equation}
+    де $A \in \mathbb{R}^{m \times n}$ --- відома матриця, $x \in \mathbb{R}^n$
+    --- невідомий вектор, $b \in \mathbb{R}^m$ --- відомий вектор. \medskip
+
+    У курсі лінійної алгебри досліджуються умови існування та єдиності
+    розв'язку СЛАР \eqref{eq:1.1}, а також будується цей розв'язок. \medskip
+
+    Якщо ж СЛАР \eqref{eq:1.1} не має розв'язку, то виникає питання пошуку
+    вектора $x$, який найкраще (за певним критерієм) її задовольняє.
+\end{mframe}
+%% slide 01
+
+%% slide 02
+\begin{mframe}{Анонс результатів}
+    Для довільних $A$ та $b$ побудуємо вектор $\bar x$, який:
+    \begin{itemize}
+        \item точно задовольняє СЛАР \eqref{eq:1.1}, якщо вона має розв'язок;
+        \item є елементом множини розв'язків \eqref{eq:1.1}, якщо таких
+        розв'язків багато;
+        \item є однозначним \textit{середньоквадратичним наближенням} до
+        розв'язку \eqref{eq:1.1}, якщо такого розв'язку у класичному розумінні
+        не існує;
+        \item є елементом множини таких наближень за умов неоднозначності
+        обернення \eqref{eq:1.1}.
+    \end{itemize}
+\end{mframe}
+%% slide 02
+
+%% slide 03
+\begin{mframe}{Псевдообернена матриця}
+    Нехай $r$ --- ранг матриці $A$; нехай $A = A_1 A_2$, де
+    $A_1 \in \mathbb{R}^{m \times r}$, $A_2 \in \mathbb{R}^{r \times n}$,
+    причому ранги як $A_1$ так і $A_2$ дорівнюють $r$. Позначимо
+    \begin{align}
+        \label{eq:1.6a}
+        A_1^+ &= (A_1 A_1^\intercal)^{-1} A_1^\intercal, \\
+        \label{eq:1.6b}
+        A_2^+ &= A_2^\intercal (A_2 A_2^\intercal)^{-1}.
+    \end{align}
+
+    Тоді \textit{псевдообернена матриця} $A^+$ визначається наступним чином: 
+    \begin{equation}
+        \label{eq:1.5}
+        A^+ = A_2^+ A_1^+.
+    \end{equation}
+\end{mframe}
+%% slide 03
+
+%% slide 04
+\begin{mframe}{Reduced row echelon form: construction}
+    In practice, we can construct one specific rank factorization as follows:
+    we can compute $B$, the \textit{reduced row echelon form} of $A$. Then
+    $A_1$ is obtained by removing from $A$ all non-pivot columns, and $A_2$ by
+    eliminating all zero rows of $B$. \medskip
+
+    Example: Consider the matrix 
+    \begin{equation*}
+        A = \begin{pmatrix}
+            1 & 3 & 1 & 4 \\
+            2 & 7 & 3 & 9 \\
+            1 & 5 & 3 & 1 \\
+            1 & 2 & 0 & 8
+        \end{pmatrix}
+        \sim
+        \begin{pmatrix}
+            1 & 0 & -2 & 0 \\
+            0 & 1 & 1 & 0 \\
+            0 & 0 & 0 & 1 \\
+            0 & 0 & 0 & 0
+        \end{pmatrix}
+        = B.
+    \end{equation*}
+    
+    $B$ is in \textit{reduced echelon form}.
+\end{mframe}
+%% slide 04
+
+%% slide 05
+\begin{mframe}{Full rank factorization: construction}
+    Then $A_1$ is obtained by removing the third column of $A$, the only one
+    which is not a \textit{pivot} column, and $A_2$ by getting rid of the last
+    row of zeroes, so:
+    \begin{equation*}
+        A_1 = \begin{pmatrix}
+            1 & 3 & 4 \\
+            2 & 7 & 9 \\
+            1 & 5 & 1 \\
+            1 & 2 & 8 
+        \end{pmatrix},
+        \qquad 
+        A_2 = \begin{pmatrix}
+            1 & 0 & -2 & 0 \\
+            0 & 1 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{pmatrix}.
+    \end{equation*}
+    
+    It is straightforward to check that
+    \begin{equation*}
+        A = \begin{pmatrix}
+            1 & 3 & 1 & 4 \\
+            2 & 7 & 3 & 9 \\
+            1 & 5 & 3 & 1 \\
+            1 & 2 & 0 & 8
+        \end{pmatrix}
+        = \begin{pmatrix}
+            1 & 3 & 4 \\
+            2 & 7 & 9 \\
+            1 & 5 & 1 \\
+            1 & 2 & 8 
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 & 0 & -2 & 0 \\
+            0 & 1 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{pmatrix} = A_1 A_2.
+    \end{equation*}
+\end{mframe}
+%% slide 05
+
+%% slide 06
+\begin{mframe}{Множина розв'язків}
+    Введемо множину
+    \begin{equation}
+        \label{eq:1.2}
+        \Omega_x = \left\{ x \in \mathbb{R}^n :
+        \|A x - b\| = \min_{z \in \mathbb{R}^n} \|A z - b\| \right\},
+    \end{equation}
+
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.4a}
+        \Omega_x = \Big\{ A^+ b + v - A^+ A v \Big| v \in \mathbb{R}^n \Big\}.
+    \end{equation}
+\end{mframe}
+%% slide 06
+
+%% slide 07
+\begin{mframe}{Виділення однозначного розв'язку}
+    За умов неоднозначності множини $\Omega_x$ виділимо з неї вектор $\bar x$
+    такий, що
+    \begin{equation}
+        \label{eq:1.3}
+        \bar x = \Argmin_{x \in \Omega_x} \|x\|^2.
+    \end{equation}
+
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.4b}
+        \bar x = A^+ b.
+    \end{equation}
+\end{mframe}
+%% slide 07
+
+%% slide 08
+\begin{mframe}{Однозначність і точність розв'язку}
+    Розв'язок $\bar x$ СЛАР \eqref{eq:1.1} буде однозначним, якщо
+    \begin{equation}
+        \label{eq:1.7}
+        \det (A^\intercal A) > 0.
+    \end{equation}
+
+    Точність розв'язку оцінюється величиною
+    \begin{equation}
+        \label{eq:1.8}
+        \varepsilon^2 = \min_{x \in \Omega_x} \|A x - b\|^2 = 
+        b^\intercal b - b^\intercal A A^+ b.
+    \end{equation}
+\end{mframe}
+%% slide 08

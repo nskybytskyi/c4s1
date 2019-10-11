@@ -1,0 +1,167 @@
+\title[Системи інт{.} та функ{.} рівнянь]
+{\S1.4. Системи інтегральних \\ та функціональних рівнянь}
+
+%% first slide
+\begin{frame}
+    \titlepage
+\end{frame}
+%% first slide
+
+%% slide 01
+\begin{mframe}{Постановка інтегральної задачі}
+    Продовжимо узагальнювати псевдообернення, цього разу для задачі
+    \begin{equation}
+        \label{eq:1.35}
+        \int_0^T A(t) x(t) \diff t = b,
+    \end{equation}
+    де $x: [0, T] \to \mathbb{R}^n$ --- невідома вектор-функція,
+    $A: [0, T] \to \mathbb{R}^{m \times n}$ --- відома матрично-значна функція,
+    $b \in \mathbb{R}^m$ --- відомий вектор.
+\end{mframe}
+%% slide 01
+
+%% slide 02
+\begin{mframe}{Множина розв'язків}
+    Введемо множину
+    \begin{multline}
+        \label{eq:1.39}
+        \Omega_x = \left\{ x(t): 
+        \left\| \int_0^T A(t) x(t) \diff t - b \right\|^2 \right. = \\ 
+        = \left. \min_{z(t)} 
+        \left\| \int_0^T A(t) z(t) \diff t - b \right\|^2 \right\}.
+    \end{multline}
+    
+    Можна показати, що 
+    \begin{equation}
+        \label{eq:1.43}
+        \Omega_x =
+        \Big\{ A^\intercal(t) P_1^+ b + v(t) - A^\intercal(T) P_1^+ A_v \Big| 
+        v: \mathbb{R} \to \mathbb{R}^n \Big\},
+    \end{equation}
+    де
+    \begin{equation*}
+        P_1 = \int_0^T A(t) A^\intercal(t) \diff t, \quad A_v = 
+        \int_0^T A(t) v(t) \diff t.
+    \end{equation*}
+\end{mframe}
+%% slide 02
+
+%% slide 03
+\begin{mframe}{Виділення однозначного розв'язку}
+    За неоднозначності $\Omega_x$ виділимо з неї вектор $\bar x(t)$ такий, що
+    \begin{equation}
+        \label{eq:1.41}
+        \bar x(t) = \Argmin_{x(t) \in \Omega_x} \int_0^T \|x(t)\|^2 \diff t.
+    \end{equation}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.45}
+        \bar x(t) = A^\intercal(t) P_1^+ b.
+    \end{equation}
+\end{mframe}
+%% slide 03
+
+%% slide 04
+\begin{mframe}{Однозначність і точність розв'язку}
+    Розв'язок $\bar x(t)$ СЛАР \eqref{eq:1.35} буде однозначним, якщо
+    \begin{equation}
+        \label{eq:1.47}
+        \lim_{\Delta_N \to 0} \det \begin{bmatrix}
+            A^\intercal(t_1) A(t_1) & A^\intercal(t_1) A(t_2) & \cdots & 
+                A^\intercal(t_1) A(t_N) \\
+            A^\intercal(t_2) A(t_1) & A^\intercal(t_2) A(t_2) & \cdots & 
+                A^\intercal(t_2) A(t_N) \\
+            \vdots & \vdots & \ddots & \vdots \\
+            A^\intercal(t_N) A(t_1) & A^\intercal(t_N) A(t_2) & \cdots & 
+                A^\intercal(t_N) A(t_N)
+        \end{bmatrix} > 0,
+    \end{equation}
+    де $\Delta_N$ --- діаметр розбиття відрізку $[0, T]$ точками
+    $t_1, t_2, \ldots, t_N$. \medskip
+
+    Точність розв'язку оцінюється величиною
+    \begin{equation}
+        \label{eq:1.49}
+        \varepsilon^2 = b^\intercal b - b^\intercal P_1 P_1^+ b.
+    \end{equation}
+\end{mframe}
+%% slide 04
+
+%% slide 05
+\begin{mframe}{Постановка функціональної задачі}
+    Розглянемо задачу
+    \begin{equation}
+        \label{eq:1.36}
+        B(t) x = b(t), \quad t \in [0, T]
+    \end{equation}
+    де $B: [0, T] \to \mathbb{R}^{m \times n}$ --- відома матрично-значна
+    функція скалярного аргументу, $x \in \mathbb{R}^n$ --- невідомий вектор,
+    $b: [0, T] \to \mathbb{R}^m$ --- відома вектор-функція скалярного аргументу.
+\end{mframe}
+%% slide 05
+
+%% slide 06
+\begin{mframe}{Множина розв'язків}
+    Введемо множину
+    \begin{multline}
+        \label{eq:1.40}
+        \Omega_x = \left\{ x \in \mathbb{R}^n: 
+        \int_0^T \|B(t) x - b(t)\|^2 \diff t \right. = \\ 
+        = \left. \min_{z \in \mathbb{R}^n} 
+        \int_0^T \|B(t) z - b(t)\|^2 \diff t  \right\}.
+    \end{multline}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.44}
+        \Omega_x = \Big\{ P_2^+ B_b + v - P_2^+ P_2 v \Big| 
+        v \in \mathbb{R}^n \Big\},
+    \end{equation}
+    де
+    \begin{equation*}
+        P_2 = \int_0^T B^\intercal(t) B(t) \diff t, \quad B_b = 
+        \int_0^T B^\intercal(t) b(t) \diff t.
+    \end{equation*}
+\end{mframe}
+%% slide 06
+
+%% slide 07
+\begin{mframe}{Виділення однозначного розв'язку}
+    За неоднозначності $\Omega_x$ виділимо з неї вектор $\bar x$ такий, що
+    \begin{equation}
+        \label{eq:1.42}
+        \bar x = \Argmin_{x \in \Omega_x} \|x\|^2.
+    \end{equation}
+    
+    Можна показати, що
+    \begin{equation}
+        \label{eq:1.46}
+        \bar x = P_2^+ B_b.
+    \end{equation}
+\end{mframe}
+%% slide 07
+
+%% slide 08
+\begin{mframe}{Однозначність і точність розв'язку}
+    Розв'язок $\bar x$ СЛАР \eqref{eq:1.36} буде однозначним, якщо
+    \begin{equation}
+        \label{eq:1.48}
+        \det P_2 > 0.
+    \end{equation}
+
+    Точність розв'язку оцінюється величиною
+    \begin{equation}
+        \label{eq:1.50}
+        \varepsilon^2 = \int_0^T b^\intercal(t) b(t) \diff t - 
+        B_b^\intercal P_2^+ B_b.
+    \end{equation}
+\end{mframe}
+%% slide 08
+
+%% last slide
+\begin{frame}{$\left.\right.$}
+  \centering \Huge
+  \emph{Дякуємо за увагу!}
+\end{frame}
+%% last slide

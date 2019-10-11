@@ -1,0 +1,47 @@
+\documentclass{beamer}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{float, graphicx}
+\usepackage{amssymb, amsmath}
+\usepackage{euler}
+\usepackage{xcolor}
+\hypersetup{unicode=true,colorlinks,linkcolor=purple,urlcolor=purple}
+
+\mode<presentation>
+{
+  \usetheme{Madrid}
+  \usecolortheme{crane}
+  \usefonttheme{default}
+} 
+
+\newcommand{\Int}{\displaystyle\int\limits}
+\newcommand{\Sum}{\displaystyle\sum\limits}
+\DeclareMathOperator*{\Argmin}{arg\,min}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+
+\usepackage{environ}
+\NewEnviron{mframe}[1]{%
+\begin{frame}{#1}%
+    \centering%
+    \parbox{.9\textwidth}{%
+        \BODY%
+    }%
+\end{frame}%
+}
+
+\author[Скибицький Н.М.]{Скибицький Нікіта Максимович}
+\institute[КНУ]{Київський національний університет імені Тараса Шевченка}
+\date{\today}
+
+\begin{document}
+\input{05.tex}
+
+%% last slide
+\begin{frame}{$\left.\right.$}
+  \centering \Huge
+  \emph{Дякуємо за увагу!}
+\end{frame}
+%% last slide
+
+\end{document}
