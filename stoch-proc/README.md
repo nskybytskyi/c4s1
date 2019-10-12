@@ -93,3 +93,5 @@ Some newer lectures also available via the following [link](https://web.ma.utexa
 1. Introduction &amp; Renewal theory: [pdf](hse/1_sol.pdf)
 
 2. Poisson processes &amp; Queueing theory: [pdf](hse/2_sol.pdf)
+
+3. Markov Chains: [pdf](hse/3_sol.pdf)
