@@ -95,3 +95,5 @@ Some newer lectures also available via the following [link](https://web.ma.utexa
 2. Poisson processes &amp; Queueing theory: [pdf](hse/2_sol.pdf)
 
 3. Markov Chains: [pdf](hse/3_sol.pdf)
+
+4. Gaussian processes: [pdf](hse/4_sol.pdf)
