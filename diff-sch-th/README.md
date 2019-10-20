@@ -34,9 +34,9 @@
 
 Лекція 10 жовтня: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2010.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a> 
 
-Лекція 17 жовтня: <span class="badge badge-warning">No file :cry:</span> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a> 
+Лекція 17 жовтня: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2017.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a> 
 
-_Note_: if you want to change many LaTeX sources then you will probably need the whole source archive. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a> 
+_Note_&thinsp;: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a> 
 
 <a id="%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0"></a>
 ### Література
