@@ -29,22 +29,22 @@
 <a id="%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8"></a>
 ### Матеріали
 
-Всі лекції: <a class="badge badge-success" href="Гуляницький,%20всі%20лекції.pdf">[Get pdf]</a>
+Всі лекції: <a class="badge badge-success" href="Гуляницький,%20всі%20лекції.pdf">Get pdf</a>
 
-Лекція 17&nbsp;вересня: <span class="badge badge-success">[Get pdf](Гуляницький,%20лекція%2017.09.pdf)</span>
+Лекція 17&nbsp;вересня: <a class="badge badge-success" href="Гуляницький,%20лекція%2017.09.pdf">Get pdf</a>
 
-Лекція 24&nbsp;вересня: <span class="badge badge-success">[Get pdf](Гуляницький,%20лекція%2024.09.pdf)</span>
+Лекція 24&nbsp;вересня: <a class="badge badge-success" href="Гуляницький,%20лекція%2024.09.pdf">Get pdf</a>
 
-Лекція 1&nbsp;жовтня: <span class="badge badge-success">[Get pdf](Гуляницький,%20лекція%201.10.pdf)</span>
+Лекція 1&nbsp;жовтня: <a class="badge badge-success" href="Гуляницький,%20лекція%201.10.pdf">Get pdf</a>
 
-Лекція 8&nbsp;жовтня: <span class="badge badge-success">[Get pdf](Гуляницький,%20лекція%208.10.pdf)</span>
+Лекція 8&nbsp;жовтня: <a class="badge badge-success" href="Гуляницький,%20лекція%208.10.pdf">Get pdf</a>
 
-Лекція 15&nbsp;жовтня: <span class="badge badge-success">[Get pdf](Гуляницький,%20лекція%2015.10.pdf)</span>
+Лекція 15&nbsp;жовтня: <a class="badge badge-success" href="Гуляницький,%20лекція%2015.10.pdf">Get pdf</a>
 
 <a id="%D0%9A%D0%BE%D0%BB%D0%BE%D0%BA%D0%B2%D1%96%D1%83%D0%BC%D0%B8"></a>
 ### Колоквіуми
 
-Питання на колоквіум: <span class="badge badge-success">[Get pdf](Гуляницький,%20питання%20на%20перший%20колоквіум.pdf)</span>
+Питання на колоквіум: <a class="badge badge-success" href="Гуляницький,%20питання%20на%20перший%20колоквіум.pdf)</span>
 
 <a id=""></a>
 <a id="%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0"></a>
