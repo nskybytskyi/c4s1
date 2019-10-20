@@ -1,0 +1,243 @@
+Коли граничні умови були першого роду то до визначення простору $H_A$ додавалися граничні умови $u(0) = u(1) = 0$.
+Коли ж граничні умови стали третього роду, то до визначення простору вже нічого не додавалося. 
+
+\begin{remark}
+    Справа у тому, що крайові умови діляться на \textit{головні} та \textit{природні} граничні умови.
+\end{remark}
+
+$\phi_i$ повинні задовольняти головним похідним, а природні умови ``входять'' до $H_A$.
+Для диференціального оператору порядку $2 m$: 
+якщо до умови входять лише похідні порядку $< m$ то такі умови головні, а інакше --- природні. 
+
+\begin{example}
+    Якщо наш оператор другого порядку, то $m = 1$, і умови першого роду є головними, а умови третього роду
+\end{example}
+
+\subsection{Метод найменших квадратів}
+
+\begin{equation}
+    \label{eq:3.3.1}
+    A u = f
+\end{equation}
+
+Нехай існує єдиний розв'язок \eqref{eq:3.3.1}, $A^{-1}$ обмежений, $A: H \to H$ --- лінійний. Для цього методу
+\begin{equation}
+    \label{eq:3.3.2}
+    \Phi(u) = \|A u - f\|^2
+\end{equation}
+
+Зрозуміло, що
+\begin{equation*}
+    \inf_{u \in D(A)} \Phi(u) = 0 = \Phi(u^\star).
+\end{equation*}
+
+У нашому випадку
+\begin{equation}
+    \label{eq:3.3.3}
+    \Phi(u) = (A u - f, A u - f) = (A u, A u) - 2 (f, A u) + \|f\|^2
+\end{equation}
+
+Згідно загальної теорії маємо 
+\begin{align*}
+    G(u, v) &= (A u, A v), \\
+    \ell(u) &= (f, A u), \\
+    c &= (A u, A v).
+\end{align*}
+
+\subsubsection{Мінімізаційна послідовність}
+
+\begin{enumerate}
+    \item $\{\phi_i\} \subset D(A)$ --- лінійно незалежна, $H$ -- повний;
+    \item $H_n = \mathcal{L}(\phi_1, \ldots, \phi_n)$;
+    \item Розв'язок шукаємо у вигляді
+    \begin{equation}
+        \label{eq:3.3.4}
+        u_n = \sum_{i = 1}^n c_i \phi_i
+    \end{equation}
+    \item Отримуємо СЛАР вигляду
+    \begin{equation}
+        \label{eq:3.3.5}
+        \sum_{i = 1}^n c_i (A \phi_i, A \phi_j) = (f, A \phi_j).
+    \end{equation}
+\end{enumerate}
+
+Зі СЛАР \eqref{eq:3.3.5} бачимо, що СЛАР методу найменших квадратів є СЛАР методу моментів з проекційною системою функцій $\psi_j = A \phi_j$.
+
+\begin{theorem}
+    Якщо $\{\phi_i\}$ є $A$-повною (це означає, що $A \phi_i$ повна в $H$) та існує $M$: $\|u\| \le M \|A u\|$ 
+    ($A^{-1}$ обмежений) то мінізаційна послідовність $u_n$ буде збігатися до $u$ в нормі простору $H$: 
+    $\{u_n\} \xrightarrow[n \to \infty]{} u$.
+\end{theorem}
+
+\begin{remark}
+    Варто вибирати $\{\phi_i\}$ ортогональними, щоб СЛАР мала мале число обумовленості.
+\end{remark}
+
+\section{Сіткові (дискретні/різницеві) методи}
+
+\subsection{Загальні поняття методу сіток}
+
+Розгялдаємо рівняння
+\begin{equation}
+    \label{eq:4.1.1}
+    A u = f,
+\end{equation}
+де $A: B_1 \to B_2$ ($B_1$, $B_2$ --- банахові простори, $D(A) \subseteq B_1$, $D(A) \subseteq B_2$. \medskip
+
+Головна ідея методу сіток полягає у введенні просторів $B_{1,h}$ та $B_{2,h}$, 
+які залежать від певного $\vec h = (h_1, \ldots, h_n)$. 
+Далі замінюємо $A$ оператором $A_h: B_{1,h} \to B_{2,h}$. Задачу \eqref{eq:4.1.1} замінюємо задачею
+\begin{equation}
+    \label{eq:4.1.2}
+    A_h y_h = \phi_h.
+\end{equation}
+
+Суть у тому, що $B_{1,h}$ та $B_{2,h}$ --- простори скінченновимірні, наприклад сіткові.
+
+% Виникає три питання: як перейти від \eqref{eq:4.1.1} до \eqref{eq:4.1.2}, як оцынити похи
+
+\begin{definition}
+    Задача \eqref{eq:4.1.1} \textit{коректно поставлена}, якщо:
+    \begin{enumerate}
+        \item $\exists!$ розв'язок \eqref{eq:4.1.1} $\forall f \in R(A)$;
+        \item цей розв'язок стійки, тобто $\|\tilde u - u\|_1 \le M \|\tilde f - f\|_2$, де $M$ стала;
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Задача \eqref{eq:4.1.2} \textit{коректно поставлена}, якщо:
+    \begin{enumerate}
+        \item $\exists!$ розв'язок \eqref{eq:4.1.2} $\forall f \in R(A)$;
+        \item цей розв'язок стійки, тобто $\|\tilde y_h - y_h\|_{1,h} \le M_1 \|\tilde \phi_h - \phi_h\|_{2,h}$, 
+        де $M_1 > 0$ --- (можливо інша) стала;
+    \end{enumerate}
+\end{definition}
+
+Розглянемо оператори проектування $P_{1, h}: B_1 \to B_{1, h}: P_{1, h} u = u_h$ та $P_{2, h}: B_2 \to B_{2, h}: P_{2, h} f = f_h$. 
+Окрім цього, хочеться мати узгоджені норми в цих просторах, тобто $\lim_{|h| \to 0} \|P_{1,h} u\|_{1,h} = \|u\|_1$ і $\lim_{|h| \to 0} \|P_{2,h} f\|_{2,h} = \|f\|_2$
+
+\begin{definition}
+    Функція 
+    \begin{equation}
+        \label{eq:4.1.3}
+        z_h = y_h - P_{1, h} u = y_h - u_h
+    \end{equation}
+     --- похибка різницевої задачі \eqref{eq:4.1.2}, визначена на просторі $B_{1,h}$.
+\end{definition}
+
+\begin{definition}
+    Будемо говорити, що розв'язок задачі \eqref{eq:4.1.2} \textit{збігається} до розв'язку задачі \eqref{eq:4.1.1} (або ж, що різницева схема збіжна), якщо $\lim_{|h| \to 0} \|z_n\|_{1,h} \to 0$.
+\end{definition}
+
+\begin{definition}
+    Будемо говорити, що розв'язок задачі \eqref{eq:4.1.2} \textit{збігається} до розв'язку задачі \eqref{eq:4.1.1} \textit{з порядком $m$}, якщо 
+    \begin{equation}
+        \label{eq:4.1.4}
+        \|z_n\|_{1,h} = O(|h|^m).
+    \end{equation}
+\end{definition}
+\begin{remark}
+    Тут $O(|h|^m) = C \cdot |h|^m$, де $C > 0$ --- незалежна від $|h|$ константа.
+\end{remark}
+
+
+З формули \eqref{eq:4.1.3} маємо 
+\begin{equation*}
+    y_h = z_h + u_n.
+\end{equation*}
+
+Позначимо
+\begin{equation}
+    \label{eq:4.1.5}
+    A_h z_h = \psi_h,
+\end{equation}
+тоді, підставляючи в \eqref{eq:4.1.2} маємо
+\begin{equation}
+    \label{eq:4.1.6}
+    \psi_h = \phi_h - A_h u_h.
+\end{equation}
+
+\begin{definition}
+    Величина $\psi_h$ визначена є \textit{похибкою апроксимації} (нев'язкою) різницевої схеми \eqref{eq:4.1.2} на розв'язку $y$.
+\end{definition}
+
+\begin{equation}
+    \label{eq:4.1.7}
+    \psi_h = \phi_h - A_h u_h - P_{2, h} (f - A u) = (\phi_h - P_{2, h} f) - (A_h u_h - P_{2, h} A u) = \psi_h^f - \psi_h^A.
+\end{equation}
+
+Звідси бачимо, що похибка апроксимації схеми складаєтся з похибки апроксимації правих частин:
+\begin{equation}
+    \label{eq:4.1.8}
+    \psi_h^f = \phi_h + P_{2, h} f = \phi_h - f_h,
+\end{equation}
+та похибки апроксимації диференціального оператору $A$ різницеми оператором $A_h$:
+\begin{equation}
+    \label{eq:4.1.9}
+    \psi_h^A = A_h u_n - P_{2, h} A u.
+\end{equation}
+
+\begin{lemma}[Лакса-Філіпова]
+    Нехай різницева задача \eqref{eq:4.1.2} апроксимує задачу \eqref{eq:4.1.1} та є коректно поставленою. Тоді розв'язок задачі \eqref{eq:4.1.2} буде збігатися до розв'язку задачі \eqref{eq:4.1.1}, причому порядок збіжності буде таким же, як і порядок апроксимації.
+\end{lemma}
+\begin{proof}
+    Підставимо
+    \begin{equation}
+        z_h = y_h - u_h
+    \end{equation}
+    в \eqref{eq:4.1.2}. Тоді для похибки отримуємо задачу \eqref{eq:4.1.6}. За умовою лемми задача є коректно поставленою, а тому і стійкої. З умови стійкості випливає, що
+    \begin{equation}
+        \label{eq:4.1.10}
+        \|z_h\|_{1, h} \le M \|\psi_h\|_{2,h}.
+    \end{equation}
+
+    Звідси і випливає, що 
+    \begin{equation}
+        \label{eq:4.1.11}
+        \lim_{|h| \to 0} \|z_h\|_{1, h} \le M \lim_{|h| \to 0} \|\psi_h\|_{2, h} = 0.
+    \end{equation}
+
+    Причому,
+    \begin{equation}
+        \label{eq:4.1.12}
+        \lim_{|h| \to 0} \|z_h\|_{1, h} \le M \cdot O(|h|^m) = O(|h|^m).
+    \end{equation}
+    \stepcounter{equation}
+\end{proof}
+
+\begin{remark}
+    $z_h$ --- стійкість і $\psi_h$. $\psi_h$ --- $\phi_h \sim f_h$ і $A_h \sim A$.
+    Тому лему ще називають ``апроксимація + стійкість = збіжність''.
+\end{remark}
+
+\begin{definition}
+    Будемо говорити, що $A_h$ \textit{наближає} $A$ якщо
+    \begin{equation}
+        \label{eq:4.1.14}
+        \lim_{|h| \to 0} \|A_h u_h - P_{2, h} A u\|_{2, h} = 0.
+    \end{equation}
+\end{definition}
+
+\begin{definition}
+    Будемо говорити, що $A_h$ \textit{наближає} $A$ \textit{з порядком $m$} якщо
+    \begin{equation}
+        \label{eq:4.1.15}
+        \|A_h u_h - P_{2, h} A u\|_{2, h} = O(|h|^m).
+    \end{equation}
+\end{definition}
+
+\begin{definition}
+    Будемо говорити, що $\phi_h$ \textit{наближає} $f$ якщо
+    \begin{equation}
+        \label{eq:4.1.16}
+        \lim_{|h| \to 0} \|\phi_h - P_{2, h} f\|_{2, h} = 0.
+    \end{equation}
+\end{definition}
+
+\begin{definition}
+    Будемо говорити, що $\phi_h$ \textit{наближає} $f$ \textit{з порядком $m$} якщо
+    \begin{equation}
+        \label{eq:4.1.17}
+        \|\phi_h - P_{2, h} f\|_{2, h} = O(|h|^m).
+    \end{equation}
+\end{definition}

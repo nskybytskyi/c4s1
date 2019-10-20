@@ -1,0 +1,342 @@
+\subsection{Метод Рітца}
+
+Нехай, як і раніше, ми розв'язуємо рівняння
+\begin{equation}
+    \label{eq:3.2.1}
+    A u = f,
+\end{equation}
+де $A: H \to H$, $H$ --- дійсний гільбертовий простір. Нагадаємо, що ми ставимо цій задачі й відповідність задачу мінімізації
+\begin{equation}
+    \label{eq:3.2.2}
+    \inf_{u \in D(A)} \Phi(u) = \Phi(u^\star) = u_0.
+\end{equation}
+
+Нехай також виконуються певні припущення, необхідні для збіжності, а саме:
+\begin{enumerate}
+    \item $A$ --- симетричний (самоспряжений), тобто
+    \begin{equation}
+        \label{eq:3.2.3}
+        (A u, v) = (u, A v).
+    \end{equation}
+    \item $A$ --- додатно визначений, тобто
+    \begin{equation}
+        \label{eq:3.2.4}
+        (\exists \mu > 0) (\forall u \in D(A)) \quad (A u, u) \ge \mu \|u\|^2 (u, A v).
+    \end{equation}
+    \item $f \in R(A)$ --- область значень оператора $A$.
+\end{enumerate}
+
+\begin{theorem}
+    Якщо $A$ задовольняє умовам 1--3 (формули \eqref{eq:3.2.3}-- \eqref{eq:3.2.4}), то
+    \begin{enumerate}
+        \item задача \eqref{eq:3.2.2} має не більш ніж один розв'язок;
+        \item $A^{-1}$ обмежений.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    $\left.\right.$
+    \begin{enumerate}
+        \item Розглянемо спочатку однорідну задачу, тобто $f \equiv 0$, тоді задача \eqref{eq:3.2.1} зводиться до $A u = 0$. Тоді з \eqref{eq:3.2.4} маємо $\mu \|u\|^2 \le (Au, u) = 0$, звідки $u = 0$. Отже однорідна задача має тільки один розв'язок, а тому неоднорідна задача має не більше ніж один розв'язок.
+        
+        \begin{remark}
+            Справді, загальний розв'язок неоднорідної є сумою загального розв'язку однорідної (який у нас один) і частинного розв'язку неоднорідної (один або нуль)
+        \end{remark}
+        \item Скористаємося постановкою задачі і нерівністю Коші-Буняковського:
+        \begin{equation*}
+            \mu \|u\|^2 \le (Au, u) = (f, u) < \|f\| \cdot \|u\|.
+        \end{equation*}
+        Можемо переписати це як
+        \begin{equation*}
+            \|u\| \le \frac{1}{\mu} \|f\|,
+        \end{equation*}
+        або ж
+        \begin{equation*}
+            \|A^{-1} f\| \le \frac{1}{\mu} \|f\|,
+        \end{equation*}
+        а це ніщо інше як
+        \begin{equation*}
+            \|A^{-1}\| \le \frac{1}{\mu}.
+        \end{equation*}
+    \end{enumerate}
+\end{proof}
+
+\subsubsection{Мінімізаційна послідовність}
+
+\begin{algorithm}
+$\left.\right.$
+\begin{enumerate}
+    \item $\{\phi_i\} \in D(A)$ --- повна;
+    \item $H_n = \mathcal{L}(\phi_1, \ldots, \phi_n)$;
+    \item $u_n = \sum_{i = 1}^n c_i \phi_i$;
+\end{enumerate}
+\end{algorithm}
+
+Де наш загальний функціонал Рітца
+\begin{equation}
+    \label{eq:3.2.5}
+    \inf_{u \in H_n} \Phi(u) = \Phi(u_n)
+\end{equation}
+з функцією $G$ вигляду
+\begin{equation}
+    \label{eq:3.2.6}
+    G(u_n, v) = (f, v), \quad \forall v \in H_n,
+\end{equation}
+або, що те саме в наших умовах,
+\begin{equation}
+    \label{eq:3.2.7}
+    G(u_n, \phi_j) = (f, \phi_j), \quad j = \overline{1, n},
+\end{equation}
+можна буде записати у вигляді
+\begin{equation}
+    \label{eq:3.2.8}
+    \sum_{i = 1}^n c_i G(\phi_i, \phi_j) = (f, \phi_j), \quad j = \overline{1, n},
+\end{equation}
+або, що те саме в наших умовах,
+\begin{equation}
+    \label{eq:3.2.9}
+    \sum_{i = 1}^n c_i (A \phi_i, \phi_j) = (f, \phi_j), \quad j = \overline{1, n}.
+\end{equation}
+
+\begin{theorem}
+    \begin{enumerate}
+        \item Якщо $u^\star$ --- розв'язок \eqref{eq:3.2.1}, а оператор $A$ задовольняє умовам \eqref{eq:3.2.3} і \eqref{eq:3.2.4}, то мінімум функціонала Рітца \eqref{eq:3.2.5} буде досягатися на $u^\star$, причому тільки на ньому.
+        \item Якщо мінімум функціонала Рітца \eqref{eq:3.2.5} досягається на елементі $u^\star \in D(A)$, то $u^\star$ --- розв'язок \eqref{eq:3.2.1}.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    $\left.\right.$
+    \begin{enumerate}
+        \item Якщо $u^\star$ --- розв'язок \eqref{eq:3.2.1}, то
+        \begin{multline}
+            \label{eq:3.2.10}
+            \Phi(u) = (Au, u) - 2 (Au^\star, u) = \\
+            = (Au, u) - (Au^\star, u) + (Au^\star, u^\star) - (Au^\star, u) - (A u^\star, u^\star) = \\
+            = (A (u - u^\star), (u - u^\star)) - (A u^\star, u^\star).
+        \end{multline}
+        Оскільки $A > 0$ то з \eqref{eq:3.2.10} маємо
+        \begin{equation}
+            \label{eq:3.2.11}
+            \Phi(u) \ge \Phi(u^\star),
+        \end{equation}
+        оскільки 
+        \begin{equation*}
+            (A (u - u^\star), (u - u^\star)) \ge \mu \|u - u^\star\|^2,
+        \end{equation*}
+        причому рівність досягається лише коли $u = u^\star$.
+
+        \item Нехай на $u^\star \in D(A)$ досягається мінімум функціонала \eqref{eq:3.2.5}, тоді
+        \begin{equation}
+            \label{eq:3.2.12}
+            (A u^\star, v) = (f, v), \quad \forall v \in D(G),
+        \end{equation}
+        \stepcounter{equation}{1}
+        аьо
+        \begin{equation*}
+            (A u^\star - f, v) = 0, \quad \forall v \in D(G),
+        \end{equation*}
+        а, оскільки $D(G)$ щільна в $H$, то
+        \begin{equation}
+            \label{eq:3.2.14}
+            A u^\star = f.
+        \end{equation}
+    \end{enumerate}
+\end{proof}
+
+\begin{remark}
+    Мінімізаційна послідовність звелася до тієї ж системи що й у методі Бубнова-Гальоркіна, то які ж його переваги?
+\end{remark}
+
+\subsubsection{Метод Рітца в \texorpdfstring{$H_A$}{HA}}
+
+Справа в тому, що якщо оператор $A$ задовольняє умовам \eqref{eq:3.2.3} і \eqref{eq:3.2.4}, то можна ввести енергетичний простір $H_A$ у якому скалярний добуток введено за формулою
+\begin{equation}
+    \label{eq:3.2.15}
+    (u, v)_A = (A u, u),
+\end{equation}
+а норма за формулою
+\begin{equation}
+    \label{eq:3.2.16}
+    \|u\|_A^2 = (u, u)_A.
+\end{equation}
+
+Можна перевірити, що ці функції задовольняють аксіомам скалярного добутку та норми. Таким чином $H_A$ --- гільбертовий простір, ширший за $D(A)$. \medskip
+
+Тоді задачі \eqref{eq:3.2.1} ставимо у відповідність задачу
+\begin{equation}
+    \label{eq:3.2.18}
+    \inf_{u \in H_A} \Phi(u) = \Phi(u_n),
+\end{equation}
+для якої мають місце аналогічні результати:
+
+\begin{theorem}
+    Мають місце наступні співвідношення:
+    \begin{enumerate}
+        \item \begin{equation}
+            \label{eq:3.2.19}
+            \Phi(u) = (A u, u) - 2 (f, u) = \|u - u^\star\|_A^2 - \|u^\star\|_A^2,
+        \end{equation}
+        \item \begin{equation}
+            \label{eq:3.2.20}
+            \inf_{u \in H_n \subset H_A} \Phi(u) = \Phi(u_n) = \Phi_0.
+        \end{equation}
+    \end{enumerate}
+\end{theorem}
+
+З \eqref{eq:3.2.20} бачимо
+\begin{equation*}
+    (A u_n, v) = (f, v), \quad v \in H_n,
+\end{equation*}
+тоді
+\begin{equation*}
+    (A u_n - A u^\star, v) = 0, \quad v \in H_n,
+\end{equation*}
+або
+\begin{equation}
+    \label{eq:3.2.21}
+    (u_n - u^\star, v)_A = 0, \quad v \in H_n.
+\end{equation}
+
+Це означає, що
+\begin{equation}
+    \label{eq:3.2.22}
+    u = P_{H_n} u^\star
+\end{equation}
+
+\begin{theorem}
+    Нехай координатна система $\{\phi_i\}$ є повною в $H_A$, тоді при $n \to \infty$ мінімізуюча послідовність $\{u_n\}$ метода Рітца збігається до розв'язку задачі \eqref{eq:3.2.1} в нормі простору $H_A$.
+\end{theorem}
+\subsubsection{Приклади}
+\begin{example}
+    Задано рівняння
+    \begin{equation*}
+        -(k u')' + qu = f, \quad 0 < x < 1
+    \end{equation*}
+    з крайовими умовами
+    \begin{equation*}
+        u(0) = u(1) = 0,
+    \end{equation*}
+    і функціями
+    \begin{equation*}
+        k(x) \ge c_0 > 0, \quad q(x) \ge 0.
+    \end{equation*}
+\end{example}
+
+\begin{remark}
+    Взагалі кажучи, перед тим як будь-що робити, ми маємо показати симетричність $A$:
+    \begin{equation}
+        \label{eq:3.2.23}
+        \begin{aligned}
+            %\forall v \in D(A): \quad
+            (A u, v) &= \int_0^1 \Big( -(ku')' v + q u v \Big) \diff x = \\
+            &= - \left. k u' v\right|_0^1 + \int_0^1 ( -k u' v' + q u v) \diff x = \\
+            &= (u, A v).
+        \end{aligned}
+    \end{equation}
+    а також додатну визначеність: з $u(0) = 0$ маємо
+    \begin{equation*}
+        u(x) = \int_0^x u'(\xi) \diff \xi,
+    \end{equation*}
+    звідки
+    \begin{equation}
+        \label{eq:3.2.24}
+        \begin{aligned}
+            \int_0^1 u^2(x) \diff x &= \int_0^1 \left( \int_0^x u'(\xi) \diff \xi \right)^2 \diff x \le \\
+            &\le \int_0^1 \int_0^x \xi \diff \xi \int_0^x (u'(\xi))^2 \diff \xi \diff x \le \\
+            &\le \frac{1}{2} \|u'\|^2,
+        \end{aligned}
+    \end{equation}
+    або ж 
+    \begin{equation}
+        \label{eq:3.2.25}
+        \|u\|^2 \le \frac{1}{2} \|u'\|^2, \quad u \in D(A)
+    \end{equation}
+
+    Тоді, підставляючи в \eqref{eq:3.2.23} $u$ замість $v$ маємо
+    \begin{equation}
+        \label{eq:3.2.27}
+        \begin{aligned}
+            (A u, u) &= \int_0^1 \Big( -(ku')' u + q u^2 \Big) \diff x \ge \\
+            &\ge c_0 \int_0^1 (u'(x))^2 \diff x + \int_0^1 q (u(x))^2 \ge \\
+            &\ge c_0 \int_0^1 (u'(x))^2 \diff x \ge \\
+            &\ge c_1 \|u\|^2,
+        \end{aligned}
+    \end{equation}
+    де $c_1 = 2 c_0$. Розгялдаючи ліву і праву частини цієї рівності маємо додатновизначеність $A$.
+\end{remark}
+
+\begin{solution}
+    $\left.\right.$
+    \begin{enumerate}
+        \item Класичний розв'язок: функціонал:
+        \begin{equation*}
+            \Phi(u) = \int_0^1 (-(ku')' u + q u^2 - 2 f(u)) \diff x,
+        \end{equation*}
+        з множиною
+        \begin{equation*}
+            F(A) = \{ u \in C^2([0, 1]), u(0) = u(1) = 0\}.
+        \end{equation*}
+
+        У якості $\{\phi_i\}$ можна взяти $\phi_i(x) = x^i (1 - x)$, $i = \overline{1, n}$. Тоді
+        \begin{equation*}
+            \sum_{i = 1}^n c_i \left( \int_0^1 (k \phi_i')' \phi_j + q\phi_i \phi_j \right) \diff x = (f, \phi_j), \quad j = \overline{1, n}.
+        \end{equation*}
+        \item Узагальнений розв'язок: функціонал:
+        \begin{equation*}
+            \Phi(u) = \int_0^1 (k(u')^2 u + q u^2 - 2 f(u)) \diff x,
+        \end{equation*}
+
+        Енергетичний простір $H_A$ зі скалярним добутком
+        \stepcounter{equation}
+        \begin{equation}
+            (u, v)_A = \int_0^1 (k u' v' + q u v) \diff x,
+        \end{equation}
+        елементи якого
+        \begin{equation*}
+            H_A = \{ u: \|u\|_A < \infty, u(0) = u(1) = 0\}.
+        \end{equation*}
+
+        Це по суті є $\overset{\circ}{W}_2^1((0, 1))$ (2 --- інтегровні з квадратом, 1 --- до першої похідної, $\circ$ --- нуль на краях). \medskip
+
+        Приклад $\{\phi_i\}_{i = 1}^{n - 1}$ --- так звані штафетини:
+        \begin{equation}
+            \phi_i(x) = \begin{cases}
+                \frac{x - x_{i - 1}}{h}, & x_{i - 1} \le x \le x_i, \\
+                \frac{x_{i + 1} - x_i}{h}, & x_i \le x \le x_{i + 1}, \\
+                0, & x \not\in [x_{i - 1}, x_{i + 1}].
+            \end{cases}
+        \end{equation}
+        % вставить опять картинку. на всякий случай.
+    \end{enumerate}
+\end{solution}
+
+Це все, що стосується першої граничної задачі. Тепер про задачу третього роду:
+\begin{example}
+    Задано рівняння
+    \begin{equation*}
+        -(k u')' + qu = f, \quad 0 < x < 1
+    \end{equation*}
+    з крайовими умовами
+    \begin{align*}
+        - k u' + \alpha_1 u &= \beta_1, \quad x = 0, \\
+        - k u' + \alpha_1 u &= \beta_1, \quad x = 1.
+    \end{align*}
+\end{example}
+
+\begin{solution}
+    Розглянемо тут узагальнений розв'язок
+    \begin{equation*}
+        \Phi(u) = \int_0^1 (k(u')^2 u + q u^2 - 2 f(u)) \diff x + \alpha_1 u^2(0) + \alpha_2 u^2(1) - 2 \beta_1 u(0) - 2 \beta_2 u(1),
+    \end{equation*}
+
+    Енергетичний простір $H_A$ з нормою
+    \begin{equation}
+        \|u\| = \int_0^1 (k (u')^2 + q u^2) \diff x + \alpha_1 u^2(0) + \alpha_2 u^2(1),
+    \end{equation}
+    елементи якого
+    \begin{equation*}
+        H_A = \{ u: \|u\|_A < \infty\}.
+    \end{equation*}
+
+    Приклад $\{\phi\}$ --- $\{\phi_i\}_{i = 0}^{n}$.
+\end{solution}
