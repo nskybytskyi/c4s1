@@ -44,20 +44,20 @@
 <a id="%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B0"></a>
 #### Основна (рекомендована)
 
-- Оксендаль&nbsp;Б. &mdash; _Стохастические дифференциальные уравнения_&thinsp;. Мир, 2003&nbsp;г., 410&nbsp;с.: <a class="badge badge-success" href="books/Оксендаль-Б.-Стохастические-дифференциальные-уравнения-Мир-2003.djvu">Get djvu</a>
+Оксендаль&nbsp;Б. &mdash; _Стохастические дифференциальные уравнения_&thinsp;. Мир, 2003&nbsp;г., 410&nbsp;с.: <a class="badge badge-success" href="books/Оксендаль-Б.-Стохастические-дифференциальные-уравнения-Мир-2003.djvu">Get djvu</a>
 
-- Ламперти, Джон &mdash; _Случайные процессы_&thinsp;. Вища школа, 1983&nbsp;г., 227&nbsp;с.: <a class="badge badge-success" href="books/Ламперти,-Джон-Случайные-процессы.-Обзор-математической-теории-Вища-школа-1983.djvu">Get djvu</a>
+Ламперти, Джон &mdash; _Случайные процессы_&thinsp;. Вища школа, 1983&nbsp;г., 227&nbsp;с.: <a class="badge badge-success" href="books/Ламперти,-Джон-Случайные-процессы.-Обзор-математической-теории-Вища-школа-1983.djvu">Get djvu</a>
 
-- Булинский&nbsp;А.В., Ширяев&nbsp;А.Н. &mdash; _Теория случайных процессов_&thinsp;. Физматлит, 2005&nbsp;г., 402&nbsp;с.: <a class="badge badge-success" href="books/Булинский-А.В.,-Ширяев-А.Н.-Теория-случайных-процессов-Физматлит-2005.pdf">Get pdf</a>
+Булинский&nbsp;А.В., Ширяев&nbsp;А.Н. &mdash; _Теория случайных процессов_&thinsp;. Физматлит, 2005&nbsp;г., 402&nbsp;с.: <a class="badge badge-success" href="books/Булинский-А.В.,-Ширяев-А.Н.-Теория-случайных-процессов-Физматлит-2005.pdf">Get pdf</a>
 
 <a id="%D0%94%D0%BE%D0%B4%D0%B0%D1%82%D0%BA%D0%BE%D0%B2%D0%B0-%D0%B7%D0%B0-%D0%B1%D0%B0%D0%B6%D0%B0%D0%BD%D0%BD%D1%8F%D0%BC"></a>
 #### Додаткова (за бажанням)
 
-- Гихман&nbsp;И.И., Скороход&nbsp;А.В. &mdash; _Введение в теорию случайных процессов_&thinsp;. Физматлит, 1977&nbsp;г., 570&nbsp;с.: <a class="badge badge-success" href="books/Гихман-И.И.,-Скороход-А.В.-Введение-теорию-случайных-процессов-Физматлит-1977.pdf">Get pdf</a>
+Гихман&nbsp;И.И., Скороход&nbsp;А.В. &mdash; _Введение в теорию случайных процессов_&thinsp;. Физматлит, 1977&nbsp;г., 570&nbsp;с.: <a class="badge badge-success" href="books/Гихман-И.И.,-Скороход-А.В.-Введение-теорию-случайных-процессов-Физматлит-1977.pdf">Get pdf</a>
 
-- Скороход&nbsp;А.В. &mdash; _Лекції з теорії випадкових процесів_&thinsp;. Либідь, 1990&nbsp;г., 168&nbsp;с.: <a class="badge badge-success" href="books/Скороход-А.В.-Лекції-з-теорії-випадкових-процесів-Либідь-1990.pdf">Get pdf</a>
+Скороход&nbsp;А.В. &mdash; _Лекції з теорії випадкових процесів_&thinsp;. Либідь, 1990&nbsp;г., 168&nbsp;с.: <a class="badge badge-success" href="books/Скороход-А.В.-Лекції-з-теорії-випадкових-процесів-Либідь-1990.pdf">Get pdf</a>
 
-- Розанов&nbsp;Ю.А. &mdash; _Случайные процессы_&thinsp;. Наука, 1979&nbsp;г., 185&nbsp;с.: <a class="badge badge-success" href="books/Розанов-Ю.А.-Случайные-процессы-Наука-1979.djvu">Get djvu</a>
+Розанов&nbsp;Ю.А. &mdash; _Случайные процессы_&thinsp;. Наука, 1979&nbsp;г., 185&nbsp;с.: <a class="badge badge-success" href="books/Розанов-Ю.А.-Случайные-процессы-Наука-1979.djvu">Get djvu</a>
 
 <a id="%D0%97%D0%BE%D0%B2%D0%BD%D1%96%D1%88%D0%BD%D1%96-%D0%BA%D1%83%D1%80%D1%81%D0%B8"></a>
 ### Зовнішні курси
@@ -94,10 +94,10 @@ Some newer lectures also available via the following [link](https://web.ma.utexa
 
 Здесь будут мои решения задач (единственное, чего нет в бесплатной версии курса):
 
-1. Introduction &amp; Renewal theory:  <a class="badge badge-success" href="hse/1_sol.pdf">Get pdf</a>
+Week 1. Introduction &amp; Renewal theory:  <a class="badge badge-success" href="hse/1_sol.pdf">Get pdf</a>
 
-2. Poisson processes &amp; Queueing theory: <a class="badge badge-success" href="hse/2_sol.pdf">Get pdf</a>
+Week 2. Poisson processes &amp; Queueing theory: <a class="badge badge-success" href="hse/2_sol.pdf">Get pdf</a>
 
-3. Markov Chains: <a class="badge badge-success" href="hse/3_sol.pdf">Get pdf</a>
+Week 3. Markov Chains: <a class="badge badge-success" href="hse/3_sol.pdf">Get pdf</a>
 
-4. Gaussian processes: <a class="badge badge-success" href="hse/4_sol.pdf">Get pdf</a>
+Week 4. Gaussian processes: <a class="badge badge-success" href="hse/4_sol.pdf">Get pdf</a>
