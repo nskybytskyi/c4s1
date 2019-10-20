@@ -18,7 +18,7 @@
 
 - Курс закінчуєтся екзаменом, який пройде TBA о TBA, в ауд. TBA. 
 
-Перший <span class="badge badge-secondary text-danger">колоквіум</span> пройде у:
+Перший <span class="badge badge-danger">колоквіум</span> пройде у:
 
 - вівторок 22 жовтня на четвертій парі (перша підгрупа);
 
