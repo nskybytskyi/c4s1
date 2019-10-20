@@ -30,19 +30,19 @@
 
 Лекція 10 жовтня: <a class="badge badge-success" href="Оноцький,%20лекція%2010.10.pdf">Get pdf</a>
 
-Лекція 17 жовтня: <span class="badge badge-warning">No pdf :cry:</span>
+Лекція 17 жовтня: <span class="badge badge-warning">No file :cry:</span>
 
 <a id="%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0"></a>
 ### Література
 
-1. Роуч&nbsp;П. Вычислительная гидродинамика. &mdash; М. "Мир", 1980. <span class="badge badge-warning">No pdf :cry:</span>
+1. Роуч&nbsp;П. Вычислительная гидродинамика. &mdash; М. "Мир", 1980. <span class="badge badge-success" href="books/Роуч%20-%20Вычислительная%20гидродинамика.djvu">Get djvu</span>
 
-2. Андерсон&nbsp;Д., Танненхилл Дж., Плетчер Р. Вычислительная гидродинамика и теплообмен, том&nbsp;1, том&nbsp;2. &mdash; М. "Мир", 1990. <span class="badge badge-warning">No pdf :cry:</span>
+2. Андерсон&nbsp;Д., Танненхилл Дж., Плетчер Р. Вычислительная гидродинамика и теплообмен, том&nbsp;1, том&nbsp;2. &mdash; М. "Мир", 1990. <a class="badge badge-success" href="books/Андерсон,%20Таннехилл,%20Плетчер%20-%20Вычислительная%20гидродинамика%20и%20теплообмен.%20Том%201.djvu">Get vol. 1 djvu</a> <a class="badge badge-success" href="books/Андерсон,%20Таннехилл,%20Плетчер%20-%20Вычислительная%20гидродинамика%20и%20теплообмен.%20Том%202.djvu">Get vol. 2 djvu</a>
 
-3. Самарський&nbsp;А.А. Теория разностных схем. &mdash; М.: "Наука", 1983. <span class="badge badge-warning">No pdf :cry:</span>
+3. Самарський&nbsp;А.А. Теория разностных схем. &mdash; М.: "Наука", 1989. <a class="badge badge-success" href="books/Самарский%20-%20Теория%20разностных%20схем.djvu">Get djvu</a>
 
-4. Грищенко&nbsp;О.Ю., Ляшко&nbsp;С.І. Методи Фур'є та першого диференціального наближення в теорії різницевих схем. &mdash; ВПЦ "Київський університет", 2005. <span class="badge badge-warning">No pdf :cry:</span>
+4. Грищенко&nbsp;О.Ю., Ляшко&nbsp;С.І. Методи Фур'є та першого диференціального наближення в теорії різницевих схем. &mdash; ВПЦ "Київський університет", 2005. <span class="badge badge-warning">No file :cry:</span>
 
-5. Рихтмайер&nbsp;Р., Мортон&nbsp;К. Разностные методы решения краевых задач. &mdash; М.: "Мир", 1972. <span class="badge badge-warning">No pdf :cry:</span>
+5. Рихтмайер&nbsp;Р., Мортон&nbsp;К. Разностные методы решения краевых задач. &mdash; М.: "Мир", 1972. <a class="badge badge-success" href="books/Роуч%20-%20Вычислительная%20гидродинамика.djvu">Get djvu</a>
 
-6. Коллатц&nbsp;Л. Функциональный анализ и вычислительная математика. &mdash; "Мир", 1969. <span class="badge badge-warning">No pdf :cry:</span>
+6. Коллатц&nbsp;Л. Функциональный анализ и вычислительная математика. &mdash; "Мир", 1969. <a class="badge badge-success" href="books/Коллатц%20-%20Функциональный%20анализ%20и%20вычислительная%20математика.djvu">Get djvu</a>
