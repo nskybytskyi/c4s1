@@ -44,20 +44,20 @@
 <a id="%D0%9A%D0%BE%D0%BB%D0%BE%D0%BA%D0%B2%D1%96%D1%83%D0%BC%D0%B8"></a>
 ### Колоквіуми
 
-Питання на колоквіум: <a class="badge badge-success" href="Гуляницький,%20питання%20на%20перший%20колоквіум.pdf)</span>
+Питання на колоквіум: <a class="badge badge-success" href="Гуляницький,%20питання%20на%20перший%20колоквіум.pdf">Get pdf</a>
 
 <a id=""></a>
 <a id="%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0"></a>
 ### Література
 
-1. Самко&nbsp;С.Г., Килбас&nbsp;А.А., Маричев&nbsp;О.И. Интегралы и производные дробного порядка и некоторые их приложения. &mdash; Минск: Наука и техника, 1987.
+1. Самко&nbsp;С.Г., Килбас&nbsp;А.А., Маричев&nbsp;О.И. Интегралы и производные дробного порядка и некоторые их приложения. &mdash; Минск: Наука и техника, 1987. <a class="badge badge-success" href="#">Get pdf</a>
 
-2. Kilbas&nbsp;A.A., Srivastava&nbsp;H.M.,Trujillo&nbsp;J.M. Theory and Applications of Fractional Differential Equations. &mdash; Amsterdam: Elsevier, 2006.
+2. Kilbas&nbsp;A.A., Srivastava&nbsp;H.M.,Trujillo&nbsp;J.M. Theory and Applications of Fractional Differential Equations. &mdash; Amsterdam: Elsevier, 2006. <a class="badge badge-success" href="#">Get pdf</a>
 
-3. Podlubny&nbsp;I., Fractional Differential Equations. &mdash; San Diego: Academic Press, 1999.
+3. Podlubny&nbsp;I., Fractional Differential Equations. &mdash; San Diego: Academic Press, 1999. <a class="badge badge-success" href="#">Get pdf</a>
 
-4. Diethelm&nbsp;K., The Analysis of Fractional Differential Equations. &mdash; Springer, 2010.
+4. Diethelm&nbsp;K., The Analysis of Fractional Differential Equations. &mdash; Springer, 2010. <a class="badge badge-success" href="#">Get pdf</a>
 
-5. Чикрий&nbsp;А.А., Матичин&nbsp;И.И. Представление решений линейных систем с дробными производными Римана-Лиувилля, Капуто и Миллера-Росса // Проблемы управления и информатики. &mdash; 2008, &mdash; №3. &mdash; С.&nbsp;133&ndash;142.
+5. Чикрий&nbsp;А.А., Матичин&nbsp;И.И. Представление решений линейных систем с дробными производными Римана-Лиувилля, Капуто и Миллера-Росса // Проблемы управления и информатики. &mdash; 2008, &mdash; №3. &mdash; С.&nbsp;133&ndash;142. <a class="badge badge-success" href="#">Get pdf</a>
 
-6. W.&nbsp;Feller An introduction to probability theory and its applications, Volume&nbsp;2. &mdash; New York: Wiley, 1971.
+6. W.&nbsp;Feller An introduction to probability theory and its applications, Volume&nbsp;2. &mdash; New York: Wiley, 1971. <a class="badge badge-success" href="#">Get pdf</a>
