@@ -50,7 +50,7 @@
 <a id="%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0"></a>
 ### Література
 
-1. Самко&nbsp;С.Г., Килбас&nbsp;А.А., Маричев&nbsp;О.И. Интегралы и производные дробного порядка и некоторые их приложения. &mdash; Минск: Наука и техника, 1987. <a class="badge badge-success" href="books/Самко,%20Килбас,%2Маричев%2-%2Интегралы%2и%2производные%2дробного%2порядка.djvu">Get djvu</a> <span class="badge badge-danger">Heavy [18&nbsp;Mb]</span>
+1. Самко&nbsp;С.Г., Килбас&nbsp;А.А., Маричев&nbsp;О.И. Интегралы и производные дробного порядка и некоторые их приложения. &mdash; Минск: Наука и техника, 1987. <a class="badge badge-success" href="books/Самко,%20Килбас,%20Маричев%20-%20Интегралы%20и%20производные%20дробного%20порядка.djvu">Get djvu</a> <span class="badge badge-danger">Heavy [18&nbsp;Mb]</span>
 
 2. Kilbas&nbsp;A.A., Srivastava&nbsp;H.M.,Trujillo&nbsp;J.M. Theory and Applications of Fractional Differential Equations. &mdash; Amsterdam: Elsevier, 2006. <a class="badge badge-success" href="books/Kilbas,%20Srivastava,%20Trujillo%20-%20Theory%20and%20Applications%20of%20Fractional%20Differential%20Equations.djvu">Get djvu</a>
 
