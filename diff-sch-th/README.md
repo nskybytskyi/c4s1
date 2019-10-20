@@ -4,6 +4,7 @@
 
 - [Логістика](#%D0%9B%D0%BE%D0%B3%D1%96%D1%81%D1%82%D0%B8%D0%BA%D0%B0)
     - [Матеріали](#%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8)
+    - [Література](#%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0)
 
 <!-- /MarkdownTOC -->
 
@@ -19,12 +20,29 @@
 <a id="%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8"></a>
 ### Матеріали
 
-Всі лекції: [pdf](Оноцький,%20всі%20лекції.pdf)
+Всі лекції: <a class="badge badge-success" href="Оноцький,%20всі%20лекції.pdf">Get pdf</a>
 
-Лекція 19 вересня: [pdf](Оноцький,%20лекція%2019.09.pdf)
+Лекція 19 вересня: <a class="badge badge-success" href="Оноцький,%20лекція%2019.09.pdf">Get pdf</a>
 
-Лекція 26 вересня: [pdf](Оноцький,%20лекція%2026.09.pdf)
+Лекція 26 вересня: <a class="badge badge-success" href="Оноцький,%20лекція%2026.09.pdf">Get pdf</a>
 
-Лекція 3 жовтня: [pdf](Оноцький,%20лекція%203.10.pdf)
+Лекція 3 жовтня: <a class="badge badge-success" href="Оноцький,%20лекція%203.10.pdf">Get pdf</a>
 
-Лекція 10 жовтня: [pdf](Оноцький,%20лекція%2010.10.pdf)
+Лекція 10 жовтня: <a class="badge badge-success" href="Оноцький,%20лекція%2010.10.pdf">Get pdf</a>
+
+Лекція 17 жовтня: <span class="badge badge-warning">No pdf :cry:</span>
+
+<a id="%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0"></a>
+### Література
+
+1. Роуч&nbsp;П. Вычислительная гидродинамика. &mdash; М. "Мир", 1980. <span class="badge badge-warning">No pdf :cry:</span>
+
+2. Андерсон&nbsp;Д., Танненхилл Дж., Плетчер Р. Вычислительная гидродинамика и теплообмен, том&nbsp;1, том&nbsp;2. &mdash; М. "Мир", 1990. <span class="badge badge-warning">No pdf :cry:</span>
+
+3. Самарський&nbsp;А.А. Теория разностных схем. &mdash; М.: "Наука", 1983. <span class="badge badge-warning">No pdf :cry:</span>
+
+4. Грищенко&nbsp;О.Ю., Ляшко&nbsp;С.І. Методи Фур'є та першого диференціального наближення в теорії різницевих схем. &mdash; ВПЦ "Київський університет", 2005. <span class="badge badge-warning">No pdf :cry:</span>
+
+5. Рихтмайер&nbsp;Р., Мортон&nbsp;К. Разностные методы решения краевых задач. &mdash; М.: "Мир", 1972. <span class="badge badge-warning">No pdf :cry:</span>
+
+6. Коллатц&nbsp;Л. Функциональный анализ и вычислительная математика. &mdash; "Мир", 1969. <span class="badge badge-warning">No pdf :cry:</span>
