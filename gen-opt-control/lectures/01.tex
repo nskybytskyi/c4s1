@@ -38,9 +38,9 @@
         \begin{aligned}
             (I_0^{n + 1} f)(t) &= I_0^1 (I_0^n f)(t) = \int_0^t (I_0^n f)(s) \diff s = \\
             &= \int_0^t \frac{1}{(n - 1)!} \left( \int_0^s (s - \xi)^{n - 1} f(\xi) \diff \xi \right) \diff s = \\
-            &= \frac{1}{(n - 1)!} \int_0^s \int_\xi^t f(\xi) (s - \xi)^{n - 1} \diff s \diff \xi = \\
+            &= \frac{1}{(n - 1)!} \int_0^t \int_\xi^t f(\xi) (s - \xi)^{n - 1} \diff s \diff \xi = \\
             &= \frac{1}{(n - 1)!} \int_0^t f(\xi) \left. \frac{(s - \xi)^n}{n} \right|_{s = \xi}^{s = t} \diff \xi = \\
-            &= \frac{1}{n!} \int_0^t f(\xi) \frac{(t - \xi)^n}{1} \diff \xi.
+            &= \frac{1}{n!} \int_0^t f(\xi) (t - \xi)^n \diff \xi.
         \end{aligned}
     \end{equation}
     З точністю до назв змінних отримали що хотіли.
@@ -182,14 +182,14 @@
 
 На завершення визначимо ще кілька корисних для подальшого дослідження об'єктів:
 \begin{definition}
-    \textit{Інтегралом Рімана-Ліувілля з нижньою межею} $a$ називається
+    \textit{Інтегралом Рімана-Ліувілля з нижньою }(\textit{лівою})\textit{ межею} $a$ називається
     \begin{equation}
-        (I_a^\alpha f)(t) = \frac{1}{\Gamma(\alpha)} \int_a^t f(s) (t - s)^{\alpha - 1} \diff s.
+        (I_{a^+}^\alpha f)(t) = \frac{1}{\Gamma(\alpha)} \int_a^t f(s) (t - s)^{\alpha - 1} \diff s.
     \end{equation}
 \end{definition}
 \begin{definition}
-    \textit{Інтегралом Рімана-Ліувілля з право межею} для $t < T$ називається
+    \textit{Інтегралом Рімана-Ліувілля з правою }(\textit{верхньою})\textit{ межею} $T$ для $t < T$ називається
     \begin{equation}
-        (I_a^\alpha f)(t) = -\frac{1}{\Gamma(\alpha)} \int_t^T f(s) (t - s)^\alpha \diff s.
+        (I_{T^-}^\alpha f)(t) = -\frac{1}{\Gamma(\alpha)} \int_t^T f(s) (t - s)^\alpha \diff s.
     \end{equation}
 \end{definition}
