@@ -29,7 +29,7 @@
 <a id="%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8"></a>
 ### Матеріали
 
-Всі лекції: <span class="badge badge-success">[Get pdf](Гуляницький,%20всі%20лекції.pdf)</span>
+Всі лекції: <a class="badge badge-success" href="Гуляницький,%20всі%20лекції.pdf">[Get pdf]</a>
 
 Лекція 17&nbsp;вересня: <span class="badge badge-success">[Get pdf](Гуляницький,%20лекція%2017.09.pdf)</span>
 
