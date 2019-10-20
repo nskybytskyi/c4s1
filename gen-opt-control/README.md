@@ -35,15 +35,15 @@
 
 Всі лекції: <a class="badge badge-success" href="lectures/Гуляницький,%20всі%20лекції.pdf">Get pdf</a>
 
-Лекція 17&nbsp;вересня: <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%2017.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a>
+Лекція 17&nbsp;вересня: Основи дробового числення. <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%2017.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a>
 
-Лекція 24&nbsp;вересня: <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%2024.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a>
+Лекція 24&nbsp;вересня: Властивостi дробових похiдних. <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%2024.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a>
 
-Лекція 1&nbsp;жовтня: <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%201.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/03.tex">Get LaTeX source</a>
+Лекція 1&nbsp;жовтня: Початковi значення. Перетворення Лапласа. <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%201.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/03.tex">Get LaTeX source</a>
 
-Лекція 8&nbsp;жовтня: <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%208.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a>
+Лекція 8&nbsp;жовтня: Моделi аномальної дифузiї. <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%208.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a>
 
-Лекція 15&nbsp;жовтня: <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%2015.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a>
+Лекція 15&nbsp;жовтня: Рiвняння субдифузiї. <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%2015.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a>
 
 _Note_&thinsp;: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a> 
 
