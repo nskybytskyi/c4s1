@@ -1,0 +1,278 @@
+\subsection{Збіжність в середньоквадратичному}
+
+Розглянемо функціональний ряд:
+\begin{equation}
+    \sum f_n(x), \quad x \in X.
+\end{equation}
+
+Як і раніше, позначатимемо послідовність частинних сум $S_n$:
+\begin{equation}
+    S_n(x) = \sum_{k = 1}^n f_k(x),
+\end{equation}
+а також позначимо
+\begin{equation}
+    \sigma_n(x) = \frac{1}{n} \sum_{k = 1}^n S_k(x).
+\end{equation}
+
+\begin{definition}
+    Якщо $\forall x \in X$ $\exists \lim_{n \to \infty} \sigma_n(x) = f(x)$, то кажуть, що функціональний ряд $S_n(x)$ збігається до $f(x)$ \textit{поточково в середньоарифметичному}.
+\end{definition}
+
+\begin{definition}
+    Якщо $\exists \lim_{n \to \infty} \sup_{x \in X} |f(x) - \sigma_n(x)| = 0$, то кажуть, що функціональний ряд $S_n(x)$ збігається до $f(x)$ \textit{рівномірно в середньоарифметичному}.
+\end{definition}
+
+\begin{definition}
+    Якщо $X = [a, b] \subset \RR$, $f_n \in R(X)$ і 
+    \begin{equation}
+        \exists \lim_{n \to \infty} \int_a^b (f(x) - S_n(x))^2 \diff x,
+    \end{equation}
+    то кажуть, що функціональний ряд $S_n(x)$ збігається до $f(x)$ \textit{в середньоквадратичному}.
+\end{definition}
+
+Повернемося до функції $f \in R([-\pi, \pi])$. Нехай її ряд Фур'є має вигляд
+\begin{equation}
+    \frac{a_0}{2} + \sum (a_n \cos n x + b_n \sin n x).
+\end{equation}
+
+% Нагадаємо, що виконуються співвідношення
+% \begin{align}
+%     a_0 &= \frac{1}{\pi} \int_{-\pi}^\pi f(x) \diff x, \\
+%     a_k &= \frac{1}{\pi} \int_{-\pi}^\pi f(x) \cos k x \diff x, \\
+%     b_k &= \frac{1}{\pi} \int_{-\pi}^\pi f(x) \sin k x \diff x.
+% \end{align}
+
+Зрозуміло, що послідовність часткових сум цього ряду буде
+\begin{equation}
+    S_n(x) = \frac{a_0}{2} + \sum_{k = 1}^n (a_k \cos k x + b_k \sin k x).
+\end{equation}
+
+Розглянемо тепер довільний тригонометричний многочлен ``степеню'' не вище $n$, тобто
+\begin{equation}
+    T_n(x) = \frac{\alpha_0}{2} + \sum_{k = 1}^n (\alpha_k \cos k x + \beta_k \sin k x).
+\end{equation}
+
+Розглянемо задачу знаходження
+\begin{equation}
+    \Argmin_{T_n} \|f - T_n\| = \sqrt{\int_a^b (f(x) - T_n(x))^2 \diff x}.  
+\end{equation}
+
+Логічним припущенням є $T_n = S_n$.
+
+\begin{theorem}[про найкраще середньоквадратичне наближення]
+    Якщо $f \in R([-\pi,\pi])$, то $\forall n \in \NN$, $\forall T_n(x)$:
+    \begin{equation}
+        \|f(x) - S_n(x)\| \le \|f(x) - T_n(x)\|.
+    \end{equation}
+\end{theorem}
+\begin{proof}
+    Розділимо інтеграл з норми на три наступним чином:
+    \begin{equation}
+        \begin{aligned}
+            \|f(x) - T_n(x)\|^2 
+            &= \int_{-\pi}^\pi (f(x) - T_n(x))^2 \diff x = \\
+            &= \int_{-\pi}^\pi \Big( (f(x))^2 - 2 f(x) T_n(x) + (T_n(x))^2 \Big) \diff x.
+        \end{aligned}
+    \end{equation}
+    
+    Перетворимо другий інтеграл:
+    \begin{equation}
+        \begin{aligned}
+            \int_{-\pi}^\pi f(x) T_n(x) \diff x 
+            &= \alpha_0 \int_{-\pi}^\pi f(x) \diff x + \sum_{k = 1}^n \alpha_k \int_{-\pi}^\pi f(x) \cos k x \diff x + \beta_k \int_{-\pi}^\pi f(x) \sin k x \diff x = \\
+            &= \pi \alpha_0 a_0 + \pi \sum_{k = 1}^n (\alpha_k a_k + \beta_k + b_k).
+        \end{aligned}
+    \end{equation}
+    
+    Перетворимо третій інтеграл:
+    \begin{equation}
+        \begin{aligned}
+            \int_{-\pi}^\pi T_n^2(x) \diff x 
+            &= 2 \pi \alpha_0^2 + 2 \alpha_0 \sum_{k = 1}^n \int_{-\pi}^\pi \alpha_k \cos k x + \beta_k \sin k x \diff x + \\
+            &\quad + \sum_{k = 1}^n \sum_{m = 1}^n \int_{-\pi}^\pi (\alpha_k \cos k x + \beta_k \sin k x) (\alpha_m \cos m x + \beta_m \sin k m) = \\
+            &= 2 \pi \alpha_0^2 + \pi \sum_{k = 1}^n (\alpha_k^2 + \beta_k^2).
+        \end{aligned}
+    \end{equation}
+    
+    Підставляємо назад і перетворюємо:
+    \begin{equation}
+        \label{eq:1.2.9}
+        \begin{aligned}
+            \|f - T_n\|^2 
+            &= \int_{-\pi}^\pi (f(x))^2 \diff x - 2 \pi \alpha_0 a_0 - 2 \pi \sum_{k = 1}^n (\alpha_k a_k + \beta_k b_k) + \\
+            &\quad + 2 \pi \alpha_0^2 + \pi \sum_{k = 1}^n (\alpha_k^2 + \beta_k^2) = \\
+            &= \int_{-\pi}^\pi (f(x))^2 \diff x + \\
+            &\quad + \pi \left( \frac{(2\alpha_0 - a_0)^2}{2} + \sum_{k = 1}^n \Big( (\alpha_k - a_k)^2 + (\beta_k - b_k)^2 \Big) \right) - \\ 
+            &\quad - \pi \left( \frac{a_0^2}{2} + \sum_{k = 1}^n (a_k^2 + b_k^2) \right).
+        \end{aligned}
+    \end{equation}
+    
+    Перший і третій доданки від $\alpha$ і $\beta$ не залежать, тому можемо просто прирівняти другий до нуля для досягнення мінімуму всього виразу. Далі нескладно бачити, що $\alpha_0 = a_0 / 2$, $\alpha_k = a_k$, $\beta_k = b_k$, тобто $T_n = S_n$.
+\end{proof}
+
+\subsection{Нерівність Бесселя}
+
+\begin{theorem}[нерівність Бесселя]
+    $\forall f \in R([-\pi,\pi])$ виконується нерівність Бесселя
+    \begin{equation}
+        \frac{a_0^2}{2} + \sum_{n = 1}^\infty (a_n^2 + b_n^2) \le \frac{1}{\pi} \int_{-\pi}^\pi (f(x))^2 \diff x,
+    \end{equation}
+    де $a_0, a_n, b_n$ --- коефіцієнти Фур'є функції $f$.
+\end{theorem}
+\begin{proof}
+    Підставимо у \eqref{eq:1.2.9} $T_n = S_n$, отримаємо
+    \begin{equation}
+        0 \le \|f(x) - S_n(x)\|^2 = \int_{-\pi}^\pi (f(x))^2 \diff x - \pi \left( \frac{a_0^2}{2} + \sum_{k = 1}^n (a_n^2 + b_n^2) \right).
+    \end{equation}
+    
+    Елементарними перетвореннями нерівності отримуємо
+    \begin{equation}
+        \frac{a_0^2}{2} + \sum_{k = 1}^n (a_n^2 + b_n^2) \le \frac{1}{\pi} \int_{-\pi}^\pi (f(x))^2 \diff x.
+    \end{equation}
+    
+    Це означає, що послідовність часткових сум обмежена (і монотонна), а тому ряд збіжний, а граничним переходом маємо нерівність Бесселя.
+\end{proof}
+
+\begin{example}
+    Розглянемо функцію
+    \begin{equation}
+        f: \RR \to \RR: x \mapsto \sum_{n = 1}^\infty \frac{\sin n x}{\sqrt{n}}.
+    \end{equation}
+    
+    Для неї $a_i = 0$, $b_n = \frac{1}{\sqrt{n}}$. Але 
+    \begin{equation}
+        \frac{1}{\pi} \int_{-\pi}^\pi (f(x))^2 \diff x \ge \sum_{n = 1}^\infty \frac{1}{n}
+    \end{equation}
+    --- розбіжний, тому наведений вище ряд не є рядом Фур'є (своєї суми).
+\end{example}
+
+\begin{corollary}
+    Нехай $f \in R([-\pi,\pi])$, $a_n, b_n$ --- її коефіцієнти Фур'є. Тоді
+    \begin{enumerate}
+        \item \begin{equation}
+            \lim_{n \to \infty} a_n = \lim_{n \to \infty} \int_{-\pi}^\pi f(x) \cos n x \diff x = 0;
+        \end{equation}
+        \item \begin{equation}
+            \lim_{n \to \infty} b_n = \lim_{n \to \infty} \int_{-\pi}^\pi f(x) \sin n x \diff x = 0.
+        \end{equation}
+    \end{enumerate}
+\end{corollary}
+
+\begin{corollary}[прямування до 0 косинусів та синусів перетворення Фур'є]
+    Нехай $f \in R([-\pi,\pi])$, тоді $\forall [a, b] \subset [-\pi,\pi]$:
+    \begin{enumerate}
+        \item \begin{equation}
+            \lim_{n \to \infty} \int_a^b f(x) \cos n x \diff x = \lim_{n \to \infty} \int_a^b f(x) \sin n x \diff x;
+        \end{equation}
+        \item \begin{equation}
+             \lim_{n \to \infty} \int_a^b f(x) \sin (n + \tfrac{1}{2}) x \diff x = 0.
+        \end{equation}
+    \end{enumerate}
+\end{corollary}
+\begin{exercise}
+    Доведіть другий пункт.            
+\end{exercise}
+
+\begin{remark}
+    Другий наслідок є частинним випадком теореми про косинус та синус перетворення Фур'є.
+\end{remark}
+
+\subsection{Інтегральне зображення частинних сум ряду Фур'є}
+
+Далі вважаємо функцію $f$ $2\pi$-періодичною, $f \in R([-\pi,\pi])$. Тоді
+\begin{equation}
+    \begin{aligned}
+        S_n(x) 
+        &= \frac{a_0}{2} + \sum_{k = 1}^n a_k \cos kx + b_k \sin kx = \\
+        &= \frac{1}{2\pi} \int_{-\pi}^\pi f(t) \diff t + \\
+        &\quad + \frac{1}{\pi} \sum_{k = 1}^n \left( \cos kx \int_{-\pi}^\pi f(t) \cos kt \diff t + \sin k x \int_{-\pi}^\pi f(t) \sin kt \diff t \right) = \\
+        &= \frac{1}{\pi} \int_{-\pi}^\pi f(t) \left( \frac{1}{2} + \sum_{k = 1}^n \cos k (x - t) \right) \diff t.
+    \end{aligned}
+\end{equation}
+
+Можемо записати останню рівність у вигляді
+\begin{equation}
+    S_n(x) = \frac{1}{\pi} \int_{-\pi}^\pi f(t) D_n(x - t) \diff t.
+\end{equation}
+
+\begin{definition}
+    $D_n(x - t)$ --- \textit{ядро Діріхле}.
+\end{definition}
+
+\begin{equation}
+    \begin{aligned}
+        2 \sin \tfrac{x}{2} D_n(x) 
+        &= \sin \tfrac{x}{2} + \sum_{k = 1}^n 2 \sin \tfrac{x}{2} \cos k x = \\
+        &= \sin \tfrac{x}{2} + \sum_{k = 1}^n \Big( \sin (k + \tfrac{1}{2}) - \sin(k - \tfrac{1}{2}) x \Big) = \\
+        &= \sin (n + \tfrac{1}{2}) x \to 0.
+    \end{aligned}
+\end{equation}
+
+З останнього маємо
+\begin{equation}
+    D_n(x) = \begin{cases}
+        \dfrac{\sin(n + \frac{1}{2})x}{2 \sin \tfrac{x}{2}}, & x \ne 2 \pi m, \\
+        n + \frac{1}{2}, & x = 2 \pi m.
+    \end{cases}
+\end{equation}
+
+\begin{properties}[ядра Діріхле]
+    $\left.\right.$
+    \begin{enumerate}
+        \item неперервне: $\forall n \in \NN$: $D_n\in C(\RR)$;
+        \item обмежене: $|D_n(x)| \le n + \frac{1}{2}$;
+        \item парне: $D(x) = D(-x)$;
+        \item періодичне з періодом $2 \pi$;
+        \item $|D_n(x)| \le \frac{\pi}{2|x|}$, $-\pi\le x\le\pi$.
+    \end{enumerate}
+\end{properties}
+
+\begin{exercise}
+    Доведіть останню властивість. Підказка: $\frac{\sin x}{x} \ge \frac{2}{\pi}$ при $x \in (0, \frac{\pi}{2}]$.
+\end{exercise}
+
+\begin{equation}
+    \begin{aligned}
+        S_n(x) 
+        &= \frac{1}{\pi} \int_{-\pi}^\pi f(t) D_n(x - t) \diff t = \\
+        &= \frac{1}{\pi} \int_{-\pi-x}^{\pi-x} f(x + y) D_n(-y) \diff y = \\
+        &= \frac{1}{\pi} \int_{-\pi}^\pi f(x + y) D_n(y) \diff y.
+    \end{aligned}
+\end{equation}
+
+\begin{equation}
+    \begin{aligned}
+        S_n(x) 
+        &= \frac{1}{\pi} \int_{-\pi}^0 f(x + t) D_n(t) \diff t + \frac{1}{\pi} \int_0^\pi f(x + t) D_n(t) \diff t = \\
+        &= \frac{1}{\pi} \int_0^\pi \Big( f(x + t) + f(x - t) \Big) D_n(t) \diff t.
+    \end{aligned}
+\end{equation}
+
+Якщо підставити сюди $f \equiv 1$, то отримаємо $a_0 = \frac{1}{\pi} \int_{-\pi}^\pi \diff x = 2$, $a_n = b_n = 0$, тобто $S_n \equiv 1$. Отже,
+\begin{equation}
+    \int_0^\pi D_n(t) \diff t = \frac{\pi}{2}.
+\end{equation}
+
+\subsection{Принцип локалізації Рімана}
+
+\begin{theorem}[принцип локалізації Рімана]
+    Якщо $f$ --- $2\pi$-періодична, і $f \in R([-\pi,\pi])$, то збіжність/розбіжність її ряду Фур'є у точці $x_0 \in \RR$ залежить лише від ``поведінки'' $f$ в околі точки $x_0$.
+\end{theorem}
+\begin{proof}
+    Нехай $\delta \in (0,\pi)$, тоді
+    \begin{equation}
+        \begin{aligned}
+            S_n(x_0)
+            &= \frac{1}{\pi} \int_{-\pi}^{-\delta} f(x_0 + t) D_n(t) \diff t + \\
+            &\quad + \frac{1}{\pi} \int_{-\delta}^\delta f(x_0 + t) D_n(t) \diff t + \frac{1}{\pi} + \\
+            &\quad + \frac{1}{\pi} \int_\delta^\pi f(x_0 + t) D_n(t) \diff t + \frac{1}{\pi}.
+        \end{aligned}
+    \end{equation}
+    
+    Позначимо
+    \begin{equation}
+        I_n(x_0) = \int_\delta^\pi f(x_0 + t) D_n(t) \diff t = \int_\delta^\pi f(x_0 + t) \frac{\sin(n+\frac{1}{2})t}{2\sin\frac{t}{2}} \diff t.
+    \end{equation}
+    
+    Якщо тепер взяти $F(t) = \frac{f(x_0 + t)}{2 \sin \frac{t}{2}}$, то $F \in R([\delta,\pi])$, а тому, за другим наслідком $I_n \xrightarrow[n\to\infty]{} 0$, тобто з трьох інтегралів вище лишається лише середній, ``локальний''.
+\end{proof}

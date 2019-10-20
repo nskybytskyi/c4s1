@@ -1,14 +1,6 @@
-Це сторінка курсу &laquo;Теорія рядів Фур'єізницевих&raquo;. Курс читається у першому семестрі четвертого курсу спеціальності &laquo;Прикладна математика&raquo; факультету комп'ютерних наук та кібернетики київського національного університету імені Тараса Шевченка.
+<span class="text-muted">Це сторінка курсу &laquo;Теорія рядів Фур'єізницевих&raquo;. Курс читається у першому семестрі четвертого курсу спеціальності &laquo;Прикладна математика&raquo; факультету комп'ютерних наук та кібернетики київського національного університету імені Тараса Шевченка.</span>
 
-<!-- MarkdownTOC -->
-
-- [Логістика](#%D0%9B%D0%BE%D0%B3%D1%96%D1%81%D1%82%D0%B8%D0%BA%D0%B0)
-    - [Матеріали](#%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8)
-
-<!-- /MarkdownTOC -->
-
-<a id="%D0%9B%D0%BE%D0%B3%D1%96%D1%81%D1%82%D0%B8%D0%BA%D0%B0"></a>
-## Логістика
+<h3 class="text-primary">Логістика</h3>
 
 - Викладач &mdash; Молодцов Олександр Ілліч.
 
@@ -16,11 +8,14 @@
 
 - Курс закінчуєтся екзаменом, який пройде TBA о TBA, в ауд. TBA. 
 
-<a id="%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8"></a>
-### Матеріали
+<h3 class="text-primary">Лекції</h3>
 
-Всі лекції: [pdf](Молодцов,%20всі%20лекції.pdf)
+Всі лекції: <a class="badge badge-success" href="lectures/Молодцов,%20всі%20лекції.pdf">Get pdf</a> 
 
-Лекція 25 вересня: [pdf](Молодцов,%20лекція%2025.09.pdf)
+Лекція **25 вересня**: <a class="badge badge-success" href="lectures/Молодцов,%20лекція%2025.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a>
 
-Лекція 9 жовтня: [pdf](Молодцов,%20лекція%209.10.pdf)
+Лекція **9 жовтня**: <a class="badge badge-success" href="lectures/Молодцов,%20лекція%209.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a>
+
+Лекція **16 жовтня**: <a class="badge badge-warning" href="#">No file :cry:</a>
+
+<span class="text-muted">_Note_&thinsp;: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></span>
