@@ -1,6 +1,6 @@
 <span class="text-muted">Це сторінка спареного курсу &laquo;Узагальнене оптимальне керування&raquo;. Курс читається у першому семестрі четвертого курсу спеціальності &laquo;Прикладна математика&raquo; факультету комп'ютерних наук та кібернетики київського національного університету імені Тараса Шевченка.</span>
 
-<h2 class="text-primary">Логістика</h2>
+<h3 class="text-primary">Логістика</h3>
 
 - Викладачі &mdash; Гуляницький Андрій Леонідович, Гончаренко Юрій Вікторович.
 
@@ -9,8 +9,6 @@
 - Курс закінчуєтся екзаменом, який пройде TBA о TBA, в ауд. TBA. 
 
 - Чат в <a class="badge badge-info" href="https://t.me/joinchat/FysbWhbQTRFtsnEFSuZKZA"><img src="/c4s1/assets/t.me" alt="Telegram icon"> Telegram</a>
-
-<h2 class="text-primary">Матеріали</h2>
 
 <h3 class="text-primary">Лекції</h3>
 
