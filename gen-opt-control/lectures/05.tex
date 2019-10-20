@@ -1,0 +1,155 @@
+\subsection{Рівняння субдифузії}
+
+Розглянемо випадкове блукання із щільностями
+\begin{equation}
+    \psi(t) \sim \frac{\alpha}{\Gamma(1 - \alpha)} \frac{\tau^\alpha}{t^{1 + \alpha}},
+\end{equation}
+при $t \to + \infty$, де $\alpha \in (0, 1)$, $\tau > 0$, та
+\begin{equation}
+    \lambda(x) = \frac{1}{2 \sqrt{\pi} \sigma} \exp\left\{-\frac{x^2}{4 \sigma^2}\right\}
+\end{equation}
+
+Згадуємо наслідок з теореми Таубера для $A = \frac{\tau^\alpha}{\Gamma(1 - \alpha)}$:
+\begin{equation}
+    \mathscr{L}[\psi](\eta) \sim 1 - \tau^\alpha \eta^\alpha + o(\eta^\alpha)
+\end{equation}
+
+Крім того
+\begin{equation}
+    \mathcal{F}[\lambda](\eta) \sim 1 - \sigma^2 \omega^2 + O(\omega^4).
+\end{equation}
+
+Застосовуємо формулу Монтрола-Вайса
+\begin{equation}
+    \mathcal{F}\text{-}\mathscr{L}[u](\eta,\omega) = \frac{\mathcal{F}[u_0](\omega)}{\eta} \frac{\tau^\alpha \eta^\alpha + o(\eta^\alpha)}{1 - (1 - \tau^\alpha \eta^\alpha + o(\eta^\alpha)) (1 - \sigma^2 \omega^2 + O(\omega^4))} 
+\end{equation}
+
+Якщо $\eta \to 0$, $\omega \to 0$, $\eta^\alpha \omega^2 = o(\eta^\alpha + \omega^2)$, то
+\begin{equation}
+    \sim \frac{\mathcal{F}[u_0](\omega)}{\eta} \frac{\tau^\alpha \eta^\alpha}{\tau^\alpha \eta^\alpha + \sigma^2 \omega^2} = \frac{\mathcal{F}[u_0](\omega)}{\eta} \frac{1}{1 + \frac{\sigma^2}{\tau^\alpha} \eta^{-\alpha} \omega^2 = \frac{\mathcal{F}[u_0](\omega)}{\eta} \frac{1}{1 + K_\alpha \eta^{-\alpha} \omega^2}}.
+\end{equation}
+
+Отже, з точністю до малих доданків,
+\begin{equation}
+    \mathcal{F}\text{-}\mathscr{L}[u](\eta,\omega) \cdot (1 + K_\alpha \eta^{-\alpha} \omega^2) = \frac{\mathcal{F}[u_0](\omega)}{\eta},
+\end{equation}
+або ж,
+\begin{equation}
+    \mathcal{F}\text{-}\mathscr{L}[u](\eta,\omega) - \frac{\mathcal{F}[u_0](\omega)}{\eta} = - K_\alpha \eta^{-\alpha} \omega^2 \mathcal{F}\text{-}\mathscr{L}[u](\eta,\omega).
+\end{equation}
+
+Оскільки
+\begin{equation}
+    \mathcal{F}[g'](\omega) = (-i \omega) \mathcal{F}[g](\omega),
+\end{equation}
+і, відповідно,
+\begin{equation}
+    \mathcal{F}[g^{(k)}](\omega) = (-i \omega)^k \mathcal{F}[g](\omega),
+\end{equation}
+то
+\begin{equation}
+    - \omega^2 \mathcal{F}\text{-}\mathscr{L}[u](\eta,\omega) = \mathcal{F}\left[ \frac{\partial^2 \mathscr{L}[u(x,\eta)]}{\partial x^2} \right]
+\end{equation}
+
+Тому маємо
+\begin{equation}
+    \mathscr{L}[u](x,\eta) - \frac{u_0(x)}{\eta} = - K_\alpha \eta^{-\alpha} \frac{\partial^2 \mathscr{L}[u(x,\eta)]}{\partial x^2},
+\end{equation}
+звідки \%пропущене\_інтегральне\_рівняння\%, або
+\begin{equation}
+    \frac{\partial u}{\partial t} = K_\alpha D_0^{1 - \alpha} \frac{\partial^2 u}{\partial x^2},
+\end{equation}
+з початковою умовою $u(x, 0) = u_0(x)$, або ж
+\begin{equation}
+    {}^\star D_0^\alpha u = K_\alpha \frac{\partial^2 u}{\partial x^2},
+\end{equation}
+з початковою умовою $u(x, 0) = u_0(x)$.
+
+\begin{definition}
+    Останні три рівняння відомі під спільною назвою \textit{рівняння субдифузії}.
+\end{definition}
+
+\begin{remark}
+    Випадкове блукання з неперервним часом із $\psi(t) = \frac{1}{\tau} e^{-t/\tau}$ (показниковій розподіл) і $\lambda \sim N(0, 2 \sigma^2)$ призвело б до параболічного рівняння.
+\end{remark}
+
+\subsection{Аналіз рівняння}
+
+\begin{definition}
+    $\mathsf{E}[(x(t) - x(0))^2] = \langle (x(t) - x(0))^2 \rangle$ --- середньо-квадратичне зміщення (якщо $x(0) = 0$, то $\langle x(t)^2 \rangle$).
+\end{definition}
+
+\begin{lemma}
+    Якщо 
+    \begin{equation}
+        \psi(t) \sim \frac{\alpha}{\Gamma(1 - \alpha)} \frac{\tau^\alpha}{t^{1 + \alpha}}, \quad t \to + \infty,
+    \end{equation}
+    то
+    \begin{equation}
+        \langle n(t) \rangle \sim \frac{t^\alpha}{\tau^\alpha \Gamma(1 + \alpha)}.
+    \end{equation}
+\end{lemma}
+
+\begin{proof}
+    \begin{equation}
+        \begin{aligned}
+            \langle n(t) \rangle 
+            &= \sum_{k = 0}^\infty k \mathsf{P}\{n (t) = k\} = \\
+            &= \sum_{k = 0}^\infty k \left( \int_0^t \Big( \psi^{\star k}(s) - \psi^{\star (k + 1)}(s) \Big) \diff s \right).
+        \end{aligned}
+    \end{equation}
+
+    \begin{equation}
+        \begin{aligned}
+            \mathscr{L}[\langle n(\eta) \rangle] 
+            &= \sum_{k = 0}^\infty \frac{k}{\eta} \Big( \mathscr{L}[\psi]^k(\eta) - \mathscr{L}[\psi]^{k + 1}(\eta) \Big) = \\
+            &= \frac{1 - \mathscr{L}[\psi](\eta)}{\eta} \sum_{k = 0}^\infty k \mathscr{L}[\psi]^k(\eta) = \\
+            &= \frac{1 - \mathscr{L}[\psi](\eta)}{\eta} \sum_{k = 0}^\infty \frac{\mathscr{L}[\psi](\eta)}{\mathscr{L}[\psi]'(\eta)} \frac{\diff}{\diff \eta} \mathscr{L}[\psi]^k(\eta) = \\
+            &= \frac{1 - \mathscr{L}[\psi](\eta)}{\eta} \frac{\mathscr{L}[\psi](\eta)}{\mathscr{L}[\psi]'(\eta)} \frac{\diff}{\diff \eta} \sum_{k = 0}^\infty \mathscr{L}[\psi]^k(\eta) = \\
+            &= \frac{\mathscr{L}[\psi](\eta)}{\eta (1 - \mathscr{L}[\psi](\eta))}.
+        \end{aligned}
+    \end{equation}
+
+    Оскільки
+    \begin{equation}
+        \mathscr{L}[\psi](\eta) = 1 - \tau^\alpha \eta^\alpha + o(\eta^\alpha),
+    \end{equation}
+    то
+    \begin{equation}
+        \mathscr{L}[\langle n(\eta) \rangle] = \frac{1 - \tau^\alpha \eta^\alpha + o(\eta^\alpha)}{\eta (\tau^\alpha \eta^\alpha + o(\eta^\alpha))} \underset{n \to 0}{\sim} \frac{1}{\tau^\alpha \eta^{\alpha + 1}}.
+    \end{equation}
+
+    Застосовуємо зворотню теорему Таубера для $\beta = - \alpha$ отримуємо
+    \begin{equation}
+        \langle n(t) \rangle \sim \frac{t^\alpha}{\tau^\alpha \Gamma(1 + \alpha)}.
+    \end{equation}
+\end{proof}
+
+\begin{corollary}
+    Якщо $x(0) = 0$, то
+    \begin{equation}
+        \langle x(t)^2 \rangle = 2 \sigma^2 \langle n(t) \rangle \sim \frac{2 \sigma^2 t^\alpha}{\tau^\alpha \Gamma(1 + \alpha)} = \frac{2 K_\alpha t^\alpha}{\Gamma(1 + \alpha)}.
+    \end{equation}
+\end{corollary}
+
+\begin{definition}
+    Якщо у випадкового (дифузійного) процесу середньоквадратичне зміщення зростає повільніше ніж лінійна функція ($\langle x(t)^2 \rangle = o(t)$), то процес називається \textit{суб-дифузійним}.
+\end{definition}
+
+\begin{definition}
+    Якщо у випадкового (дифузійного) процесу середньоквадратичне зміщення зростає швидше ніж лінійна функція ($t = o(\langle x(t)^2 \rangle)$), то процес називається \textit{супер-дифузійним}.
+\end{definition}
+
+\begin{definition}
+    Якщо ж у випадкового (дифузійного) процесу середньоквадратичне зміщення зростає так само як ніж лінійна функція, то процес називається \textit{нормально-дифузійним}.
+\end{definition}
+
+\begin{remark}
+    $\langle (x(t))^2 \rangle$ --- середньоквадратичне зміщення, усереднене за сукупністю частинок (eng. \textit{ensemble-averaged}).
+\end{remark}
+
+Інший підхід --- усереднення за часом:
+\begin{equation}
+    \overline{d^2(t, T)} = \frac{1}{T - t} \int_0^{T - t} (x(s + t) - x(s))^2 \diff s,
+\end{equation}
+де $t$ --- часове вікно, $T$ --- загальна тривалість спостереження.

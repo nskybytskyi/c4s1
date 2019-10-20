@@ -1,0 +1,263 @@
+% intro + recap
+
+\subsection{Початкові значення}
+
+\subsubsection{Початкові значення інтегралу}
+
+Дослідимо, за яких умов початкове значення інтегралу ($(I_0^\alpha f)(t) = o(1)$) дорівнює нулю.
+
+\begin{theorem}
+    Нехай $\alpha > 0$, $p > 1 / \alpha$, $p \ge 1$, $f \in L_p((0, T))$. Тоді $(I_0^\alpha f) (t) = o(t^{\alpha - 1 / p})$ при $t \to 0$.
+\end{theorem}
+
+\begin{proof}
+    \begin{align*}
+        \left| (I_0^\alpha f) (t) \right| &= \frac{1}{\Gamma(\alpha)} \left| \int_0^t f(s) (t - s)^{\alpha - 1} \diff s \right| \le \\
+        &\le \frac{1}{\Gamma(\alpha)}  \int_0^t \left| f(s) (t - s)^{\alpha - 1} \diff s \right| \le \\
+        &\le \frac{1}{\Gamma(\alpha)} \left( \int_0^t |f(s)|^p \diff s \right)^{1/p} \left( \int_0^t (t - s)^{(\alpha - 1) q} \diff s \right)^{1/q} = \\
+        &= \frac{1}{\Gamma(\alpha)} \left( \int_0^t |f(s)|^p \diff s \right)^{1/p} \left( \frac{t^{(\alpha - 1) q + 1}}{(\alpha - 1) q + 1} \right)^{1 / q} = \\
+        &= \left( \int_0^t |f(s)|^p \diff s \right)^{1/p} \frac{t^{\alpha - 1 + 1 / q}}{c(\alpha, p)} = \\
+        &= \left( \int_0^t |f(s)|^p \diff s \right)^{1/p} \frac{t^{\alpha - 1 / p}}{c(\alpha, p)} = \\
+        &= o(t^{\alpha - 1 / p}),
+    \end{align*}
+    де останній перехід справджується адже $\int_0^t |f(s)|^p \diff s = o(1)$ при $t \to 0$
+\end{proof}
+
+\begin{remark}[абсолютна неперервність інтеграла Лебега]
+    Якщо $f \in L_1$ то
+    \begin{equation}
+        (\forall \epsilon > 0) \quad (\exists \delta(\epsilon) > 0) \quad (\forall A: \mu(A) < \delta(\epsilon)) \quad \int_A f \diff \mu \le \epsilon.
+    \end{equation}
+\end{remark}
+
+\begin{remark}[інтегральна нерівність Коші-Буняковського]
+    Якщо всі функції достатньо інтегровні (всі норми скінченні)
+    \begin{equation}
+        \|f \cdot g\|_{L_1} \le \|f\|_{L_2} \cdot \|g\|_{L_2}.  
+    \end{equation}
+\end{remark}
+
+\begin{remark}[інтегральна нерівність Гельдера]
+    Якщо всі функції достатньо інтегровні (всі норми скінченні)
+    \begin{equation}
+        \|f \cdot g\|_{L_1} \le \|f\|_{L_p} \cdot \|g\|_{L_q},  
+    \end{equation}
+    де $1 / p + 1 / q = 1$.
+\end{remark}
+
+\begin{remark}
+    Умова $p > 1 / \alpha$ необхідна для збіжності усіх інтегралів з доведення
+\end{remark}
+
+\begin{corollary}
+    При $\alpha > 1 / p$ маємо $(I_0^\alpha f)(t) = o(1)$, тобто $(I_0^\alpha f)(0) = 0$.
+\end{corollary}
+
+\begin{exercise}
+    Наведіть приклад $f$ для якої $(I_0^\alpha f)(0) \ne 0$ (але і не $\infty$).
+\end{exercise}
+\begin{solution}
+    \begin{example}
+        Розглянемо $f(x) = \frac{1}{\sqrt{x}}$ на $[0,1]$. Можна показати, що
+        \begin{equation}
+            \int_0^1 |f(x)| \diff x = 2,
+        \end{equation}
+        тому $f \in L_1((0,1))$. З іншого боку,
+        \begin{equation}
+            \int_0^1 |f(x)|^2 \diff x = \int_0^1 \frac{\diff x}{x} = \infty,
+        \end{equation}
+        тому $f \not\in L_2((0,1))$. Це означає, що $1 < p < 2$. Тоді нерівність $p > 1 / \alpha$ з умов теореми не буде виконуватися, для $\alpha \le \frac{1}{2}$. Зокрема, виникають певні сподівання на $\alpha = \frac{1}{2}$. Розглянемо $(I_0^{1/2}f)(t)$:
+        \begin{equation}
+            (I_0^{1/2}f)(t) = \frac{1}{\Gamma(1/2)} \int_0^t \frac{\diff s}{\sqrt{t - s} \sqrt{s}} = \frac{\pi}{\Gamma(1/2)} = \sqrt{\pi}.
+        \end{equation}
+        Як бачимо, отриманий вираз не просто не прямує до нуля при $t \to 0$, а взагалі не залежить від $t$, тобто наші сподівання не були марні і $(I_0^{1/2}f)(0) = \sqrt{\pi} \ne 0$ (але і не $\infty$).
+    \end{example}
+\end{solution}
+
+\subsubsection{Початкові значення похідних}
+
+\begin{theorem}
+    Нехай $\alpha > 0$, $\alpha \not\in \NN$, $n = \lceil \alpha \rceil$, $f \in C^{n - 1}([0, T])$, $p > \frac{1}{n - \alpha}$, $f^{(n)} \in L_p([0, T])$. Тоді $(D_0^\alpha) (0) = 0 \iff f^{(k)} (0) = 0$ при $k = \overline{0, n - 1}$.
+\end{theorem}
+
+\begin{proof}
+    За умов теореми
+    \begin{equation}
+        \label{eq:3-to-ref}
+        (D_0^\alpha f)(t) = \frac{1}{\Gamma(n - \alpha)} \int_0^t \frac{f^{(n)}(s)}{(t - s)^{\alpha - n + 1}} \diff s + \sum_{k = 0}^{n - 1} \frac{f^{(k)}(0) t^{k - \alpha}}{\Gamma(k - \alpha + 1)}.
+    \end{equation}
+
+    ($\Longleftarrow$) У формулі вище інтеграл дорівнює нулю за першою сьогоднішньою теоремою, а уся сумма зануляється за умовою теореми. \medskip
+
+    ($\Longrightarrow$) Домножатимемо \eqref{eq:3-to-ref} на $t^{\alpha - k}$ для $k = \overline{0, n - 1}$. Наприклад, для $k = 0$ матимемо
+    \begin{equation}
+        t^\alpha (D_0^\alpha f)(t) = t^\alpha ({}^\star D_0^\alpha f)(t) + \frac{f(0)}{\Gamma(1 - \alpha)} + \sum_{k = 1}^{n - 1} \frac{f^{(k)}(0) t^k}{\Gamma(k - \alpha + 1)}.
+    \end{equation}
+
+    Бачимо, що $t^\alpha ({}^\star D_0^\alpha f)(t) = o(1)$, всі доданки суми нескінченно малі, тому $f(0) = 0$. Далі за індукцією по $k$ отримуємо рівність нулеві усіх похідних до $(n-1)$-ої.
+\end{proof}
+
+\begin{remark}
+    При $0 < \alpha < 1$ маємо $(D_0^\alpha 1)(t) = \frac{1}{\Gamma(1 - \alpha) t^\alpha} \ne 0$.
+\end{remark}
+
+\begin{remark}
+    Але $({}^\star D_0^\alpha 1)(t) = 0$.
+\end{remark}
+
+\begin{theorem}
+    Нехай $\alpha > 0$, $n = \lceil \alpha \rceil$, $f \in C^n([0, T])$, тоді $D_0^\alpha f \equiv 0$ $\iff$ $f(t) = \sum_{k = 0}^{n - 1} c_k t^{\alpha - k - 1}$ --- дробовий многочлен.
+\end{theorem}
+\begin{proof}
+    $\left.\right.$
+    \begin{exercise}
+        ($\Longrightarrow$) За умов теореми 
+        \begin{equation}
+            0 = (I_0^\alpha 0)(t) = (I_0^\alpha D_0^\alpha f)(t) = f(t) - \sum_{k = 0}^{n - 1} (D_0^{\alpha - k  - 1} f)(0) \cdot \frac{t^{\alpha - k - 1}}{\Gamma(\alpha - k)},
+        \end{equation}
+        звідки
+        \begin{equation}
+            f(t) = \sum_{k = 0}^{n - 1} (D_0^{\alpha - k - 1} f)(0) \cdot \frac{t^{\alpha - k - 1}}{\Gamma(\alpha - k)},
+        \end{equation}
+        і, перепозначаючи $c_k = \frac{D_0^{\alpha - k - 1} f)(0)}{\Gamma(\alpha - k)}$, отримуємо якраз ту форму для $f$, яку хотіли.
+    \end{exercise}
+    
+    ($\Longleftarrow$) Нехай
+    \begin{equation}
+        f(t) = \sum_{k = 0}^{n - 1} c_k t^{\alpha - k - 1},
+    \end{equation}
+    тоді 
+    \begin{equation}
+        D_0^\alpha f = \frac{\diff^n}{\diff t^n} I_0^{n - \alpha} \left( \sum_{k = 0}^{n - 1} t^{\alpha - k - 1} \right) = \frac{\diff^n}{\diff t^n} \sum_{k = 0}^{n - 1} \frac{\Gamma(\alpha - k)}{\Gamma(n - k)} t^{n - k - 1} = 0.
+    \end{equation}
+\end{proof}
+
+\begin{theorem}[похідна добутку]
+    Нехай $f, g$ --- аналітичні в $(-h, h)$. Тоді для $t \in (0, h/2)$
+    \begin{equation}
+        D^\alpha (f \cdot g) (t) \sum_{k = 0}^\infty \binom{k}{\alpha} D_0^k f(t) \cdot D_0^{\alpha - k} f(t),
+    \end{equation}
+    де
+    \begin{equation}
+        \binom{k}{\alpha} = \frac{\Gamma(\alpha + 1)}{\Gamma(k + 1) \cdot \Gamma(\alpha - k - 1)}.
+    \end{equation}
+\end{theorem}
+
+\begin{theorem}[Тарасова]
+    Нехай $0 < \alpha < 1$, тоді $D^\alpha$ --- лінійний оператор, що задовольняє умову
+    \begin{equation}
+        D^\alpha(f \cdot g) = D^\alpha f \cdot g + f \cdot D^\alpha g.
+    \end{equation}
+    
+    Тоді $\exists p(t)$: $(D_0^\alpha f) (t) = p(t) \cdot \frac{\diff f}{\diff t}$.
+\end{theorem}
+
+\subsection{Перетворення Лапласа дробовах інтегралів і похідних}
+
+\begin{definition}
+    Нехай $f: \RR_+ \to \RR$, тоді 
+    \begin{equation}
+        \mathscr{L}[f](\eta) = \overline{f}(\eta) = \int_0^\infty e^{-\eta t} f(t) \diff t.
+    \end{equation}
+\end{definition}
+
+\begin{lemma}[перетворення Лапласа похідної]
+    \begin{equation}
+        \mathscr{L}[f'](\eta) = \eta \cdot \mathscr{L}[f](\eta) - f(0).
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    Інтегруємо частинами.
+\end{proof}
+
+\begin{lemma}[перетворення Лапласа згортки]
+    \begin{equation}
+        \mathscr{L}[f \star g](\eta) = \mathscr{L}[f](\eta) \cdot \mathscr{L}[g](\eta).
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    Змінюємо порядок інтегрування.
+\end{proof}
+
+\begin{lemma}[перетворення Лапласа степеневої функції]
+    \begin{equation}
+        \mathscr{L}[t^{-\beta}](\eta) = \Gamma(1 - \beta) \eta^{\beta - 1}.
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    За означенням
+    \begin{equation}
+        \mathscr{L}[t^{-\beta}](\eta) = \int_0^\infty e^{- \eta t} t^{-\beta}.
+    \end{equation}
+    Зробимо заміну змінних: $\eta t = \xi$, $\diff t = \diff \xi / \eta$. Тоді
+    \begin{equation}
+        \begin{aligned}
+            \int_0^\infty e^{- \eta t} t^{-\beta} &= \int_0^\infty e^{-\xi} \left(\frac{\xi}{\eta}\right)^{-\beta} \frac{1}{\eta} \diff \xi = \\
+            &= \eta^{\beta - 1} \int_0^\infty e^{-\xi} \xi^{-\beta} \diff \xi = \\
+            &= \eta^{\beta - 1} \Gamma(1 - \beta).
+        \end{aligned}
+    \end{equation}
+\end{proof}
+
+\begin{lemma}[перетворення Лапласа інтегралу дробового порядку]
+    \begin{equation}
+        \mathscr{L}[I_0^\alpha f](\eta) = \eta^{-\alpha} \mathscr{L}[f](\eta).
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    \begin{equation}
+        \begin{aligned}
+            \mathscr{L}[I_0^\alpha f](\eta) &= \mathscr{L}[f \star y_\alpha](\eta) = \\
+            &= \mathscr{L}[f](\eta) \cdot \mathscr{L}[y_\alpha](\eta) = \\
+            &= \mathscr{L}[f](\eta) \cdot \frac{1}{\Gamma(\alpha)} \Gamma(1 - (1 - \alpha)) \eta^{-\alpha} = \\
+            &= \eta^{-\alpha} \mathscr{L}[f](\eta).
+        \end{aligned}
+    \end{equation}
+\end{proof}
+
+\begin{lemma}[перетворення Лапласа похідної Рімана-Ліувіля]
+    \begin{equation}
+        \mathscr{L}[D_0^\alpha f](\eta) = \eta^{\alpha} \mathscr{L}[f](\eta) - \sum_{k = 0}^{n - 1} (D_0^{\alpha - k - 1} f) (0) \eta^k.
+    \end{equation}
+\end{lemma}
+\begin{example}
+    Зокрема, при $0 < \alpha < 1$ маємо
+    \begin{equation}
+        \mathscr{L}[D_0^\alpha f](\eta) = \eta^{\alpha} \mathscr{L}[f](\eta) - (I_0^{\alpha - 1} f) (0).
+    \end{equation}
+\end{example}
+\begin{proof}
+    \begin{equation}
+        \begin{aligned}
+            \mathscr{L}[D_0^\alpha f](\eta) &= \mathscr{L} \left[\frac{\diff}{\diff t} I_0^{1 - \alpha} f \right](\eta) = \\
+            &= \eta \cdot \mathscr{L} [I_0^{1 - \alpha} f](\eta) - (I_0^{1 - \alpha} f)(0) = \\
+            &= \eta \cdot \eta^{\alpha - 1} \cdot \mathscr{L} [f](\eta) - (I_0^{1 - \alpha} f)(0) = \\
+            &= \eta^\alpha \cdot \mathscr{L} [f](\eta) - (I_0^{1 - \alpha} f)(0).
+        \end{aligned}
+    \end{equation}
+\end{proof}
+
+\begin{lemma}[перетворення Лапласа похідної Катупо]
+    \begin{equation}
+        \mathscr{L}\Big[{}^\star D_0^\alpha f\Big](\eta) = \eta^{\alpha} \cdot \mathscr{L}[f](\eta) - \sum_{k = 0}^{n - 1} f^{(k)}(0) \eta^{\alpha - k - 1}.
+    \end{equation}
+\end{lemma}
+\begin{example}
+    Зокрема, при $0 < \alpha < 1$ маємо
+    \begin{equation}
+        \mathscr{L}\Big[{}^\star D_0^\alpha f\Big](\eta) = \eta^{\alpha} \cdot \mathscr{L}[f](\eta) - \eta^{\alpha - 1} \cdot f(0).
+    \end{equation}
+\end{example}
+\begin{exercise}
+    Довести.
+\end{exercise}
+\begin{proof}
+    \begin{equation}
+        \begin{aligned}
+            \mathscr{L}\Big[{}^\star D_0^\alpha f\Big](\eta) &= \mathscr{L} \left[I_0^{1 - \alpha} \frac{\diff f}{\diff t} \right](\eta) = \\
+            &= \eta^{\alpha - 1} \cdot \mathscr{L} \left[\frac{\diff f}{\diff t} \right](\eta) = \\
+            &= \eta^{\alpha - 1} \cdot \Big(\eta \cdot \mathscr{L}[f](\eta) - f(0) \Big) = \\
+            &= \eta^{\alpha} \cdot \mathscr{L}[f](\eta) - \eta^{\alpha - 1} \cdot f(0).
+        \end{aligned}
+    \end{equation}
+\end{proof}
