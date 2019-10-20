@@ -58,6 +58,6 @@
 
 4. Diethelm&nbsp;K., The Analysis of Fractional Differential Equations. &mdash; Springer, 2010. <a class="badge badge-success" href="books/Diethelm%20-%20The%20Analysis%20of%20Fractional%20Differential%20Equations.pdf">Get pdf</a>
 
-5. Чикрий&nbsp;А.А., Матичин&nbsp;И.И. Представление решений линейных систем с дробными производными Римана-Лиувилля, Капуто и Миллера-Росса // Проблемы управления и информатики. &mdash; 2008, &mdash; №3. &mdash; С.&nbsp;133&ndash;142. <span class="badge badge-warning">No pdf :cry:</span>
+5. Чикрий&nbsp;А.А., Матичин&nbsp;И.И. Представление решений линейных систем с дробными производными Римана-Лиувилля, Капуто и Миллера-Росса // Проблемы управления и информатики. &mdash; 2008, &mdash; №3. &mdash; С.&nbsp;133&ndash;142. <span class="badge badge-warning">No pdf 😢</span>
 
 6. W.&nbsp;Feller, An Introduction to Probability Theory and Its Applications, Volume&nbsp;2. &mdash; New York: Wiley, 1971. <a class="badge badge-success" href="books/Feller%20-%20An%20Introduction%20to%20Probability%20Theory%20and%20Its%20Applications,%20Volume%202.djvu">Get djvu</a> <span class="badge badge-danger">Heavy [10&nbsp;Mb]</span>
