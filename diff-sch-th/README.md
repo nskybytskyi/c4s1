@@ -3,7 +3,8 @@
 <!-- MarkdownTOC -->
 
 - [Логістика](#%D0%9B%D0%BE%D0%B3%D1%96%D1%81%D1%82%D0%B8%D0%BA%D0%B0)
-    - [Матеріали](#%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8)
+- [Матеріали](#%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8)
+    - [Лекції](#%D0%9B%D0%B5%D0%BA%D1%86%D1%96%D1%97)
     - [Література](#%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0)
 
 <!-- /MarkdownTOC -->
@@ -18,19 +19,24 @@
 - Курс закінчуєтся екзаменом, який пройде TBA о TBA, в ауд. TBA. 
 
 <a id="%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8"></a>
-### Матеріали
+## Матеріали
 
-Всі лекції: <a class="badge badge-success" href="Оноцький,%20всі%20лекції.pdf">Get pdf</a>
+<a id="%D0%9B%D0%B5%D0%BA%D1%86%D1%96%D1%97"></a>
+### Лекції
 
-Лекція 19 вересня: <a class="badge badge-success" href="Оноцький,%20лекція%2019.09.pdf">Get pdf</a>
+Всі лекції: <a class="badge badge-success" href="lectures/Оноцький,%20всі%20лекції.pdf">Get pdf</a> 
 
-Лекція 26 вересня: <a class="badge badge-success" href="Оноцький,%20лекція%2026.09.pdf">Get pdf</a>
+Лекція 19 вересня: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2019.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a> 
 
-Лекція 3 жовтня: <a class="badge badge-success" href="Оноцький,%20лекція%203.10.pdf">Get pdf</a>
+Лекція 26 вересня: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2026.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a> 
 
-Лекція 10 жовтня: <a class="badge badge-success" href="Оноцький,%20лекція%2010.10.pdf">Get pdf</a>
+Лекція 3 жовтня: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%203.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/03.tex">Get LaTeX source</a> 
 
-Лекція 17 жовтня: <span class="badge badge-warning">No file :cry:</span>
+Лекція 10 жовтня: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2010.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a> 
+
+Лекція 17 жовтня: <span class="badge badge-warning">No file :cry:</span> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a> 
+
+_Note_: if you want to change many LaTeX sources then you will probably need the whole source archive. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a> 
 
 <a id="%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0"></a>
 ### Література
