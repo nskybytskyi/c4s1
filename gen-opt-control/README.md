@@ -50,14 +50,14 @@
 <a id="%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0"></a>
 ### Література
 
-1. Самко&nbsp;С.Г., Килбас&nbsp;А.А., Маричев&nbsp;О.И. Интегралы и производные дробного порядка и некоторые их приложения. &mdash; Минск: Наука и техника, 1987. <a class="badge badge-success" href="#">Get pdf</a>
+1. Самко&nbsp;С.Г., Килбас&nbsp;А.А., Маричев&nbsp;О.И. Интегралы и производные дробного порядка и некоторые их приложения. &mdash; Минск: Наука и техника, 1987. <a class="badge badge-success" href="books/Самко,%20Килбас,%2Маричев%2-%2Интегралы%2и%2производные%2дробного%2порядка.djvu">Get djvu</a> <span class="badge badge-danger">Heavy [18&nbsp;Mb]</span>
 
-2. Kilbas&nbsp;A.A., Srivastava&nbsp;H.M.,Trujillo&nbsp;J.M. Theory and Applications of Fractional Differential Equations. &mdash; Amsterdam: Elsevier, 2006. <a class="badge badge-success" href="#">Get pdf</a>
+2. Kilbas&nbsp;A.A., Srivastava&nbsp;H.M.,Trujillo&nbsp;J.M. Theory and Applications of Fractional Differential Equations. &mdash; Amsterdam: Elsevier, 2006. <a class="badge badge-success" href="books/Kilbas,%20Srivastava,%20Trujillo%20-%20Theory%20and%20Applications%20of%20Fractional%20Differential%20Equations.djvu">Get djvu</a>
 
-3. Podlubny&nbsp;I., Fractional Differential Equations. &mdash; San Diego: Academic Press, 1999. <a class="badge badge-success" href="#">Get pdf</a>
+3. Podlubny&nbsp;I., Fractional Differential Equations. &mdash; San Diego: Academic Press, 1999. <a class="badge badge-success" href="books/Podlubny%20-%20Fractional%20Differential%20Equations.djvu">Get djvu</a>
 
-4. Diethelm&nbsp;K., The Analysis of Fractional Differential Equations. &mdash; Springer, 2010. <a class="badge badge-success" href="#">Get pdf</a>
+4. Diethelm&nbsp;K., The Analysis of Fractional Differential Equations. &mdash; Springer, 2010. <a class="badge badge-success" href="books/Diethelm%20-%20The%20Analysis%20of%20Fractional%20Differential%20Equations.pdf">Get pdf</a>
 
-5. Чикрий&nbsp;А.А., Матичин&nbsp;И.И. Представление решений линейных систем с дробными производными Римана-Лиувилля, Капуто и Миллера-Росса // Проблемы управления и информатики. &mdash; 2008, &mdash; №3. &mdash; С.&nbsp;133&ndash;142. <a class="badge badge-success" href="#">Get pdf</a>
+5. Чикрий&nbsp;А.А., Матичин&nbsp;И.И. Представление решений линейных систем с дробными производными Римана-Лиувилля, Капуто и Миллера-Росса // Проблемы управления и информатики. &mdash; 2008, &mdash; №3. &mdash; С.&nbsp;133&ndash;142. <span class="badge badge-warning">No pdf :cry:</span>
 
-6. W.&nbsp;Feller An introduction to probability theory and its applications, Volume&nbsp;2. &mdash; New York: Wiley, 1971. <a class="badge badge-success" href="#">Get pdf</a>
+6. W.&nbsp;Feller, An Introduction to Probability Theory and Its Applications, Volume&nbsp;2. &mdash; New York: Wiley, 1971. <a class="badge badge-success" href="books/Feller%20-%20An%20Introduction%20to%20Probability%20Theory%20and%20Its%20Applications,%20Volume%202.djvu">Get djvu</a> <span class="badge badge-danger">Heavy [10&nbsp;Mb]</span>
