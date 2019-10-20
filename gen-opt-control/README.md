@@ -21,14 +21,6 @@
 
 - Чат в [![](/c4s1/assets/t.me) Telegram](https://t.me/joinchat/FysbWhbQTRFtsnEFSuZKZA)
 
-Перший <span class="badge badge-danger">колоквіум</span> пройде у:
-
-- вівторок **22 жовтня** на четвертій парі (перша підгрупа);
-
-- середу **23 жовтня** на четвертій парі (друга підгрупа).
-
-Аудиторії уточнюються.
-
 <a id="%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8"></a>
 ## Матеріали
 
@@ -51,6 +43,14 @@ _Note_&thinsp;: you will probably need the whole source archive if you want to c
 
 <a id="%D0%9A%D0%BE%D0%BB%D0%BE%D0%BA%D0%B2%D1%96%D1%83%D0%BC%D0%B8"></a>
 ### Колоквіуми
+
+Перший <span class="badge badge-danger">колоквіум</span> пройде у:
+
+- вівторок **22 жовтня** на четвертій парі (перша підгрупа);
+
+- середу **23 жовтня** на четвертій парі (друга підгрупа).
+
+Аудиторії уточнюються.
 
 Питання на перший колоквіум: <a class="badge badge-success" href="Гуляницький,%20питання%20на%20перший%20колоквіум.pdf">Get pdf</a>
 
