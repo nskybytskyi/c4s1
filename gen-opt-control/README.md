@@ -5,7 +5,6 @@
 - [Логістика](#%D0%9B%D0%BE%D0%B3%D1%96%D1%81%D1%82%D0%B8%D0%BA%D0%B0)
 - [Матеріали](#%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8)
     - [Лекції](#%D0%9B%D0%B5%D0%BA%D1%86%D1%96%D1%97)
-    - [Колоквіуми](#%D0%9A%D0%BE%D0%BB%D0%BE%D0%BA%D0%B2%D1%96%D1%83%D0%BC%D0%B8)
     - [Література](#%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0)
 
 <!-- /MarkdownTOC -->
@@ -42,9 +41,9 @@
 _Note_&thinsp;: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a> 
 
 <a id="%D0%9A%D0%BE%D0%BB%D0%BE%D0%BA%D0%B2%D1%96%D1%83%D0%BC%D0%B8"></a>
-### Колоквіуми
+<h3 class="text-danger">Колоквіуми</h3>
 
-Перший <span class="badge badge-danger">колоквіум</span> пройде у:
+Перший колоквіум пройде у:
 
 - вівторок **22 жовтня** на четвертій парі (перша підгрупа);
 
