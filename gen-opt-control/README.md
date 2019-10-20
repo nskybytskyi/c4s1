@@ -3,7 +3,8 @@
 <!-- MarkdownTOC -->
 
 - [Логістика](#%D0%9B%D0%BE%D0%B3%D1%96%D1%81%D1%82%D0%B8%D0%BA%D0%B0)
-    - [Матеріали](#%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8)
+- [Матеріали](#%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8)
+    - [Лекції](#%D0%9B%D0%B5%D0%BA%D1%86%D1%96%D1%97)
     - [Колоквіуми](#%D0%9A%D0%BE%D0%BB%D0%BE%D0%BA%D0%B2%D1%96%D1%83%D0%BC%D0%B8)
     - [Література](#%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0)
 
@@ -27,7 +28,10 @@
 Аудиторії уточнюються.
 
 <a id="%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D0%B8"></a>
-### Матеріали
+## Матеріали
+
+<a id="%D0%9B%D0%B5%D0%BA%D1%86%D1%96%D1%97"></a>
+### Лекції
 
 Всі лекції: <a class="badge badge-success" href="lectures/Гуляницький,%20всі%20лекції.pdf">Get pdf</a>
 
@@ -46,7 +50,7 @@ _Note_&thinsp;: you will probably need the whole source archive if you want to c
 <a id="%D0%9A%D0%BE%D0%BB%D0%BE%D0%BA%D0%B2%D1%96%D1%83%D0%BC%D0%B8"></a>
 ### Колоквіуми
 
-Питання на колоквіум: <a class="badge badge-success" href="Гуляницький,%20питання%20на%20перший%20колоквіум.pdf">Get pdf</a>
+Питання на перший колоквіум: <a class="badge badge-success" href="Гуляницький,%20питання%20на%20перший%20колоквіум.pdf">Get pdf</a>
 
 <a id=""></a>
 <a id="%D0%9B%D1%96%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0"></a>
