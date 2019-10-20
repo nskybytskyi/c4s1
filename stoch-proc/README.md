@@ -44,16 +44,16 @@
 <a id="%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B0"></a>
 #### Основна (рекомендована)
 
-- Оксендаль Б. &mdash; _Стохастические дифференциальные уравнения_&thinsp;. Мир, 2003&nbsp;г., 410&nbsp;с.: [djvu](Оксендаль-Б.-Стохастические-дифференциальные-уравнения-Мир-2003.djvu)
-- Ламперти, Джон &mdash; _Случайные процессы_&thinsp;. Вища школа, 1983&nbsp;г., 227&nbsp;с.: [djvu](Ламперти,-Джон-Случайные-процессы.-Обзор-математической-теории-Вища-школа-1983.djvu)
-- Булинский А.В., Ширяев А.Н. &mdash; _Теория случайных процессов_&thinsp;. Физматлит, 2005&nbsp;г., 402&nbsp;с.: [pdf](Булинский-А.В.,-Ширяев-А.Н.-Теория-случайных-процессов-Физматлит-2005.pdf)
+- Оксендаль&nbsp;Б. &mdash; _Стохастические дифференциальные уравнения_&thinsp;. Мир, 2003&nbsp;г., 410&nbsp;с.: <a class="badge badge-success" href="books/Оксендаль-Б.-Стохастические-дифференциальные-уравнения-Мир-2003.djvu">Get djvu</a>
+- Ламперти, Джон &mdash; _Случайные процессы_&thinsp;. Вища школа, 1983&nbsp;г., 227&nbsp;с.: <a class="badge badge-success" href="books/Ламперти,-Джон-Случайные-процессы.-Обзор-математической-теории-Вища-школа-1983.djvu">Get djvu</a>
+- Булинский&nbsp;А.В., Ширяев&nbsp;А.Н. &mdash; _Теория случайных процессов_&thinsp;. Физматлит, 2005&nbsp;г., 402&nbsp;с.: <a class="badge badge-success" href="books/Булинский-А.В.,-Ширяев-А.Н.-Теория-случайных-процессов-Физматлит-2005.pdf">Get pdf</a>
 
 <a id="%D0%94%D0%BE%D0%B4%D0%B0%D1%82%D0%BA%D0%BE%D0%B2%D0%B0-%D0%B7%D0%B0-%D0%B1%D0%B0%D0%B6%D0%B0%D0%BD%D0%BD%D1%8F%D0%BC"></a>
 #### Додаткова (за бажанням)
 
-- Гихман И.И., Скороход А.В. &mdash; _Введение в теорию случайных процессов_&thinsp;. Физматлит, 1977&nbsp;г., 570&nbsp;с.: [pdf](Гихман-И.И.,-Скороход-А.В.-Введение-теорию-случайных-процессов-Физматлит-1977.pdf)
-- Скороход А.В. &mdash; _Лекції з теорії випадкових процесів_&thinsp;. Либідь, 1990&nbsp;г., 168&nbsp;с.: [pdf](Скороход-А.В.-Лекції-з-теорії-випадкових-процесів-Либідь-1990.pdf)
-- Розанов Ю.А. &mdash; _Случайные процессы_&thinsp;. Наука, 1979&nbsp;г., 185&nbsp;с.: [djvu](Розанов-Ю.А.-Случайные-процессы-Наука-1979.djvu)
+- Гихман&nbsp;И.И., Скороход&nbsp;А.В. &mdash; _Введение в теорию случайных процессов_&thinsp;. Физматлит, 1977&nbsp;г., 570&nbsp;с.: <a class="badge badge-success" href="books/Гихман-И.И.,-Скороход-А.В.-Введение-теорию-случайных-процессов-Физматлит-1977.pdf">Get pdf</a>
+- Скороход&nbsp;А.В. &mdash; _Лекції з теорії випадкових процесів_&thinsp;. Либідь, 1990&nbsp;г., 168&nbsp;с.: <a class="badge badge-success" href="books/Скороход-А.В.-Лекції-з-теорії-випадкових-процесів-Либідь-1990.pdf">Get pdf</a>
+- Розанов&nbsp;Ю.А. &mdash; _Случайные процессы_&thinsp;. Наука, 1979&nbsp;г., 185&nbsp;с.: <a class="badge badge-success" href="books/Розанов-Ю.А.-Случайные-процессы-Наука-1979.djvu">Get djvu</a>
 
 <a id="%D0%97%D0%BE%D0%B2%D0%BD%D1%96%D1%88%D0%BD%D1%96-%D0%BA%D1%83%D1%80%D1%81%D0%B8"></a>
 ### Зовнішні курси
@@ -77,23 +77,23 @@ Some newer lectures also available via the following [link](https://web.ma.utexa
 <a id="%D0%9C%D0%A4%D0%A2%D0%98"></a>
 #### МФТИ
 
-Домашняя страницу курса на лектории: [link](https://lectoriy.mipt.ru/course/Maths-StochasticProcesses-15L)
+Домашняя страница курса на лектории: [link](https://lectoriy.mipt.ru/course/Maths-StochasticProcesses-15L)
 
 15 лекций.
 
 <a id="%D0%9D%D0%98%D0%A3-%D0%92%D0%A8%D0%AD"></a>
 #### НИУ ВШЭ
 
-Ссылка на домашнюю страницу курса на курсере: [link](https://www.coursera.org/learn/stochasticprocesses/home/welcome)
+Домашняя страница курса на курсере: [link](https://www.coursera.org/learn/stochasticprocesses/home/welcome)
 
 8 лекций, 8 домашних заданий, онлайн экзамен.
 
 Здесь будут мои решения задач (единственное, чего нет в бесплатной версии курса):
 
-1. Introduction &amp; Renewal theory: [pdf](hse/1_sol.pdf)
+1. Introduction &amp; Renewal theory:  <a class="badge badge-success" href="hse/1_sol.pdf">Get pdf</a>
 
-2. Poisson processes &amp; Queueing theory: [pdf](hse/2_sol.pdf)
+2. Poisson processes &amp; Queueing theory: <a class="badge badge-success" href="hse/2_sol.pdf">Get pdf</a>
 
-3. Markov Chains: [pdf](hse/3_sol.pdf)
+3. Markov Chains: <a class="badge badge-success" href="hse/3_sol.pdf">Get pdf</a>
 
-4. Gaussian processes: [pdf](hse/4_sol.pdf)
+4. Gaussian processes: <a class="badge badge-success" href="hse/4_sol.pdf">Get pdf</a>
