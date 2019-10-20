@@ -18,7 +18,7 @@
 
 - Курс закінчуєтся екзаменом, який пройде TBA о TBA, в ауд. TBA. 
 
-Перший <span style="color: red">колоквіум</span> пройде у:
+Перший <span class="badge badge-secondary text-danger">колоквіум</span> пройде у:
 
 - вівторок 22 жовтня на четвертій парі (перша підгрупа);
 
@@ -58,6 +58,6 @@
 
 4. Diethelm&nbsp;K., The Analysis of Fractional Differential Equations. &mdash; Springer, 2010.
 
-5. Чикрий&nbsp;А.А., Матичин&nbsp;И.И. Представление решений линейных систем с дробными производными Римана_лиувилля, Капуто и Миллера-Росса // Проблемы управления и информатики. &mdash; 2008, &mdash; №3. &mdash; С.&nbsp;133&ndash;142.
+5. Чикрий&nbsp;А.А., Матичин&nbsp;И.И. Представление решений линейных систем с дробными производными Римана-Лиувилля, Капуто и Миллера-Росса // Проблемы управления и информатики. &mdash; 2008, &mdash; №3. &mdash; С.&nbsp;133&ndash;142.
 
 6. W.&nbsp;Feller An introduction to probability theory and its applications, Volume&nbsp;2. &mdash; New York: Wiley, 1971.
