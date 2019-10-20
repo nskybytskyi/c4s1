@@ -8,7 +8,7 @@
 
 - Курс закінчуєтся екзаменом, який пройде TBA о TBA, в ауд. TBA. 
 
-- Чат в <a class="badge badge-info" href="https://t.me/joinchat/FysbWhbQTRFtsnEFSuZKZA"><img src="/c4s1/assets/t.me" alt="Telegram icon"> Telegram</a>
+- Чат в <a class="badge badge-primary" href="https://t.me/joinchat/FysbWhbQTRFtsnEFSuZKZA"><img src="/c4s1/assets/t.me" alt="Telegram icon"> Telegram</a>
 
 <h3 class="text-primary">Лекції</h3>
 
