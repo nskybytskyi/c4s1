@@ -20,6 +20,6 @@
         Нестеров&nbsp;Ю.Е. <i>Введение в выпуклую оптимизацию</i>. <a class="badge badge-success" href="books/Нестеров_Ю_Е_Введение_в_выпуклую.djvu">Get djvu</a>
     </p>
     <p>
-    Поляк&nbsp;Б.Т. <i>Введение в оптимизацию</i>. <a class="badge badge-success" href="books/Поляк_Б_Т_Введение_в_оптимизацию.djvu">Get djvu</a>
+        Поляк&nbsp;Б.Т. <i>Введение в оптимизацию</i>. <a class="badge badge-success" href="books/Поляк_Б_Т_Введение_в_оптимизацию.djvu">Get djvu</a>
     </p>
 </div>
