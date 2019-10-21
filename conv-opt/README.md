@@ -1,6 +1,6 @@
 <span class="text-muted">Це сторінка курсу &laquo;Методи інтегральних рівнянь&raquo;, який насправді є курсом &laquo;Опукла оптимізація&raquo;. Курс читається у першому семестрі четвертого курсу спеціальності &laquo;Прикладна математика&raquo; факультету комп'ютерних наук та кібернетики київського національного університету імені Тараса Шевченка.</span>
 
-<div class="mt-2 mb-4 pl-2 pr-2 pb-3 pt-3 border rounded" style="border-radius: 1rem;">
+<div class="mt-2 mb-4 pl-2 pr-2 pb-3 pt-3 border rounded bg-white" style="border-radius: 1rem;">
     <h3 class="text-primary">Логістика</h3>
     <p>
         Викладач &mdash; Семенов Володимир Вікторович.
@@ -14,7 +14,7 @@
     <!-- - Чат в <a class="badge badge-primary" href="https://t.me/joinchat/FysbWhbQTRFtsnEFSuZKZA"><img src="/c4s1/assets/t.me" alt="Telegram icon"> Telegram</a> -->
 </div>
 
-<div class="mt-2 mb-4 pl-2 pr-2 pb-3 pt-3 border rounded" style="border-radius: 1rem;">
+<div class="mt-2 mb-4 pl-2 pr-2 pb-3 pt-3 border rounded bg-white" style="border-radius: 1rem;">
     <h3 class="text-primary">Література</h3>
     <p>
         Нестеров&nbsp;Ю.Е. _Введение в выпуклую оптимизацию_: <a class="badge badge-success" href="books/Нестеров_Ю_Е_Введение_в_выпуклую.djvu">Get djvu</a>
