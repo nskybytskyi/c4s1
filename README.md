@@ -64,7 +64,7 @@
 
 <h4 class="text-primary">Кафедра &laquo;Обчислювальної математики&raquo;</h4>
 
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped table-bordered">
     <thead class="thead-dark">
         <tr>
             <th scope="col">Дисципліна</th>
@@ -117,8 +117,8 @@
             <td>екзамен</td>
         </tr>
         <tr scope="row">
-            <td>Узагальнене оптимальне керування</td>
-            <td>Випадкові процеси&nbsp;М.М.</td>
+            <td>Випадкові процеси</td>
+            <td>Савчук&nbsp;М.М.</td>
             <td>TBA</td>
             <td>TBA</td>
             <td>TBA</td>
@@ -129,7 +129,7 @@
 
 <h4 class="text-primary">Кафедра &laquo;Дослідження операцій&raquo;</h4>
 
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped table-bordered">
     <thead class="thead-dark">
         <tr>
             <th scope="col">Дисципліна</th>
@@ -182,8 +182,8 @@
             <td>екзамен</td>
         </tr>
         <tr scope="row">
-            <td>Узагальнене оптимальне керування</td>
-            <td>Випадкові процеси&nbsp;М.М.</td>
+            <td>Випадкові процеси</td>
+            <td>Савчук&nbsp;М.М.</td>
             <td>TBA</td>
             <td>TBA</td>
             <td>TBA</td>
@@ -194,7 +194,7 @@
 
 <h4 class="text-primary">Кафедра &laquo;Моделювання складних систем&raquo;</h4>
 
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped table-bordered">
     <thead class="thead-dark">
         <tr>
             <th scope="col">Дисципліна</th>
@@ -247,8 +247,8 @@
             <td>екзамен</td>
         </tr>
         <tr scope="row">
-            <td>Узагальнене оптимальне керування</td>
-            <td>Випадкові процеси&nbsp;М.М.</td>
+            <td>Випадкові процеси</td>
+            <td>Савчук&nbsp;М.М.</td>
             <td>TBA</td>
             <td>TBA</td>
             <td>TBA</td>
