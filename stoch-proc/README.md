@@ -54,14 +54,14 @@
     </p>
     <h4 class="text-primary">МФТИ</h4>
     <p>
-        Домашняя страница курса на лектории: <a href="(https://lectoriy.mipt.ru/course/Maths-StochasticProcesses-15L">link</a>
+        Домашняя страница курса на лектории: <a href="https://lectoriy.mipt.ru/course/Maths-StochasticProcesses-15L">link</a>
     </p>
     <p>
         <i class="text-muted">15 лекций.</i>
     </p>
     <h4 class="text-primary">НИУ ВШЭ</h4>
     <p>
-        Домашняя страница курса на курсере: [link](https://www.coursera.org/learn/stochasticprocesses/home/welcome)
+        Домашняя страница курса на курсере: <a href="https://www.coursera.org/learn/stochasticprocesses/home/welcome">link</a>
     </p>
     <p>
         <i class="text-muted">8 лекций, 8 домашних заданий, онлайн экзамен.</i>
@@ -69,10 +69,10 @@
     <p>
         Здесь будут мои решения задач (единственное, чего нет в бесплатной версии курса):
         <ol>
-            <li>Introduction &amp; Renewal theory:  <a class="badge badge-success" href="hse/1_sol.pdf">Get pdf</a></li>
-            <li>Poisson processes &amp; Queueing theory: <a class="badge badge-success" href="hse/2_sol.pdf">Get pdf</a></li>
-            <li>Markov Chains: <a class="badge badge-success" href="hse/3_sol.pdf">Get pdf</a></li>
-            <li>Gaussian processes: <a class="badge badge-success" href="hse/4_sol.pdf">Get pdf</a></li>
+            <li>Introduction &amp; Renewal theory. <a class="badge badge-success" href="hse/1_sol.pdf">Get pdf</a></li>
+            <li>Poisson processes &amp; Queueing theory. <a class="badge badge-success" href="hse/2_sol.pdf">Get pdf</a></li>
+            <li>Markov Chains. <a class="badge badge-success" href="hse/3_sol.pdf">Get pdf</a></li>
+            <li>Gaussian processes. <a class="badge badge-success" href="hse/4_sol.pdf">Get pdf</a></li>
         </ol>
     </p>
 </div>

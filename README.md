@@ -3,7 +3,9 @@
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
     <h2 class="text-primary">Власне курси</h2>
     <h3 class="text-primary">Нормативні курси</h3>
-    <i class="text-muted">Нормативні курси спільні для усіх кафедр однієї спеціальності.</i>
+    <p>
+        <i class="text-muted">Нормативні курси спільні для усіх кафедр однієї спеціальності.</i>
+    </p>
     <p>
         <a href="/c4s1/nm-mph/">Чисельні методи математичної фізики</a>
     </p>
@@ -14,7 +16,9 @@
         <a href="/c4s1/stoch-proc/">Випадкові процеси</a>
     </p>
     <h3 class="text-primary">Спеціальні курси</h3>
-    <i class="text-muted">Спеціальні курси у кожної кафедри свої.</i>
+    <p>
+        <i class="text-muted">Спеціальні курси у кожної кафедри свої.</i>
+    </p>
     <h4 class="text-primary">Кафедра &laquo;Обчислювальної математики&raquo;</h4>
     <p>
         <a href="/c4s1/four-ser/">Теорія рядів Фур'є</a>
@@ -27,6 +31,7 @@
     </p>
     <p>
         <a href="/c4s1/gen-opt-control/">Узагальнене оптимальне керування</a>
+    </p>
     <h4 class="text-primary">Кафедра &laquo;Дослідження операцій&raquo;</h4>
     <p>
         Додаткові розділи теорії випадкових процесів
