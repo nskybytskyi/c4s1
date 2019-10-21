@@ -76,7 +76,7 @@
     <p>
         <a href="https://mytimetable.live/schedule/MSS-4">Кафедра &laquo;Моделювання складних систем&raquo;</a>
     </p>
-    <h3 class="text-primary">Графік сесії</h3>
+    <!-- <h3 class="text-primary">Графік сесії</h3>
     <h4 class="text-primary">Кафедра &laquo;Обчислювальної математики&raquo;</h4>
     <table class="table table-sm table-striped table-bordered">
         <thead class="thead-dark">
@@ -265,5 +265,5 @@
                 <td>залік</td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
 </div>
