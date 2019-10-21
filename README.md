@@ -64,33 +64,195 @@
 
 <h4 class="text-primary">Кафедра &laquo;Обчислювальної математики&raquo;</h4>
 
-Дисципліна | Викладач | Дата | Год. | Ауд. | Контроль
----------- | -------- | ---- | ---- | ---- | --------
-Методи інтегральних рівнянь | Семенов&nbsp;В.В. | TBA | TBA | TBA | залік
-Теорія різницевих схем | Молодцов&nbsp;О.І., Оноцький&nbsp;В.В. | TBA | TBA | TBA | екзамен
-Узагальнене оптимальне керування | Гуляницький&nbsp;А.Л., Гончаренко&nbsp;Ю.В. | TBA | TBA | TBA | екзамен
-Чисельні методи математичної фізики | Риженко&nbsp;А.І., Кузьмін&nbsp;А.В. | TBA | TBA | TBA | екзамен
-Математичне моделювання | Стоян&nbsp;В.А. | TBA | TBA | TBA | екзамен
-Випадкові процеси | Савчук&nbsp;М.М. | TBA | TBA | TBA | залік
+<table class="table table-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Дисципліна</th>
+            <th scope="col">Викладач</th>
+            <th scope="col">Дата</th>
+            <th scope="col">Год.</th>
+            <th scope="col">Ауд.</th>
+            <th scope="col">Контроль</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr scope="row">
+            <td>Методи інтегральних рівнянь</td>
+            <td>Семенов&nbsp;В.В.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>залік</td>
+        </tr>
+        <tr scope="row">
+            <td>Теорія різницевих схем</td>
+            <td>Молодцов&nbsp;О.І., Оноцький&nbsp;В.В.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Узагальнене оптимальне керування</td>
+            <td>Гуляницький&nbsp;А.Л., Гончаренко&nbsp;Ю.В.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Чисельні методи математичної фізики</td>
+            <td>Риженко&nbsp;А.І., Кузьмін&nbsp;А.В.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Математичне моделювання</td>
+            <td>Стоян&nbsp;В.А.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Узагальнене оптимальне керування</td>
+            <td>Випадкові процеси&nbsp;М.М.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>залік</td>
+        </tr>
+    </tbody>
+</table>
 
 <h4 class="text-primary">Кафедра &laquo;Дослідження операцій&raquo;</h4>
 
-Дисципліна | Викладач | Дата | Год. | Ауд. | Контроль
----------- | -------- | ---- | ---- | ---- | --------
-Додаткові розділи теорії випадкових процесів | IDK | TBA | TBA | TBA | IDK
-Застосування теорії ймовірностей у прикладній математиці | IDK | TBA | TBA | TBA | IDK
-Стохастичні моделі прикладної математики | IDK | TBA | TBA | TBA | IDK
-Чисельні методи математичної фізики | Риженко&nbsp;А.І. | TBA | TBA | TBA | екзамен
-Математичне моделювання | Стоян&nbsp;В.А. | TBA | TBA | TBA | екзамен
-Випадкові процеси | Савчук&nbsp;М.М. | TBA | TBA | TBA | залік
+<table class="table table-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Дисципліна</th>
+            <th scope="col">Викладач</th>
+            <th scope="col">Дата</th>
+            <th scope="col">Год.</th>
+            <th scope="col">Ауд.</th>
+            <th scope="col">Контроль</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr scope="row">
+            <td>Додаткові розділи теорії випадкових процесів</td>
+            <td>IDK</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>залік</td>
+        </tr>
+        <tr scope="row">
+            <td>Застосування теорії ймовірностей у прикладній математиці</td>
+            <td>IDK</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Стохастичні моделі прикладної математики</td>
+            <td>IDK</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Чисельні методи математичної фізики</td>
+            <td>Риженко&nbsp;А.І., Кузьмін&nbsp;А.В.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Математичне моделювання</td>
+            <td>Стоян&nbsp;В.А.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Узагальнене оптимальне керування</td>
+            <td>Випадкові процеси&nbsp;М.М.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>залік</td>
+        </tr>
+    </tbody>
+</table>
 
 <h4 class="text-primary">Кафедра &laquo;Моделювання складних систем&raquo;</h4>
 
-Дисципліна | Викладач | Дата | Год. | Ауд. | Контроль
----------- | -------- | ---- | ---- | ---- | --------
-Цифрова обробка інформації | IDK | TBA | TBA | TBA | IDK
-Моделі та методи математичного моделювання | IDK | TBA | TBA | TBA | IDK
-Екстремальні задачі та варіаційне числення | IDK | TBA | TBA | TBA | IDK
-Чисельні методи математичної фізики | Риженко&nbsp;А.І. | TBA | TBA | TBA | екзамен
-Математичне моделювання | Стоян&nbsp;В.А. | TBA | TBA | TBA | екзамен
-Випадкові процеси | Савчук&nbsp;М.М. | TBA | TBA | TBA | залік
+<table class="table table-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Дисципліна</th>
+            <th scope="col">Викладач</th>
+            <th scope="col">Дата</th>
+            <th scope="col">Год.</th>
+            <th scope="col">Ауд.</th>
+            <th scope="col">Контроль</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr scope="row">
+            <td>Цифрова обробка інформації</td>
+            <td>IDK</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>залік</td>
+        </tr>
+        <tr scope="row">
+            <td>Моделі та методи математичного моделювання</td>
+            <td>IDK</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Екстремальні задачі та варіаційне числення</td>
+            <td>IDK</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Чисельні методи математичної фізики</td>
+            <td>Риженко&nbsp;А.І., Кузьмін&nbsp;А.В.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Математичне моделювання</td>
+            <td>Стоян&nbsp;В.А.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>екзамен</td>
+        </tr>
+        <tr scope="row">
+            <td>Узагальнене оптимальне керування</td>
+            <td>Випадкові процеси&nbsp;М.М.</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>залік</td>
+        </tr>
+    </tbody>
+</table>
