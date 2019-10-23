@@ -1,0 +1,195 @@
+\subsection{Рівномірна збіжність}
+
+\begin{theorem}[про рівномірну збіжність ряду Фур'є]
+    Нехай функція $f$ неперервна, кусково-гладка на проміжку $[-\pi, \pi]$ і $f(-\pi) = f(\pi)$, то її тригонометричний ряд Фур'є збігається на цьому проміжку до $f$ рівномірно.
+\end{theorem}
+\begin{proof}
+    Скористаємося ознакою Вейєрштрасса. Наш функціональний ряд мажорується наступним чином:
+    \begin{equation}
+        \frac{a_0}{2} + \sum_{n = 1}^\infty (a_n \cos n x + b_n \sin n x) \prec \frac{|a_0|}{2} + \sum_{n = 1}^\infty (a_n + b_n).
+    \end{equation}
+
+    Досліджуємо останній числовий ряд починаючи з $n = 1$ (збіжність/розбіжність ряду не залежить від сталої $a_0$):
+    \begin{equation}
+        \begin{aligned}
+            a_n 
+            &= \frac{1}{\pi} \int_{-\pi}^\pi f(x) \cos n x \diff x = \\
+            &= \frac{1}{n \pi} \int_{-\pi}^\pi f(x) \diff \sin n x = \ldots \\
+            &= -\frac{1}{n \pi} \int_{-\pi}^\pi f'(x) \sin n x \diff x = -\frac{b_n'}{n},
+        \end{aligned}
+    \end{equation}
+    де $b_n' = \frac{1}{\pi} \int_{-\pi}^\pi f'(x) \sin n x \diff x$ --- $b_n$ для функції $f'$. Аналогічно,
+
+    \begin{equation}
+        \begin{aligned}
+            b_n
+            &= \frac{1}{\pi} \int_{-\pi}^\pi f(x) \sin n x \diff x = \\
+            &= -\frac{1}{n \pi} \int_{-\pi}^\pi f(x) \diff \cos n x = \ldots \\
+            &= \frac{1}{n \pi} \int_{-\pi}^\pi f'(x) \cos n x \diff x = \frac{a_n'}{n},
+        \end{aligned}
+    \end{equation}
+    де $a_n' = \frac{1}{\pi} \int_{-\pi}^\pi f'(x) \cos n x \diff x$ --- $a_n$ для функції $f'$. \medskip
+
+    Поєднуючи, маємо 
+    \begin{equation}
+        \label{eq:}
+        |a_n| + |b_n| = \tfrac{1}{n} \left( |a_n'| + |b_n'| \right).
+    \end{equation}
+
+    Далі
+    \begin{equation}
+        \tfrac{1}{n} \cdot |a_n'| + \tfrac{1}{n} \cdot |b_n'| \le \tfrac{1}{2} \left( (a_n')^2 + \tfrac{1}{n^2} \right) + \tfrac{1}{2} \left( (b_n')^2 + \tfrac{1}{n^2} \right) = \tfrac{1}{2} \left( (a_n')^2 + (b_n')^2 \right) + \tfrac{1}{n^2}.
+    \end{equation}
+
+    Остаточно, $f' \in R([-\pi, \pi])$, тому для неї виконується нерівність Бесселя:
+    \begin{equation}
+        \sum_{n = 1}^\infty \left( (a_n')^2 + (b_n')^2  \right) \le \frac{1}{\pi} \int_{-\pi}^\pi (f'(x))^2 \diff x.
+    \end{equation}
+
+    Тому $\sum \left( (a_n')^2 + (b_n')^2  \right) < \infty$. Враховуючи, що ряд $\sum \frac{1}{n^2} = \frac{\pi^2}{6}$, тобто також збіжний, отримуємо збіжність досліджуваного числового ряду.
+\end{proof}
+
+\subsection{Швидкість збіжності}
+
+\begin{theorem}[про зв'язок степеню гладкості і швидкості збіжності  ряду Фур'є]
+    Якщо $f \in C^{(m)}([-\pi, \pi])$ і $f^{(k)}(-\pi) = f^{(k)}(\pi)$, $k = \overline{0, m}$ і $f^{(m + 1)}$ кусково-неперервна на $[-\pi, \pi]$, то виконуються співвідношення
+    \begin{equation}
+        a_n = o \left( \frac{1}{n^{m + 1}} \right), \quad b_n = o \left( \frac{1}{n^{m + 1}} \right),
+    \end{equation}
+    а також
+    \begin{equation}
+        \sum n^k \left( |a_n| + |b_n| \right) < \infty, \quad k = \overline{0, m}.
+    \end{equation}
+\end{theorem}
+\begin{proof}
+    Аналогічно доведенню попередньої теореми, багатократно інтегруючи частинами, маємо
+    \begin{equation}
+        \begin{aligned}
+            a_n
+            &= -\frac{1}{n \pi} \int_{-\pi}^\pi f'(x) \sin n x \diff x = \\
+            &= -\frac{1}{n^2 \pi} \int_{-\pi}^\pi f''(x) \cos n x \diff x = \ldots = \\
+            &= \pm \frac{1}{n^{m + 1}} \int_{-\pi}^\pi f^{(m + 1)}(x) \begin{Bmatrix} \cos n x \\ \sin n x \end{Bmatrix} \diff x.
+        \end{aligned}
+    \end{equation}
+
+    Аналогічним чином можна отримати наступне співвідношення
+    \begin{equation}
+        b_n = \pm \frac{1}{n^{m + 1}} \int_{-\pi}^\pi f^{(m + 1)}(x) \begin{Bmatrix} \sin n x \\ \cos n x \end{Bmatrix} \diff x
+    \end{equation}
+
+    Звідси маємо
+    \begin{equation}
+        |a_n| = \begin{Bmatrix} \dfrac{\left|a_n^{(m + 1)}\right|}{n^{m + 1}} \\ \\ \dfrac{\left|b_n^{(m + 1)}\right|}{n^{m + 1}} \end{Bmatrix}, \quad |b_n| = \begin{Bmatrix} \dfrac{\left|b_n^{(m + 1)}\right|}{n^{m + 1} \pi} \\ \\ \dfrac{\left|a_n^{(m + 1)}\right|}{n^{m + 1} \pi} \end{Bmatrix}.
+    \end{equation}
+
+    Поєднучи, отримуємо
+    \begin{equation}
+        |a_n| + |b_n| = \frac{1}{n^{m + 1}} \left( \left|a_n^{(m + 1)}\right| + \left|b_n^{(m + 1)}\right| \right)
+    \end{equation}
+
+    $f^{(m + 1)} \in R([-\pi, \pi])$, тому для неї виконується нерівність Бесселя:
+    \begin{equation}
+        \sum_{n = 1}^\infty \left( \left( a_n^{(m + 1)} \right)^2 + \left( b_n^{(m + 1)} \right)^2 \right) \le \frac{1}{\pi} \int_{-\pi}^\pi \left( f^{(m + 1)}(x) \right)^2 \diff x.
+    \end{equation}
+
+    Тому $a_n^{(m + 1)}$, $b_n^{(m + 1)} \to 0$, тобто $a_n^{(m + 1)}$, $b_n^{(m + 1)} = o(1)$,
+    \begin{equation}
+        a_n, b_n = \frac{o(1)}{n^{m + 1}} = o \left( \frac{1}{n^{m + 1}} \right).
+    \end{equation}
+
+    \begin{exercise}
+        Довести, що
+        \begin{equation}
+            \sum n^m \left( |a_n| + |b_n| \right) < \infty
+        \end{equation}
+        аналогічним чином.
+    \end{exercise}
+\end{proof}
+
+\begin{remark}
+    Збіжність рядів
+    \begin{equation}
+        \sum n^k \left( |a_n| + |b_n| \right) < \infty, \quad k = \overline{0, m}
+    \end{equation}
+    означає, що ряд Фур'є можна почленно диференціювати $m$ разів, і він буде рівномірно збігатися до $m$-ої похідної.
+\end{remark}
+
+\begin{proposition}
+    $n$-залишок ряду Фур'є має асиптотику $O \left( \frac{1}{n^{m + 1/2}} \right)$.
+\end{proposition}
+\begin{proof}
+    Прості перетворення:
+    \begin{equation}
+        \begin{aligned}
+            & \left| \sum_{n = n_0 + 1}^\infty (a_n \cos n x + b_n \sin n x) \right| \le \\
+            &\quad \le \sum_{n = n_0 + 1}^\infty \left( |a_n| + |b_n| \right) = \\
+            &\quad = \sum_{n = n_0 + 1}^\infty \frac{1}{n^{(m + 1)}} \left( \left|a_n^{(m + 1)}\right| + \left|b_n^{(m + 1)}\right| \right) \overset{\text{CS}}{\le} \\
+            &\quad \le \sqrt{ \sum_{n = n_0 + 1}^\infty \frac{1}{n^{2 m + 2}} } \cdot \sqrt{ 2 \sum_{n = n_0 + 1}^\infty \left( \left( a_n^{(m + 1)} \right)^2 + \left( b_n^{(m + 1)} \right)^2 \right) } \le \\
+            &\quad \le \sqrt{ \int_{n_0}^\infty \frac{\diff x}{x^{2 m + 2}}} \cdot \sqrt{ \frac{2}{\pi} \int_{-\pi}^\pi \left( f^{(m + 1)}(x) \right)^2 \diff x } = \\
+            &\quad = \sqrt{\frac{A}{n_0^{2 m + 1}}} = O \left( \frac{1}{n^{m + 1/2}} \right).
+        \end{aligned}
+    \end{equation}
+\end{proof}
+
+\section{Інтеграл та перетворення Фур'є}
+
+\subsection{Визначення інтегралу Фур'є}
+
+\begin{definition}
+    Невласний інтеграл
+    \begin{equation}
+        \int_0^\infty \left( a(\lambda) \cos \lambda x + b(\lambda) \sin \lambda x \right) \diff x, \quad x \in \RR.
+    \end{equation}
+    називається \textit{тригонометрчиним інтегралом}.
+\end{definition}
+
+Якщо $f$ абсолютно інтегровна на $\RR$, тобто
+\begin{equation}
+    \int_{-\infty}^{+\infty} |f(x)| \diff x < \infty,
+\end{equation}
+то, виходячи з порівняльних ознак
+\begin{equation}
+    |f(x) \cos \lambda x|, |f(x) \sin \lambda x| \le |f(x)|,
+\end{equation}
+отримуємо, що функції
+\begin{align}
+    a(\lambda) &= \frac{1}{\pi} \int_{-\infty}^{+\infty} f(x) \cos \lambda x \diff x, \\
+    b(\lambda) &= \frac{1}{\pi} \int_{-\infty}^{+\infty} f(x) \sin \lambda x \diff x, \\
+\end{align}
+визначені для довільного $\lambda$ на $[0, \infty)$.
+
+\begin{definition}
+    Якщо $f$ абсолютно збіжна на $\RR$, то
+    \begin{equation}
+        \int_0^\infty \left( a(\lambda) \cos \lambda x + b(\lambda) \sin \lambda x \right) \diff x, \quad x \in \RR.
+    \end{equation}
+    називається \textit{інтегралом Фур'є} якщо $a(\lambda), b(\lambda)$ обчислюються за формулами вище.
+\end{definition}
+
+\begin{multline}
+    \frac{1}{\pi} \int_0^\infty \left( \cos \lambda x \int_{-\infty}^{+\infty} f(t) \cos \lambda t \diff t + \sin \lambda x \int_{-\infty}^{+\infty} f(t) \sin \lambda t \diff t \right) \diff \lambda = \\
+    = \frac{1}{\pi} \int_0^\infty \int_{-\infty}^{+\infty} f(t) \cos \lambda (t - x) \diff t \diff \lambda.
+\end{multline}
+
+\begin{proposition}[ознака Діні збіжності інтегралу Фур'є]
+    Якщо $f$ абсолютно інтегровна на $\RR$ і $\forall x \in \RR$ вона задовольняє умови Діні, то її інтеграл Фур'є збігається в кожній точці $\RR$ до числа $\frac{f(x + 0) + f(x - 0)}{2}$.
+\end{proposition}
+\begin{proof}
+    Використаємо отримане вище зображення ряду Фур'є. Нам небохідно показати, що
+    \begin{equation}
+        \exists \lim_{A \to + \infty} \frac{1}{\pi} \int_0^A \int_{-\infty}^{+\infty} f(t) \cos \lambda (t - x) \diff t \diff \lambda \overset{?}{=} \frac{f(x + 0) + f(x - 0)}{2}.
+    \end{equation}
+
+    Позначимо виписану вище функцію як $\mathcal{J}(A)$. Змінимо в ній порядок інтегрування, отримаємо
+    \begin{equation}
+        \begin{aligned}
+            \mathcal{J}(A)
+            &=\frac{1}{\pi} \int_{-\infty}^{+\infty} f(t) \left( \int_0^A \cos \lambda (t - x) \diff \lambda \right) \diff t = \\
+            &= \frac{1}{\pi} \int_{-\infty}^{+\infty} f(t) \cdot \left. \frac{1}{t - x} \sin \lambda (t - x) \right|_0^A \diff t = \\
+            &= \frac{1}{\pi} \int_{-\infty}^{+\infty} f(t) \cdot \frac{\sin A (t - x)}{t - x} \diff t.
+        \end{aligned}
+    \end{equation}
+    \begin{exercise}
+        Завершити доведення.
+    \end{exercise}
+\end{proof}

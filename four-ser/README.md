@@ -25,10 +25,10 @@
         Лекція <b>9&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Молодцов,%20лекція%209.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>16&nbsp;жовтня</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+        Лекція <b>16&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Молодцов,%20лекція%2016.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/03.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>23&nbsp;жовтня</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+        Лекція <b>23&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Молодцов,%20лекція%2023.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a>
     </p>
     <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>
