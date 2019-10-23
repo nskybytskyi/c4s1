@@ -1,7 +1,7 @@
 outputtemplate := "%j-%c.mps";
 prologues := 3;
 
-% cls && mpost rai.mp && epstopdf rai-1.mps && start rai-1.pdf
+% cls && mpost rai-01.mp && epstopdf rai-1.mps && start rai-1.pdf
 beginfig(1)
 
 u := 2cm;
@@ -29,8 +29,8 @@ drawarrow axis_y[0]--axis_y[2];
 label.lft(btex $1$ etex, axis_y[1]);
 
 % f
-label.bot(btex $x_{i-1}$ etex, f[1]);
-label.bot(btex $x_i$ etex, f[3]);
+label.bot(btex $x_{i - 1}$ etex, f[1]);
+label.bot(btex $x_{i + 1}$ etex, f[3]);
 draw axis_y[1]--f[2] dashed evenly;
 draw f[0]--f[1]--f[2]--f[3]--f[4] withcolor red;
 

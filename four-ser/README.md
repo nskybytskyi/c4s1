@@ -19,13 +19,16 @@
         Всі лекції: <a class="badge badge-success" href="lectures/Молодцов,%20всі%20лекції.pdf">Get pdf</a> 
     </p>
     <p>
-        Лекція <b>25 вересня</b>: <a class="badge badge-success" href="lectures/Молодцов,%20лекція%2025.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a>
+        Лекція <b>25&nbsp;вересня</b>: <a class="badge badge-success" href="lectures/Молодцов,%20лекція%2025.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>9 жовтня</b>: <a class="badge badge-success" href="lectures/Молодцов,%20лекція%209.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a>
+        Лекція <b>9&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Молодцов,%20лекція%209.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>16 жовтня</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+        Лекція <b>16&nbsp;жовтня</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+    </p>
+    <p>
+        Лекція <b>23&nbsp;жовтня</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
     </p>
     <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>

@@ -22,19 +22,22 @@
         Всі лекції: <a class="badge badge-success" href="lectures/Риженко,%20всі%20лекції.pdf">Get pdf</a>
     </p>
     <p>
-        Лекція <b>20 вересня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%2020.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a>
+        Лекція <b>20&nbsp;вересня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%2020.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>24 вересня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%2024.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a>
+        Лекція <b>24&nbsp;вересня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%2024.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>1 жовтня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%201.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/03.tex">Get LaTeX source</a>
+        Лекція <b>1&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%201.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/03.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>8 жовтня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%208.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a>
+        Лекція <b>8&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%208.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>15 жовтня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%2015.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a>
+        Лекція <b>15&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%2015.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a>
+    </p>
+    <p>
+        Лекція <b>22&nbsp;жовтня</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
     </p>
     <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>

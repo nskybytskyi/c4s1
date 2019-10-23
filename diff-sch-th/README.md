@@ -19,20 +19,23 @@
         Всі лекції: <a class="badge badge-success" href="lectures/Оноцький,%20всі%20лекції.pdf">Get pdf</a> 
     </p>
     <p>
-        Лекція <b>19 вересня</b>: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2019.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a> 
+        Лекція <b>19&nbsp;вересня</b>: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2019.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a> 
     </p>
     <p>
-        Лекція <b>26 вересня</b>: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2026.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a> 
+        Лекція <b>26&nbsp;вересня</b>: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2026.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a> 
     </p>
     <p>
-        Лекція <b>3 жовтня</b>: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%203.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/03.tex">Get LaTeX source</a> 
+        Лекція <b>3&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%203.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/03.tex">Get LaTeX source</a> 
     </p>
     <p>
-        Лекція <b>10 жовтня</b>: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2010.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a>
+        Лекція <b>10&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2010.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>17 жовтня</b>: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2017.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a>
+        Лекція <b>17&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2017.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a>
     </p> 
+    <p>
+        Лекція <b>24&nbsp;жовтня</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+    </p>
     <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>
     </p>
