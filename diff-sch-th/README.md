@@ -42,6 +42,13 @@
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+    <h3 class="text-primary">Реферати</h3>
+    <p>
+        Фазова похибка різницевих схем. Схема Лейта <a class="badge badge-success" href="Оноцький,%20реферат.pdf">Get pdf</a>
+    </p>
+</div>
+
+<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
     <h3 class="text-primary">Література</h3>
     <p>
         Роуч&nbsp;П. <i>Вычислительная гидродинамика</i> &mdash; Москва: "Мир", 1980. <a class="badge badge-success" href="books/Роуч%20-%20Вычислительная%20гидродинамика.djvu">Get djvu</a>
