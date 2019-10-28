@@ -45,6 +45,19 @@
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+    <h3 class="text-primary">Лабораторні (звіти)</h3>
+    <p>
+        Нікіта Скибицький, 2019 р. Перша лабораторна робота: <a class="badge badge-success" href="labs/lab-1/report.pdf">Get pdf</a>
+    </p>
+    <p>
+        Нікіта Скибицький, 2019 р. Друга лабораторна робота: <a class="badge badge-warning" href="#">No file :cry:</a>
+    </p>
+    <p>
+        Нікіта Скибицький, 2019 р. Третя лабораторна робота: <a class="badge badge-warning" href="#">No file :cry:</a>
+    </p>
+</div>
+
+<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
     <h3 class="text-primary">Література</h3>
     <p>
         Лионс&nbsp;Ж.Л. <i>Оптимальное управление системами, описываемыми уравнениями с частными производными</i> &mdash; "Мир", 1972. <a class="badge badge-success" href="books/Лионс-Оптимальное-управление-системами-описываемыми-уравнениями-с-частными-производными.djvu">Get djvu</a>

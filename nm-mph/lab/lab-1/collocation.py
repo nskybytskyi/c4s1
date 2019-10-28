@@ -83,59 +83,56 @@ def graph(points, u_true: SympyExpressionFactory, u: SympyExpressionFactory, **k
     x: SympySymbol = sympy.Symbol('x')
     u_true_np, u_np = sympy.lambdify(x, u_true(x), "numpy"), sympy.lambdify(x, u(x), "numpy")
 
-    plt.plot(points, u_true_np(points), 'k-', label="True u(points)")
+    plt.figure(figsize=(20,20))
+    plt.plot(points, u_true_np(points), 'k-', label="True u(x)")
     if "u_label" in kwargs:
         plt.plot(points, u_np(points), 'b-', label=kwargs["u_label"])
     else:
         plt.plot(points, u_np(points), 'b-')
 
-    plt.xlabel('$points$')
-    plt.ylabel('$u$')
-    if "title" in kwargs:
-        plt.title(kwargs["title"])
-    plt.legend(loc='best')
-    plt.grid()
-    plt.show()
+    plt.xlabel('$x$', fontsize=40)
+    plt.ylabel('$u$', fontsize=40)
+    plt.legend(loc='best', fontsize=40)
+    plt.grid(True)
+    plt.savefig(f'collocation_{n - 1}.png', bbox_inches='tight')
 
 
 if __name__ == '__main__':
-    x: SympySymbol = sympy.Symbol('x')
+    for n in (8 + 1, 16 + 1):
+        x: SympySymbol = sympy.Symbol('x')
 
-    a, b = 0, 4
-    alpha_1, alpha_2 = 4, 2
+        a, b = 0, 4
+        alpha_1, alpha_2 = 4, 2
 
-    m_1, m_2, m_3 = 2, 2, 1
-    u_true: SympyExpressionFactory = lambda x: m_1 * sympy.sin(m_2 * x) + m_3
-    print(u_true(x))
+        m_1, m_2, m_3 = 2, 2, 1
+        u_true: SympyExpressionFactory = lambda x: m_1 * sympy.sin(m_2 * x) + m_3
 
-    k_1, k_2, k_3 = 2, 3, 1
-    k: SympyExpressionFactory = lambda x: k_1 * sympy.sin(k_2 * x) + k_3
+        k_1, k_2, k_3 = 2, 3, 1
+        k: SympyExpressionFactory = lambda x: k_1 * sympy.sin(k_2 * x) + k_3
 
-    mu_1: float = (alpha_1 * u_true(x) - k(x) * u_true(x).diff(x)).evalf(subs={x: a}, chop=True)
-    mu_2: float = (alpha_2 * u_true(x) + k(x) * u_true(x).diff(x)).evalf(subs={x: b}, chop=True)
+        mu_1: float = (alpha_1 * u_true(x) - k(x) * u_true(x).diff(x)).evalf(subs={x: a}, chop=True)
+        mu_2: float = (alpha_2 * u_true(x) + k(x) * u_true(x).diff(x)).evalf(subs={x: b}, chop=True)
 
-    p_1, p_2, p_3 = 2, 1, 1
-    p: SympyExpressionFactory = lambda x: p_1 * sympy.cos(p_2 * x) + p_3
+        p_1, p_2, p_3 = 2, 1, 1
+        p: SympyExpressionFactory = lambda x: p_1 * sympy.cos(p_2 * x) + p_3
 
-    q_1, q_2, q_3 = 0, 2, 3
-    q: SympyExpressionFactory = lambda x: q_1 * sympy.sin(q_2 * x) + q_3
+        q_1, q_2, q_3 = 0, 2, 3
+        q: SympyExpressionFactory = lambda x: q_1 * sympy.sin(q_2 * x) + q_3
 
-    A = DifferentialOperator(k, p, q)
-    f: SympyExpressionFactory = lambda x: A(u_true, x).simplify()
+        A = DifferentialOperator(k, p, q)
+        f: SympyExpressionFactory = lambda x: A(u_true, x).simplify()
 
-    n = 16 + 1
+        phi_factory = PhiExpressionFactory(a, b, k, alpha_1, alpha_2, mu_1, mu_2)
+        phi: tp.List[PhiExpression] = [phi_factory(i) for i in range(n + 1)]
 
-    phi_factory = PhiExpressionFactory(a, b, k, alpha_1, alpha_2, mu_1, mu_2)
-    phi: tp.List[PhiExpression] = [phi_factory(i) for i in range(n + 1)]
+        psi: tp.List[PsiFunction] = [PsiFunction(a, b, n, i) for i in range(n)]
 
-    psi: tp.List[PsiFunction] = [PsiFunction(a, b, n, i) for i in range(n)]
+        c: tp.List[float] = collocation_method(A, f, phi, psi, x, n)
+        u: SympyExpressionFactory = lambda x: sum(c[i] * phi[i](x) for i in range(n + 1))
 
-    c: tp.List[float] = collocation_method(A, f, phi, psi, x, n)
-    u: SympyExpressionFactory = lambda x: sum(c[i] * phi[i](x) for i in range(n + 1))
+        graph(np.linspace(a, b, 50 + 1), u_true, u, u_label="$u_{%i}(x)$" % (n - 1))
 
-    graph(np.linspace(a, b, 50 + 1), u_true, u, title="Collocation method", u_label="$u_{%i}(x)$" % n)
-
-    u_true = sympy.lambdify(x, u_true(x), "numpy")
-    u = sympy.lambdify(x, u(x), "numpy")
-    delta = integrate.quad(lambda x: (u_true(x) - u(x))**2, a, b)[0] / (b - a)
-    print(f"Collocation-{n} delta = {delta}")
+        u_true = sympy.lambdify(x, u_true(x), "numpy")
+        u = sympy.lambdify(x, u(x), "numpy")
+        delta = integrate.quad(lambda x: (u_true(x) - u(x))**2, a, b)[0] / (b - a)
+        print(f"Collocation-{n - 1} delta = {delta}")
