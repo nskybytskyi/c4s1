@@ -3,14 +3,14 @@
     Знайдемо похідні степеневих функцій.
 \end{example}
 \begin{solution}
-    Нехай $\beta > -1$, $0 < \alpha < 1$. Тоді
+    Нехай $\beta > -1$, $0 < \alpha < 1$. Тоді, безпосередньо за визначення дробової похідної Рімана-Ліувілля
     \begin{equation}
-        D_0^\alpha t^\beta = \frac{\diff}{\diff t} I_0^{1-\alpha} t^\beta.
+        \RiemannLiouvilleFractionalDerivative{\alpha} t^\beta = \frac{\diff}{\diff t} \FractionalIntegral{1-\alpha} t^\beta.
     \end{equation}
     
-    У свою чергу
+    У свою чергу, безпосередньо за визначення дробового інтегралу
     \begin{equation}
-        I_0^{1-\alpha} t^\beta = \frac{1}{\Gamma(1 - \alpha)} \int_0^t s^\beta (t- s)^{-\alpha} \diff s.
+        \FractionalIntegral{1-\alpha} t^\beta = \frac{1}{\Gamma(1 - \alpha)} \int_0^t s^\beta (t- s)^{-\alpha} \diff s.
     \end{equation}
     
     Нагадаємо
@@ -41,7 +41,7 @@
             &\quad = \frac{\Gamma(\beta + 1)}{\Gamma(1 + \beta - \alpha)} t^{\beta - \alpha},
         \end{aligned}
     \end{equation}
-    де ми скористалився властивістю $a \Gamma(a) = \Gamma(a + 1)$.
+    де в останньому переході ми скористалився властивістю $a \Gamma(a) = \Gamma(a + 1)$.
 \end{solution}
 
 \begin{remark}
@@ -49,7 +49,7 @@
 \end{remark}
 
 \begin{example}
-    Зокрема, якщо $\alpha \le \beta \in \NN$, то маємо формулу
+    Зокрема, якщо $\NN \ni \alpha \le \beta \in \NN$, то маємо формулу
     \begin{equation}
         \frac{\diff^\alpha}{\diff t^\alpha} t^\beta = \frac{\beta!}{(\beta - \alpha)!} t^{\beta - \alpha}.
     \end{equation}
@@ -60,7 +60,7 @@
 \end{example}
 
 \begin{remark}
-    Зрозуміло також що всі введені нами оператори лінійні.
+    Зрозуміло також, що всі введені нами оператори лінійні.
 \end{remark}
 
 \subsubsection{Властивості похідних Рімана-Ліувілля}
@@ -79,34 +79,36 @@
     Почленно диференціюємо:
     \begin{equation}
         \begin{aligned} 
-            D_0^\alpha e^{\lambda t} 
-            &= D_0^\alpha \left( \sum_{k = 0}^\infty \frac{(\lambda t)^k}{k!} \right) = \\
-            &= \sum_{k = 0}^\infty \frac{\lambda^k}{k!} D_0^\alpha \left( t^k \right) = \\
-            &= \sum_{k = 0}^\infty \frac{\lambda^k}{k!} \frac{k!}{\Gamma(k + 1 - \alpha} t^{k - \alpha} \ne \\
+            \RiemannLiouvilleFractionalDerivative{\alpha} e^{\lambda t} 
+            &= \RiemannLiouvilleFractionalDerivative{\alpha} \left( \sum_{k = 0}^\infty \frac{(\lambda t)^k}{k!} \right) = \\
+            &= \sum_{k = 0}^\infty \frac{\lambda^k}{k!} \RiemannLiouvilleFractionalDerivative{\alpha} \left( t^k \right) = \\
+            &= \sum_{k = 0}^\infty \frac{\lambda^k}{k!} \frac{k!}{\Gamma(k + 1 - \alpha)} t^{k - \alpha} \ne \\
             &\ne \sum_{k = 0}^\infty \lambda^\alpha \frac{(\lambda t)^k}{k!}.
         \end{aligned}
     \end{equation}
 \end{proof}
 
+Нагадаємо основні співвідношення між похідними та інтегралами із класичного аналізу:
 \begin{proposition}[формула (не) Ньютона-Лейбніца]
     \begin{equation}
         \frac{\diff}{\diff t} \int_0^t f(s) \diff s = f(t).
     \end{equation}
 \end{proposition}
-
+а також
 \begin{proposition}[формула Ньютона-Лейбніца]
     \begin{equation}
         \int_0^t f'(s) \diff s = f(t) - f(0).
     \end{equation}
 \end{proposition}
 
+Важливим для подальшого аналізу є
 \begin{proposition}[напівгрупова властивість дробових інтегралів]
-    Нехай $\alpha, \beta > 0$, тоді $I_0^{\alpha + \beta} = I_0^\alpha I_0^\beta$.
+    Нехай $\alpha, \beta > 0$, тоді $\FractionalIntegral{\alpha + \beta} = \FractionalIntegral{\alpha} \FractionalIntegral{\beta}$.
 \end{proposition}
 \begin{exercise}
     Доведіть цю властивість. \textbf{Підказка}: за означеннями,
     \begin{equation}
-        I_0^{\alpha + \beta} f = f \star y_{\alpha + \beta} \overset{?}{=} f \star (y_\alpha \star y_\beta) \overset{?}{=} (f \star y_\alpha) \star y_\beta = I_0^\beta I_0^\alpha f,
+        \FractionalIntegral{\alpha + \beta} f = f \star y_{\alpha + \beta} \overset{?}{=} f \star (y_\alpha \star y_\beta) \overset{?}{=} (f \star y_\alpha) \star y_\beta = \FractionalIntegral{\beta} \FractionalIntegral{\alpha} f,
     \end{equation}
     тому достатньо перевірити асоціативність згортки і рівність $y_{\alpha + \beta} = y_\alpha \star y_\beta$.
 \end{exercise}
@@ -140,13 +142,13 @@
         Проведемо заміну $\xi = s / t$, тоді $\diff s = t \diff \xi$, отримаємо
         \begin{equation}
             \begin{aligned}
-                \frac{1}{\Gamma(\alpha) \Gamma(\beta)} \int_0^t s^{\alpha - 1} (t - s)^{\beta - 1} \diff s
-                &= \frac{1}{\Gamma(\alpha) \Gamma(\beta)} \int_0^t (\xi t)^{\alpha - 1} (1 - \xi)^{\beta - 1} t^{\beta - 1} t \diff \xi = \\
-                &= \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{(\alpha - 1) + (\beta - 1) + 1} \int_0^t \xi^{\alpha - 1} (1 - \xi)^{\beta - 1} \diff \xi = \\
-                &= \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{\alpha + \beta - 1} B(\alpha, \beta) = \\
-                &= \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{\alpha + \beta - 1} \frac {\Gamma (\alpha) \Gamma (\beta)}{\Gamma (\alpha + \beta)} = \\
-                &= \frac{1}{\Gamma (\alpha + \beta)} t^{\alpha + \beta - 1} = \\
-                &= y_{\alpha + \beta}(t).
+                & \frac{1}{\Gamma(\alpha) \Gamma(\beta)} \int_0^t s^{\alpha - 1} (t - s)^{\beta - 1} \diff s = \\
+                &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} \int_0^t (\xi t)^{\alpha - 1} (1 - \xi)^{\beta - 1} t^{\beta - 1} t \diff \xi = \\
+                &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{(\alpha - 1) + (\beta - 1) + 1} \int_0^t \xi^{\alpha - 1} (1 - \xi)^{\beta - 1} \diff \xi = \\
+                &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{\alpha + \beta - 1} B(\alpha, \beta) = \\
+                &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{\alpha + \beta - 1} \frac {\Gamma (\alpha) \Gamma (\beta)}{\Gamma (\alpha + \beta)} = \\
+                &\quad = \frac{1}{\Gamma (\alpha + \beta)} t^{\alpha + \beta - 1} = \\
+                &\quad = y_{\alpha + \beta}(t).
             \end{aligned}
         \end{equation}
     \end{enumerate}
@@ -155,13 +157,13 @@
 \begin{theorem}[аналог формули (не) Ньютона-Лейбніца]
     Для $\alpha > 0$
     \begin{equation}
-        D_0^\alpha I_0^\alpha f = f.
+        \RiemannLiouvilleFractionalDerivative{\alpha} \FractionalIntegral{\alpha} f = f.
     \end{equation}
 \end{theorem}
 \begin{proof}
     Нехай $n = \lceil \alpha \rceil$, тоді
     \begin{equation}
-        D_0^\alpha I_0^\alpha f = \frac{\diff^n}{\diff t^n} I_0^{n - \alpha} I_0^{\alpha} f = \frac{\diff^n}{\diff t^n} I_0^n f = f. 
+        \RiemannLiouvilleFractionalDerivative{\alpha} \FractionalIntegral{\alpha} f = \frac{\diff^n}{\diff t^n} \FractionalIntegral{n - \alpha} \FractionalIntegral{\alpha} f = \frac{\diff^n}{\diff t^n} \FractionalIntegral{n} f = f. 
     \end{equation}
 \end{proof}
 \begin{remark}
@@ -171,54 +173,54 @@
 \begin{proposition}[аналог формули Ньютона-Лейбніца]
     Нехай $f, D_0^\alpha f \in L_1([0,T])$, $n = \lceil \alpha \rceil$, $\alpha \not\in \NN$, тоді для $0 < t < T$ маємо
     \begin{equation}
-        (I_0^\alpha D_0^\alpha f)(t) = f(t) - \sum_{k = 0}^{n - 1} (D_0^{\alpha - k  - 1} f)(0) \cdot \frac{t^{\alpha - k - 1}}{\Gamma(\alpha - k)}.
+        (\FractionalIntegral{\alpha} \RiemannLiouvilleFractionalDerivative{\alpha} f)(t) = f(t) - \sum_{k = 0}^{n - 1} (\RiemannLiouvilleFractionalDerivative{\alpha - k  - 1} f)(0) \cdot \frac{t^{\alpha - k - 1}}{\Gamma(\alpha - k)}.
     \end{equation}
 \end{proposition}
 \begin{remark}
-    Тут під $D_0^{-|\beta|}$ маємо на увазі $I_0^{|\beta|}$.
+    Тут під $\RiemannLiouvilleFractionalDerivative{-|\beta|}$ маємо на увазі $\FractionalIntegral{|\beta|}$.
 \end{remark}
 \begin{example}
     Для $0 < \alpha < 1$ маємо
     \begin{equation}
-        (I_0^\alpha D_0^\alpha f)(t) = f(t) - (I_0^{1 - \alpha} f)(0) \frac{t^{\alpha - 1}}{\Gamma(\alpha)}.
+        (\FractionalIntegral{\alpha} \RiemannLiouvilleFractionalDerivative{\alpha} f)(t) = f(t) - (\FractionalIntegral{1 - \alpha} f)(0) \frac{t^{\alpha - 1}}{\Gamma(\alpha)}.
     \end{equation}
 \end{example}
 \begin{remark}
-    Тут $(I_0^{1 - \alpha} f)(0) = \lim_{\epsilon \downarrow 0} (I_0^{1 - \alpha} f)(\epsilon)$.
+    Тут $(\FractionalIntegral{1 - \alpha} f)(0) = \lim_{\epsilon \downarrow 0} (\FractionalIntegral{1 - \alpha} f)(\epsilon)$.
 \end{remark}
 \begin{proof}
     Доведемо частинний випадок:
     \begin{equation}
         \begin{aligned}
-            (I_0^\alpha D_0^\alpha f)(t) 
-            &= \frac{1}{\Gamma(\alpha)} \int_0^t (t - s)^{\alpha - 1} (D_0^\alpha f) (s) \diff s = \\
-            &= \frac{\diff}{\diff t} \left( \frac{1}{\alpha \Gamma(\alpha)} \int_0^t (t - s)^{\alpha} (D_0^\alpha f) (s) \diff s \right).
+            (\FractionalIntegral{\alpha} \RiemannLiouvilleFractionalDerivative{\alpha} f)(t) 
+            &= \frac{1}{\Gamma(\alpha)} \int_0^t (t - s)^{\alpha - 1} (\RiemannLiouvilleFractionalDerivative{\alpha} f) (s) \diff s = \\
+            &= \frac{\diff}{\diff t} \left( \frac{1}{\alpha \Gamma(\alpha)} \int_0^t (t - s)^{\alpha} (\RiemannLiouvilleFractionalDerivative{\alpha} f) (s) \diff s \right).
         \end{aligned}
     \end{equation}
     Виконаємо наступні маніпуляції з виразом що стоїть під похідною:
     \begin{equation}
         \begin{aligned}
-            & \frac{1}{\alpha \Gamma(\alpha)} \int_0^t (t - s)^{\alpha} (D_0^\alpha f) (t) \diff t = \\
-            &\quad = \frac{1}{\alpha \Gamma(\alpha)} \left( \left. (t - s)^{\alpha} I_0^{1-\alpha} f (s) \right|_{s = 0}^{s = t} + \alpha \int_0^t (t - s)^{\alpha - 1} I_0^{1-\alpha} f(s) \diff s \right) = \\
-            &\quad = - \frac{t^\alpha (I_0^{1 - \alpha} f)(0)}{\alpha \Gamma(\alpha)} + I_0^\alpha I_0^{1-\alpha} f = \\
-            &\quad = - \frac{t^\alpha (I_0^{1 - \alpha} f)(0)}{\alpha \Gamma(\alpha)} + I_0^1 f.
+            & \frac{1}{\alpha \Gamma(\alpha)} \int_0^t (t - s)^{\alpha} (\RiemannLiouvilleFractionalDerivative{\alpha} f) (t) \diff t = \\
+            &\quad = \frac{1}{\alpha \Gamma(\alpha)} \left( \left. (t - s)^{\alpha} \FractionalIntegral{1-\alpha} f (s) \right|_{s = 0}^{s = t} + \alpha \int_0^t (t - s)^{\alpha - 1} \FractionalIntegral{1-\alpha} f(s) \diff s \right) = \\
+            &\quad = - \frac{t^\alpha (\FractionalIntegral{1 - \alpha} f)(0)}{\alpha \Gamma(\alpha)} + \FractionalIntegral{\alpha} \FractionalIntegral{1 - \alpha} f = \\
+            &\quad = - \frac{t^\alpha (\FractionalIntegral{1 - \alpha} f)(0)}{\alpha \Gamma(\alpha)} + \FractionalIntegral{1} f.
         \end{aligned}
     \end{equation}
     Лишилося всього лише продиференціювати:
     \begin{equation}
-        \frac{\diff}{\diff t} \left( - \frac{t^\alpha (I_0^{1 - \alpha} f)(0)}{\alpha \Gamma(\alpha)} + I_0^1 f \right) = f(t) - \frac{t^{\alpha - 1} (I_0^{1-\alpha} f)(0)}{\Gamma(\alpha)}.
+        \frac{\diff}{\diff t} \left( -\frac{t^\alpha (\FractionalIntegral{1 - \alpha} f)(0)}{\alpha \Gamma(\alpha)} + \FractionalIntegral{1} f \right) = f(t) - \frac{t^{\alpha - 1} (\FractionalIntegral{1 - \alpha} f)(0)}{\Gamma(\alpha)}.
     \end{equation}
 \end{proof}
 
 \subsubsection{Властивості похідних за Капуто}
 \begin{theorem}
-    Нехай $f \in L_\infty([0,T])$, тобто $\exists M \in \RR$: $|f(t)| \overset{\text{a.e.}}{\le} M$, тоді, як і очікувалося, $({}^\star D_0^\alpha I_0^\alpha f)(0) = (I_0^\alpha {}^\star D_0^\alpha f)(0)$.
+    Нехай $f \in L_\infty([0,T])$, тобто $\exists M \in \RR$: $|f(t)| \overset{\text{a.e.}}{\le} M$, тоді, як і очікувалося, $(\CaputoFractionalDerivative{\alpha} \FractionalIntegral{\alpha} f)(0) = (\FractionalIntegral{\alpha} \CaputoFractionalDerivative{\alpha} f)(0)$.
 \end{theorem}
 а також
 \begin{theorem}
     Нехай $n = \lceil \alpha \rceil$, $f \in AC^n([0,T])$, тоді
     \begin{equation}
-        (I_0^\alpha {}^\star D_0^\alpha f)(t) = f(t) - \sum_{k = 0}^n \frac{f^{(k)}(0)}{k!} t^k.
+        (\FractionalIntegral{\alpha} \CaputoFractionalDerivative{\alpha} f)(t) = f(t) - \sum_{k = 0}^n \frac{f^{(k)}(0)}{k!} t^k.
     \end{equation}
 \end{theorem}
 \begin{remark}
@@ -229,29 +231,29 @@
     Для похідних у загальному випадку не виконується напівгрупова властивість.
 \end{proposition}
 \begin{theorem}
-    Нехай $f, D_0^\beta \in L_1([0, T])$, $\alpha \not\in \NN$. Тоді
+    Нехай $f, \RiemannLiouvilleFractionalDerivative{\beta} \in L_1([0, T])$, $\alpha \not\in \NN$. Тоді
     \begin{equation}
-        (D_0^\alpha D_0^\beta f)(t) = (D_0^{\alpha + \beta}) f(t) - \sum_{k = 0}^{\lceil \beta \rceil - 1} (D_0^{\beta - k - 1} f)(0) \frac{t^{-\alpha - k - 1}}{\Gamma(-\alpha - k)}
+        (\RiemannLiouvilleFractionalDerivative{\alpha} \RiemannLiouvilleFractionalDerivative{\beta} f)(t) = (\RiemannLiouvilleFractionalDerivative{\alpha + \beta}) f(t) - \sum_{k = 0}^{\lceil \beta \rceil - 1} (\RiemannLiouvilleFractionalDerivative{\beta - k - 1} f)(0) \frac{t^{-\alpha - k - 1}}{\Gamma(-\alpha - k)}
     \end{equation}
 \end{theorem}
 \begin{example}
     Зокрема, для $0 < \alpha, \beta < 1$:
     \begin{equation}
-        (D_0^\alpha D_0^\beta f)(t) = (D_0^{\alpha + \beta}) f(t) - (I_0^{1 - \beta} f)(0) \frac{t^{-\alpha - 1}}{\Gamma(-\alpha)}
+        (\RiemannLiouvilleFractionalDerivative{\alpha} \RiemannLiouvilleFractionalDerivative{\beta} f)(t) = (\RiemannLiouvilleFractionalDerivative{\alpha + \beta}) f(t) - (\FractionalIntegral{1 - \beta} f)(0) \frac{t^{-\alpha - 1}}{\Gamma(-\alpha)}
     \end{equation}
 \end{example}
 \begin{proof}
     Доведемо частинний випадок:
     \begin{equation}
         \begin{aligned}
-            (D_0^\alpha D_0^\beta f)(t)
-            &= \left( \frac{\diff}{\diff t} I_0^{1 - \alpha} D_0^\beta f \right)(t) = \\
-            &= \left( \frac{\diff^2}{\diff t^2} I_0^{2 - \alpha} D_0^\beta f \right)(t) = \\
-            &= \left( \frac{\diff^2}{\diff t^2} I_0^{2 - \alpha - \beta} I_0^\beta D_0^\beta f \right)(t) = \\
-            &= \frac{\diff^2}{\diff t^2} I_0^{2 - \alpha - \beta} \left( f(t) - \frac{(I_0^{1-\beta} f)(0) t^{\beta - 1}}{\Gamma(\beta)} \right) = \\
-            &= (D_0^{\alpha + \beta} f)(t) - \frac{(I_0^{1-\beta} f)(0)}{\Gamma(\beta)} D_0^{\alpha+\beta} t^{\beta-1} = \\
-            &= (D_0^{\alpha + \beta} f)(t) - \frac{(I_0^{1-\beta} f)(0)}{\Gamma(\beta)} \frac{\Gamma(\beta)}{\Gamma(-\alpha)} t^{-1-\alpha} = \\
-            &= (D_0^{\alpha + \beta} f)(t) - \frac{(I_0^{1-\beta} f)(0)}{\Gamma(-\alpha)} t^{-1-\alpha}.
+            (\RiemannLiouvilleFractionalDerivative{\alpha} \RiemannLiouvilleFractionalDerivative{\beta} f)(t)
+            &= \left( \frac{\diff}{\diff t} \FractionalIntegral{1 - \alpha} \RiemannLiouvilleFractionalDerivative{\beta} f \right)(t) = \\
+            &= \left( \frac{\diff^2}{\diff t^2} \FractionalIntegral{2 - \alpha} \RiemannLiouvilleFractionalDerivative{\beta} f \right)(t) = \\
+            &= \left( \frac{\diff^2}{\diff t^2} \FractionalIntegral{2 - \alpha - \beta} \FractionalIntegral{\beta} \RiemannLiouvilleFractionalDerivative{\beta} f \right)(t) = \\
+            &= \frac{\diff^2}{\diff t^2} \FractionalIntegral{2 - \alpha - \beta} \left( f(t) - \frac{(\FractionalIntegral{1 - \beta} f)(0) t^{\beta - 1}}{\Gamma(\beta)} \right) = \\
+            &= (\RiemannLiouvilleFractionalDerivative{\alpha + \beta} f)(t) - \frac{(\FractionalIntegral{1 - \beta} f)(0)}{\Gamma(\beta)} \RiemannLiouvilleFractionalDerivative{\alpha + \beta} t^{\beta-1} = \\
+            &= (\RiemannLiouvilleFractionalDerivative{\alpha + \beta} f)(t) - \frac{(\FractionalIntegral{1 - \beta} f)(0)}{\Gamma(\beta)} \frac{\Gamma(\beta)}{\Gamma(-\alpha)} t^{-1 - \alpha} = \\
+            &= (\RiemannLiouvilleFractionalDerivative{\alpha + \beta} f)(t) - \frac{(\FractionalIntegral{1 - \beta} f)(0)}{\Gamma(-\alpha)} t^{-1 - \alpha}.
         \end{aligned}
     \end{equation}
 \end{proof}

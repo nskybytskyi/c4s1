@@ -14,6 +14,13 @@
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+    <h3 class="text-danger">Модулі</h3>
+    <p>
+        Перший модуль пройде у п'ятницю <b class="text-danger">22&nbsp;листопада 2019&nbsp;р</b> на першій парі.
+    </p>
+</div>
+
+<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
     <h3 class="text-primary">Література</h3>
     <p>
         Оксендаль&nbsp;Б. &mdash; <i>Стохастические дифференциальные уравнения</i>. Мир, 2003&nbsp;г., 410&nbsp;с.: <a class="badge badge-success" href="books/Оксендаль-Б.-Стохастические-дифференциальные-уравнения-Мир-2003.djvu">Get djvu</a>

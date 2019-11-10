@@ -7,17 +7,17 @@
 \end{equation}
 де функція $f(x, t)$ відповідає джерелам речовини, що дифузує. \medskip
 
-Втім, у реальному житті зустрічаються процеси, у яких дифузія відбувається повільніше/швидше, ніж передбачає рівняння \eqref{eq:classical-diffusion}. Для постановки відповідних рівнянь необхідно вводити дробові похідні (похідні дробових порядків).
+Втім, у реальному житті зустрічаються процеси, у яких дифузія відбувається повільніше/швидше, ніж передбачає це рівняння. Для постановки відповідних рівнянь необхідно вводити дробові похідні (похідні дробових порядків).
 
 \subsection{Основи дробового числення}
 
 Розглянемо $f(t): \RR_{\ge 0} \to \RR$. Позначимо
 \begin{equation}
-    (I_0^1 f)(t) = \int_0^t f(s) \diff s.
+    (\FractionalIntegral{1} f)(t) = \int_0^t f(s) \diff s.
 \end{equation}
 Також визначимо рекурсивно 
 \begin{equation}
-    (I_0^n f)(t) = I_0^1 (I_0^{n - 1} f)(t) = \int_0^t \int_0^{s_1} \cdots \int_0^{s_{n - 1}} f(s_n) \diff s_n \ldots \diff s_1.
+    (\FractionalIntegral{n} f)(t) = \FractionalIntegral{1} (\FractionalIntegral{n - 1} f)(t) = \int_0^t \int_0^{s_1} \cdots \int_0^{s_{n - 1}} f(s_n) \diff s_n \ldots \diff s_1.
 \end{equation}
 
 Подібне визначення не дуже зручне з обчислювальної точки зору, тому наступна теорема стане нам у пригоді.
@@ -25,18 +25,19 @@
 \begin{theorem}[формула Коші-Діріхле]
     Для $f \in L_1([0, T])$, $t \in [0, T]$ має місце
     \begin{equation}
-        (I_0^n f)(t) = \frac{1}{(n - 1)!} \int_0^t (t - s)^{n - 1} f(s) \diff s.
+        (\FractionalIntegral{n} f)(t) = \frac{1}{(n - 1)!} \int_0^t (t - s)^{n - 1} f(s) \diff s.
     \end{equation}
 \end{theorem}
 \begin{proof}
     Доведення проведемо за методом математичної індукції по $n$. \textbf{База} $n = 1$ виконується безпосередньо за визначенням $I_0^1$. \textbf{Перехід}: нехай
     \begin{equation}
-        (I_0^n f)(t) = \frac{1}{(n - 1)!} \int_0^t (t - s)^{n - 1} f(s) \diff s.
+        (\FractionalIntegral{n} f)(t) = \frac{1}{(n - 1)!} \int_0^t (t - s)^{n - 1} f(s) \diff s.
     \end{equation}
     Тоді 
     \begin{equation}
         \begin{aligned}
-            (I_0^{n + 1} f)(t) &= I_0^1 (I_0^n f)(t) = \int_0^t (I_0^n f)(s) \diff s = \\
+            (\FractionalIntegral{n + 1} f)(t)
+            &= \FractionalIntegral{1} (I_0^n f)(t) = \int_0^t (\FractionalIntegral{n} f)(s) \diff s = \\
             &= \int_0^t \frac{1}{(n - 1)!} \left( \int_0^s (s - \xi)^{n - 1} f(\xi) \diff \xi \right) \diff s = \\
             &= \frac{1}{(n - 1)!} \int_0^t \int_\xi^t f(\xi) (s - \xi)^{n - 1} \diff s \diff \xi = \\
             &= \frac{1}{(n - 1)!} \int_0^t f(\xi) \left. \frac{(s - \xi)^n}{n} \right|_{s = \xi}^{s = t} \diff \xi = \\
@@ -52,15 +53,17 @@
         \includegraphics[width=.4\textwidth]{{img/01/01}.mps}
         \caption{При $s: 0 \to t$ маємо $\xi: 0 \to s$.}
     \end{figure}
+
+    У подальшому ми будемо часто явно чи неявно користатися теоремою Фубіні, тому радимо переконатися у тому, що ви розумієте цей перехід.
 \end{remark}
 
 Формула Коші-Діріхле мотивує введення інтегральних операторів нецілого порядку.
 \begin{definition}
     \textit{Інтегралом Рімана-Ліувілля} порядку $\alpha > 0$ з нижньою межею $0$ функції $f$ називається оператор
     \begin{equation}
-        (I_0^\alpha f)(t) = \frac{1}{\Gamma(\alpha)} \int_0^t (t - s)^{\alpha - 1} f(s) \diff s.
+        (\FractionalIntegral{\alpha} f)(t) = \frac{1}{\Gamma(\alpha)} \int_0^t (t - s)^{\alpha - 1} f(s) \diff s.
     \end{equation}
-    Також окремо зауважимо, що $I_0^0 f = f$.
+    Також окремо зауважимо, що $\FractionalIntegral{0} f = f$.
 \end{definition}
 \begin{example}
     Справді, для $\alpha \in \NN$ маємо $\Gamma(\alpha) = (\alpha - 1)!$, тобто власне формулу Коші-Діріхле.
@@ -71,7 +74,7 @@
 
 Взагалі кажучи, подібний вираз нагадує функцію згортки зі степеневою функцією порядку $\alpha$:
 \begin{equation}
-    I_0^\alpha f = f \star y_\alpha,
+    \FractionalIntegral{\alpha} f = f \star y_\alpha,
 \end{equation}
 де $y_\alpha(t) = \frac{1}{\Gamma(\alpha)} t^{\alpha - 1}$, а операція $\star: (\RR_{\ge 0} \to \RR) \times (\RR_{\ge 0} \to \RR) \to \RR$ визначається наступним чином:
 \begin{equation}
@@ -95,18 +98,18 @@
 \begin{definition}
     \textit{Похідною за Капуто} функції $f$ порядку $\alpha$ з нижнею межею $0$ називається оператор
     \begin{equation}
-        ({}^\star D_0^\alpha f)(t) = I_0^{n - \alpha} \left( \frac{\diff^n f}{\diff t^n} \right).
+        (\CaputoFractionalDerivative{\alpha} f)(t) = \FractionalIntegral{n - \alpha} \left( \frac{\diff^n f}{\diff t^n} \right).
     \end{equation}
 \end{definition}
 \begin{definition}
     \textit{Похідною Рімана-Ліувілля} функції $f$ порядку $\alpha$ з нижнею межею $0$ називається оператор
     \begin{equation}
-        (D_0^\alpha f)(t) = \frac{\diff^n}{\diff t^n} \left( I_0^{n - \alpha} f \right).
+        (\RiemannLiouvilleFractionalDerivative{\alpha} f)(t) = \frac{\diff^n}{\diff t^n} \left( \FractionalIntegral{n - \alpha} f \right).
     \end{equation}
 \end{definition}
 
 \begin{example}
-    На рисунку вище $D_0^{0.5} = \dfrac{\diff}{\diff t} I_0^{0.5}$, а ${}^\star D_0^{0.5} = I_0^{0.5} \left( \dfrac{\diff}{\diff t} \right)$.
+    На рисунку вище $\RiemannLiouvilleFractionalDerivative{0.5} = \dfrac{\diff}{\diff t} \FractionalIntegral{0.5}$, а $\CaputoFractionalDerivative{0.5} = \FractionalIntegral{0.5} \left( \dfrac{\diff}{\diff t} \right)$.
 \end{example}
 
 Взагалі кажучи виникає питання коли введені вище похідні існують. Для відповіді на це питання нам знадобиться наступне:
@@ -125,10 +128,10 @@
     Наведіть приклад рівномірно неперервної але не абсолютно неперервної функції.
 \end{exercise}
 \begin{solution}
-    Функція Кантора є класичним прикладом такої функції. нагадаємо, що функція Кантора визначається як
+    Функція Кантора є класичним прикладом такої функції. Нагадаємо, що функція Кантора визначається як
     \begin{equation}
         c(x) = \begin{cases}
-            \frac{1}{2} \Sum_{n = 1}^\infty \frac{b_n}{2^n}, & x = \Sum_{n = 1}^\infty \frac{b_n}{3^n} \in \mathcal{C}, \\
+            \dfrac{1}{2} \Sum_{n = 1}^\infty \frac{b_n}{2^n}, & x = \Sum_{n = 1}^\infty \frac{b_n}{3^n} \in \mathcal{C}, \\
             \Sup_{y \le x, y \in \mathcal{C}} c(y), & x \in [0, 1] \setminus \mathcal{C},
         \end{cases}
     \end{equation}
@@ -149,23 +152,23 @@
 \begin{theorem}
     Нехай $f \in AC^n([0, T])$, $t \in [0, T]$, $n = \lceil \alpha \rceil$. Тоді
     \begin{equation}
-        (D_0^\alpha f) (t) = \frac{1}{\Gamma(n - \alpha)} \int_0^t \frac{f^{(n)}(s)}{(t - s)^{\alpha + 1 - n}} \diff s + \sum_{k = 0}^{n - 1} \frac{f^{(k)}(0)}{\Gamma(1 + k - \alpha) t^{\alpha - k}}.
+        (\RiemannLiouvilleFractionalDerivative{\alpha} f) (t) = \frac{1}{\Gamma(n - \alpha)} \int_0^t \frac{f^{(n)}(s)}{(t - s)^{\alpha + 1 - n}} \diff s + \sum_{k = 0}^{n - 1} \frac{f^{(k)}(0)}{\Gamma(1 + k - \alpha) t^{\alpha - k}}.
     \end{equation}
 \end{theorem}
 \begin{example}
     Зокрема, при $0 < \alpha < 1$ маємо $f \in AC([0, T])$ і
     \begin{equation}
-        (D_0^\alpha f) (t) = \frac{1}{\Gamma(1 - \alpha)} \int_0^t \frac{f'(s)}{(t - s)^\alpha} \diff s + \frac{f(0)}{\Gamma(1 - \alpha) t^\alpha}.
+        (\RiemannLiouvilleFractionalDerivative{\alpha} f) (t) = \frac{1}{\Gamma(1 - \alpha)} \int_0^t \frac{f'(s)}{(t - s)^\alpha} \diff s + \frac{f(0)}{\Gamma(1 - \alpha) t^\alpha}.
     \end{equation}
 \end{example}
 \begin{remark}
-    Як показує формула, ${}^\star D_0^\alpha, D_0^\alpha$ --- нелокальні оператори.    
+    Як показує формула, $\CaputoFractionalDerivative{\alpha}$, $\RiemannLiouvilleFractionalDerivative{\alpha}$ --- \textit{нелокальні оператори}.
 \end{remark}
 \begin{proof}
     Доведемо частинний випадок $0 < \alpha < 1$:
     \begin{equation}
         \begin{aligned}
-            (D_0^\alpha f)(t) &= \frac{\diff}{\diff t} I_0^{1 - \alpha} f = \frac{\diff}{\diff t} \frac{1}{\Gamma(1 - \alpha)} \int_0^t (t - s)^{-\alpha} f(s) \diff s = \\
+            (\RiemannLiouvilleFractionalDerivative{\alpha} f)(t) &= \frac{\diff}{\diff t} \FractionalIntegral{1 - \alpha} f = \frac{\diff}{\diff t} \frac{1}{\Gamma(1 - \alpha)} \int_0^t (t - s)^{-\alpha} f(s) \diff s = \\
             &= \frac{\diff}{\diff t} \frac{1}{\Gamma(1 - \alpha)} \int_0^t f(s) \frac{\diff (-(t-s)^{1-\alpha}}{1 - \alpha} \diff s = \\
             &= \frac{\diff}{\diff t} \frac{1}{\Gamma(1 - \alpha)} \left( \left. \frac{-f(s)(t-s)^{1-\alpha}}{1 - \alpha} \right|_{s = 0}^{s = t} + \int_0^t f'(s) \frac{(t - s)^{1- \alpha}}{1 - \alpha} \diff s \right) = \\
             &= \frac{\diff}{\diff t} \frac{1}{\Gamma(1 - \alpha)} \left( \frac{f(0) t^{1-\alpha}}{1 - \alpha} + \frac{1}{1 - \alpha} \int_0^t f'(s) (t - s)^{1 - \alpha} \diff s \right) = \\
@@ -174,22 +177,22 @@
     \end{equation}
 \end{proof}
 \begin{remark}
-    Тут при переході від другого рядочка до третього ми скористалися інтегруванням за частинами, а в останньому переході --- формулою Лейбніца:
+    Тут при переході від другого рядка до третього ми скористалися інтегруванням за частинами, а в останньому переході --- формулою Лейбніца:
     \begin{equation}
         \frac{\diff}{\diff x} \left(\int_{a(x)}^{b(x)} f(x,t) \diff t \right) = f(x, b(x)) \cdot b'(x) - f(x, a(x)) \cdot a'(x) + \int_{a(x)}^{b(x)} \frac{\partial}{\partial x} f(x,t) \diff t.    
     \end{equation}
 \end{remark}
 
-На завершення визначимо ще кілька корисних для подальшого дослідження об'єктів:
+На завершення визначимо ще кілька корисних для загального розвитку об'єктів:
 \begin{definition}
-    \textit{Інтегралом Рімана-Ліувілля з нижньою }(\textit{лівою})\textit{ межею} $a$ називається
+    \textit{Інтегралом Рімана-Ліувілля порядку $\alpha$ з нижньою }(\textit{лівою})\textit{ межею} $a$ називається
     \begin{equation}
-        (I_{a^+}^\alpha f)(t) = \frac{1}{\Gamma(\alpha)} \int_a^t f(s) (t - s)^{\alpha - 1} \diff s.
+        (\LeftFractionalIntegral{\alpha}{a} f)(t) = \frac{1}{\Gamma(\alpha)} \int_a^t f(s) (t - s)^{\alpha - 1} \diff s.
     \end{equation}
 \end{definition}
 \begin{definition}
-    \textit{Інтегралом Рімана-Ліувілля з правою }(\textit{верхньою})\textit{ межею} $T$ для $t < T$ називається
+    \textit{Інтегралом Рімана-Ліувілля порядку $\alpha$ з правою }(\textit{верхньою})\textit{ межею} $T$ для $t < T$ називається
     \begin{equation}
-        (I_{T^-}^\alpha f)(t) = -\frac{1}{\Gamma(\alpha)} \int_t^T f(s) (t - s)^\alpha \diff s.
+        (\RightFractionalIntegral{\alpha}{T} f)(t) = -\frac{1}{\Gamma(\alpha)} \int_t^T f(s) (t - s)^\alpha \diff s.
     \end{equation}
 \end{definition}

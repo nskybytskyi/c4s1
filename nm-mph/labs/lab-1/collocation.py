@@ -98,7 +98,7 @@ def graph(points, u_true: SympyExpressionFactory, u: SympyExpressionFactory, **k
 
 
 if __name__ == '__main__':
-    for n in (8 + 1, 16 + 1):
+    for n in (5 + 1,):
         x: SympySymbol = sympy.Symbol('x')
 
         a, b = 0, 4

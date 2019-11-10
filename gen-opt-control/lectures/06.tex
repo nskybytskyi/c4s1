@@ -1,0 +1,176 @@
+\begin{equation}
+    \ol{\delta^2(t, T)}
+    = \frac{1}{T - t} \int_0^{T - t} \Big( x(t + s) - x(s) \Big)^2 \diff s
+\end{equation}
+--- усереднене зміщення (за часом). Усереднимо за сукупністю частинок:
+\begin{equation}
+    \begin{aligned}
+        \ol{\Blangle \qq^2(t, T) \Brangle}
+        &= \frac{1}{T - t} \int_0^{T - t} \Blangle x(t + s) - x(s) \Brangle \diff s = \\
+        &= \frac{1}{T - t} \int_0^{T - t} 2 \sigma^2 \Blangle n(t + s) - n(s) \Brangle \diff s.
+    \end{aligned}
+\end{equation}
+
+За умов, що $t \to \infty$, $T \to \infty$ і $T \gg t$ маємо
+\begin{equation}
+    \langle n(t) \rangle
+    \sim \frac{1}{\tau^\alpha \Gamma(1 + \alpha)} t^\alpha,
+\end{equation}
+а тому попередній вираз асимптотично рівний
+\begin{equation}
+    \frac{2 \sigma^2}{T - t} \int_0^{T - t} \frac{1}{\tau^\alpha \Gamma(1 + \alpha)} \Big( (s + t)^\alpha - s^\alpha \Big) \diff s.
+\end{equation}
+
+У свою чергу, можемо переписати $(s + t)^\alpha - s^\alpha$ за рядом Тейлора:
+\begin{equation}
+    (s + t)^\alpha - s^\alpha
+    = s^\alpha \left( 1 + \frac{t}{s} \right)^\alpha - s^\alpha
+    \sim s^\alpha \left( 1 + \frac{\alpha t}{s} \right) - s^\alpha
+    = \frac{\alpha t}{s^{1 - \alpha}},
+\end{equation}
+а тому попередній вираз асимптотично рівний
+\begin{equation}
+    \begin{aligned}
+        \frac{2 \sigma^2}{T - t} \cdot \frac{\alpha t}{\Gamma(1 + \alpha) \tau^\alpha} \int_0^{T - t} s^{\alpha - 1} \diff s
+        &= \frac{2 \sigma^2 \alpha t}{(T - t) \Gamma(1 + \alpha) \tau^\alpha} \cdot \frac{1}{\alpha} \cdot (T - t)^\alpha
+        &= \frac{2 \sigma^2 t}{\Gamma(1 + \alpha) \tau^\alpha} (T - t)^{\alpha - 1}
+        &\sim \frac{2 K_\alpha}{\Gamma(1 + \alpha) T^{1 - \alpha}} t,
+    \end{aligned}
+\end{equation}
+тобто отримали лінійну функцію від $t$. \medskip
+
+\begin{definition}
+    Ситуація, у якій $\Blangle x^2(t) \Brangle$ і $\ol{\Blangle \delta^2(t, T) \Brangle}$ мають рязний вигляд фу функції змінної $t$ називається \textit{слабкою неергодичністю} (\textit{eng.} weak ergodicity breaking).
+\end{definition}
+
+\begin{remark}
+    В обмеженій області
+    \begin{align}
+        \Blangle x^2(t) \Brangle &= \const, \quad t \to \infty, \\
+        \Blangle \delta^2(t, T) \Brangle &= \const \cdot t^{1 - \alpha}, \quad t \to \infty.
+    \end{align}
+\end{remark}
+
+Розглянемо тепер ситуацію коли $0 < \alpha < 1$ і $\psi(t) \sim A \alpha t^{-1 - \alpha}$, тоді математичне сподівання $\int_0^\infty t \psi(t) \diff t = \infty$ --- так званий \textit{розподіл з важким хвостом} (\textit{eng.} fat-tailed distribution).
+
+\begin{example}
+    Нехай $\psi(t) = \frac{t}{\tau} e^{-t / \tau}$, тоді $\langle T \rangle = \tau$.
+\end{example}
+
+\subsection{Рівняння розподіленого порядку}
+
+Розглянемо випадок коли $\alpha$ --- випадкова величина, розподілена на $(0, 1)$ зі щільністю $p(\alpha)$. Припустимо, що час очікування стрибки задається умовною щільністю
+\begin{equation}
+    \psi(t|\alpha) \sim A \alpha \frac{\tau^\alpha}{t^{1 + \alpha}},
+\end{equation}
+де $A = \frac{\alpha}{\sigma (1 - \sigma)}$. \medskip
+
+Тоді
+\begin{equation}
+    \psi(t) = \int_0^1 \psi(t|\alpha) p(\alpha) \diff \alpha.
+\end{equation}
+
+Звідси
+\begin{equation}
+    \LaplaceTransform{\psi}(\eta)
+    = \int_0^\infty e^{-\eta t} \int_0^1 \psi(t|\alpha) p(\alpha) \diff \alpha \diff t.
+\end{equation}
+
+Змінюючи порядок інтегрування, отримуємо
+\begin{equation}
+    \int_0^1 p(\alpha) \int_0^\infty e^{-\eta t} \psi(t|\alpha) \diff t \diff \alpha.
+\end{equation}
+
+Далі, $\psi(t) \sim \frac{\alpha}{\Gamma(1 - \alpha)} \frac{\tau^\alpha}{t^{1 + \alpha}}$, а тому, за теоремою Таубера, $\LaplaceTransform{\psi}(\eta) \sim 1 - (\eta \tau)^\alpha + o(\eta^\alpha)$. Замінюючи таким чином внутрішній інтеграл отримуємо
+\begin{equation}
+    \int_0^1 \Big( 1 - (\eta \tau)^\alpha + o(\eta^\alpha) \Big) \diff \alpha
+    \sim 1 - \int_0^1 p(\alpha) (\eta \tau)^\alpha \diff \alpha.
+\end{equation}
+
+Позначимо
+\begin{equation}
+    I(\eta, \tau) = \int_0^1 p(\alpha) (\eta \tau)^\alpha \diff \alpha.
+\end{equation}
+
+За формулою Монтрола-Вайса
+\begin{equation}
+    \FourierLaplaceTransform{u}(\omega, \eta)
+    = \FourierTransform{u_0}(\omega) \cdot \frac{1}{\eta} \cdot \frac{1 - \LaplaceTransform{\psi}(\eta)}{1 - \LaplaceTransform{\psi}(\eta) \FourierTransform{\lambda}(\omega)}
+    = \frac{\FourierTransform{u_0}(\omega)}{\eta} \cdot \frac{I(\eta, \tau)}{1 - (1 - I(\eta, \tau)) \FourierTransform{\lambda}(\omega)}.
+\end{equation}
+
+Також припустимо, що $\lambda \sim \mathcal{N}(0, 2 \sigma^2) \implies \FourierTransform{\lambda} \sim 1 - \sigma^2 \omega^2$. Тоді
+\begin{equation}
+    \FourierLaplaceTransform{u}(\omega, \eta)
+    = \frac{\FourierTransform{u_0}(\omega)}{\eta} \cdot \frac{I(\eta, \tau)}{I(\eta, \tau) + \sigma^2 \omega^2}.
+\end{equation}
+
+Отже, з точністю до малих доданків,
+\begin{equation}
+    \FourierLaplaceTransform{u} \cdot \Big( I(\eta, \tau) + \sigma^2 \omega^2 \Big) = \frac{\FourierTransform{u_0}}{\eta} \cdot I(\eta, \tau),
+\end{equation}
+або ж
+\begin{equation}
+    I(\eta, \tau) \left( \FourierLaplaceTransform{u} - \FourierTransform{u_0}{\eta} \right) = -\sigma^2 \omega^2 \FourierLaplaceTransform{u}.
+\end{equation}
+
+Діємо на це співвідношення оберненим перетворенням Фур'є, отримаємо
+\begin{equation}
+    I(\eta, \tau) \left( \LaplaceTransform{u} - \frac{u_0}{\eta} \right) = -\sigma^2 \cdot \frac{\partial^2 \LaplaceTransform{u}}{\partial x^2}.
+\end{equation}
+
+\begin{remark}
+    Тут $\LaplaceTransform{u} = \LaplaceTransform{u}(x, \eta)$.
+\end{remark}
+
+Розпишемо інтеграл у явному вигляді:
+\begin{equation}
+    \begin{aligned}
+        I(\eta, \tau) \left( \LaplaceTransform{u} - \frac{u_0}{\eta} \right)
+        &= \int_0^1 p(\alpha) (\eta \tau)^\alpha \left( \LaplaceTransform{u} - \frac{u_0}{\eta} \right) \diff \alpha = \\
+        &= \int_0^1 p(\alpha) \tau^\alpha \cdot \left( \eta^\alpha \LaplaceTransform{u} - \eta^{\alpha - 1} u_0 \right) \diff \alpha.
+    \end{aligned}
+\end{equation}
+
+У виразі в дужках під інтегралом не складно впізнати $\LaplaceTransform{{}^\star D_0^\alpha u}(\eta)$. Підставляючи, отримуємо
+\begin{equation}
+    \int_0^1 p(\alpha) \tau^\alpha \int_0^\infty e^{-\eta t} ({}^\star D_0^\alpha u(x, t)) \diff t \diff \alpha.
+\end{equation}
+
+Знову змінюємо порядок інтегрування:
+\begin{equation}
+    \int_0^\infty e^{-\eta t} \int_0^1 p(\alpha) \tau^\alpha {}^\star D_0^\alpha u(x, t) \diff \alpha \diff t.
+\end{equation}
+
+А у цьому, у свою чергу, можна впізнати
+\begin{equation}
+    \LaplaceTransform{\int_0^1 p(\alpha) \tau^\alpha {}^\star D_0^\alpha u(x, t) \diff \alpha }(\eta).
+\end{equation}
+
+Тому, діючи оберненим перетворенням Лапласа на останнє рівняння, отримаємо
+\begin{equation}
+    \int_0^1 p(\alpha) \tau^\alpha {}^\star D_0^\alpha u(x, t) \diff \alpha = \sigma^2 \frac{\partial^2 u}{\partial x^2},
+\end{equation}
+\textit{рівняння розподіленого порядку}.
+
+\begin{example}
+    Якщо $\alpha = \alpha_0 = \const$, то $p(\alpha) = \delta(\alpha - \alpha_0)$ --- так звана \textit{густина матеріальної точки}:
+    \begin{itemize}
+        \item $\delta (\alpha - \alpha_0) = 0$, $\forall \alpha \ne \alpha_0$;
+        \item $\delta (\alpha_0 - \alpha_0) = \infty$;
+        \item $\int_0^1 \delta(\alpha - \alpha_0) \diff x = 1$ ($\alpha_0 \in (0, 1$).
+    \end{itemize}    
+    
+    Тоді отримаємо рівняння
+    \begin{equation}
+        \tau^{\alpha_0} {}^\star D_0^{\alpha_0} u(x, t) = \sigma^2 \cdot \frac{\partial^2 u}{\partial x^2},
+    \end{equation}
+    тобто
+    \begin{equation}
+        {}^\star D_0^{\alpha_0} u(x, t) = K_{\alpha_0} \cdot \frac{\partial^2 u}{\partial x^2}.
+    \end{equation}
+\end{example}
+
+\begin{example}
+    Якщо ж $p(\alpha) \sim \nu \alpha^{\nu - 1}$ при $\alpha \to $ і $x(0) = 0$ (блукання починається з початку координат), то $\langle x^2(t) \rangle \sim c\onst \cdot \ln^\nu t$, так звана \textit{ультраповільна дифузія}.
+\end{example}

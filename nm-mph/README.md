@@ -37,7 +37,13 @@
         Лекція <b>15&nbsp;жовтня</b>: <a class="badge badge-success" href="lectures/Риженко,%20лекція%2015.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>22&nbsp;жовтня</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+        Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+    </p>
+    <p>
+        Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+    </p>
+    <p>
+        Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
     </p>
     <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>

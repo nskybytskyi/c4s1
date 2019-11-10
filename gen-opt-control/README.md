@@ -42,6 +42,12 @@
         Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
     </p>
     <p>
+        Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+    </p>
+    <p>
+        Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+    </p>
+    <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>
     </p>
 </div>
@@ -49,17 +55,27 @@
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
     <h3 class="text-danger">Колоквіуми</h3>
     <p>
-        Перший колоквіум пройде у:
+        Другий колоквіум пройде у:
+        <ul>
+            <li>вівторок <b class="text-danger">19&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
+            <li>середу <b class="text-danger">20&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
+        </ul>
+    </p>
+    <p>
+        Питання на другий колоквіум: <a class="badge badge-success" href="Гуляницький,%20питання%20на%20другий%20колоквіум.pdf">Get pdf</a>
+    </p>
+    <p>
+        Перший колоквіум пройшли у:
         <ul>
             <li>вівторок <b>22&nbsp;жовтня 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
             <li>середу <b>23&nbsp;жовтня 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
         </ul>
     </p>
     <p>
-        Перескладання першого колоквіуму пройдуть у:
+        Перескладання пройшли колоквіуму пройшли у:
         <ul>
-            <li>вівторок <b class="text-danger">29&nbsp;жовтня 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
-            <li>вівторок <b class="text-danger">5&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
+            <li>вівторок <b>29&nbsp;жовтня 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
+            <li>вівторок <b>5&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
         </ul>
     </p>
     <p>

@@ -109,7 +109,7 @@ def graph(points, u_true, u, **kwargs) -> None:
 
 
 if __name__ == '__main__':
-    for n in (4 + 1, 8 + 1):
+    for n in (8 + 1,):
         a, b = 0, 4
         alpha_1, alpha_2 = 4, 2
 

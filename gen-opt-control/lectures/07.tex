@@ -1,0 +1,125 @@
+\subsection{Рівняння реакції-субдифузії змінного порядку}
+
+Згадаємо класичне рівняння реакції-дифузії:
+\begin{equation}
+    \frac{\partial u}{\partial t} = k \Delta u - \theta u,
+\end{equation}
+де $\theta$ --- кооефіцієнт реакції (реакція це процес у якому частинки речовини зникають). \medskip
+
+Наївне узагальнення:
+\begin{equation}
+    {}^\star D_0^\alpha u = k_\alpha \Delta u - \theta u.
+\end{equation}
+
+\begin{remark}
+    Основна проблема із цим рівнянням у тому, що його розв'язок $u(x, t)$, взагалі кажучи, не є невід'ємним, навіть якщо $u_0(x) \ge 0$.
+\end{remark}
+
+Скористаємося напів-дискретним підходом: розглянемо сітку з рівновіддаленими вузлами (для наочності --- у одновимірному випадку). Нехай $u_i(t)$ --- кількість частинок речовини у $i$-ому вузлі у момент часу $t$. Будемо вважати, що стрибки відбуваються в один із сусідніх вузлів із ймовірностями $1/2$ (тобто блукання не зміщене). Нехай також, як і раніше, $\psi_i(t)$ --- щільність часу очікування стрибка у вузлі $i$. \medskip
+
+Також вважаємо, що час зникнення частинки має показниковий розподіл з параметром $\theta_i$. Показниковий розподіл особливий тим, що у нього відсутній ефект післядії: ймовірність розпаду у проміжку часу $[t_0, t_0 + \Delta t]$ не залежить від $t_0$ і дорівнює $1 - e^{-\theta_i t}$, а ймовірність продовження існування дорівнює $e^{-\theta_i t}$. \medskip
+
+Це рівносильно тому, що за відсутності стриків (тобто без дифузії) рівняння мало б такий вигляд:
+\begin{equation}
+    \frac{\diff u_i}{\diff t} = -\theta_i u_i,
+\end{equation}
+адже розв'язок цього рівняння має вигляд
+\begin{equation}
+    u_i(t) = u_i(0) e^{-\theta_i t},
+\end{equation}
+тобто отримали (з точністю до множника) ймовірність продовження існування для показникового розподілу. \medskip
+
+Розглянемо ще дві величини: 
+\begin{definition}
+    \textit{вхідний та вихідний інтегральні потоки} $J_i^+(t)$, $J_i^-(t)$ такі, що
+    \begin{equation}
+        \int_{t_1}^{t_2} J_i^+(t) \diff t
+    \end{equation}
+    --- кількість частинок, що прибули в $i$-ий вузол впродовж часу $[t_1, t_2]$, а
+    \begin{equation}
+        \int_{t_1}^{t_2} J_i^-(t) \diff t
+    \end{equation}
+    --- кількість частинок, що вибули з $i$-ого вузла за час $[t_1, t_2]$.
+\end{definition}
+
+Відносно них ми і запишемо рівняння: за наведених припущень, маємо такі рівняння:
+\begin{equation}
+    \frac{\diff u_i}{\diff t} = J_i^+ - J_i^- - \theta_i u_i
+\end{equation}
+а також
+\begin{equation}
+    J_i^+ = \frac{1}{2} J_{i - 1}^- + \frac{1}{2} J_{i + 1}^-.
+\end{equation}
+
+Б,езпосередньо з цих двох рівнянь випливає, що
+\begin{equation}
+    \frac{\diff u_i}{\diff t} = \frac{1}{2} J_{i - 1}^- - J_i^- + \frac{1}{2} J_{i + 1}^- - \theta_i u_i.
+\end{equation}
+
+Крім того,
+\begin{equation}
+    J_i^-(t) = u_i(0) \cdot e^{-\theta_i t} \psi_i(t) + \int_0^t J_i^+(s) e^{-\theta_i (t - s)} \psi_i(t - s) \diff s.
+\end{equation}
+
+Перший доданок відповідає за частинки, які з самого початку були в $i$-ому вузлі, не розпалися за час $t$ (ймовірність цього $e^{-\theta_i t}$) і вистринули з нього у час $t$ (ймовірність цього $\psi_i(t)$), а підінтегральний вираз у другому --- за  ті частинки, які прибули у момент часу $s$, не розпалисі за час $t - s$ (ймовірність цього $e^{-\theta_i (t - s)}$), і вистрибнули з нього через час $t - s$ після прибуття (ймовірність цього $\psi_i(t - s)$). \medskip
+
+Перетворимо останнє рівняння перетворенням Лапласа:
+\begin{equation}
+    \begin{aligned}
+        \mathcal{L} [J_i^-](\eta)
+        &= u_i(0) \mathcal{L}[\psi_i](\eta + \theta_i) + \mathcal{L} [J_i^+](\eta) \mathcal{L}[\psi_i](\eta + \theta_i) = \\
+        &= u_i(0) \mathcal{L}[\psi_i](\eta + \theta_i) + \big( \eta \mathcal{L} [u_i](\eta) - u_i(0) + \mathcal{L}[J_i^-](\eta) + \theta_i \mathcal{L}[u_i](\eta) \big) \mathcal{L}[\psi_i](\eta + \theta_i) = \\
+        &= \big( \eta \mathcal{L} [u_i](\eta) + \mathcal{L}[J_i^-](\eta) + \theta_i \mathcal{L}[u_i](\eta) \big) \mathcal{L}[\psi_i](\eta + \theta_i).
+    \end{aligned}
+\end{equation}
+
+Звідси
+\begin{equation}
+    \begin{aligned}
+        \mathcal{L} [J_i^-](\eta)
+        &= \frac{(\eta + \theta_i) \mathcal{L} [u_i](\eta) \mathcal{L}[\psi_i](\eta + \theta_i)}{1 - \mathcal{L} [\psi_i](\eta + \theta_i)} = \\
+        &= \eta \mathcal{L} [u_i](\eta) \mathcal{L} \left[ e^{-\theta_i t} \mathcal{L}^{-1} \left[ \frac{\mathcal{L}[\psi_i](\eta)}{1 - \mathcal{L}[\psi_i](\eta)} \right] \right] + \theta_i \mathcal{L} [u_i](\eta) \mathcal{L} \left[ e^{-\theta_i t} \mathcal{L}^{-1} \left[ \frac{\mathcal{L}[\psi_i](\eta)}{1 - \mathcal{L}[\psi_i](\eta)} \right] \right].
+    \end{aligned}
+\end{equation}
+
+Нехай тепер $\psi_i(t) \sim r_i t^{-1 - \alpha_i}$, де $0 < \alpha_i < 1$. Тоді $\mathcal{L}[\psi_i](\eta) \sim 1 - r_i \frac{\Gamma(1 - \alpha_i)}{\alpha_i} \eta^{\alpha_i} + o(\eta^{\alpha_i})$ (за наслідком з теореми Таубера). Отже,
+\begin{equation}
+    \frac{\mathcal{L}[\psi_i](\eta)}{1 - \mathcal{L}[\psi_i](\eta)} = \frac{1 - r_i \frac{\Gamma(1 - \alpha_i)}{\alpha_i} \eta^{\alpha_i} + o(\eta^{\alpha_i})}{r_i \frac{\Gamma(1 - \alpha_i)}{\alpha_i} \eta^{\alpha_i} + o(\eta^{\alpha_i})} \sim \frac{\alpha_i \eta^{-\alpha_i}}{r_i \Gamma(1 - \alpha_i)} = M_i \eta^{-\alpha_i}.
+\end{equation}
+
+За теоремою Таубера з $\beta = 1 - \alpha_i$,
+\begin{equation}
+    \mathcal{L}^{-1} \left[ \frac{\mathcal{L}[\psi_i](\eta)}{1 - \mathcal{L}[\psi_i](\eta)} \right] \sim \frac{M_i}{\Gamma(\alpha_i)} t^{\alpha_i - 1}.
+\end{equation}
+
+Тому можемо продовжити
+\begin{equation}
+    J_i^-(t) \sim \frac{\diff}{\diff t} \left[ u_i(t) \star e^{-\theta_i t} \frac{M_i}{\Gamma(\alpha_i)} t^{\alpha_i - 1} \right] + \theta_i \left[ u_i(t) \star e^{-\theta_i t} \frac{M_i}{\Gamma(\alpha_i)} t^{\alpha_i - 1} \right].
+\end{equation}
+
+\begin{remark}
+    У цій формулі не фігурує початкове значення, адже воно рівне нулеві для достатньо гладкої $u_i$, наприклад для обмеженої в околі нуля і інтегровної. Справді, тоді $\left. u_i \star e^{-\theta_i t} t^{\alpha_i - 1} \right|_{t = 0}$:
+    \begin{equation}
+        \left. u_i \star e^{-\theta_i t} t^{\alpha_i - 1} \right|_{t = 0} = \int_0^t u_i(s) e^{-\theta_i (t - s)} (t - s)^{\alpha_i - 1} \diff s \le \int_0^t U \cdot 1 \cdot (t - s)^{\alpha_i - 1} \diff s \xrightarrow[t \to 0]{} 0.
+    \end{equation}
+\end{remark}
+
+Ми майже досягнули нашої мети:
+\begin{equation}
+    \begin{aligned}
+        \frac{1}{M_i} J_i^-(t)
+        &= \frac{\diff}{\diff t} \frac{1}{\Gamma(\alpha_i)} \int_0^t u_i(s) e^{-\theta_i (t - s)} (t - s)^{\alpha_i - 1} \diff s + \\
+        &\quad + \theta_i \frac{1}{\Gamma(\alpha_i)} \int_0^t u_i(s) e^{-\theta_i (t - s)} (t - s)^{\alpha_i - 1} \diff s = \\
+        &= \frac{\diff}{\diff t} e^{-\theta_i t} \frac{1}{\Gamma(\alpha_i)} \int_0^t u_i(s) e^{\theta_i s} (t - s)^{\alpha_i - 1} \diff s + \\
+        &\quad + \theta_i \frac{1}{\Gamma(\alpha_i)} \int_0^t u_i(s) e^{-\theta_i (t - s)} (t - s)^{\alpha_i - 1} \diff s = \\
+        &= \frac{\diff}{\diff t} e^{-\theta_i t} \frac{1}{\Gamma(\alpha_i)} \int_0^t u_i(s) e^{\theta_i s} (t - s)^{\alpha_i - 1} \diff s + \\
+        &\quad + \theta_i \frac{1}{\Gamma(\alpha_i)} \int_0^t u_i(s) e^{-\theta_i (t - s)} (t - s)^{\alpha_i - 1} \diff s = \\
+        &= e^{-\theta_i t} \frac{\diff}{\diff t} \frac{1}{\Gamma(\alpha_i)} \int_0^t u_i(s) e^{\theta_i s} (t - s)^{\alpha_i - 1} \diff s = \\
+        &= e^{-\theta_i t} D_0^{1 - \alpha} (e^{\theta_i t} u_i(t)).
+    \end{aligned}
+\end{equation}
+
+% Пісдтавляємо це назад:
+% \begin{equation}
+%     \frac{\diff u_i}{\diff t} = \frac{M_{i - 1}}{2}    
+% \end{equation}

@@ -1,0 +1,197 @@
+\begin{proof}
+    $\forall x \in \RR$
+    \begin{equation}
+        \frac{f(x + 0) + f(x - 0)}{2} = \frac{1}{\pi} \int_0^\infty \diff \lambda \int_{-\infty}^{+\infty} f(t) \cos \lambda (t - x) \diff t
+    \end{equation}
+
+    \begin{equation}
+        \begin{aligned}
+            I(A)
+            &= \frac{1}{\pi} \int_0^A \diff \lambda \int_{-\infty}^{+\infty} f(t) \cos \lambda (t - x) \diff t = \\
+            &= \frac{1}{\pi} \int_{-\infty}^{+\infty} f(t) \frac{\sin A (t - x)}{t - x} \diff t = \\
+            &= \frac{1}{\pi} \int_{-\infty}^0 f(t) \frac{\sin A (t - x)}{t - x} \diff t + \\
+            &\quad + \frac{1}{\pi} \int_0^{+\infty} f(t) \frac{\sin A (t - x)}{t - x} \diff t + \\
+            &= \frac{1}{\pi} \int_x^{+\infty} f(x - y) \frac{\sin A y}{y} \diff y + \\
+            &\quad + \frac{1}{\pi} \int_{-x}^{+\infty} f(x + y) \frac{\sin A y}{y} \diff y + \\
+            &= \frac{1}{\pi} \int_0^{+\infty} \Big( f(x - y) + f(x + y) \Big) \frac{\sin A y}{y} \diff y.
+        \end{aligned}
+    \end{equation}
+
+    Інтеграл Діріхле:
+    \begin{equation}
+        \int_0^\infty \frac{\sin A y}{y} \diff y = \frac{\pi}{2},
+    \end{equation}
+    при $A > 0$, звідки
+    \begin{equation}
+        \frac{f(x + 0) + f(x - 0)}{2} = \frac{1}{\pi} \int_0^\infty \Big( f(x + 0) - f(x - 0) \Big) \frac{\sin A y}{y} \diff y.
+    \end{equation}
+
+    Тому
+    \begin{equation}
+        \begin{aligned}
+            I(A) - \frac{f(x + 0) + f(x - 0)}{2}
+            &= \frac{1}{\pi} \int_0^\infty \Big( f(x + y) - f(x + 0) \Big) \frac{\sin A y}{y} \diff y + \\
+            &\quad + \frac{1}{\pi} \int_0^\infty \Big( f(x - y) - f(x - 0) \Big) \frac{\sin A y}{y} \diff y.
+        \end{aligned}
+    \end{equation}
+
+    Доведення буде завершене, коли ми покажемо, що обидва цих інтеграли прямують до нуля при $A \to \infty$. Покажемо це для першого:
+    \begin{equation}
+        \begin{aligned}
+            \int_0^\infty \Big( f(x + y) - f(x + 0) \Big) \frac{\sin A y}{y} \diff y
+            &= \int_0^1 \frac{f(x + y) - f(x + 0)}{y} \sin A y \diff y + \\
+            &\quad + \int_1^\infty \frac{f(x + y)}{y} \sin A y \diff y + \\
+            &\quad + f(x + 0) \int_1^\infty \frac{\sin A y}{y} \diff y.
+        \end{aligned}
+    \end{equation}
+
+    Як бачимо, усі три інтеграли прямують до нуля при $A \to \infty$: перші два за теоремою про прямування до нуля синуса перетворення Фур'є (у першому підінтегральна функція, що множиться на синус є абсолютно збіжною за умовою Діні, другий обмежується ``в лоб''), а третій обмежується заміною $z = A y$ (отримується $\int_A^\infty \frac{\sin z}{z} \diff z$, а він прямує до нуля як хвіст збіжного інтегралу).
+\end{proof}
+
+\begin{corollary}
+    Якщо $f$ абсолютно інтегровна на $\RR$ і кусково-гладка на $\RR$ то інтеграл Фур'є функції $f$ на $\RR$ збігається до $\frac{f(x + 0) + f(x - 0)}{2}$, а у точках неперервності виконується рівність
+    \begin{equation}
+        f(x) = \frac{1}{\pi} \int_0^\infty \left( \cos(\lambda x) \int_{-\infty}^{+\infty} f(t) \cos (\lambda t) \diff t + \sin(\lambda x) \int_{-\infty}^{+\infty} f(t) \sin (\lambda t) \diff t \right) \diff \lambda.
+    \end{equation}
+
+    Якщо ж функція $f$ ще й парна, то останню рівність можна буде записати у вигляді
+    \begin{equation}
+        f(x) = \frac{2}{\pi} \int_0^\infty \left( \cos(\lambda x) \int_0^\infty f(t) \cos (\lambda t) \diff t,
+    \end{equation}
+    а якщо $f$ непарна, то у вигляді
+    \begin{equation}
+        f(x) = \frac{2}{\pi} \int_0^\infty \left( \sin(\lambda x) \int_0^\infty f(t) \sin (\lambda t) \diff t.
+    \end{equation}
+\end{corollary}
+
+\begin{definition}
+    Якщо $f$ визначена на $\RR$ і $\forall A > 0$ $f \in R([-A, A])$, то, якщо існує скінченна
+    \begin{equation}
+        \lim_{A \to \infty} \int_{-A}^A f(x) \diff x,
+    \end{equation}
+    то вона називається \textit{головним значенням невласного інтегралу першого роду $\int_{-\infty}^{+\infty} f(x) \diff x$ у розумінні Коші} і позначається
+    \begin{equation}
+        \text{v.p.} \int_{-\infty}^{+\infty} f(x) \diff x.
+    \end{equation}
+\end{definition}
+
+\begin{definition}
+    Аналогічно, якщо $f$ визначена на $[a, b]$ і має особливість другого роду у внітрішній точці $c$, то, якщо існує скінченна
+    \begin{equation}
+        \lim_{\epsilon \to 0} \left( \int_a^{c - \epsilon} f(x) \diff x + \int_{c + \epsilon}^b f(x) \diff x \right),
+    \end{equation}
+    то вона називається \textit{головним значенням невласного інтегралу другого роду $\int_a^b f(x) \diff x$ у розумінні Коші} і позначається
+    \begin{equation}
+        \text{v.p.} \int_a^b f(x) \diff x.
+    \end{equation}
+\end{definition}
+
+\begin{theorem}
+    Якщо функція $f$ неперервна, абсолютно інтгровна на $\RR$, у кожній точці задовольняє умовам Діні, то у кожній точці $x \in \RR$ виконується рівність
+    \begin{equation}
+        f(x) = \frac{1}{2 \pi} \text{v.p.} \int_{-\infty}^{+\infty} \diff \lambda \int_{-\infty}^{+\infty} f(t) e^{-i \lambda (t - x)} \diff t.
+    \end{equation}
+\end{theorem}
+\begin{proof}
+    $\forall x \in \RR$:
+    \begin{equation}
+        f(x) = \frac{1}{\pi} \int_0^\infty \diff \lambda \int_{-\infty}^{+\infty} f(t) \cos \labda (t - x) \diff t
+    \end{equation}
+
+    Тому існує $\int_0^\infty \phi(\lambda) \diff \lambda$, де
+    \begin{equation}
+        \phi(\lambda) = \int_{-\infty}^{+\infty} f(t) \cos \lambda (t - x) \diff t.
+    \end{equation}
+
+    Нескладно бачити, що функція $\phi$ парна і неперервна на $\RR$, і
+    \begin{equation}
+        \int_{-\infty}^{+\infty} f(t) \cos \lambda (t - x) \diff t
+    \end{equation}
+    збігається до $\phi$ рівномірно по $\lambda \in \RR_{\ge 0}$ за властивістю Вейєрштраса. \medskip
+
+    Розглянемо також
+    \begin{equation}
+        \psi(\lambda) = \int_{-\infty}^{+\infty} f(t) \sin \lambda (t - x) \diff t,
+    \end{equation}
+    яка є непарною, неперервною, і $\forall A > 0$
+    \begin{equation}
+        \int_{-A}^A \psi(\lambda) \diff \lambda = 0,
+    \end{equation}
+    тому
+    \begin{equation}
+        \exists \text{v.p.} \int_{-\infty}^{+\infty} \psi(\lambda) \diff \lambda = 0.
+    \end{equation}
+
+    Поєднуючи вищесказане отримуємо, що
+    \begin{equation}
+        \begin{aligned}
+            f(x)
+            &= \frac{1}{2 \pi} \int_{-\infty}^{+\infty} \phi(\lambda) \diff \lambda - i \frac{1}{2 \pi} \text{v.p.} \int_{-\infty}^{+\infty} \psi(\lambda) \diff \lambda = \\
+            &= \frac{1}{2 \pi} \text{v.p.} \int_{-\infty}^{+\infty} \Big( \phi(\lambda) - i \psi(\lambda) \Big) \diff \lambda = \\
+            &= \frac{1}{2 \pi} \text{v.p.} \int_{-\infty}^{+\infty} \diff \lambda \int_{-\infty}^{+\infty} f(t) e^{-i \lambda (t - x)} \diff t.
+        \begin{aligned}
+    \end{equation}
+\end{proof}
+
+\begin{example}
+    Побудувати інтеграл Фур'є функції
+    \begin{equation}
+        f(x) = \begin{cases}
+            1, & x \in [0, 1], \\
+            0, & \text{інакше}.
+        \end{cases}
+    \end{equation}
+\end{example}
+\begin{solution}
+    По-перше,
+    \begin{equation}
+        \begin{aligned}
+            a(\lambda)
+            &= \frac{1}{\pi} \int_{-\infty}^{+\infty} f(t) \cos \lambda t \diff t = \\
+            &= \frac{1}{\pi} \int_0^1 \cos \lambda t \diff t = \\
+            &= \frac{1}{\pi} \left. \frac{\sin \lambda t}{\lambda} \right|_0^1 = \\
+            &= \frac{1}{\pi} \frac{\sin \lambda}{\lambda \pi}, 
+        \begin{aligned}
+    \end{equation}
+    якщо тільки $\lambda \ne 0$, інакше $a(\lambda) = \frac{1}{\pi}$. \medskip
+
+    По-друге,
+    \begin{equation}
+        \begin{aligned}
+            b(\lambda)
+            &= \frac{1}{\pi} \int_{-\infty}^{+\infty} f(t) \sin \lambda t \diff t = \\
+            &= \frac{1}{\pi} \int_0^1 \sin \lambda t \diff t = \\
+            &= -\frac{1}{\pi} \left. \frac{\cos \lambda t}{\lambda} \right|_0^1 = \\
+            &= -\frac{1}{\pi} \frac{1 - \cos \lambda}{\lambda \pi}, 
+        \begin{aligned}
+    \end{equation}
+    якщо тільки $\lambda \ne 0$, інакше $b(\lambda) = 0$. \medskip
+
+    Остаточно,
+    \begin{equation}
+        \begin{aligned}
+            \Phi(x)
+            &= \int_0^\infty \Big( a(\lambda) \cos \lambda x + b(\lambda) \sin \lambda x \Big) \diff \lambda = \\
+            &= \frac{1}{\pi} \int_0^\infty \Big( \frac{\sin \lambda \cos \lambda x}{\lambda} + \frac{1 - \cos \lambda \sin \lambda x}{\lambda} \Big) \diff \lambda = \\
+            &= \frac{1}{\pi} \int_0^\infty \frac{\sin \lambda x + \sin (\lambda (1 - x))}{\lambda} \diff \lambda.
+        \begin{aligned}
+    \end{equation}
+
+    За попередніми теоремами
+    \begin{equation}
+        \Phi(x) = \begin{cases}
+            0, & x < 0, \\
+            1/2, & x = 0, \\
+            1, & 0 < x < 1, \\
+            1/2, & x = 1, \\
+            0, & 1 < x.
+        \end{cases}
+    \end{equation}
+
+    Можемо перевірити себе і обчислити $\Phi(0)$:
+    \begin{equation}
+        \Phi(0) = \frac{1}{\pi} \int_0^\infty \frac{\sin \lambda}{\lambda} = \frac{1}{2}.
+    \end{equation}
+\end{solution}
+
+\subsection{Інтегральні перетворення Фур'є}

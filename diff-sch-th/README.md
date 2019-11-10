@@ -40,9 +40,22 @@
     </p> 
     <p>
         Лекція <b>24&nbsp;жовтня 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+    </p> 
+    <p>
+        Лекція <b>31&nbsp;жовтня 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+    </p> 
+    <p>
+        Лекція <b>7&nbsp;листопада 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
     </p>
     <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>
+    </p>
+</div>
+
+<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+    <h3 class="text-danger">Контрольні роботи</h3>
+    <p>
+        Перша контрольна пройде у четвер <b class="text-danger">14&nbsp;листопада 2019&nbsp;р</b> на першій парі.
     </p>
 </div>
 

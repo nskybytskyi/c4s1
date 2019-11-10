@@ -15,6 +15,13 @@
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+    <h3 class="text-danger">Модулі</h3>
+    <p>
+        Перший модуль пройде у четвер <b class="text-danger">14&nbsp;листопада 2019&nbsp;р</b> на третій парі.
+    </p>
+</div>
+
+<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
     <h3 class="text-primary">Література</h3>
     <p>
         Нестеров&nbsp;Ю.Е. <i>Введение в выпуклую оптимизацию</i>. <a class="badge badge-success" href="books/Нестеров_Ю_Е_Введение_в_выпуклую.djvu">Get djvu</a>
