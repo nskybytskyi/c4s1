@@ -25,46 +25,46 @@
     <h4 class="text-primary">Перша частина: Основи дробового числення <sup><a class="badge badge-info" href="lectures/ch-1.pdf">Get pdf</a></sup> </h4>
     <ul>
         <li>
-            Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основні поняття та визначення. <sup><a class="badge badge-success" href="lectures/pdf/01.pdf">Get pdf</a></sup>
+            Лекція <b>17&nbsp;вересня 2019&nbsp;р:</b> Основні поняття та визначення <sup><a class="badge badge-success" href="lectures/pdf/01.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>24&nbsp;вересня 2019&nbsp;р</b>: Основні властивостi та формули. <sup><a class="badge badge-success" href="lectures/pdf/02.pdf">Get pdf</a></sup>
+            Лекція <b>24&nbsp;вересня 2019&nbsp;р:</b> Основні властивостi та формули <sup><a class="badge badge-success" href="lectures/pdf/02.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>1&nbsp;жовтня 2019&nbsp;р</b>: Початковi значення. <sup><a class="badge badge-success" href="lectures/pdf/03.pdf">Get pdf</a></sup>
+            Лекція <b>1&nbsp;жовтня 2019&nbsp;р:</b> Початковi значення <sup><a class="badge badge-success" href="lectures/pdf/03.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>8&nbsp;жовтня 2019&nbsp;р</b>: Перетворення Лапласа. Теорема Таубера. <sup><a class="badge badge-success" href="lectures/pdf/04.pdf">Get pdf</a></sup>
+            Лекція <b>8&nbsp;жовтня 2019&nbsp;р:</b> Перетворення Лапласа. Теорема Таубера <sup><a class="badge badge-success" href="lectures/pdf/04.pdf">Get pdf</a></sup>
         </li>
     </ul>
     <h4 class="text-primary">Друга частина: Моделi аномальної дифузiї <sup><a class="badge badge-info" href="lectures/ch-2.pdf">Get pdf</a></sup> </h4>
     <ul>
         <li>
-            Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Формула Монтрола-Вайса. <sup><a class="badge badge-success" href="lectures/pdf/05.pdf">Get pdf</a></sup>
+            Лекція <b>15&nbsp;жовтня 2019&nbsp;р:</b> Формула Монтрола-Вайса <sup><a class="badge badge-success" href="lectures/pdf/05.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: Рiвняння субдифузiї. <sup><a class="badge badge-success" href="lectures/pdf/06.pdf">Get pdf</a></sup>
+            Лекція <b>22&nbsp;жовтня 2019&nbsp;р:</b> Рiвняння субдифузiї <sup><a class="badge badge-success" href="lectures/pdf/06.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: . <sup><a class="badge badge-success" href="lectures/pdf/07.pdf">Get pdf</a></sup>
+            Лекція <b>29&nbsp;жовтня 2019&nbsp;р:</b>  <sup><a class="badge badge-success" href="lectures/pdf/07.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: . <sup><a class="badge badge-success" href="lectures/pdf/08.pdf">Get pdf</a></sup>
+            Лекція <b>5&nbsp;листопада 2019&nbsp;р:</b>  <sup><a class="badge badge-success" href="lectures/pdf/08.pdf">Get pdf</a></sup>
         </li>
     </ul>
     <h4 class="text-primary">Третя частина:<sup><a class="badge badge-warning" href="lectures/ch-3.pdf">Coming soon</a></sup> </h4>
     <ul>
         <li>
-            Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <sup><a class="badge badge-success" href="lectures/pdf/09.pdf">Get pdf</a></sup>
+            Лекція <b>12&nbsp;листопада 2019&nbsp;р:</b>  <sup><a class="badge badge-success" href="lectures/pdf/09.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>19&nbsp;листопада 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/10.pdf">Coming soon</a>
+            Лекція <b>19&nbsp;листопада 2019&nbsp;р:</b> TBA <a class="badge badge-warning" href="lectures/pdf/10.pdf">Coming soon</a>
         </li>
         <li>
-            Лекція <b>26&nbsp;листопада 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/11.pdf">Coming soon</a>
+            Лекція <b>26&nbsp;листопада 2019&nbsp;р:</b> TBA <a class="badge badge-warning" href="lectures/pdf/11.pdf">Coming soon</a>
         </li>
         <li>
-            Лекція <b>3&nbsp;грудня 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/12.pdf">Coming soon</a>
+            Лекція <b>3&nbsp;грудня 2019&nbsp;р:</b> TBA <a class="badge badge-warning" href="lectures/pdf/12.pdf">Coming soon</a>
         </li>
     </ul>
     <p>
@@ -118,22 +118,22 @@
     <h3 class="text-primary">Література</h3>
     <ul>
         <li>
-            Самко&nbsp;С.Г., Килбас&nbsp;А.А., Маричев&nbsp;О.И. <i>Интегралы и производные дробного порядка и некоторые их приложения</i> &mdash; Минск: Наука и техника, 1987. <a class="badge badge-success" href="books/Самко,%20Килбас,%20Маричев%20-%20Интегралы%20и%20производные%20дробного%20порядка.djvu">Get djvu</a> <span class="badge badge-danger">Heavy [18&nbsp;Mb]</span>
+            Самко&nbsp;С.Г., Килбас&nbsp;А.А., Маричев&nbsp;О.И. <i>Интегралы и производные дробного порядка и некоторые их приложения</i> &mdash; Минск: Наука и техника, 1987 <a class="badge badge-success" href="books/Самко,%20Килбас,%20Маричев%20-%20Интегралы%20и%20производные%20дробного%20порядка.djvu">Get djvu</a> <span class="badge badge-danger">Heavy [18&nbsp;Mb]</span>
         </li>
         <li>
-            Kilbas&nbsp;A.A., Srivastava&nbsp;H.M.,Trujillo&nbsp;J.M. <i>Theory and Applications of Fractional Differential Equations</i> &mdash; Amsterdam: Elsevier, 2006. <a class="badge badge-success" href="books/Kilbas,%20Srivastava,%20Trujillo%20-%20Theory%20and%20Applications%20of%20Fractional%20Differential%20Equations.djvu">Get djvu</a>
+            Kilbas&nbsp;A.A., Srivastava&nbsp;H.M.,Trujillo&nbsp;J.M. <i>Theory and Applications of Fractional Differential Equations</i> &mdash; Amsterdam: Elsevier, 2006 <a class="badge badge-success" href="books/Kilbas,%20Srivastava,%20Trujillo%20-%20Theory%20and%20Applications%20of%20Fractional%20Differential%20Equations.djvu">Get djvu</a>
         </li>
         <li>
-            Podlubny&nbsp;I., <i>Fractional Differential Equations</i> &mdash; San Diego: Academic Press, 1999. <a class="badge badge-success" href="books/Podlubny%20-%20Fractional%20Differential%20Equations.djvu">Get djvu</a>
+            Podlubny&nbsp;I., <i>Fractional Differential Equations</i> &mdash; San Diego: Academic Press, 1999 <a class="badge badge-success" href="books/Podlubny%20-%20Fractional%20Differential%20Equations.djvu">Get djvu</a>
         </li>
         <li>
-            Diethelm&nbsp;K., <i>The Analysis of Fractional Differential Equations</i> &mdash; Springer, 2010. <a class="badge badge-success" href="books/Diethelm%20-%20The%20Analysis%20of%20Fractional%20Differential%20Equations.pdf">Get pdf</a>
+            Diethelm&nbsp;K., <i>The Analysis of Fractional Differential Equations</i> &mdash; Springer, 2010 <a class="badge badge-success" href="books/Diethelm%20-%20The%20Analysis%20of%20Fractional%20Differential%20Equations.pdf">Get pdf</a>
         </li>
         <li>
             Чикрий&nbsp;А.А., Матичин&nbsp;И.И. <i>Представление решений линейных систем с дробными производными Римана-Лиувилля, Капуто и Миллера-Росса</i> // Проблемы управления и информатики. &mdash; 2008, &mdash; №3. &mdash; С.&nbsp;133&ndash;142. <span class="badge badge-warning">No pdf :cry:</span>
         </li>
         <li>
-            W.&nbsp;Feller, <i>An Introduction to Probability Theory and Its Applications, Volume&nbsp;2</i> &mdash; New York: Wiley, 1971. <a class="badge badge-success" href="books/Feller%20-%20An%20Introduction%20to%20Probability%20Theory%20and%20Its%20Applications,%20Volume%202.djvu">Get djvu</a> <span class="badge badge-danger">Heavy [10&nbsp;Mb]</span>
+            W.&nbsp;Feller, <i>An Introduction to Probability Theory and Its Applications, Volume&nbsp;2</i> &mdash; New York: Wiley, 1971 <a class="badge badge-success" href="books/Feller%20-%20An%20Introduction%20to%20Probability%20Theory%20and%20Its%20Applications,%20Volume%202.djvu">Get djvu</a> <span class="badge badge-danger">Heavy [10&nbsp;Mb]</span>
         </li>
     </ul>
 </div>
