@@ -55,7 +55,7 @@
             Лекція <b>5&nbsp;листопада 2019&nbsp;р:</b> Рівняння супердифузії <sup><a class="badge badge-success" href="lectures/pdf/09.pdf">Get pdf</a></sup>
         </li>
     </ul>
-    <h4 class="text-primary">Третя частина:  <sup><a class="badge badge-warning" href="lectures/ch-3.pdf">Coming soon</a></sup> </h4>
+    <!-- <h4 class="text-primary">Третя частина:  <sup><a class="badge badge-warning" href="lectures/ch-3.pdf">Coming soon</a></sup> </h4>
     <ul>
         <li>
             Лекція <b>12&nbsp;листопада 2019&nbsp;р:</b> TBA <sup><a class="badge badge-success" href="lectures/pdf/10.pdf">Coming soon</a></sup>
@@ -69,7 +69,7 @@
         <li>
             Лекція <b>3&nbsp;грудня 2019&nbsp;р:</b> TBA <sup><a class="badge badge-warning" href="lectures/pdf/13.pdf">Coming soon</a></sup>
         </li>
-    </ul>
+    </ul> -->
     <p>
         <i class="text-muted">
         Електронний конспект лекцій створено у 2019 році за конспектами Тетяни Сергієнко, Тетяни Рабійчук, та Олексія Кравця. Верстка у LaTeX &mdash; Нікіта Скибицький. Якщо ви знайшли помилку і хочете її виправити, то можете створити merge request за посиланням: <a class="badge badge-info" href="https://github.com/Sky-Nik/c4s1/tree/master/gen-opt-control">we on GitHub</a>
