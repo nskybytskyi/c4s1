@@ -30,7 +30,7 @@
         Лекція <b>24&nbsp;вересня 2019&nbsp;р</b>: Властивостi дробових похiдних. <a class="badge badge-success" href="lectures/pdf/02.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/02.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>1&nbsp;жовтня 2019&nbsp;р</b>: Початковi значення. Перетворення Лапласа. <a class="badge badge-warning" href="lectures/pdf/03.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/03.tex">Get LaTeX source</a>
+        Лекція <b>1&nbsp;жовтня 2019&nbsp;р</b>: Початковi значення. Перетворення Лапласа. <a class="badge badge-success" href="lectures/pdf/03.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/03.tex">Get LaTeX source</a>
     </p>
     <p>
         Лекція <b>8&nbsp;жовтня 2019&nbsp;р</b>: Моделi аномальної дифузiї. <a class="badge badge-warning" href="lectures/pdf/04.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/04.tex">Get LaTeX source</a>
