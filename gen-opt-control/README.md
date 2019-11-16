@@ -21,42 +21,41 @@
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
-    <h3 class="text-primary">Лекції <a class="badge badge-primary" href="lectures/all.pdf">Get pdf</a> </h3>
-    </p>
-    <h4 class="text-primary">Перша частина: Основи дробового числення <a class="badge badge-primary" href="lectures/ch-1.pdf">Get pdf</a> </h4>
+    <h3 class="text-primary">Лекції <sup><a class="badge badge-info" href="lectures/all.pdf">Get pdf</a></sup> </h3>
+    <h4 class="text-primary">Перша частина: Основи дробового числення <sup><a class="badge badge-info" href="lectures/ch-1.pdf">Get pdf</a></sup> </h4>
     <ul>
         <li>
-            Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основні поняття та визначення. <a class="badge badge-success" href="lectures/pdf/01.pdf">Get pdf</a>
+            Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основні поняття та визначення. <sup><a class="badge badge-success" href="lectures/pdf/01.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>24&nbsp;вересня 2019&nbsp;р</b>: Основні властивостi та формули. <a class="badge badge-success" href="lectures/pdf/02.pdf">Get pdf</a>
+            Лекція <b>24&nbsp;вересня 2019&nbsp;р</b>: Основні властивостi та формули. <sup><a class="badge badge-success" href="lectures/pdf/02.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>1&nbsp;жовтня 2019&nbsp;р</b>: Початковi значення. <a class="badge badge-success" href="lectures/pdf/03.pdf">Get pdf</a>
+            Лекція <b>1&nbsp;жовтня 2019&nbsp;р</b>: Початковi значення. <sup><a class="badge badge-success" href="lectures/pdf/03.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>8&nbsp;жовтня 2019&nbsp;р</b>: Перетворення Лапласа. Теорема Таубера. <a class="badge badge-success" href="lectures/pdf/04.pdf">Get pdf</a>
+            Лекція <b>8&nbsp;жовтня 2019&nbsp;р</b>: Перетворення Лапласа. Теорема Таубера. <sup><a class="badge badge-success" href="lectures/pdf/04.pdf">Get pdf</a></sup>
         </li>
     </ul>
-    <h4 class="text-primary">Друга частина: Моделi аномальної дифузiї <a class="badge badge-primary" href="lectures/ch-2.pdf">Get pdf</a> </h4>
+    <h4 class="text-primary">Друга частина: Моделi аномальної дифузiї <sup><a class="badge badge-info" href="lectures/ch-2.pdf">Get pdf</a></sup> </h4>
     <ul>
         <li>
-            Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Формула Монтрола-Вайса. <a class="badge badge-success" href="lectures/pdf/05.pdf">Get pdf</a>
+            Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Формула Монтрола-Вайса. <sup><a class="badge badge-success" href="lectures/pdf/05.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: Рiвняння субдифузiї. <a class="badge badge-success" href="lectures/pdf/06.pdf">Get pdf</a>
+            Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: Рiвняння субдифузiї. <sup><a class="badge badge-success" href="lectures/pdf/06.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-success" href="lectures/pdf/07.pdf">Get pdf</a>
+            Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: . <sup><a class="badge badge-success" href="lectures/pdf/07.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-success" href="lectures/pdf/08.pdf">Get pdf</a>
+            Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: . <sup><a class="badge badge-success" href="lectures/pdf/08.pdf">Get pdf</a></sup>
         </li>
     </ul>
-    <h4 class="text-primary">Третя частина: <a class="badge badge-warning" href="lectures/ch-3.pdf">Coming soon</a> </h4>
+    <h4 class="text-primary">Третя частина:<sup><a class="badge badge-warning" href="lectures/ch-3.pdf">Coming soon</a></sup> </h4>
     <ul>
         <li>
-            Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-success" href="lectures/pdf/09.pdf">Get pdf</a>
+            Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <sup><a class="badge badge-success" href="lectures/pdf/09.pdf">Get pdf</a></sup>
         </li>
         <li>
             Лекція <b>19&nbsp;листопада 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/10.pdf">Coming soon</a> <a class="badge badge-warning" href="lectures/tex/10.tex">Coming soon</a>
