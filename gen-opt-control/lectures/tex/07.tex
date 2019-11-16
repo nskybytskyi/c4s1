@@ -1,0 +1,127 @@
+\subsection{Рівняння розподіленого порядку}
+
+Розглянемо випадок коли $\alpha$ --- випадкова величина, розподілена на $(0, 1)$ зі щільністю $p(\alpha)$. Припустимо, що час очікування стрибка задається умовною щільністю
+\begin{equation}
+    \psi(t|\alpha) \sim A \cdot \alpha \cdot \frac{\tau^\alpha}{t^{1 + \alpha}},
+\end{equation}
+де $A = \frac{\alpha}{\Gamma (1 - \sigma)}$. \medskip
+
+Тоді
+\begin{equation}
+    \psi(t) = \int_0^1 \psi(t|\alpha) \cdot p(\alpha) \diff \alpha.
+\end{equation}
+
+Звідси
+\begin{equation}
+    \Ltrans{\psi}(\eta)
+    = \int_0^\infty e^{-\eta t} \int_0^1 \psi(t|\alpha) \cdot p(\alpha) \diff \alpha \diff t.
+\end{equation}
+
+Змінюючи порядок інтегрування, отримуємо
+\begin{equation}
+    \int_0^1 p(\alpha) \int_0^\infty e^{-\eta t} \psi(t|\alpha) \diff t \diff \alpha.
+\end{equation}
+
+Далі,
+\begin{equation}
+    \psi(t) \sim \frac{\alpha}{\Gamma(1 - \alpha)} \frac{\tau^\alpha}{t^{1 + \alpha}},
+\end{equation}
+а тому, за теоремою Таубера,
+\begin{equation}
+    \Ltrans{\psi}(\eta) \sim 1 - (\eta \tau)^\alpha + o(\eta^\alpha).
+\end{equation}
+
+Замінюючи таким чином внутрішній інтеграл отримуємо
+\begin{equation}
+    \int_0^1 ( 1 - (\eta \tau)^\alpha + o(\eta^\alpha) ) \diff \alpha
+    \underset{\eta \downarrow 0}{\sim} 1 - \int_0^1 p(\alpha) \cdot (\eta \tau)^\alpha \diff \alpha.
+\end{equation}
+
+Позначимо
+\begin{equation}
+    I(\eta, \tau) = \int_0^1 p(\alpha) \cdot (\eta \tau)^\alpha \diff \alpha.
+\end{equation}
+
+За формулою Монтрола-Вайса
+\begin{equation}
+    \begin{aligned}
+        \FLtrans{u}(\omega, \eta)
+        &= \Ftrans{u_0}(\omega) \cdot \frac{1}{\eta} \cdot \frac{1 - \Ltrans{\psi}(\eta)}{1 - \Ltrans{\psi}(\eta) \cdot \Ftrans{\lambda}(\omega)} = \\
+        &= \frac{\Ftrans{u_0}(\omega)}{\eta} \cdot \frac{I(\eta, \tau)}{1 - (1 - I(\eta, \tau)) \Ftrans{\lambda}(\omega)}.
+    \end{aligned}
+\end{equation}
+
+Також припустимо, що $\lambda \sim \mathcal{N}(0, 2 \sigma^2) \implies \Ftrans{\lambda} \sim 1 - \sigma^2 \omega^2$. Тоді
+\begin{equation}
+    \FLtrans{u}(\omega, \eta)
+    = \frac{\Ftrans{u_0}(\omega)}{\eta} \cdot \frac{I(\eta, \tau)}{I(\eta, \tau) + \sigma^2 \omega^2}.
+\end{equation}
+
+Отже, з точністю до малих доданків,
+\begin{equation}
+    \FLtrans{u}(\omega, \eta) \cdot ( I(\eta, \tau) + \sigma^2 \omega^2 ) = \frac{\Ftrans{u_0}(\omega)}{\eta} \cdot I(\eta, \tau),
+\end{equation}
+або ж
+\begin{equation}
+    I(\eta, \tau) \cdot \left( \FLtrans{u}(\omega, \eta) - \frac{\Ftrans{u_0}(\omega)}{\eta} \right) = \sigma^2 \omega^2 \cdot \FLtrans{u}(\omega, \eta).
+\end{equation}
+
+Діємо на це співвідношення оберненим перетворенням Фур'є, отримаємо
+\begin{equation}
+    I(\eta, \tau) \cdot \left( \Ltrans{u}(x, \eta) - \frac{u_0}{\eta} \right) = -\sigma^2 \cdot \frac{\partial^2 \Ltrans{u}(x, \eta)}{\partial x^2}.
+\end{equation}
+
+Розпишемо інтеграл у явному вигляді:
+\begin{equation}
+    \begin{aligned}
+        I(\eta, \tau) \cdot \left( \Ltrans{u}(x, \eta) - \frac{u_0}{\eta} \right)
+        &= \int_0^1 p(\alpha) \cdot (\eta \tau)^\alpha \cdot \left( \Ltrans{u}(x, \eta) - \frac{u_0}{\eta} \right) \diff \alpha = \\
+        &= \int_0^1 p(\alpha) \cdot \tau^\alpha \cdot (\eta^\alpha \Ltrans{u}(x, \eta) - \eta^{\alpha - 1} u_0) \diff \alpha.
+    \end{aligned}
+\end{equation}
+
+У виразі в дужках під інтегралом не складно впізнати $\Ltrans{\CFdiff{\alpha} u}(\eta)$. Підставляючи, отримуємо
+\begin{equation}
+    \int_0^1 p(\alpha) \cdot \tau^\alpha \int_0^\infty e^{-\eta t} \cdot (\CFdiff{\alpha} u) (x, t) \diff t \diff \alpha.
+\end{equation}
+
+Знову змінюємо порядок інтегрування:
+\begin{equation}
+    \int_0^\infty e^{-\eta t} \int_0^1 p(\alpha) \cdot \tau^\alpha \cdot (\CFdiff{\alpha} u)(x, t) \diff \alpha \diff t.
+\end{equation}
+
+А у цьому, у свою чергу, можна впізнати
+\begin{equation}
+    \Ltrans{\int_0^1 p(\alpha) \cdot \tau^\alpha \cdot (\CFdiff{\alpha} u)(x, t) \diff \alpha }(\eta).
+\end{equation}
+
+Тому, діючи оберненим перетворенням Лапласа на останнє рівняння, отримаємо
+\begin{th_equation}[розподіленого порядку]
+    \nothing
+    \begin{equation}
+        \int_0^1 p(\alpha) \cdot \tau^\alpha \cdot (\CFdiff{\alpha} u)(x, t) \diff \alpha = \sigma^2 \cdot \frac{\partial^2 u}{\partial x^2}.
+    \end{equation}
+\end{th_equation}
+
+\begin{example}
+    Якщо $\alpha = \alpha_0 = \const$, то $p(\alpha) = \delta(\alpha - \alpha_0)$ --- так звана \textit{густина матеріальної точки}:
+    \begin{itemize}
+        \item $\delta (\alpha - \alpha_0) = 0$, $\forall \alpha \ne \alpha_0$;
+        \item $\delta (\alpha_0 - \alpha_0) = \infty$;
+        \item $\int_0^1 \delta(\alpha - \alpha_0) \diff \alpha = 1$ ($\alpha_0 \in (0, 1$).
+    \end{itemize}    
+    
+    Тоді отримаємо рівняння
+    \begin{equation}
+        \tau^{\alpha_0} \cdot (\CFdiff{\alpha_0} u)(x, t) = \sigma^2 \cdot \frac{\partial^2 u}{\partial x^2},
+    \end{equation}
+    тобто
+    \begin{equation}
+        (\CFdiff{\alpha_0} u)(x, t) = K_{\alpha_0} \cdot \frac{\partial^2 u}{\partial x^2}.
+    \end{equation}
+\end{example}
+
+\begin{example}
+    Якщо ж $p(\alpha) \sim \nu \alpha^{\nu - 1}$ при $\alpha \to 0$ і $x(0) = 0$ (блукання починається з початку координат), то $\langle x^2(t) \rangle \sim \const \cdot \ln^\nu t$, так звана \textit{ультраповільна дифузія}.
+\end{example}
+

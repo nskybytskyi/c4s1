@@ -1,0 +1,81 @@
+\subsection{Рівняння супердифузії}
+
+Розглянемо випадкове блукання з неперервним часом із $\psi(t) = \frac{1}{\tau} \cdot e^{-t/\tau}$ (тобто час очікування стрибка $\psi$ має показниковий розподіл з параметром $\tau$), а також
+\begin{equation}
+    \lambda(x) \sim \frac{\sigma^\mu}{|x|^{1 + \mu}}, 
+\end{equation}
+при $|x| \to \infty$, де $\mu$ --- якась стала, $1 < \mu < 2$. Спробуємо знайти дисперсію очікуваної довжини стрибка. Як відомо з курсу теорії ймовірностей,
+\begin{equation}
+    \mathsf{D} \lambda = \int_{-\infty}^\infty x^2 \lambda(x) \diff x.
+\end{equation}
+
+Але $x^2 \lambda(x) \sim \sigma^\mu |x|^{1 - \mu}$. При $1 < \mu < 2$ маємо $-1 < 1 - \mu < 0$, тобто інтеграл для дисперсії розбіжний (за порівняльною ознакою збіжності, порівнюємо з $1/x$). Таким чином, сама дисперсія довжини стрибка --- нескінченна. \medskip
+
+Можна показати, що
+\begin{equation}
+    \Ltrans{\psi}(\eta) \sim 1 - \tau \eta + o(\eta), \quad \eta \to 0,
+\end{equation}
+а також
+\begin{equation}
+    \Ftrans{\lambda}(\omega) = 1 - \sigma^\mu |\omega|^\mu + o(|\omega|^\mu), \quad \omega \to 0.
+\end{equation}
+
+Як можна було здогадатися, ці рівності нам знадобляться для застосування формули Монтрола-Вайса:
+\begin{equation}
+    \begin{aligned}
+        \FLtrans{u}(\omega, \eta)
+        &= \frac{\Ftrans{u_0}}{\eta} \cdot \frac{1 - \Ltrans{\psi}(\eta)}{1 - \Ltrans{\psi}(\eta) \cdot \Ftrans{\lambda}(\omega)} \approx \\
+        &\approx \frac{\Ftrans{u_0}}{\eta} \cdot \frac{\tau \eta}{1 - (1 - \tau \eta) \cdot (1 - \sigma^\mu |\omega|^\mu)} \sim \\
+        &\sim \frac{\Ftrans{u_0}}{\eta} \cdot \frac{\tau \eta}{\tau \eta + \sigma^\mu |\omega|^\mu} = \\
+        &= \frac{\Ftrans{u_0}}{\eta + k_\mu |\omega|^\mu}.
+    \end{aligned}
+\end{equation}
+
+\begin{definition}
+    \nothing
+    \begin{equation}
+        k_\mu = \frac{\sigma^\mu}{\tau}
+    \end{equation}
+    --- \textit{коефіцієнт дифузії}.
+\end{definition}
+
+Звідси:
+\begin{equation}
+    \eta \cdot \FLtrans{u} - \Ftrans{u_0} = -k_\mu |\omega|^\mu \cdot \FLtrans{u}.
+\end{equation}
+
+Діємо на обидві сторони оберненим перетворенням Лапласа:
+\begin{equation}
+    \frac{\partial \Ftrans{u}(\omega, t)}{\partial t} = -k_\mu |\omega|^\mu \cdot \Ftrans{u}(\omega, t),
+\end{equation}
+і оберненим перетворенням Фур'є:
+\begin{equation}
+    \frac{\partial u}{\partial t} = k_\mu \cdot \frac{\partial^\mu u}{\partial |x|^\mu},
+\end{equation}
+де 
+\begin{definition}
+    \nothing
+    \begin{equation}
+        \frac{\partial^\mu u}{\partial |x|^\mu}
+    \end{equation}
+    --- \textit{похідна Ріса-Бейля} порядку $\mu$ за змінною $x$, яка визначається рівністю
+    \begin{equation}
+        \frac{\partial^\mu u}{\partial |x|^\mu} = \iFtrans{-|\omega|^\mu \cdot \Ftrans{u}}.
+    \end{equation}
+\end{definition}
+
+\begin{remark}
+    \begin{equation}
+        \frac{\partial^2 u}{\partial |x|^2} = \iFtrans{-\omega^2 \cdot \Ftrans{u}} = \iFtrans{(-i \omega)^2 \cdot \Ftrans{u}} = \frac{\partial^2 u}{\partial x^2}.
+    \end{equation}
+\end{remark}
+
+\begin{remark}
+    \begin{equation}
+        \frac{\partial^\mu f}{\partial |x|^\mu} = \begin{cases}
+            \dfrac{D_{-\infty}^\mu f + D_{+\infty}^\mu f}{2 \cos \dfrac{\pi \mu}{2}}, & \mu \ne 1, \\
+            \\
+            \dfrac{\diff}{\diff \pi} \dfrac{1}{x} \displaystyle\int_\RR \dfrac{f(\xi)}{\xi - x} \diff \xi, & \mu = 1.
+        \end{cases}
+    \end{equation}
+\end{remark}
