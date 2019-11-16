@@ -71,11 +71,8 @@
         </li>
     </ul>
     <p>
-        <i class="text-muted">Якщо ви знайшли помилку і хочете її виправити, то можете створити merge request за посиланням: <a class="badge badge-info" href="https://github.com/Sky-Nik/c4s1/tree/master/gen-opt-control">we on GitHub</a></i>
-    </p>
-    <p>
         <i class="text-muted">
-        Електронний конспект лекції створено у 2019 році за конспектами Нікіти Скибицького, Тетяни Сергієнко, Тетяни Рабійчук, та Олексія Кравця. Верстка у LaTeX &mdash; Нікіта Скибицький.
+        Електронний конспект лекції створено у 2019 році за конспектами Нікіти Скибицького, Тетяни Сергієнко, Тетяни Рабійчук, та Олексія Кравця. Верстка у LaTeX &mdash; Нікіта Скибицький. Якщо ви знайшли помилку і хочете її виправити, то можете створити merge request за посиланням: <a class="badge badge-info" href="https://github.com/Sky-Nik/c4s1/tree/master/gen-opt-control">we on GitHub</a>
         </i>
     </p>
 </div>
