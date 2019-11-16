@@ -40,15 +40,15 @@
     </p>
     <p>
         Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/06.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/06.tex">Get LaTeX source</a>
+    </p>
     <p>
         Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/07.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/07.tex">Get LaTeX source</a>
-    <p>
+    </p>
     <p>
         Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/08.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/08.tex">Get LaTeX source</a>
-    <p>
+    </p>
     <p>
         Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/09.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/09.tex">Get LaTeX source</a>
-    <p>
     </p>
     <!-- <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>
