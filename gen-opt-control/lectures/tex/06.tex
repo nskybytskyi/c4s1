@@ -1,0 +1,230 @@
+\subsection{Рівняння субдифузії}
+
+\subsubsection{Виведення рівняння}
+
+Розглянемо випадкове блукання із щільностями
+\begin{equation}
+    \psi(t) \sim \frac{\alpha}{\Gamma(1 - \alpha)} \frac{\tau^\alpha}{t^{1 + \alpha}},
+\end{equation}
+при $t \to + \infty$, де $\alpha \in (0, 1)$, $\tau > 0$, та
+\begin{equation}
+    \lambda(x) = \frac{1}{2 \sqrt{\pi} \sigma} \exp\left\{-\frac{x^2}{4 \sigma^2}\right\}.
+\end{equation}
+
+Згадуємо наслідок з теореми Таубера для $A = \frac{\tau^\alpha}{\Gamma(1 - \alpha)}$:
+\begin{equation}
+    \Ltrans{\psi}(\eta) \sim 1 - \tau^\alpha \eta^\alpha + o(\eta^\alpha)
+\end{equation}
+
+Крім того
+\begin{equation}
+    \Ftrans{\lambda}(\omega) \sim 1 - \sigma^2 \omega^2 + O(\omega^4).
+\end{equation}
+
+Застосовуємо формулу Монтрола-Вайса
+\begin{equation}
+    \FLtrans{u}(\omega, \eta) = \frac{\Ftrans{u_0}(\omega)}{\eta} \frac{\tau^\alpha \eta^\alpha + o(\eta^\alpha)}{1 - (1 - \tau^\alpha \eta^\alpha + o(\eta^\alpha)) (1 - \sigma^2 \omega^2 + O(\omega^4))} \sim
+\end{equation}
+
+якщо $\eta \to 0$ і $\omega \to 0$ у певному розумінні ``синхронно'', то $\eta^\alpha \omega^2 = o(\eta^\alpha + \omega^2)$, а тому
+\begin{equation}
+    \sim \frac{\Ftrans{u_0}(\omega)}{\eta} \frac{\tau^\alpha \eta^\alpha}{\tau^\alpha \eta^\alpha + \sigma^2 \omega^2} = \frac{\Ftrans{u_0}(\omega)}{\eta} \frac{1}{1 + \frac{\sigma^2}{\tau^\alpha} \eta^{-\alpha} \omega^2 = \frac{\Ftrans{u_0}(\omega)}{\eta} \frac{1}{1 + K_\alpha \eta^{-\alpha} \omega^2}}.
+\end{equation}
+
+Отже, з точністю до малих доданків,
+\begin{equation}
+    \FLtrans{u}(\omega, \eta) \cdot (1 + K_\alpha \eta^{-\alpha} \omega^2) = \frac{\Ftrans{u_0}(\omega)}{\eta},
+\end{equation}
+або ж,
+\begin{equation}
+    \FLtrans{u}(\omega, \eta) - \frac{\Ftrans{u_0}(\omega)}{\eta} = - K_\alpha \eta^{-\alpha} \omega^2 \FLtrans{u}(\omega, \eta).
+\end{equation}
+
+Оскільки
+\begin{equation}
+    \Ftrans{g'}(\omega) = (-i \omega) \Ftrans{g}(\omega),
+\end{equation}
+і, відповідно,
+\begin{equation}
+    \Ftrans{g^{(k)}}(\omega) = (-i \omega)^k \Ftrans{g}(\omega),
+\end{equation}
+то
+\begin{equation}
+    - \omega^2 \FLtrans{u}(\omega, \eta) = \Ftrans{\frac{\partial^2 \Ltrans{u}(x,\eta)}{\partial x^2}}
+\end{equation}
+
+Тому маємо
+\begin{equation}
+    \Ltrans{u}(x,\eta) - \frac{u_0(x)}{\eta} = K_\alpha \eta^{-\alpha} \frac{\partial^2 \Ltrans{u}(x,\eta)}{\partial x^2},
+\end{equation}
+звідки
+\begin{th_equation}[субдифузії, інтегральне]
+    \nothing
+    \begin{equation}
+        u(x, t) - u_0(x) = K_\alpha \Fint{\alpha} \left( \frac{\partial^2 u(x t)}{\partial x^2} \right),
+    \end{equation}
+\end{th_equation}
+або
+\begin{th_equation}[субдифузії, диференціальне, перша форма]
+    \nothing
+    \begin{equation}
+        \frac{\partial u}{\partial t} = K_\alpha \RLFdiff{1 - \alpha} \left(\frac{\partial^2 u}{\partial x^2}\right),
+    \end{equation}
+    з початковою умовою $u(x, 0) = u_0(x)$, 
+\end{th_equation}
+або ж
+\begin{th_equation}[субдифузії, диференціальне, друга форма]
+    \nothing
+    \begin{equation}
+        \CFdiff{\alpha} u = K_\alpha \cdot \frac{\partial^2 u}{\partial x^2},
+    \end{equation}
+    з початковою умовою $u(x, 0) = u_0(x)$.
+\end{th_equation}
+
+\begin{remark}
+    Випадкове блукання sз неперервним часом із
+    \begin{equation}
+        \psi(t) = \frac{1}{\tau} e^{-t/\tau}
+    \end{equation}
+    (показниковий розподіл) і з
+    \begin{equation}
+        \lambda \sim N(0, 2 \sigma^2)
+    \end{equation}
+    призвело б до класичного параболічного рівняння.
+\end{remark}
+
+\subsubsection{Аналіз рівняння}
+
+\begin{definition}
+    $\mathsf{E}[(x(t) - x(0))^2] = \langle (x(t) - x(0))^2 \rangle$ --- \textit{середньо-квадратичне зміщення} (якщо $x(0) = 0$, то $\langle x^2(t) \rangle$).
+\end{definition}
+
+\begin{lemma}
+    Якщо 
+    \begin{equation}
+        \psi(t) \sim \frac{\alpha}{\Gamma(1 - \alpha)} \frac{\tau^\alpha}{t^{1 + \alpha}},
+    \end{equation}
+    при $t \to + \infty$ то
+    \begin{equation}
+        \langle n(t) \rangle \sim \frac{t^\alpha}{\tau^\alpha \cdot \Gamma(1 + \alpha)}.
+    \end{equation}
+\end{lemma}
+
+\begin{proof}
+    \begin{equation}
+        \langle n(t) \rangle = \sum_{k = 0}^\infty k \mathsf{P}\{n (t) = k\} = \sum_{k = 0}^\infty k \left( \int_0^t ( \psi^{\star k}(s) - \psi^{\star (k + 1)}(s) ) \diff s \right).
+    \end{equation}
+
+    \begin{equation}
+        \begin{aligned}
+            \Ltrans{\langle n \rangle} (\eta)
+            &= \sum_{k = 0}^\infty \frac{k}{\eta} ( (\Ltrans{\psi}(\eta))^k - (\Ltrans{\psi}(\eta))^{k + 1} ) = \\
+            &= \frac{1 - \Ltrans{\psi}(\eta)}{\eta} \sum_{k = 0}^\infty k (\Ltrans{\psi}(\eta))^k = \\
+            &= \frac{1 - \Ltrans{\psi}(\eta)}{\eta} \sum_{k = 0}^\infty \frac{\Ltrans{\psi}(\eta)}{\Ltrans{\psi}'(\eta)} \frac{\diff}{\diff \eta} (\Ltrans{\psi}(\eta))^k = \\
+            &= \frac{1 - \Ltrans{\psi}(\eta)}{\eta} \frac{\Ltrans{\psi}(\eta)}{\Ltrans{\psi}'(\eta)} \frac{\diff}{\diff \eta} \sum_{k = 0}^\infty (\Ltrans{\psi}(\eta))^k = \\
+            &= \frac{\Ltrans{\psi}(\eta)}{\eta \cdot (1 - \Ltrans{\psi}(\eta))}.
+        \end{aligned}
+    \end{equation}
+
+    Оскільки
+    \begin{equation}
+        \Ltrans{\psi}(\eta) = 1 - \tau^\alpha \eta^\alpha + o(\eta^\alpha),
+    \end{equation}
+    то
+    \begin{equation}
+        \Ltrans{\langle n \rangle} (\eta) = \frac{1 - \tau^\alpha \eta^\alpha + o(\eta^\alpha)}{\eta \cdot (\tau^\alpha \eta^\alpha + o(\eta^\alpha))} \underset{n \to 0}{\sim} \frac{1}{\tau^\alpha \eta^{\alpha + 1}}.
+    \end{equation}
+
+    Застосовуємо ``зворотню'' теорему Таубера для $\beta = - \alpha$ отримуємо
+    \begin{equation}
+        \langle n(t) \rangle \sim \frac{t^\alpha}{\tau^\alpha \cdot \Gamma(1 + \alpha)}.
+    \end{equation}
+\end{proof}
+
+\begin{corollary}
+    Якщо $x(0) = 0$, то
+    \begin{equation}
+        \langle x(t)^2 \rangle = 2 \sigma^2 \langle n(t) \rangle \sim \frac{2 \sigma^2 t^\alpha}{\tau^\alpha \Gamma(1 + \alpha)} = \frac{2 K_\alpha t^\alpha}{\Gamma(1 + \alpha)}.
+    \end{equation}
+\end{corollary}
+
+\begin{definition}
+    Якщо у випадкового (дифузійного) процесу середньоквадратичне зміщення зростає повільніше ніж лінійна функція ($\langle x(t)^2 \rangle = o(t)$), то процес називається \textit{суб-дифузійним}.
+\end{definition}
+
+\begin{definition}
+    Якщо у випадкового (дифузійного) процесу середньоквадратичне зміщення зростає швидше ніж лінійна функція ($t = o(\langle x(t)^2 \rangle)$), то процес називається \textit{супер-дифузійним}.
+\end{definition}
+
+\begin{definition}
+    Якщо ж у випадкового (дифузійного) процесу середньоквадратичне зміщення зростає так само як лінійна функція, то процес називається \textit{нормально-дифузійним}.
+\end{definition}
+
+\begin{remark}
+    $\langle x^2(t) \rangle$ --- середньоквадратичне зміщення, усереднене за сукупністю частинок (eng. \textit{ensemble-averaged}).
+\end{remark}
+
+Інший підхід --- усереднення за часом:
+\begin{equation}
+    \overline{\delta^2(t, T)} = \frac{1}{T - t} \int_0^{T - t} (x(s + t) - x(s))^2 \diff s,
+\end{equation}
+де $t$ --- часове вікно, $T$ --- загальна тривалість спостереження.
+
+\begin{equation}
+    \ol{\delta^2(t, T)}
+    = \frac{1}{T - t} \int_0^{T - t} ( x(t + s) - x(s) )^2 \diff s
+\end{equation}
+--- усереднене зміщення (за часом). Усереднимо за сукупністю частинок:
+\begin{equation}
+    \begin{aligned}
+        \ol{\langle \delta^2(t, T) \rangle}
+        &= \frac{1}{T - t} \int_0^{T - t} \langle ( x(t + s) - x(s) )^2 \rangle \diff s = \\
+        &= \frac{1}{T - t} \int_0^{T - t} 2 \sigma^2 \langle ( n(t + s) - n(s) )^2 \rangle \diff s.
+    \end{aligned}
+\end{equation}
+
+За умов, що $t \to \infty$, $T \to \infty$ і $T \gg t$ маємо
+\begin{equation}
+    \langle n(t) \rangle
+    \sim \frac{1}{\tau^\alpha \cdot \Gamma(1 + \alpha)} t^\alpha,
+\end{equation}
+а тому попередній вираз асимптотично рівний
+\begin{equation}
+    \frac{2 \sigma^2}{T - t} \int_0^{T - t} \frac{1}{\tau^\alpha \cdot \Gamma(1 + \alpha)} \cdot ( (s + t)^\alpha - s^\alpha ) \diff s.
+\end{equation}
+
+У свою чергу, можемо переписати $(s + t)^\alpha - s^\alpha$ за рядом Тейлора:
+\begin{equation}
+    (s + t)^\alpha - s^\alpha
+    = s^\alpha \left( 1 + \frac{t}{s} \right)^\alpha - s^\alpha
+    \sim s^\alpha \left( 1 + \frac{\alpha t}{s} \right) - s^\alpha
+    = \frac{\alpha t}{s^{1 - \alpha}},
+\end{equation}
+а тому попередній вираз асимптотично рівний
+\begin{equation}
+    \begin{aligned}
+        \frac{2 \sigma^2}{T - t} \cdot \frac{\alpha t}{\Gamma(1 + \alpha) \cdot \tau^\alpha} \int_0^{T - t} s^{\alpha - 1} \diff s
+        &= \frac{2 \sigma^2 \alpha t}{(T - t) \cdot \Gamma(1 + \alpha) \cdot \tau^\alpha} \cdot \frac{1}{\alpha} \cdot (T - t)^\alpha = \\
+        &= \frac{2 \sigma^2 t}{\Gamma(1 + \alpha) \tau^\alpha} \cdot (T - t)^{\alpha - 1} \sim \frac{2 K_\alpha}{\Gamma(1 + \alpha) \cdot T^{1 - \alpha}} t,
+    \end{aligned}
+\end{equation}
+тобто отримали лінійну функцію від $t$. \medskip
+
+\begin{definition}
+    Ситуація, у якій $\langle x^2(t) \rangle$ і $\ol{\langle \delta^2(t, T) \rangle}$ мають різний вигляд як функції змінної $t$ називається \textit{слабкою неергодичністю} (\textit{eng.} weak ergodicity breaking).
+\end{definition}
+
+\begin{remark}
+    В обмеженій області
+    \begin{align}
+        \langle x^2(t) \rangle &= c_1, \quad t \to \infty, \\
+        \langle \delta^2(t, T) \rangle &= c_2 t^{1 - \alpha}, \quad t \to \infty,
+    \end{align}
+    де $c_1$, $c_2$ --- певні (можливо різні) константи.
+\end{remark}
+
+% Розглянемо тепер ситуацію коли $0 < \alpha < 1$ і $\psi(t) \sim A \alpha t^{-1 - \alpha}$, тоді математичне сподівання $\int_0^\infty t \psi(t) \diff t = \infty$ --- так званий \textit{розподіл з важким хвостом} (\textit{eng.} fat-tailed distribution).
+
+% \begin{example}
+%     Нехай $\psi(t) = \frac{t}{\tau} e^{-t / \tau}$, тоді $\langle T \rangle = \tau$.
+% \end{example}
