@@ -1,51 +1,58 @@
+% \date{24 вересня 2019 р.}
+% \setcounter{section}{1}
+% \setcounter{subsection}{1}
+
 \subsection{Властивості дробових похідних}
-\begin{example}
-    Знайдемо похідні степеневих функцій.
-\end{example}
-\begin{solution}
-    Нехай $\beta > -1$, $0 < \alpha < 1$. Тоді, безпосередньо за визначення дробової похідної Рімана-Ліувілля
-    \begin{equation}
-        \RiemannLiouvilleFractionalDerivative{\alpha} t^\beta = \frac{\diff}{\diff t} \FractionalIntegral{1-\alpha} t^\beta.
-    \end{equation}
-    
-    У свою чергу, безпосередньо за визначення дробового інтегралу
-    \begin{equation}
-        \FractionalIntegral{1-\alpha} t^\beta = \frac{1}{\Gamma(1 - \alpha)} \int_0^t s^\beta (t- s)^{-\alpha} \diff s.
-    \end{equation}
-    
-    Нагадаємо
+
+Знайдемо похідні степеневих функцій. Нехай $\beta > -1$, $0 < \alpha < 1$. Тоді, безпосередньо за визначення дробової похідної Рімана-Ліувілля
+\begin{equation}
+    \RiemannLiouvilleFractionalDerivative{\alpha} t^\beta = \frac{\diff}{\diff t} \FractionalIntegral{1-\alpha} t^\beta.
+\end{equation}
+
+У свою чергу, безпосередньо за визначенням дробового інтеграла
+\begin{equation}
+    \FractionalIntegral{1-\alpha} t^\beta = \frac{1}{\Gamma(1 - \alpha)} \int_0^t s^\beta (t- s)^{-\alpha} \diff s.
+\end{equation}
+
+\begin{reminder}
+    \nothing
     \begin{definition}[бета-функції]
         \begin{equation}
-            B(a,b) = \int_0^1 \xi^{a-1}(1-\xi)^{b-1}.
+            B(a, b) = \int_0^1 \xi^{a-1}(1-\xi)^{b-1},
         \end{equation}
     \end{definition}
-    а також наступну властивість бета-функції:
-    \begin{equation}
-        B(x,y) = \frac {\Gamma (x) \Gamma (y)}{\Gamma (x + y)}.
-    \end{equation}
     
-    Проведемо заміну $\xi = s / t$, тоді $\diff s = t \diff \xi$, отримаємо
-    \begin{equation}
-        \begin{aligned}
-            & \frac{1}{\Gamma(1-\alpha)} \int_0^1 (t \xi)^\beta t^{-\alpha} (1 - \xi) t \diff \xi = \\
-            &\quad = \frac{t^{\beta - \alpha + 1}}{\Gamma(1 - \alpha)} B(\beta + 1, 1 - \alpha) = \\
-            &\quad = \frac{\Gamma(\beta + 1)}{\Gamma(2 + \beta - \alpha)} t^{\beta - \alpha + 1}.
-        \end{aligned}
-    \end{equation}
-    
-    Лишилося продиференційювати цей інтеграл:
-    \begin{equation}
-        \begin{aligned}
-            & D_0^\alpha \frac{\Gamma(\beta + 1)}{\Gamma(2 + \beta - \alpha)} t^{\beta - \alpha + 1} = \\
-            &\quad = \frac{\Gamma(\beta + 1)}{\Gamma(2 + \beta - \alpha)} (\beta - \alpha + 1) t^{\beta - \alpha} = \\
-            &\quad = \frac{\Gamma(\beta + 1)}{\Gamma(1 + \beta - \alpha)} t^{\beta - \alpha},
-        \end{aligned}
-    \end{equation}
-    де в останньому переході ми скористалився властивістю $a \Gamma(a) = \Gamma(a + 1)$.
-\end{solution}
+    \begin{property}[бета-функції]
+        \begin{equation}
+            B(x, y) = \frac {\Gamma (x) \Gamma (y)}{\Gamma (x + y)}.
+        \end{equation}
+    \end{property}
+\end{reminder}
+
+Проведемо заміну $\xi = s / t$, тоді $\diff s = t \diff \xi$, отримаємо
+\begin{equation}
+    \begin{aligned}
+        & \frac{1}{\Gamma(1-\alpha)} \int_0^1 (t \xi)^\beta t^{-\alpha} (1 - \xi) t \diff \xi = \\
+        &\quad = \frac{t^{\beta - \alpha + 1}}{\Gamma(1 - \alpha)} B(\beta + 1, 1 - \alpha) = \\
+        &\quad = \frac{\Gamma(\beta + 1)}{\Gamma(2 + \beta - \alpha)} t^{\beta - \alpha + 1}.
+    \end{aligned}
+\end{equation}
+
+Лишилося продиференціювати  цей інтеграл:
+\begin{equation}
+    \begin{aligned}
+        & D_0^\alpha \frac{\Gamma(\beta + 1)}{\Gamma(2 + \beta - \alpha)} t^{\beta - \alpha + 1} = \\
+        &\quad = \frac{\Gamma(\beta + 1)}{\Gamma(2 + \beta - \alpha)} (\beta - \alpha + 1) t^{\beta - \alpha} = \\
+        &\quad = \frac{\Gamma(\beta + 1)}{\Gamma(1 + \beta - \alpha)} t^{\beta - \alpha},
+    \end{aligned}
+\end{equation}
+де в останньому переході ми скористалися властивістю $a \Gamma(a) = \Gamma(a + 1)$.
 
 \begin{remark}
-    Ця формула справедлива і для $\alpha \ge 1$, але умова $\beta > -1$ важлива для збіжності кількох інтегралів, зокрема $\int_0^t s^\beta (t- s)^{-\alpha} \diff s$.
+    Ця формула справедлива і для $\alpha \ge 1$, але умова $\beta > -1$ важлива для збіжності кількох інтегралів, зокрема
+    \begin{equation}
+        \int_0^t s^\beta (t- s)^{-\alpha} \diff s.
+    \end{equation}
 \end{remark}
 
 \begin{example}
@@ -89,22 +96,23 @@
 \end{proof}
 
 Нагадаємо основні співвідношення між похідними та інтегралами із класичного аналізу:
-\begin{proposition}[формула (не) Ньютона-Лейбніца]
+\begin{th_formula}[(не) Ньютона-Лейбніца]
     \begin{equation}
-        \frac{\diff}{\diff t} \int_0^t f(s) \diff s = f(t).
+        \frac{\diff}{\diff t} \int_0^t f(s) \diff s = f(t),
     \end{equation}
-\end{proposition}
+\end{th_formula}
 а також
-\begin{proposition}[формула Ньютона-Лейбніца]
+\begin{th_formula}[Ньютона-Лейбніца]
     \begin{equation}
         \int_0^t f'(s) \diff s = f(t) - f(0).
     \end{equation}
-\end{proposition}
+\end{th_formula}
 
-Важливим для подальшого аналізу є
-\begin{proposition}[напівгрупова властивість дробових інтегралів]
+Важливою для подальшого аналізу є
+\begin{property}[напівгрупова властивість дробових інтегралів]
     Нехай $\alpha, \beta > 0$, тоді $\FractionalIntegral{\alpha + \beta} = \FractionalIntegral{\alpha} \FractionalIntegral{\beta}$.
-\end{proposition}
+\end{property}
+
 \begin{exercise}
     Доведіть цю властивість. \textbf{Підказка}: за означеннями,
     \begin{equation}
@@ -112,54 +120,54 @@
     \end{equation}
     тому достатньо перевірити асоціативність згортки і рівність $y_{\alpha + \beta} = y_\alpha \star y_\beta$.
 \end{exercise}
-\begin{proof}
-    Перевіримо два вищезгаданих твердження:
-    \begin{enumerate}
-        \item Асоціативність $\star$ отримується ``в лоб'':
-        \begin{equation}
-            \begin{aligned}
-                ((f \star g) \star h)(t) &=
-                \int_0^t (f \star g)(s) h(t - s) \diff s = \\
-                &= \int_0^t \left( \int_0^\xi f(\xi) g(s - \xi) \diff \xi \right) h(t - s) \diff s = \\
-                &= \int_0^t \int_0^s f(\xi) g(s - \xi) h(t - s) \diff \xi \diff s = \\
-                &= \int_0^t \int_\xi^t f(\xi) g(s - \xi) h(t - s) \diff s \diff \xi = \\
-                &= \int_0^t \int_0^{t - \xi} f(\xi) g(s) h(t - s - \xi) \diff s \diff \xi = \\
-                &= \int_0^t f(\xi) \left( \int_0^{t - \xi} g(s) h(t - \xi - s) \diff s \right) \diff \xi = \\
-                &= \int_0^t f(\xi) (g \star h)(t - \xi) \diff \xi = \\
-                &= (f \star (g \star h))(t).
-            \end{aligned}
-        \end{equation}
-        \item Далі
-        \begin{equation}
-            \begin{aligned}
-                y_\alpha(t) \star y_\beta(t) 
-                &= \int_0^t y_\alpha(s) y_\beta(t - s) \diff s = \\
-                &= \int_0^t \frac{1}{\Gamma(\alpha)} s^{\alpha - 1} \frac{1}{\Gamma(\beta)} (t - s)^{\beta - 1} \diff s = \\
-                &= \frac{1}{\Gamma(\alpha) \Gamma(\beta)} \int_0^t s^{\alpha - 1} (t - s)^{\beta - 1} \diff s.
-            \end{aligned}
-        \end{equation}
+% \begin{proof}
+%     Перевіримо два вищезгаданих твердження:
+%     \begin{enumerate}
+%         \item Асоціативність $\star$ отримується ``в лоб'':
+%         \begin{equation}
+%             \begin{aligned}
+%                 ((f \star g) \star h)(t) &=
+%                 \int_0^t (f \star g)(s) h(t - s) \diff s = \\
+%                 &= \int_0^t \left( \int_0^\xi f(\xi) g(s - \xi) \diff \xi \right) h(t - s) \diff s = \\
+%                 &= \int_0^t \int_0^s f(\xi) g(s - \xi) h(t - s) \diff \xi \diff s = \\
+%                 &= \int_0^t \int_\xi^t f(\xi) g(s - \xi) h(t - s) \diff s \diff \xi = \\
+%                 &= \int_0^t \int_0^{t - \xi} f(\xi) g(s) h(t - s - \xi) \diff s \diff \xi = \\
+%                 &= \int_0^t f(\xi) \left( \int_0^{t - \xi} g(s) h(t - \xi - s) \diff s \right) \diff \xi = \\
+%                 &= \int_0^t f(\xi) (g \star h)(t - \xi) \diff \xi = \\
+%                 &= (f \star (g \star h))(t).
+%             \end{aligned}
+%         \end{equation}
+%         \item Далі
+%         \begin{equation}
+%             \begin{aligned}
+%                 y_\alpha(t) \star y_\beta(t) 
+%                 &= \int_0^t y_\alpha(s) y_\beta(t - s) \diff s = \\
+%                 &= \int_0^t \frac{1}{\Gamma(\alpha)} s^{\alpha - 1} \frac{1}{\Gamma(\beta)} (t - s)^{\beta - 1} \diff s = \\
+%                 &= \frac{1}{\Gamma(\alpha) \Gamma(\beta)} \int_0^t s^{\alpha - 1} (t - s)^{\beta - 1} \diff s.
+%             \end{aligned}
+%         \end{equation}
         
-        Проведемо заміну $\xi = s / t$, тоді $\diff s = t \diff \xi$, отримаємо
-        \begin{equation}
-            \begin{aligned}
-                & \frac{1}{\Gamma(\alpha) \Gamma(\beta)} \int_0^t s^{\alpha - 1} (t - s)^{\beta - 1} \diff s = \\
-                &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} \int_0^t (\xi t)^{\alpha - 1} (1 - \xi)^{\beta - 1} t^{\beta - 1} t \diff \xi = \\
-                &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{(\alpha - 1) + (\beta - 1) + 1} \int_0^t \xi^{\alpha - 1} (1 - \xi)^{\beta - 1} \diff \xi = \\
-                &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{\alpha + \beta - 1} B(\alpha, \beta) = \\
-                &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{\alpha + \beta - 1} \frac {\Gamma (\alpha) \Gamma (\beta)}{\Gamma (\alpha + \beta)} = \\
-                &\quad = \frac{1}{\Gamma (\alpha + \beta)} t^{\alpha + \beta - 1} = \\
-                &\quad = y_{\alpha + \beta}(t).
-            \end{aligned}
-        \end{equation}
-    \end{enumerate}
-\end{proof}
+%         Проведемо заміну $\xi = s / t$, тоді $\diff s = t \diff \xi$, отримаємо
+%         \begin{equation}
+%             \begin{aligned}
+%                 & \frac{1}{\Gamma(\alpha) \Gamma(\beta)} \int_0^t s^{\alpha - 1} (t - s)^{\beta - 1} \diff s = \\
+%                 &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} \int_0^t (\xi t)^{\alpha - 1} (1 - \xi)^{\beta - 1} t^{\beta - 1} t \diff \xi = \\
+%                 &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{(\alpha - 1) + (\beta - 1) + 1} \int_0^t \xi^{\alpha - 1} (1 - \xi)^{\beta - 1} \diff \xi = \\
+%                 &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{\alpha + \beta - 1} B(\alpha, \beta) = \\
+%                 &\quad = \frac{1}{\Gamma(\alpha) \Gamma(\beta)} t^{\alpha + \beta - 1} \frac {\Gamma (\alpha) \Gamma (\beta)}{\Gamma (\alpha + \beta)} = \\
+%                 &\quad = \frac{1}{\Gamma (\alpha + \beta)} t^{\alpha + \beta - 1} = \\
+%                 &\quad = y_{\alpha + \beta}(t).
+%             \end{aligned}
+%         \end{equation}
+%     \end{enumerate}
+% \end{proof}
 
-\begin{theorem}[аналог формули (не) Ньютона-Лейбніца]
+\begin{th_formula}[аналог формули (не) Ньютона-Лейбніца]
     Для $\alpha > 0$
     \begin{equation}
         \RiemannLiouvilleFractionalDerivative{\alpha} \FractionalIntegral{\alpha} f = f.
     \end{equation}
-\end{theorem}
+\end{th_formula}
 \begin{proof}
     Нехай $n = \lceil \alpha \rceil$, тоді
     \begin{equation}
@@ -170,12 +178,12 @@
     Тут ми скористалися напівгруповою властивістю.
 \end{remark}
 
-\begin{proposition}[аналог формули Ньютона-Лейбніца]
+\begin{th_formula}[аналог формули Ньютона-Лейбніца]
     Нехай $f, D_0^\alpha f \in L_1([0,T])$, $n = \lceil \alpha \rceil$, $\alpha \not\in \NN$, тоді для $0 < t < T$ маємо
     \begin{equation}
         (\FractionalIntegral{\alpha} \RiemannLiouvilleFractionalDerivative{\alpha} f)(t) = f(t) - \sum_{k = 0}^{n - 1} (\RiemannLiouvilleFractionalDerivative{\alpha - k  - 1} f)(0) \cdot \frac{t^{\alpha - k - 1}}{\Gamma(\alpha - k)}.
     \end{equation}
-\end{proposition}
+\end{th_formula}
 \begin{remark}
     Тут під $\RiemannLiouvilleFractionalDerivative{-|\beta|}$ маємо на увазі $\FractionalIntegral{|\beta|}$.
 \end{remark}
@@ -214,7 +222,10 @@
 
 \subsubsection{Властивості похідних за Капуто}
 \begin{theorem}
-    Нехай $f \in L_\infty([0,T])$, тобто $\exists M \in \RR$: $|f(t)| \overset{\text{a.e.}}{\le} M$, тоді, як і очікувалося, $(\CaputoFractionalDerivative{\alpha} \FractionalIntegral{\alpha} f)(0) = (\FractionalIntegral{\alpha} \CaputoFractionalDerivative{\alpha} f)(0)$.
+    Нехай $f \in L_\infty([0,T])$, тобто $\exists M \in \RR$: $|f(t)| \overset{\text{a.e.}}{\le} M$, тоді, як і очікувалося,
+    \begin{equation}
+        (\CaputoFractionalDerivative{\alpha} \FractionalIntegral{\alpha} f)(0) = (\FractionalIntegral{\alpha} \CaputoFractionalDerivative{\alpha} f)(0),
+    \end{equation}
 \end{theorem}
 а також
 \begin{theorem}

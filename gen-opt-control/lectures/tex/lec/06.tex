@@ -1,3 +1,9 @@
+% \date{22 жовтня 2019 р.}
+% \setcounter{section}{?}
+% \setcounter{subsection}{?}
+% \setcounter{equation}{??}
+% \setcounter{theorem}{??}
+
 \begin{equation}
     \ol{\delta^2(t, T)}
     = \frac{1}{T - t} \int_0^{T - t} \Big( x(t + s) - x(s) \Big)^2 \diff s
@@ -32,8 +38,8 @@
 \begin{equation}
     \begin{aligned}
         \frac{2 \sigma^2}{T - t} \cdot \frac{\alpha t}{\Gamma(1 + \alpha) \tau^\alpha} \int_0^{T - t} s^{\alpha - 1} \diff s
-        &= \frac{2 \sigma^2 \alpha t}{(T - t) \Gamma(1 + \alpha) \tau^\alpha} \cdot \frac{1}{\alpha} \cdot (T - t)^\alpha
-        &= \frac{2 \sigma^2 t}{\Gamma(1 + \alpha) \tau^\alpha} (T - t)^{\alpha - 1}
+        &= \frac{2 \sigma^2 \alpha t}{(T - t) \Gamma(1 + \alpha) \tau^\alpha} \cdot \frac{1}{\alpha} \cdot (T - t)^\alpha = \\
+        &= \frac{2 \sigma^2 t}{\Gamma(1 + \alpha) \tau^\alpha} (T - t)^{\alpha - 1} \sim \\
         &\sim \frac{2 K_\alpha}{\Gamma(1 + \alpha) T^{1 - \alpha}} t,
     \end{aligned}
 \end{equation}
@@ -94,9 +100,11 @@
 
 За формулою Монтрола-Вайса
 \begin{equation}
-    \FourierLaplaceTransform{u}(\omega, \eta)
-    = \FourierTransform{u_0}(\omega) \cdot \frac{1}{\eta} \cdot \frac{1 - \LaplaceTransform{\psi}(\eta)}{1 - \LaplaceTransform{\psi}(\eta) \FourierTransform{\lambda}(\omega)}
-    = \frac{\FourierTransform{u_0}(\omega)}{\eta} \cdot \frac{I(\eta, \tau)}{1 - (1 - I(\eta, \tau)) \FourierTransform{\lambda}(\omega)}.
+    \begin{aligned}
+        \FourierLaplaceTransform{u}(\omega, \eta)
+        &= \FourierTransform{u_0}(\omega) \frac{1}{\eta} \frac{1 - \LaplaceTransform{\psi}(\eta)}{1 - \LaplaceTransform{\psi}(\eta) \FourierTransform{\lambda}(\omega)} = \\
+        &= \frac{\FourierTransform{u_0}(\omega)}{\eta} \frac{I(\eta, \tau)}{1 - (1 - I(\eta, \tau)) \FourierTransform{\lambda}(\omega)}.
+    \end{aligned}
 \end{equation}
 
 Також припустимо, що $\lambda \sim \mathcal{N}(0, 2 \sigma^2) \implies \FourierTransform{\lambda} \sim 1 - \sigma^2 \omega^2$. Тоді
@@ -172,5 +180,5 @@
 \end{example}
 
 \begin{example}
-    Якщо ж $p(\alpha) \sim \nu \alpha^{\nu - 1}$ при $\alpha \to $ і $x(0) = 0$ (блукання починається з початку координат), то $\langle x^2(t) \rangle \sim c\onst \cdot \ln^\nu t$, так звана \textit{ультраповільна дифузія}.
+    Якщо ж $p(\alpha) \sim \nu \alpha^{\nu - 1}$ при $\alpha \to $ і $x(0) = 0$ (блукання починається з початку координат), то $\langle x^2(t) \rangle \sim \const \cdot \ln^\nu t$, так звана \textit{ультраповільна дифузія}.
 \end{example}

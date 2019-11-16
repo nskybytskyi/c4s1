@@ -1,0 +1,258 @@
+% \date{12 листопада 2019 р.}
+% \setcounter{section}{?}
+% \setcounter{subsection}{?}
+% \setcounter{equation}{??}
+% \setcounter{theorem}{??}
+
+\section{Слабка розв'язність рівняння субдифузії}
+
+\begin{definition}
+    Нехай $f: \RR \to \RR$, $f \in L_1$ на довільному компакті.
+    Така функція називається \textit{локально інтегровною}.
+    Позначається $L_1^{\text{loc}}$.
+\end{definition}
+
+\begin{definition}
+    \textit{Носій} функції $f$ --- замикання множини $\RR \setminus \{ x : f(x) = 0 \}$.
+    Позначається $\supp f$ (\textit{eng.} support domain).
+\end{definition}
+
+\begin{definition}
+    Функція називається \textit{фінітною} якщо її носій компактний.
+    Множину нескінченно-диференційовних фінітних функцій позначимо як $C_0^\infty(\RR)$
+\end{definition}
+
+Нескладно бачити, що якщо функція $f$ має локально-інтегровну похідну $g = f'$, то $\forall \phi \in C_0^\infty(\RR)$:
+\begin{equation}
+    \int_{-\infty}^\infty g(t) \phi(t) \diff t = -\int_{-\infty}^{\infty} f(t) \phi'(t) \diff t,
+\end{equation}
+трохи спрощена формула інтегрування частинами.
+
+\begin{definition}
+    Нехай $f \in L_1^{\text{loc}}(\RR)$ і $\exists g \in L_1^{\text{loc}}(\RR)$: $\forall \phi \in C_0^\infty(\RR)$:
+    \begin{equation}
+        \int_{-\infty}^\infty g(t) \phi(t) \diff t = -\int_{-\infty}^{\infty} f(t) \phi'(t) \diff t,
+    \end{equation}
+
+    Тоді будемо називати функцію $g$ \textit{слабкою похідною} функції $f$.
+\end{definition}
+
+\begin{example}
+    Нехай $f(t) = |t|$. Тоді $f' = \sgn t$.
+\end{example}
+
+\begin{exercise}
+    Довети.
+\end{exercise}
+
+Кожна $f \in L_1^{\text{loc}}(\RR)$ породжує лінійний функціонал на $C_0^\infty(\RR)$:
+\begin{equation}
+    \phi \mapsto \int_{-\infty}^\infty f(t) \phi(t) \diff t = \langle f, \phi \rangle.
+\end{equation}
+
+Відомо, що майже скрізь рівні функції породжують один і той же лінійний функціонал:
+якщо $\forall \phi \in C_0^\infty(\RR)$
+\begin{equation}
+    \langle f, \phi \rangle = \langle g, \phi \rangle,
+\end{equation}
+то $f = g$ майже всюди. \medskip
+
+З іншого боку, множина лінійних функціоналів на $C_0^\infty(\RR)$ ширша ніж множина функціоналів, породжених $f \in L_1^{\text{loc}}(\RR)$:
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[]{} % image 
+% \end{figure}
+
+\begin{definition}
+    Множиною \textit{узагальнених функцій} називається множина лінійних неперервних (відносно спеціально заданої топології) функціоналів на $C_0^\infty(\RR)$.
+\end{definition}
+
+\begin{definition}
+    Узагальнені функції, які породжуються локально-інтегровними функціями називаються \textit{регулярними}.
+\end{definition}
+
+\begin{definition}
+    Нехай $f$ узагальнена функція. Тоді $f'$ --- \textit{узагальнені похідна} $f$ якщо для довільної пробної функції $\phi$ маємо
+    \begin{equation}
+        \langle f', phi \rangle = - \langle f, \phi \rangle.
+    \end{equation}
+\end{definition}
+
+\begin{remark}
+    Зауважимо, що довільна узагальнена функція нескінченну кількість разів диференційовна (але, знову ж таки, у класі узагальнених функцій).
+\end{remark}
+
+\begin{remark}
+    Наприклад, похідною функції Хевісайда
+    \begin{equation}
+        \theta(t) = \begin{cases}
+            0, & t < 0, \\
+            1, & 0 \le t,
+        \end{cases}
+    \end{equation}
+    є дельта-функція Дірака (зосереджена у точці 0): $\theta' = \delta$, який діє на пробні функції наступним чином:
+    \begin{equation}
+        \langle \delta, \phi \rangle = \phi(0).
+    \end{equation}
+\end{remark}
+
+\begin{exercise}
+    Перевірити.
+\end{exercise}
+
+\begin{definition}
+    Узагальнені функції, які не є регулярними називаються \textit{сингулярними}.
+\end{definition}
+
+\begin{definition}
+    $\langle \delta_{t_0}, \phi \rangle = \phi(t_0)$ --- $\delta$ функція Дірака, зосереджена у точці $t_0$.
+\end{definition}
+
+\begin{remark}
+    Фізичний зміст $\delta$-функції --- густина матеріальної точки.
+\end{remark}
+
+Густина --- така функція $\rho: \RR^n \to \RR$, що $\iiint_V \rho(x) \diff x$ --- маса, зосереджена в об'ємі $V$. \medskip
+
+Можна також сприймати
+\begin{equation}
+    \iiint_V \rho(x) \diff x = \iiint_{\RR^n} \rho(x) \chi_V(x) \diff x.
+\end{equation}
+
+Можна також сприймати
+\begin{equation}
+    \iiint_{\RR^n} \rho(x) \chi_V(x) \diff x = \lim_{\epsilon \to 0} \iiint_{\RR^n} \rho(x) \chi_V^\epsilon(x) \diff x,
+\end{equation}
+де $\chi_V^\epsilon$ --- гладкі $\epsilon$-наближення індикаторної функції:
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[]{} % image 
+% \end{figure}
+тобто
+\begin{equation}
+    \chi_V^\epsilon(x) = \begin{cases}
+        1, & x \in V: d(x, \partial V) > \epsilon, \\
+        1, & x \not\in V: d(x, \partial V) > \epsilon.
+    \end{cases}
+\end{equation}
+
+Далі 
+\begin{equation}
+    \lim_{\epsilon \to 0} \iiint_{\RR^n} \rho(x) \chi_V^\epsilon(x) \diff x = \lim_{\epsilon \to 0} \langle \rho, \chi_V^\epsilon \rangle
+\end{equation}
+
+Оскільки $\rho = \delta_{x_0}$, то
+\begin{equation}
+    \lim_{\epsilon \to 0} \langle \rho, \chi_V^\epsilon \rangle = \begin{cases}
+        1, & x_0 \in V, \\
+        0, & x_0 \not\in V.
+    \end{cases}
+\end{equation}
+
+\begin{remark}
+    Фізичний зміст $\delta$-функції --- прискорення матеріальної точки, яка миттєво набула одиничної швидкості починаючи зі стану спокою.
+\end{remark}
+
+\begin{remark}
+    Ймовірнісний зміст $\delta$-функції зосередженої в $x_0$ --- щільність сталої $x_0$ випадкової величини.
+\end{remark}
+
+\begin{definition}
+    Нехай $\Omega \subset \RR$ --- область, тоді $W_p^k (\Omega) = \{f \in L_p(\Omega): f_1', \ldots, f^{(k)} \in L_p(\Omega)\}$ --- \textit{соболівський простір}.
+    Тут норма має вигляд
+    \begin{equation}
+        \|f\|_{k,p} = \left( \|f\|_{L_q(\Omega)}^p + \|f'\|_{L_q(\Omega)}^p + \ldots + \|f^{(k)}\|_{L_q(\Omega)}^p \right)^{1/p},
+    \end{equation}
+    що у свою чергу еквівалентно наступним нормам:
+    \begin{equation}
+        \|f\|_{L_p(\Omega)} + \|f'\|_{L_p(\Omega)} + \ldots + \|f^{(k)}\|_{L_p(\Omega)},
+    \end{equation}
+    а також
+    \begin{equation}
+        \|f\|_{L_p(\Omega)} + \|f^{(k)}\|_{L_p(\Omega)}
+    \end{equation}
+\end{definition}
+
+\begin{remark}
+    Якщо $p = 2$ то є ще позначення $W_2^k(\Omega) = H^k(\Omega)$.
+\end{remark}
+
+\begin{remark}
+    Якщо $\Omega \subset \RR^n$ то у визначенні з'являються всі мішані похідні порядку $\le k$.
+\end{remark}
+
+\begin{definition}
+    $C_0^\infty(\Omega) = \{f \in C^\infty(\Omega): \supp f \subset \Omega\}$, де $\Omega$ --- область в $\RR^n$, а останнє включення строге.
+\end{definition}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[]{} % image 
+% \end{figure}
+
+\begin{definition}
+    $\overset{\circ}{W}_p^k(\Omega)$ --- поповнення (найменший повний надпростір) простору $C_0^\infty(\Omega)$ за $\|\cdot\|_{k,p}$.
+\end{definition}
+
+% про поповнення: поповнення --- множина класів еквівалентності не збіжних фундаментальних послідовностей
+
+\begin{remark}
+    Якщо $p = 2$ то є ще позначення $\overset{\circ}{W}_2^k(\Omega) = H_0^k(\Omega)$.
+\end{remark}
+
+\begin{proposition}[Нерівність Пуанкаре-Фрідріхса]
+    $\forall \Omega \subset \RR^n$ $\exists C_\Omega > 0$: $\forall u \in H_0^1 (\Omega)$:
+    \begin{equation}
+        \|u\|_{L_2}^2 \le C_0 \sum_{i = 1}^n \left\| \frac{\partial u}{\partial x_i} \right\|_{L_2(\Omega)}^2 = C_0 \|u\|^2_{H_0^1(\Omega)}.
+    \end{equation}
+\end{proposition}
+
+\begin{proposition}[Рівність Парсеваля]
+    Перетворення Фур'є --- гомеоморфізм з $L_2(\RR)$ в $L_2(\RR)$, причому
+    \begin{equation}
+        \int_{-\infty}^\infty f^2(x) \diff x = \frac{1}{2 \pi} \int_{-\infty}^\infty |\tilde{f}(\omega)|^2 \diff \omega.
+    \end{equation}
+\end{proposition}
+
+\begin{proposition}
+    $\|\cdot\|_{H^k(\RR)}$ еквівалентна нормі
+    \begin{equation}
+        \left( \int_\RR (1 + |\omega|^2)^k |\tilde{u}(\omega)|^2 \diff \omega \right)^{1/2}
+        = \left\|(1 + |\omega|^2)^{k/2} \tilde{u}(\omega)\right\|_{L_2(\RR)}.
+    \end{equation}
+\end{proposition}
+
+\subsection{Соболівські простори на $\RR$}
+
+\begin{definition}
+    Нехай $\beta > 0$, тоді
+    \begin{equation}
+        \left\{g \in L_2(\RR): \int_\RR (1 + |\omega|^2)^\beta |\tilde{g}(\omega)|^2 \diff \omega < \infty \right\}
+    \end{equation}
+    з нормою
+    \begin{equation}
+        \|g\|_{\beta(\RR)} = \left\|(1 + |\omega|^2)^{\beta/2} \tilde{u}(\omega)\right\|_{L_2(\RR)}
+    \end{equation}
+    --- \textit{соболівський простір порядку $\beta$ на $\RR$}.
+\end{definition}
+
+Розглянемо задачу наближення елементів $H^\beta(\RR)$ гладкими функціями. Розглянемо функцію
+\begin{equation}
+    \eta(t) = \begin{cases}
+        0, & 1 \le |t|, \\
+        c \cdot \exp\left\{\frac{1}{t^2 - 1}\right\}, & |t| < 1,
+    \end{cases}
+\end{equation}
+де $c$ підбирається з умови $\int \eta(t) \diff t = 1$:
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[]{} % image 
+% \end{figure}
+
+\begin{remark}
+    Можна показати, що $\eta$ --- нескінченно-диференційовна.
+\end{remark}
+
+Позначимо
+\begin{equation}
+    \eta_\epsilon(t) = \frac{1}{\epsilon} \eta \left( \frac{t}{\epsilon} \right).
+\end{equation}

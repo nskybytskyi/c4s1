@@ -1,0 +1,276 @@
+% \date{8 жовтня 2019 р.}
+% \setcounter{section}{?}
+% \setcounter{subsection}{?}
+% \setcounter{equation}{??}
+% \setcounter{theorem}{??}
+
+\begin{lemma}[перетворення Лапласа сталої]
+    $\LaplaceTransform{c}(\eta) = c / \eta$.
+\end{lemma}
+
+\begin{lemma}[перетворення Лапласа множника-експоненти]
+    $\LaplaceTransform{e^{p t} f(t)}(\eta) = \LaplaceTransform{f(t)}(\eta - p)$.
+\end{lemma}
+
+Нагадаємо, що раніше ми з'ясували, що
+$\LaplaceTransform{t^{-\beta}}(\eta) = \Gamma(1 - \beta) \eta^{\beta - 1}$.
+
+\begin{theorem}[Таубера]
+    Нехай $-\beta > - 1$, $f$ монотонна при великих $t$ (тобто вона монотонна на деякому проміжку вигляду $[t_0, +\infty)$). Тоді $f(t) \sim t^{-\beta}$ при $t \to +\infty$ $\iff$ $\LaplaceTransform{f}(\eta) = \Gamma(1 - \beta) \eta^{\beta - 1}$ при $\eta \to 0$.
+\end{theorem}
+
+\begin{remark}
+    Тут $f(x) \sim g(x)$ при $x \to \infty$ означає, що $\lim_{x \to \infty} \frac{f(x)}{g(x)} = 1$.
+\end{remark}
+
+\begin{corollary}
+    Нехай $0 < \alpha < 1$ і $f$ монотонна при великих $t$, $f \ge 0$ на $[0, +\infty)$ і $\int_0^{+\infty} f(t) \diff t = 1$. Тоді $\forall A > 0$: $f(t) \sim \alpha A t^{-\alpha - 1}$ при $t \to +\infty$ $\iff$ $\LaplaceTransform{f}(\eta) = 1 - A \Gamma(1 - \alpha) \eta^\alpha + o(n^\alpha)$ при $\eta \downarrow 0$.
+\end{corollary}
+
+\begin{proof}
+    Розглянемо функцію 
+    \begin{equation}
+        F(t) = \int_t^{+\infty} f(s) \diff s.
+    \end{equation}
+    Зауважимо, що $F'(t) = -f(t)$.
+
+    \begin{exercise}
+        Доведіть, що за наших припущень
+        \begin{equation}
+            f(t) \sim A \alpha t^{-\alpha - 1} \iff F(t) \sim A t^{-\alpha}.
+        \end{equation}
+    \end{exercise}
+    % \begin{proof}
+    %     ($\Longrightarrow$) Якщо $f(t) \sim A \alpha t^{-\alpha - 1}$, то, за визначенням асимптотики, 
+    %         \begin{equation}
+    %             (\forall \epsilon > 0) \quad (\exists t_0(\epsilon)) \quad (\forall t > t_0) \quad \left| \frac{f(t)}{A \alpha t^{-\alpha - 1}} - 1 \right| < \epsilon,
+    %         \end{equation}
+    %         або ж, що те саме,
+    %         \begin{multline}
+    %             (\forall \epsilon > 0) \quad (\exists t_0(\epsilon)) \quad (\forall t > t_0) \\
+    %             (A - \epsilon) \alpha t^{-\alpha - 1} < f(t) < (A + \epsilon) \alpha t^{-\alpha - 1},
+    %         \end{multline}
+    %         щоправде вже з іншим $t_0(\epsilon)$, але не суть. \medskip
+            
+    %         Інтегруємо:
+    %         \begin{multline}
+    %             (\forall \epsilon > 0) \quad (\exists t_0(\epsilon)) \quad (\forall t > t_0) \\
+    %             \int_t^\infty (A - \epsilon) \alpha s^{-\alpha - 1} \diff s < \int_t^\infty f(s) \diff s < \int_t^\infty (A + \epsilon) \alpha s^{-\alpha - 1} \diff s,
+    %         \end{multline}
+    %         звідки
+    %         \begin{multline}
+    %             (\forall \epsilon > 0) \quad (\exists t_0(\epsilon)) \quad (\forall t > t_0) \\
+    %             (A - \epsilon) t^{-\alpha} < F(t) < (A + \epsilon) t^{-\alpha},
+    %         \end{multline}
+    %         отримали що хотіли. \medskip
+            
+    %     % ($\Longleftarrow$) Припустимо, що $F(t) \sim A t^{-\alpha}$, але $f(t) \not\sim A \alpha t^{-\alpha - 1}$. За визначенням, це означає, що  
+    %     % \begin{equation}
+    %     %     (\exists \epsilon > 0) (\forall t_0) (\exists t > t_0) \quad \left| \frac{f(t)}{A \alpha t^{-\alpha - 1}} - 1 \right| > \epsilon.
+    %     % \end{equation}
+        
+    %     % Зрозуміло, що для деякого $C > 0$ нескінченно часто відбувається або
+    %     % \begin{equation}
+    %     %     \frac{f(t)}{A \alpha t^{-\alpha - 1}} > 1 + C,
+    %     % \end{equation}
+    %     % або
+    %     % \begin{equation}
+    %     %     \frac{f(t)}{A \alpha t^{-\alpha - 1}} < 1 - C,
+    %     % \end{equation}
+    %     % а також нескінченно часто відбувається
+    %     % \begin{equation}
+    %     %     \frac{f(t)}{A \alpha t^{-\alpha - 1}} = 1.
+    %     % \end{equation}
+        
+    %     % Без обмеження загальності, перше, розглянемо тоді зростаючу $\{t_n\}_{n = 1}^\infty$ таку, що $t_n \to \infty$ при $n \to \infty$ і 
+    %     % \begin{equation}
+    %     %     \frac{f(t_n)}{A \alpha t_n^{-\alpha - 1}} = 1.
+    %     % \end{equation}
+        
+    %     % Позначимо
+    %     % \begin{equation}
+    %     %     T_n = \min_{t \ge t_n} \left\{t: \frac{f(t)}{A \alpha t^{-\alpha - 1}} = 1 + C \right\}.
+    %     % \end{equation}
+        
+    %     % Для зручності запишемо це як 
+    %     % \begin{equation}
+    %     %     f(T_n) = (1 + C) A \alpha T_n^{-\alpha - 1}.
+    %     % \end{equation}
+        
+    %     % Без обмеження загальності вважаємо, що $f$ монотонна починаючи з деякого $t_0 < t_1$, а тому $f(T_n) \le f(t_n)$. Тоді
+    %     % \begin{equation}
+    %     %     (1 + C) A \alpha T_n^{-\alpha - 1} \le A \alpha t_n^{-\alpha - 1}.
+    %     % \end{equation}
+        
+    %     % Логарифмуючи маємо
+    %     % \begin{equation}
+    %     %     \ln (1 + C) + \ln A + \ln \alpha - (\alpha + 1) \ln T_n \le \ln A + \ln \alpha - (\alpha + 1) \ln t_n,
+    %     % \end{equation}
+    %     % або ж
+    %     % \begin{equation}
+    %     %     (\alpha + 1) \ln T_n \ge (\alpha + 1) \ln t_n + \ln (1 + C).
+    %     % \end{equation}
+        
+    %     % Звідси
+    %     % \begin{equation}
+    %     %     \ln T_n \ge \ln t_n + k,
+    %     % \end{equation}
+    %     % або ж
+    %     % \begin{equation}
+    %     %     T_n \ge K t_n,
+    %     % \end{equation}
+    %     % де $k = \frac{\ln (1 + C)}{\alpha + 1}$ --- додатнє, $K = e^k$. Аналогічним чином можна показати, що $f(t) \ge (1 + C') A \alpha t^{-\alpha - 1}$ на $[T_n/K', T_n]$ для певних сталих $C' < C$ і $1 < K' < K$. \medskip
+        
+    %     % Розглянемо тепер $\int_{t_n}^{T_n} f(s) \diff s$. Доволі просто показати, що 
+    %     % \begin{equation}
+    %     %     \begin{aligned}
+    %     %         \int_{T_n / K'}^{T_n} f(s) \diff s 
+    %     %         &< (A - \epsilon) (T_n/K')^{-\alpha} - (A + \epsilon) T_n^{-\alpha} = \\
+    %     %         &= A \Big( (T_n/K')^{-\alpha} - T_n^{-\alpha} \Big) - \epsilon \Big( (T_n/K')^{-\alpha} + T_n^{-\alpha} \Big).
+    %     %     \end{aligned}
+    %     % \end{equation}
+    %     % для довільного $\epsilon > 0$, починаючи з деякого $n_0(\epsilon)$, звичайно. Але ж $f(t) \ge (1 + C') A \alpha t^{-\alpha - 1}$ на $[T_n/K', T_n]$, а тому
+    %     % \begin{equation}
+    %     %     \begin{aligned}
+    %     %         \int_{T_n/K'}^{T_n} f(s) \diff s 
+    %     %         &\ge \int_{T_n/K'}^{T_n} (1 + C') A \alpha t^{-\alpha - 1} = \\
+    %     %         &= (1 + C') A (T_n/K')^{-\alpha} - (1 + C') A T_n^{-\alpha} = \\
+    %     %         &= A \Big( (T_n/K')^{-\alpha} - T_n^{-\alpha} \Big) + C' A \Big( (T_n/K')^{-\alpha} - T_n^{-\alpha} \Big).
+    %     %     \end{aligned}
+    %     % \end{equation}
+        
+    %     % Лишилося порівняти (якщо права частина більше то ми отримали протиріччя)
+    %     % \begin{equation}
+    %     %     \epsilon \Big( (T_n/K')^{-\alpha} + T_n^{-\alpha} \Big) \lor C' A \Big( (T_n/K')^{-\alpha} - T_n^{-\alpha} \Big),
+    %     % \end{equation}
+    %     % або ж
+    %     % \begin{equation}
+    %     %     \epsilon T_n^{-\alpha} K_2 \lor C' A T_n^{-\alpha} K_3,
+    %     % \end{equation}
+    %     % де $K_2 = (K')^\alpha + 1$, $K_3 = (K')^\alpha - 1$ --- додатні константи. \medskip
+        
+    %     % Помітимо, що тепер $T_n^{-\alpha}$ можна скоротити, отримаємо
+    %     % \begin{equation}
+    %     %     \epsilon K_2 \lor C' A K_3.
+    %     % \end{equation}
+        
+    %     % Цілком очевидно, що при $\epsilon \to 0$ права частина переважає, а тому отримали протиріччя.
+    % \end{proof}
+
+    Розглянемо
+    \begin{equation}
+        \LaplaceTransform{F}(\eta) = \int_0^{+\infty} e^{-\eta t} \int_t^{+\infty} f(s) \diff s \diff t,
+    \end{equation}
+    % картинка Тоді, з
+    Змінюючи порядок інтегрування, отримуємо
+    \begin{equation}
+        \begin{aligned}
+            \int_0^{+\infty} f(s) \int_0^s e^{-\eta t} \diff t \diff s
+            &= \int_0^{+\infty} f(s) \frac{1 - e^{-\eta s}}{\eta} \diff s = \\
+            &= \frac{1}{\eta} \left( 1 - \int_0^{+\infty} f(s) e^{-\eta s} \diff s \right) = \\
+            &= \frac{1 - \LaplaceTransform[f](\eta)}{\eta}.
+        \end{aligned}
+    \end{equation}
+
+    Звідси
+    \begin{equation}
+        \LaplaceTransform{f}(\eta) = 1 - \eta \LaplaceTransform{F}(\eta).
+    \end{equation}
+
+    Тепер можемо записати
+    \begin{equation}
+        \begin{aligned}
+            f(t) \underset{t \to \infty}{\sim} A \alpha t^{-\alpha - 1}
+            &\iff F(t) \underset{t \to \infty}{\sim} A t^{-\alpha} \iff \\
+            &\iff \LaplaceTransform{F}(\eta) \underset{\eta \to 0+}{\sim} A \Gamma(1 - \alpha) \eta^{\alpha - 1} \iff \\
+            &\iff \LaplaceTransform{F}(\eta) = \Gamma(1 - \alpha) \eta^{\alpha - 1} + o(\eta^{\alpha - 1}) \iff \\
+            &\iff \LaplaceTransform{f}(\eta) = 1 - A \Gamma(1 - \alpha) \eta^{\alpha} + o(\eta^{\alpha}).
+        \end{aligned}
+    \end{equation}
+\end{proof}
+
+\section{Моделі аномальної дифузії}
+
+% мотивація
+
+Нагадаємо, що класичні рівняння дифузії та теплопровідності зумовлені наступними чинниками:
+\begin{enumerate}
+    \item закон збереження кількості речовини/тепла;
+    \item джерела і стоки;
+    \item ``закон'' Фіка/Фур'є --- емпірично встановлене для широкого класу процесів твердження про те, що інтенсивність потоку речовини/тепла пропорційна мінус градієнту концентрації речовини/кількості тепла на границі.
+\end{enumerate}
+
+Розглянемо тепер інший підхід, який грунтується на випадкових блуканнях з неперервним часом (\textit{eng.} CTRW, continuous time random walk). А саме, нехай $x(t)$ --- випадкова величина (координата частинки в момент часу $t$), а  $u(x, t)$ (gпри фіксованому $t$ --- щільність координати частинки). \medskip
+
+% картинка
+
+Параметри моделі:
+\begin{enumerate}
+    \item $u_0(x)$ --- щільність початкового (при $t = 0$) розподілу;
+    \item $\psi(t)$ --- щільність часу очікування наступного стрибка;
+    \item $\lambda(x)$ --- щільність зміщення.
+\end{enumerate}
+
+\begin{definition}
+    Нехай $f: \RR \to \RR$, тоді її \textit{перетворенням Фур'є} називається 
+    \begin{equation}
+        \FourierTransform{f}(\omega) = \tilde{f}(\omega) = \int_\RR e^{i \omega t} f(x) \diff x.
+    \end{equation}
+\end{definition}
+
+\begin{proposition}
+    Для перетворення Фур'є справедлива теоерма згортки:
+    \begin{equation}
+        \FourierTransform{f \star g}(\omega) = \FourierTransform{f}(\omega) \cdot \FourierTransform{f}(\omega),
+    \end{equation}
+    де
+    \begin{equation}
+        (f \star g)(x) = \int_\RR f(y) g(x - y) \diff y.
+    \end{equation}
+\end{proposition}
+
+\begin{definition}
+    Нехай $u(x, t): \RR \times \RR \to \RR$, тоді її \textit{перетворенням Фур'є-Лапласа} називається 
+    \begin{equation}
+        \FourierLaplaceTransform{u}(\omega, \eta) = \tilde{\bar{u}}(\omega, \eta) = \int_0^{+\infty} \int_\RR e^{-\eta t + i \omega x} u(x, t) \diff x \diff t.
+    \end{equation}
+\end{definition}
+
+\begin{th_formula}[Монтрола-Вайса]
+    \begin{equation}
+        \FourierLaplaceTransform{u}(\omega, \eta) = \frac{\FourierTransform{u_0}(\omega)}{\eta} \frac{1 - \LaplaceTransform{\psi}(\eta)}{1 - \LaplaceTransform{\psi}(\eta) \FourierTransform{\lambda}(\omega)},
+    \end{equation}
+    як тільки $|\LaplaceTransform{\psi}(\eta) \FourierTransform{\lambda}(\omega)| < 1$.
+\end{th_formula}
+\begin{proof}
+    Введемо додаткове позначення: $n(t)$ --- кількість стрибків до моменту $t$. $\psi_k(t)$ --- щільність часу $k$-го стрибка. І нарешті, $\lambda_k(x)$ --- щільність координати після $k$-го стрибка. \medskip
+
+    Запишемо формулу повної ймовірності:
+    \begin{equation}
+        \begin{aligned}
+            u(x, t)
+            &= \sum_{k = 0}^\infty \mathsf{P}\{n(t) = k\} \lambda_k (x) = \\
+            &= \sum_{k = 0}^\infty \Big(\mathsf{P}\{n(t) \ge k\} - \mathsf{P}\{n(t) \ge k + 1\}\Big) \lambda_k (x) = \\
+            &= \sum_{k = 0}^\infty \left( \int_0^t \psi_k(s) \diff s - \int_0^t \psi_{k + 1} (s) \diff s \right) \lambda_k (x) = \\
+            &= \sum_{k = 0}^\infty \left( \int_0^t \psi^{\star k}(s) \diff s - \int_0^t \psi^{\star(k + 1)} (s) \diff s \right) \cdot (u_0 \star \lambda^{\star k}) (x).
+        \end{aligned}
+    \end{equation}
+
+    \begin{remark}
+        Тут ми скористалися тим, що $\psi_k(x) = \psi^{\star k} = \underset{k}{\underbrace{\psi \star \psi \star \ldots \star \psi}}$ і $\lambda_k(x) = u_0 \star \lambda^{\star k} = u_0 \star \underset{k}{\underbrace{\lambda \star \lambda \star \ldots \star \lambda}}$.
+    \end{remark}
+    
+    \begin{exercise}
+        Поновити у конспекті формальне доведення цих фактів.
+    \end{exercise}
+
+    З урахуванням \%перелік\_нагадувань\%, маємо
+    \begin{equation}
+        \begin{aligned}
+            \FourierLaplaceTransform{u}(\omega, \eta) 
+            &= \sum_{k = 0}^\infty \frac{1}{\eta} \Big( (\LaplaceTransform{\psi}(\eta)^k - \LaplaceTransform{\psi}(\eta)^{k + 1}) \FourierTransform{u_0}(\omega) \FourierTransform{\lambda}(\omega)^k \Big) = \\
+            &= \frac{\FourierTransform{u_0}(\omega) (1 - \LaplaceTransform{\psi}(\eta))}{\eta} \sum_{k = 0}^\infty \LaplaceTransform{\psi}(\eta)^{k} \FourierTransform{\lambda}(\omega)^k = \\
+            &= \frac{\FourierTransform{u_0}(\omega) (1 - \LaplaceTransform{\psi}(\eta))}{\eta (1 - \LaplaceTransform{\psi}(\eta) \FourierTransform{\lambda}(\omega)}.
+        \end{aligned}
+    \end{equation}
+\end{proof}

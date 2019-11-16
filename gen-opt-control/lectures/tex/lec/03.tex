@@ -1,3 +1,9 @@
+% \date{1 жовтня 2019 р.}
+% \setcounter{section}{?}
+% \setcounter{subsection}{?}
+% \setcounter{equation}{??}
+% \setcounter{theorem}{??}
+
 \subsection{Початкові значення}
 
 \subsubsection{Початкові значення інтегралу}
@@ -54,23 +60,23 @@
 \begin{exercise}
     Наведіть приклад $f$ для якої $(\FractionalIntegral{\alpha} f)(0) \ne 0$ (але і не $\infty$).
 \end{exercise}
-\begin{solution}
-    \begin{example}
-        Розглянемо $f(x) = \frac{1}{\sqrt{x}}$ на $[0,1]$. Можна показати, що
-        \begin{equation}
-            \int_0^1 |f(x)| \diff x = 2,
-        \end{equation}
-        тому $f \in L_1((0,1))$. З іншого боку,
-        \begin{equation}
-            \int_0^1 |f(x)|^2 \diff x = \int_0^1 \frac{\diff x}{x} = \infty,
-        \end{equation}
-        тому $f \not\in L_2((0,1))$. Це означає, що $1 < p < 2$. Тоді нерівність $p > 1 / \alpha$ з умов теореми не буде виконуватися, для $\alpha \le \frac{1}{2}$. Зокрема, виникають певні сподівання на $\alpha = \frac{1}{2}$. Розглянемо $(\FractionalIntegral{1/2}f)(t)$:
-        \begin{equation}
-            (\FractionalIntegral{1/2}f)(t) = \frac{1}{\Gamma(1/2)} \int_0^t \frac{\diff s}{\sqrt{t - s} \sqrt{s}} = \frac{\pi}{\Gamma(1/2)} = \sqrt{\pi}.
-        \end{equation}
-        Як бачимо, отриманий вираз не просто не прямує до нуля при $t \to 0$, а взагалі не залежить від $t$, тобто наші сподівання не були марні і $(\FractionalIntegral{1/2}f)(0) = \sqrt{\pi} \ne 0$ (але і не $\infty$).
-    \end{example}
-\end{solution}
+% \begin{solution}
+%     \begin{example}
+%         Розглянемо $f(x) = \frac{1}{\sqrt{x}}$ на $[0,1]$. Можна показати, що
+%         \begin{equation}
+%             \int_0^1 |f(x)| \diff x = 2,
+%         \end{equation}
+%         тому $f \in L_1((0,1))$. З іншого боку,
+%         \begin{equation}
+%             \int_0^1 |f(x)|^2 \diff x = \int_0^1 \frac{\diff x}{x} = \infty,
+%         \end{equation}
+%         тому $f \not\in L_2((0,1))$. Це означає, що $1 < p < 2$. Тоді нерівність $p > 1 / \alpha$ з умов теореми не буде виконуватися, для $\alpha \le \frac{1}{2}$. Зокрема, виникають певні сподівання на $\alpha = \frac{1}{2}$. Розглянемо $(\FractionalIntegral{1/2}f)(t)$:
+%         \begin{equation}
+%             (\FractionalIntegral{1/2}f)(t) = \frac{1}{\Gamma(1/2)} \int_0^t \frac{\diff s}{\sqrt{t - s} \sqrt{s}} = \frac{\pi}{\Gamma(1/2)} = \sqrt{\pi}.
+%         \end{equation}
+%         Як бачимо, отриманий вираз не просто не прямує до нуля при $t \to 0$, а взагалі не залежить від $t$, тобто наші сподівання не були марні і $(\FractionalIntegral{1/2}f)(0) = \sqrt{\pi} \ne 0$ (але і не $\infty$).
+%     \end{example}
+% \end{solution}
 
 \subsubsection{Початкові значення похідних}
 
@@ -109,15 +115,16 @@
 \begin{proof}
     $\left.\right.$
     \begin{exercise}
-        ($\Longrightarrow$) За умов теореми 
-        \begin{equation}
-            0 = (\FractionalIntegral{\alpha} 0)(t) = (\FractionalIntegral{\alpha} \RiemannLiouvilleFractionalDerivative{\alpha} f)(t) = f(t) - \sum_{k = 0}^{n - 1} (\RiemannLiouvilleFractionalDerivative{\alpha - k  - 1} f)(0) \cdot \frac{t^{\alpha - k - 1}}{\Gamma(\alpha - k)},
-        \end{equation}
-        звідки
-        \begin{equation}
-            f(t) = \sum_{k = 0}^{n - 1} (\RiemannLiouvilleFractionalDerivative{\alpha - k - 1} f)(0) \cdot \frac{t^{\alpha - k - 1}}{\Gamma(\alpha - k)},
-        \end{equation}
-        і, перепозначаючи $c_k = \frac{\RiemannLiouvilleFractionalDerivative{\alpha - k - 1} f)(0)}{\Gamma(\alpha - k)}$, отримуємо якраз ту форму для $f$, яку хотіли.
+        ($\Longrightarrow$)
+        % За умов теореми 
+        % \begin{equation}
+        %     0 = (\FractionalIntegral{\alpha} 0)(t) = (\FractionalIntegral{\alpha} \RiemannLiouvilleFractionalDerivative{\alpha} f)(t) = f(t) - \sum_{k = 0}^{n - 1} (\RiemannLiouvilleFractionalDerivative{\alpha - k  - 1} f)(0) \cdot \frac{t^{\alpha - k - 1}}{\Gamma(\alpha - k)},
+        % \end{equation}
+        % звідки
+        % \begin{equation}
+        %     f(t) = \sum_{k = 0}^{n - 1} (\RiemannLiouvilleFractionalDerivative{\alpha - k - 1} f)(0) \cdot \frac{t^{\alpha - k - 1}}{\Gamma(\alpha - k)},
+        % \end{equation}
+        % і, перепозначаючи $c_k = \frac{\RiemannLiouvilleFractionalDerivative{\alpha - k - 1} f)(0)}{\Gamma(\alpha - k)}$, отримуємо якраз ту форму для $f$, яку хотіли.
     \end{exercise}
     
     ($\Longleftarrow$) Нехай
@@ -249,13 +256,13 @@
 \begin{exercise}
     Довести.
 \end{exercise}
-\begin{proof}
-    \begin{equation}
-        \begin{aligned}
-            \LaplaceTransform{\CaputoFractionalDerivative{\alpha} f}(\eta) &= \LaplaceTransform{\FractionalIntegral{1 - \alpha} \frac{\diff f}{\diff t}}(\eta) = \\
-            &= \eta^{\alpha - 1} \cdot \LaplaceTransform{\frac{\diff f}{\diff t}}(\eta) = \\
-            &= \eta^{\alpha - 1} \cdot \Big(\eta \cdot \LaplaceTransform{f}(\eta) - f(0) \Big) = \\
-            &= \eta^{\alpha} \cdot \LaplaceTransform{f}(\eta) - \eta^{\alpha - 1} \cdot f(0).
-        \end{aligned}
-    \end{equation}
-\end{proof}
+% \begin{proof}
+%     \begin{equation}
+%         \begin{aligned}
+%             \LaplaceTransform{\CaputoFractionalDerivative{\alpha} f}(\eta) &= \LaplaceTransform{\FractionalIntegral{1 - \alpha} \frac{\diff f}{\diff t}}(\eta) = \\
+%             &= \eta^{\alpha - 1} \cdot \LaplaceTransform{\frac{\diff f}{\diff t}}(\eta) = \\
+%             &= \eta^{\alpha - 1} \cdot \Big(\eta \cdot \LaplaceTransform{f}(\eta) - f(0) \Big) = \\
+%             &= \eta^{\alpha} \cdot \LaplaceTransform{f}(\eta) - \eta^{\alpha - 1} \cdot f(0).
+%         \end{aligned}
+%     \end{equation}
+% \end{proof}

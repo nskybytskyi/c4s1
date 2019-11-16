@@ -24,28 +24,31 @@
         Всі лекції: <a class="badge badge-success" href="lectures/Гуляницький,%20всі%20лекції.pdf">Get pdf</a>
     </p>
     <p>
-        Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основи дробового числення. <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%2017.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a>
+        Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основи дробового числення. <a class="badge badge-warning" href="lectures/pdf/01.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/01.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>24&nbsp;вересня 2019&nbsp;р</b>: Властивостi дробових похiдних. <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%2024.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a>
+        Лекція <b>24&nbsp;вересня 2019&nbsp;р</b>: Властивостi дробових похiдних. <a class="badge badge-warning" href="lectures/pdf/02.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/02.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>1&nbsp;жовтня 2019&nbsp;р</b>: Початковi значення. Перетворення Лапласа. <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%201.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/03.tex">Get LaTeX source</a>
+        Лекція <b>1&nbsp;жовтня 2019&nbsp;р</b>: Початковi значення. Перетворення Лапласа. <a class="badge badge-warning" href="lectures/pdf/03.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/03.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>8&nbsp;жовтня 2019&nbsp;р</b>: Моделi аномальної дифузiї. <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%208.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a>
+        Лекція <b>8&nbsp;жовтня 2019&nbsp;р</b>: Моделi аномальної дифузiї. <a class="badge badge-warning" href="lectures/pdf/04.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/04.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Рiвняння субдифузiї. <a class="badge badge-success" href="lectures/Гуляницький,%20лекція%2015.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a>
+        Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Рiвняння субдифузiї. <a class="badge badge-warning" href="lectures/pdf/05.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/05.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
-    </p>
+        Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/06.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/06.tex">Get LaTeX source</a>
     <p>
-        Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
-    </p>
+        Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/07.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/07.tex">Get LaTeX source</a>
     <p>
-        Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
+    <p>
+        Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/08.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/08.tex">Get LaTeX source</a>
+    <p>
+    <p>
+        Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/09.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/09.tex">Get LaTeX source</a>
+    <p>
     </p>
     <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>
@@ -62,7 +65,7 @@
         </ul>
     </p>
     <p>
-        Питання на другий колоквіум: <a class="badge badge-success" href="Гуляницький,%20питання%20на%20другий%20колоквіум.pdf">Get pdf</a>
+        Питання на другий колоквіум: <a class="badge badge-success" href="colloquiums/2.pdf">Get pdf</a>
     </p>
     <p>
         Перший колоквіум пройшли у:
@@ -79,7 +82,7 @@
         </ul>
     </p>
     <p>
-        Питання на перший колоквіум: <a class="badge badge-success" href="Гуляницький,%20питання%20на%20перший%20колоквіум.pdf">Get pdf</a>
+        Питання на перший колоквіум: <a class="badge badge-success" href="colloquiums/1.pdf">Get pdf</a>
     </p>
 </div>
 

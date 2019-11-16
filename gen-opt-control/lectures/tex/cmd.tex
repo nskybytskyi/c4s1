@@ -1,0 +1,88 @@
+\usepackage[inline]{enumitem}  % for inline enumerate
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}  % Cyrillic enumerate items
+\makeatother
+
+\newcommand{\qq}{??}  % undefined symbol
+\newcommand{\nothing}{$\left.\right.$}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}  % straight differential
+\newcommand*\rfrac[2]{{}^{#1}\!/_{\!#2}}  % beveled (inline) fraction
+
+% Russian symbol styling
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\le}{\leqslant}
+
+% text formatting
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\ul}[1]{\underline{#1}}
+
+% common display-style operators
+\DeclareMathOperator{\const}{const}
+\DeclareMathOperator*{\Max}{max}
+\DeclareMathOperator*{\Min}{min}
+\DeclareMathOperator{\argmax}{arg max}
+\DeclareMathOperator{\argmin}{arg min}
+\DeclareMathOperator*{\Argmax}{arg max}
+\DeclareMathOperator*{\Argmin}{arg min}
+\DeclareMathOperator*{\Sup}{sup}
+\DeclareMathOperator*{\Inf}{inf}
+\DeclareMathOperator*{\Lim}{lim}
+\DeclareMathOperator*{\Limsup}{lim sup}
+\DeclareMathOperator*{\Liminf}{lim inf}
+\newcommand{\Sum}{\displaystyle\sum\limits}
+\newcommand{\Bigcup}{\displaystyle\bigcup\limits}
+\newcommand{\Bigsqcup}{\displaystyle\bigsqcup\limits}
+\newcommand{\Bigcap}{\displaystyle\bigcap\limits}
+\newcommand{\Bigsqcap}{\displaystyle\bigsqcap\limits}
+\newcommand{\Int}{\displaystyle\int\limits}
+\newcommand{\Oint}{\displaystyle\oint\limits}
+\newcommand{\Iint}{\displaystyle\iint\limits}
+\newcommand{\Iiint}{\displaystyle\iiint\limits}
+
+% angle brackets
+\newcommand{\blangle}{\big\langle}
+\newcommand{\brangle}{\big\rangle}
+\newcommand{\Blangle}{\Big\langle}
+\newcommand{\Brangle}{\Big\rangle}
+\newcommand{\bblangle}{\bbig\langle}
+\newcommand{\bbrangle}{\bbig\rangle}
+\newcommand{\Bblangle}{\Bbig\langle}
+\newcommand{\Bbrangle}{\Bbig\rangle}
+
+% common sets
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+
+%% general optimal control special commands
+% fractional integrals, derivatives, and transforms
+\usepackage{mathrsfs}
+\newcommand{\FractionalIntegral}[1]{I_0^{#1}}
+\newcommand{\LeftFractionalIntegral}[2]{I_{{#2}^+}^{#1}}
+\newcommand{\RightFractionalIntegral}[2]{I_{{#2}^-}^{#1}}
+\newcommand{\RiemannLiouvilleFractionalDerivative}[1]{D_0^{#1}}
+\newcommand{\CaputoFractionalDerivative}[1]{{}^{\star\!\!}D_0^{#1}}
+\newcommand{\LaplaceTransform}[1]{\mathscr{L}\left[#1\right]}
+\newcommand{\FourierTransform}[1]{\mathcal{F}\left[#1\right]}
+\newcommand{\InverseLaplaceTransform}[1]{\mathscr{L}^{-1}\left[#1\right]}
+\newcommand{\InverseFourierTransform}[1]{\mathcal{F}^{-1}\left[#1\right]}
+\newcommand{\FourierLaplaceTransform}[1]{\mathcal{F}\text{-}\mathscr{L}\left[#1\right]}
+% and their short aliases
+\newcommand{\Fint}[1]{\FractionalIntegral{#1}}
+\newcommand{\LeftFint}[2]{\LeftFractionalIntegral{#1}{#2}}
+\newcommand{\RightFint}[2]{\RightFractionalIntegral{#1}{#2}}
+\newcommand{\RLFdiff}[1]{\RiemannLiouvilleFractionalDerivative{#1}}
+\newcommand{\CFdiff}[1]{\CaputoFractionalDerivative{#1}}
+\newcommand{\Ltrans}[1]{\LaplaceTransform{#1}}
+\newcommand{\Ftrans}[1]{\FourierTransform{#1}}
+\newcommand{\iLtrans}[1]{\InverseLaplaceTransform{#1}}
+\newcommand{\iFtrans}[1]{\InverseFourierTransform{#1}}
+\newcommand{\FLtrans}[1]{\FourierLaplaceTransform{#1}}
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\sgn}{sgn}

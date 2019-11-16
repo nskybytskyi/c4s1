@@ -1,3 +1,9 @@
+% \date{29 жовтня 2019 р.}
+% \setcounter{section}{?}
+% \setcounter{subsection}{?}
+% \setcounter{equation}{??}
+% \setcounter{theorem}{??}
+
 \subsection{Рівняння реакції-субдифузії змінного порядку}
 
 Згадаємо класичне рівняння реакції-дифузії:
@@ -51,7 +57,7 @@
     J_i^+ = \frac{1}{2} J_{i - 1}^- + \frac{1}{2} J_{i + 1}^-.
 \end{equation}
 
-Б,езпосередньо з цих двох рівнянь випливає, що
+Безпосередньо з цих двох рівнянь випливає, що
 \begin{equation}
     \frac{\diff u_i}{\diff t} = \frac{1}{2} J_{i - 1}^- - J_i^- + \frac{1}{2} J_{i + 1}^- - \theta_i u_i.
 \end{equation}
@@ -68,7 +74,8 @@
     \begin{aligned}
         \mathcal{L} [J_i^-](\eta)
         &= u_i(0) \mathcal{L}[\psi_i](\eta + \theta_i) + \mathcal{L} [J_i^+](\eta) \mathcal{L}[\psi_i](\eta + \theta_i) = \\
-        &= u_i(0) \mathcal{L}[\psi_i](\eta + \theta_i) + \big( \eta \mathcal{L} [u_i](\eta) - u_i(0) + \mathcal{L}[J_i^-](\eta) + \theta_i \mathcal{L}[u_i](\eta) \big) \mathcal{L}[\psi_i](\eta + \theta_i) = \\
+        &= u_i(0) \mathcal{L}[\psi_i](\eta + \theta_i) + \big( \eta \mathcal{L} [u_i](\eta) - u_i(0) + \mathcal{L}[J_i^-](\eta) + \\
+        &\quad + \theta_i \mathcal{L}[u_i](\eta) \big) \mathcal{L}[\psi_i](\eta + \theta_i) = \\
         &= \big( \eta \mathcal{L} [u_i](\eta) + \mathcal{L}[J_i^-](\eta) + \theta_i \mathcal{L}[u_i](\eta) \big) \mathcal{L}[\psi_i](\eta + \theta_i).
     \end{aligned}
 \end{equation}
@@ -78,7 +85,8 @@
     \begin{aligned}
         \mathcal{L} [J_i^-](\eta)
         &= \frac{(\eta + \theta_i) \mathcal{L} [u_i](\eta) \mathcal{L}[\psi_i](\eta + \theta_i)}{1 - \mathcal{L} [\psi_i](\eta + \theta_i)} = \\
-        &= \eta \mathcal{L} [u_i](\eta) \mathcal{L} \left[ e^{-\theta_i t} \mathcal{L}^{-1} \left[ \frac{\mathcal{L}[\psi_i](\eta)}{1 - \mathcal{L}[\psi_i](\eta)} \right] \right] + \theta_i \mathcal{L} [u_i](\eta) \mathcal{L} \left[ e^{-\theta_i t} \mathcal{L}^{-1} \left[ \frac{\mathcal{L}[\psi_i](\eta)}{1 - \mathcal{L}[\psi_i](\eta)} \right] \right].
+        &= \eta \mathcal{L} [u_i](\eta) \mathcal{L} \left[ e^{-\theta_i t} \mathcal{L}^{-1} \left[ \frac{\mathcal{L}[\psi_i](\eta)}{1 - \mathcal{L}[\psi_i](\eta)} \right] \right] + \\
+        &\quad + \theta_i \mathcal{L} [u_i](\eta) \mathcal{L} \left[ e^{-\theta_i t} \mathcal{L}^{-1} \left[ \frac{\mathcal{L}[\psi_i](\eta)}{1 - \mathcal{L}[\psi_i](\eta)} \right] \right].
     \end{aligned}
 \end{equation}
 
@@ -115,11 +123,11 @@
         &= \frac{\diff}{\diff t} e^{-\theta_i t} \frac{1}{\Gamma(\alpha_i)} \int_0^t u_i(s) e^{\theta_i s} (t - s)^{\alpha_i - 1} \diff s + \\
         &\quad + \theta_i \frac{1}{\Gamma(\alpha_i)} \int_0^t u_i(s) e^{-\theta_i (t - s)} (t - s)^{\alpha_i - 1} \diff s = \\
         &= e^{-\theta_i t} \frac{\diff}{\diff t} \frac{1}{\Gamma(\alpha_i)} \int_0^t u_i(s) e^{\theta_i s} (t - s)^{\alpha_i - 1} \diff s = \\
-        &= e^{-\theta_i t} D_0^{1 - \alpha} (e^{\theta_i t} u_i(t)).
+        &= e^{-\theta_i t} D_0^{1 - \alpha_i} (e^{\theta_i t} u_i(t)).
     \end{aligned}
 \end{equation}
 
-% Пісдтавляємо це назад:
-% \begin{equation}
-%     \frac{\diff u_i}{\diff t} = \frac{M_{i - 1}}{2}    
-% \end{equation}
+Пісдтавляємо це назад:
+\begin{equation}
+    \frac{\diff u_i}{\diff t} = \frac{M_{i - 1}}{2}.    
+\end{equation}
