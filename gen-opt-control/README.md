@@ -21,8 +21,8 @@
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
-    <h3 class="text-primary">Лекції <sup><a class="badge badge-info" href="lectures/all.pdf">Get pdf</a></sup> </h3>
-    <h4 class="text-primary">Перша частина: Основи дробового числення <sup><a class="badge badge-info" href="lectures/ch-1.pdf">Get pdf</a></sup> </h4>
+    <h3 class="text-primary">Лекції <sup><a class="badge badge-success" href="lectures/all.pdf">Get pdf</a></sup> </h3>
+    <h4 class="text-primary">Перша частина: Основи дробового числення <sup><a class="badge badge-success" href="lectures/ch-1.pdf">Get pdf</a></sup> </h4>
     <ul>
         <li>
             Лекція <b>17&nbsp;вересня 2019&nbsp;р:</b> Основні поняття та визначення <sup><a class="badge badge-success" href="lectures/pdf/01.pdf">Get pdf</a></sup>
@@ -37,7 +37,7 @@
             Лекція <b>8&nbsp;жовтня 2019&nbsp;р:</b> Перетворення Лапласа. Теорема Таубера <sup><a class="badge badge-success" href="lectures/pdf/04.pdf">Get pdf</a></sup>
         </li>
     </ul>
-    <h4 class="text-primary">Друга частина: Моделi аномальної дифузiї <sup><a class="badge badge-info" href="lectures/ch-2.pdf">Get pdf</a></sup> </h4>
+    <h4 class="text-primary">Друга частина: Моделi аномальної дифузiї <sup><a class="badge badge-success" href="lectures/ch-2.pdf">Get pdf</a></sup> </h4>
     <ul>
         <li>
             Лекція <b>15&nbsp;жовтня 2019&nbsp;р:</b> Формула Монтрола-Вайса <sup><a class="badge badge-success" href="lectures/pdf/05.pdf">Get pdf</a></sup>
