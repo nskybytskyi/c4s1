@@ -24,10 +24,10 @@
         Всі лекції: <a class="badge badge-success" href="lectures/Гуляницький,%20всі%20лекції.pdf">Get pdf</a>
     </p>
     <p>
-        Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основи дробового числення. <a class="badge badge-warning" href="lectures/pdf/01.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/01.tex">Get LaTeX source</a>
+        Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основи дробового числення. <a class="badge badge-success" href="lectures/pdf/01.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/01.tex">Get LaTeX source</a>
     </p>
     <p>
-        Лекція <b>24&nbsp;вересня 2019&nbsp;р</b>: Властивостi дробових похiдних. <a class="badge badge-warning" href="lectures/pdf/02.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/02.tex">Get LaTeX source</a>
+        Лекція <b>24&nbsp;вересня 2019&nbsp;р</b>: Властивостi дробових похiдних. <a class="badge badge-success" href="lectures/pdf/02.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/02.tex">Get LaTeX source</a>
     </p>
     <p>
         Лекція <b>1&nbsp;жовтня 2019&nbsp;р</b>: Початковi значення. Перетворення Лапласа. <a class="badge badge-warning" href="lectures/pdf/03.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/03.tex">Get LaTeX source</a>
@@ -50,9 +50,9 @@
         Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/09.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/09.tex">Get LaTeX source</a>
     <p>
     </p>
-    <p>
+    <!-- <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>
-    </p>
+    </p> -->
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
