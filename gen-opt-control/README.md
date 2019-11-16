@@ -58,13 +58,13 @@
             Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <sup><a class="badge badge-success" href="lectures/pdf/09.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>19&nbsp;листопада 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/10.pdf">Coming soon</a> <a class="badge badge-warning" href="lectures/tex/10.tex">Coming soon</a>
+            Лекція <b>19&nbsp;листопада 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/10.pdf">Coming soon</a>
         </li>
         <li>
-            Лекція <b>26&nbsp;листопада 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/11.pdf">Coming soon</a> <a class="badge badge-warning" href="lectures/tex/11.tex">Coming soon</a>
+            Лекція <b>26&nbsp;листопада 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/11.pdf">Coming soon</a>
         </li>
         <li>
-            Лекція <b>3&nbsp;грудня 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/12.pdf">Coming soon</a> <a class="badge badge-warning" href="lectures/tex/12.tex">Coming soon</a>
+            Лекція <b>3&nbsp;грудня 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/12.pdf">Coming soon</a>
         </li>
     </ul>
     <p>
