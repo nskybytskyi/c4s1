@@ -52,19 +52,19 @@
             Лекція <b>5&nbsp;листопада 2019&nbsp;р:</b>  <sup><a class="badge badge-success" href="lectures/pdf/08.pdf">Get pdf</a></sup>
         </li>
     </ul>
-    <h4 class="text-primary">Третя частина:<sup><a class="badge badge-warning" href="lectures/ch-3.pdf">Coming soon</a></sup> </h4>
+    <h4 class="text-primary">Третя частина:  <sup><a class="badge badge-warning" href="lectures/ch-3.pdf">Coming soon</a></sup> </h4>
     <ul>
         <li>
             Лекція <b>12&nbsp;листопада 2019&nbsp;р:</b>  <sup><a class="badge badge-success" href="lectures/pdf/09.pdf">Get pdf</a></sup>
         </li>
         <li>
-            Лекція <b>19&nbsp;листопада 2019&nbsp;р:</b> TBA <a class="badge badge-warning" href="lectures/pdf/10.pdf">Coming soon</a>
+            Лекція <b>19&nbsp;листопада 2019&nbsp;р:</b> TBA <sup><a class="badge badge-warning" href="lectures/pdf/10.pdf">Coming soon</a></sup>
         </li>
         <li>
-            Лекція <b>26&nbsp;листопада 2019&nbsp;р:</b> TBA <a class="badge badge-warning" href="lectures/pdf/11.pdf">Coming soon</a>
+            Лекція <b>26&nbsp;листопада 2019&nbsp;р:</b> TBA <sup><a class="badge badge-warning" href="lectures/pdf/11.pdf">Coming soon</a></sup>
         </li>
         <li>
-            Лекція <b>3&nbsp;грудня 2019&nbsp;р:</b> TBA <a class="badge badge-warning" href="lectures/pdf/12.pdf">Coming soon</a>
+            Лекція <b>3&nbsp;грудня 2019&nbsp;р:</b> TBA <sup><a class="badge badge-warning" href="lectures/pdf/12.pdf">Coming soon</a></sup>
         </li>
     </ul>
     <p>
