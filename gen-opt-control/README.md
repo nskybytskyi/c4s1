@@ -23,7 +23,7 @@
     <p>
         Всі лекції: <a class="badge badge-success" href="lectures/Гуляницький,%20всі%20лекції.pdf">Get pdf</a>
     </p>
-    <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-gray">
+    <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-light">
         <h4 class="text-primary">Перша глава: Основи дробового числення</h4>
         <p>
             Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основні поняття та визначення дробового числення. <a class="badge badge-success" href="lectures/pdf/01.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/01.tex">Get LaTeX source</a>
