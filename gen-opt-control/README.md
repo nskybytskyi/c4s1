@@ -24,7 +24,7 @@
         Всі лекції: <a class="badge badge-success" href="lectures/Гуляницький,%20всі%20лекції.pdf">Get pdf</a>
     </p>
     <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-light">
-        <h4 class="text-primary">Перша глава: Основи дробового числення</h4>
+        <h4 class="text-primary">Перша частина: Основи дробового числення</h4>
         <p>
             Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основні поняття та визначення дробового числення. <a class="badge badge-success" href="lectures/pdf/01.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/01.tex">Get LaTeX source</a>
         </p>
@@ -37,22 +37,37 @@
         <p>
             Лекція <b>8&nbsp;жовтня 2019&nbsp;р</b>: Перетворення Лапласа. Теорема Таубера та її наслідок. <a class="badge badge-success" href="lectures/pdf/04.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/04.tex">Get LaTeX source</a>
         </p>
-    </div>       
-    <p>
-        Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Моделi аномальної дифузiї. Рiвняння субдифузiї. <a class="badge badge-warning" href="lectures/pdf/05.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/05.tex">Get LaTeX source</a>
-    </p>
-    <p>
-        Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/06.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/06.tex">Get LaTeX source</a>
-    </p>
-    <p>
-        Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/07.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/07.tex">Get LaTeX source</a>
-    </p>
-    <p>
-        Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/08.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/08.tex">Get LaTeX source</a>
-    </p>
-    <p>
-        Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/09.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/09.tex">Get LaTeX source</a>
-    </p>
+    </div>
+    <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-light">
+        <h4 class="text-primary">Друга частина: </h4>
+        <p>
+            Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Моделi аномальної дифузiї. Рiвняння субдифузiї. <a class="badge badge-warning" href="lectures/pdf/05.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/05.tex">Get LaTeX source</a>
+        </p>
+        <p>
+            Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/06.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/06.tex">Get LaTeX source</a>
+        </p>
+        <p>
+            Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/07.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/07.tex">Get LaTeX source</a>
+        </p>
+        <p>
+            Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/08.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/08.tex">Get LaTeX source</a>
+        </p>
+    </div>
+    <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-light">
+        <h4 class="text-primary">Третя частина: </h4>
+        <p>
+            Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/09.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/09.tex">Get LaTeX source</a>
+        </p>
+        <p>
+            Лекція <b>19&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/10.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/10.tex">Get LaTeX source</a>
+        </p>
+        <p>
+            Лекція <b>26&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/11.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/11.tex">Get LaTeX source</a>
+        </p>
+        <p>
+            Лекція <b>3&nbsp;грудня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/12.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/12.tex">Get LaTeX source</a>
+        </p>
+    </div>
     <!-- <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>
     </p> -->
@@ -60,33 +75,46 @@
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
     <h3 class="text-danger">Колоквіуми</h3>
-    <p>
-        Другий колоквіум пройде у:
-        <ul>
-            <li>вівторок <b class="text-danger">19&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
-            <li>середу <b class="text-danger">20&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
-        </ul>
-    </p>
-    <p>
-        Питання на другий колоквіум: <a class="badge badge-success" href="colloquiums/2.pdf">Get pdf</a>
-    </p>
-    <p>
-        Перший колоквіум пройшли у:
-        <ul>
-            <li>вівторок <b>22&nbsp;жовтня 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
-            <li>середу <b>23&nbsp;жовтня 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
-        </ul>
-    </p>
-    <p>
-        Перескладання пройшли колоквіуму пройшли у:
-        <ul>
-            <li>вівторок <b>29&nbsp;жовтня 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
-            <li>вівторок <b>5&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
-        </ul>
-    </p>
-    <p>
-        Питання на перший колоквіум: <a class="badge badge-success" href="colloquiums/1.pdf">Get pdf</a>
-    </p>
+    <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-light">
+        <h4 class="text-danger">Другий колоквіум</h4>
+        <p>
+            Другий колоквіум пройде у:
+            <ul>
+                <li>вівторок <b class="text-danger">19&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
+                <li>середу <b class="text-danger">20&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
+            </ul>
+        </p>
+        <p>
+            Перескладання колоквіуму пройдуть:
+            <ul>
+                <li>вівторок <b>26&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
+                <li>вівторок <b>3&nbsp;грудня 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
+            </ul>
+        </p>
+        <p>
+            Питання на другий колоквіум: <a class="badge badge-success" href="colloquiums/2.pdf">Get pdf</a>
+        </p>
+    </div>
+    <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-light">
+        <h4 class="text-danger">Перший колоквіум</h4>
+        <p>
+            Перший колоквіум пройшов у:
+            <ul>
+                <li>вівторок <b>22&nbsp;жовтня 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
+                <li>середу <b>23&nbsp;жовтня 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
+            </ul>
+        </p>
+        <p>
+            Перескладання колоквіуму пройшли у:
+            <ul>
+                <li>вівторок <b>29&nbsp;жовтня 2019&nbsp;р</b> на четвертій парі (перша підгрупа);</li>
+                <li>вівторок <b>5&nbsp;листопада 2019&nbsp;р</b> на четвертій парі (друга підгрупа).</li>
+            </ul>
+        </p>
+        <p>
+            Питання на перший колоквіум: <a class="badge badge-success" href="colloquiums/1.pdf">Get pdf</a>
+        </p>
+    </div>
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
