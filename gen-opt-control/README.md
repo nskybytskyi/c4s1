@@ -23,20 +23,23 @@
     <p>
         Всі лекції: <a class="badge badge-success" href="lectures/Гуляницький,%20всі%20лекції.pdf">Get pdf</a>
     </p>
+    <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-gray">
+        <h4 class="text-primary">Перша глава: Основи дробового числення</h3>
+        <p>
+            Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основні поняття та визначення дробового числення. <a class="badge badge-success" href="lectures/pdf/01.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/01.tex">Get LaTeX source</a>
+        </p>
+        <p>
+            Лекція <b>24&nbsp;вересня 2019&nbsp;р</b>: Властивостi дробових похiдних та інтегралів. <a class="badge badge-success" href="lectures/pdf/02.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/02.tex">Get LaTeX source</a>
+        </p>
+        <p>
+            Лекція <b>1&nbsp;жовтня 2019&nbsp;р</b>: Початковi значення дробових похiдних та інтегралів. <a class="badge badge-success" href="lectures/pdf/03.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/03.tex">Get LaTeX source</a>
+        </p>
+        <p>
+            Лекція <b>8&nbsp;жовтня 2019&nbsp;р</b>: Перетворення Лапласа. Теорема Таубера та її наслідок. <a class="badge badge-success" href="lectures/pdf/04.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/04.tex">Get LaTeX source</a>
+        </p>
+    </div>       
     <p>
-        Лекція <b>17&nbsp;вересня 2019&nbsp;р</b>: Основи дробового числення. <a class="badge badge-success" href="lectures/pdf/01.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/01.tex">Get LaTeX source</a>
-    </p>
-    <p>
-        Лекція <b>24&nbsp;вересня 2019&nbsp;р</b>: Властивостi дробових похiдних. <a class="badge badge-success" href="lectures/pdf/02.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/02.tex">Get LaTeX source</a>
-    </p>
-    <p>
-        Лекція <b>1&nbsp;жовтня 2019&nbsp;р</b>: Початковi значення. Перетворення Лапласа. <a class="badge badge-success" href="lectures/pdf/03.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/03.tex">Get LaTeX source</a>
-    </p>
-    <p>
-        Лекція <b>8&nbsp;жовтня 2019&nbsp;р</b>: Моделi аномальної дифузiї. <a class="badge badge-warning" href="lectures/pdf/04.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/04.tex">Get LaTeX source</a>
-    </p>
-    <p>
-        Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Рiвняння субдифузiї. <a class="badge badge-warning" href="lectures/pdf/05.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/05.tex">Get LaTeX source</a>
+        Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Моделi аномальної дифузiї. Рiвняння субдифузiї. <a class="badge badge-warning" href="lectures/pdf/05.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/05.tex">Get LaTeX source</a>
     </p>
     <p>
         Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/06.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/06.tex">Get LaTeX source</a>
