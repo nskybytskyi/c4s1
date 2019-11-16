@@ -40,39 +40,44 @@
             Лекція <b>8&nbsp;жовтня 2019&nbsp;р</b>: Перетворення Лапласа. Теорема Таубера. <a class="badge badge-success" href="lectures/pdf/04.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/04.tex">Get LaTeX source</a>
         </li>
     </ul>
-    <h4 class="text-primary">Друга частина: </h4>
+    <h4 class="text-primary">Друга частина: Моделi аномальної дифузiї</h4>
     <ul>
         <li>
-            Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Моделi аномальної дифузiї. Рiвняння субдифузiї. <a class="badge badge-warning" href="lectures/pdf/05.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/05.tex">Get LaTeX source</a>
+            Лекція <b>15&nbsp;жовтня 2019&nbsp;р</b>: Формула Монтрола-Вайса. <a class="badge badge-success" href="lectures/pdf/05.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/05.tex">Get LaTeX source</a>
         </li>
         <li>
-            Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/06.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/06.tex">Get LaTeX source</a>
+            Лекція <b>22&nbsp;жовтня 2019&nbsp;р</b>: Рiвняння субдифузiї. <a class="badge badge-success" href="lectures/pdf/06.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/06.tex">Get LaTeX source</a>
         </li>
         <li>
-            Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/07.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/07.tex">Get LaTeX source</a>
+            Лекція <b>29&nbsp;жовтня 2019&nbsp;р</b>: . <a class="badge badge-success" href="lectures/pdf/07.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/07.tex">Get LaTeX source</a>
         </li>
         <li>
-            Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/08.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/08.tex">Get LaTeX source</a>
+            Лекція <b>5&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-success" href="lectures/pdf/08.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/08.tex">Get LaTeX source</a>
         </li>
     </ul>
     <h4 class="text-primary">Третя частина: </h4>
     <ul>
         <li>
-            Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/09.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/09.tex">Get LaTeX source</a>
+            Лекція <b>12&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-success" href="lectures/pdf/09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/tex/09.tex">Get LaTeX source</a>
         </li>
         <li>
-            Лекція <b>19&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/10.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/10.tex">Get LaTeX source</a>
+            Лекція <b>19&nbsp;листопада 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/10.pdf">Coming soon</a> <a class="badge badge-warning" href="lectures/tex/10.tex">Coming soon</a>
         </li>
         <li>
-            Лекція <b>26&nbsp;листопада 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/11.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/11.tex">Get LaTeX source</a>
+            Лекція <b>26&nbsp;листопада 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/11.pdf">Coming soon</a> <a class="badge badge-warning" href="lectures/tex/11.tex">Coming soon</a>
         </li>
         <li>
-            Лекція <b>3&nbsp;грудня 2019&nbsp;р</b>: . <a class="badge badge-warning" href="lectures/pdf/12.pdf">Under construction</a> <a class="badge badge-info" href="lectures/tex/12.tex">Get LaTeX source</a>
+            Лекція <b>3&nbsp;грудня 2019&nbsp;р</b>: TBA. <a class="badge badge-warning" href="lectures/pdf/12.pdf">Coming soon</a> <a class="badge badge-warning" href="lectures/tex/12.tex">Coming soon</a>
         </li>
     </ul>
     <!-- <p>
         <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>
     </p> -->
+    <p>
+        <i class="text-muted">
+        Електронний конспект лекції створено у 2019 році за конспектами Нікіти Скибицького, Тетяни Сергієнко, Тетяни Рабійчук, та Олексія Кравця. Верстка у LaTeX &mdash; Нікіта Скибицький.
+        </i>
+    </p>
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">

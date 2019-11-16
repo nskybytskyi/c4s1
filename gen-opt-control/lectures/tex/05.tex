@@ -1,0 +1,118 @@
+\section{Моделі аномальної дифузії}
+
+\subsubsection{Основні поняття}
+
+Нагадаємо, що класичні рівняння дифузії та теплопровідності зумовлені наступними чинниками:
+\begin{enumerate}
+    \item закон збереження кількості речовини/тепла;
+    \item джерела і стоки;
+    \item ``закон'' Фіка/Фур'є --- емпірично встановлене для широкого класу процесів твердження про те, що інтенсивність потоку речовини/тепла пропорційна мінус градієнту концентрації речовини/кількості тепла на границі.
+\end{enumerate}
+
+Розглянемо тепер інший підхід, який грунтується на випадкових блуканнях з неперервним часом (\textit{eng.} CTRW, continuous time random walk). А саме, нехай $x(t)$ --- випадкова величина (координата частинки в момент часу $t$), а  $u(x, t)$ (при фіксованому $t$ --- щільність координати частинки). \medskip
+
+% картинка
+
+Параметри моделі:
+\begin{enumerate}
+    \item $u_0(x)$ --- щільність початкового (при $t = 0$) розподілу;
+    \item $\psi(t)$ --- щільність часу очікування наступного стрибка;
+    \item $\lambda(x)$ --- щільність зміщення.
+\end{enumerate}
+
+\begin{definition}
+    Нехай $f: \RR \to \RR$, тоді її \textit{перетворенням Фур'є} називається 
+    \begin{equation}
+        \Ftrans{f}(\omega) = \tilde{f}(\omega) = \int_\RR e^{i \omega t} f(x) \diff x.
+    \end{equation}
+\end{definition}
+
+\begin{proposition}
+    Для перетворення Фур'є справедлива теорема згортки:
+    \begin{equation}
+        \Ftrans{f \star g}(\omega) = \Ftrans{f}(\omega) \cdot \Ftrans{f}(\omega),
+    \end{equation}
+    де
+    \begin{equation}
+        (f \star g)(x) = \int_\RR f(y) g(x - y) \diff y.
+    \end{equation}
+\end{proposition}
+
+\begin{definition}
+    Нехай $u(x, t): \RR \times \RR \to \RR$, тоді її \textit{перетворенням Фур'є-Лапласа} називається 
+    \begin{equation}
+        \FLtrans{u}(\omega, \eta) = \tilde{\bar{u}}(\omega, \eta) = \int_0^{+\infty} \int_\RR e^{-\eta t + i \omega x} u(x, t) \diff x \diff t.
+    \end{equation}
+\end{definition}
+
+\subsubsection{Формула Монтрола-Вайса}
+
+\begin{th_formula}[Монтрола-Вайса]
+    \begin{equation}
+        \FLtrans{u}(\omega, \eta) = \frac{\Ftrans{u_0}(\omega)}{\eta} \frac{1 - \Ltrans{\psi}(\eta)}{1 - \Ltrans{\psi}(\eta) \cdot \Ftrans{\lambda}(\omega)},
+    \end{equation}
+    як тільки
+    \begin{equation}
+        |\Ltrans{\psi}(\eta) \cdot \Ftrans{\lambda}(\omega)| < 1.
+    \end{equation}
+\end{th_formula}
+\begin{proof}
+    Введемо додаткове позначення: $n(t)$ --- кількість стрибків до моменту $t$. $\psi_k(t)$ --- щільність часу $k$-го стрибка. І нарешті, $\lambda_k(x)$ --- щільність координати після $k$-го стрибка. \medskip
+
+    Запишемо формулу повної ймовірності:
+    \begin{equation}
+        \begin{aligned}
+            u(x, t)
+            &= \sum_{k = 0}^\infty \mathsf{P}\{n(t) = k\} \lambda_k (x) = \\
+            &= \sum_{k = 0}^\infty (\mathsf{P}\{n(t) \ge k\} - \mathsf{P}\{n(t) \ge k + 1\}) \lambda_k (x) = \\
+            &= \sum_{k = 0}^\infty \left( \int_0^t \psi_k(s) \diff s - \int_0^t \psi_{k + 1} (s) \diff s \right) \lambda_k (x) = \\
+            &= \sum_{k = 0}^\infty \left( \int_0^t \psi^{\star k}(s) \diff s - \int_0^t \psi^{\star(k + 1)} (s) \diff s \right) \cdot (u_0 \star \lambda^{\star k}) (x).
+        \end{aligned}
+    \end{equation}
+
+    \begin{remark}
+        Тут ми скористалися тим, що 
+        \begin{equation}
+            \psi_k \equiv \psi^{\star k} \equiv \underset{k}{\underbrace{\psi \star \psi \star \ldots \star \psi}}
+        \end{equation}
+        і
+        \begin{equation}
+            \lambda_k \equiv u_0 \star \lambda^{\star k} \equiv u_0 \star \underset{k}{\underbrace{\lambda \star \lambda \star \ldots \star \lambda}}.
+        \end{equation}
+    \end{remark}
+    
+    \begin{proof}
+        Справді, аби здійснити $k$-ий стрибок у момент часу $T$ необхідно зробити $k-1$ стрибок до моменту часу $t$, після чого зачекати час $T - t$. Вже видно, звідки береться згортка у першій формулі, лишається просто формально застосувати математичну індукцію по $k$. \medskip
+    
+        Справді, потрапити у точку $y$ після $k$ стрибків можна з довільної точки $x$ у якій ми опинилися після $(k - 1)$-го стрибка, причому ймовірність цього $\lambda (y - x)$. Вже видно, звідки береться згортка у другій формулі, лишається просто формально застосувати математичну індукцію по $k$.
+    \end{proof}
+
+    Враховуючи, що
+    \begin{itemize}
+        \item $\Ltrans{\Fint{1} f}(\eta) = \frac{1}{\eta} \Ltrans{f}(\eta)$;
+        \item $\Ltrans{\psi^{\star k}}(\eta) = (\Ltrans{\psi}(\eta))^k$;
+        \item $\Ftrans{\lambda^{\star k}}(\omega) = (\Ftrans{\lambda}(\omega))^k$;
+    \end{itemize}
+    маємо
+    \begin{equation}
+        \begin{aligned}
+            \FLtrans{u}(\omega, \eta) 
+            &= \sum_{k = 0}^\infty \frac{1}{\eta} ((\Ltrans{\psi}(\eta))^k - (\Ltrans{\psi}(\eta))^{k + 1}) \cdot \Ftrans{u_0}(\omega) \cdot (\Ftrans{\lambda}(\omega))^k = \\
+            &= \frac{\Ftrans{u_0}(\omega) \cdot (1 - \Ltrans{\psi}(\eta))}{\eta} \sum_{k = 0}^\infty (\Ltrans{\psi}(\eta))^k \cdot (\Ftrans{\lambda}(\omega))^k = \\
+            &= \frac{\Ftrans{u_0}(\omega) \cdot (1 - \Ltrans{\psi}(\eta))}{\eta (1 - \Ltrans{\psi}(\eta) \cdot \Ftrans{\lambda}(\omega)},
+        \end{aligned}
+    \end{equation}
+    де останній перехід --- формула для суми нескінченної геометричної прогресії.
+    
+    \begin{remark}
+        Рівності
+        \begin{equation}
+            \Ltrans{\psi^{\star k}}(\eta) = (\Ltrans{\psi}(\eta))^k
+        \end{equation}
+        і
+        \begin{equation}
+            \Ftrans{\lambda^{\star k}}(\omega) = (\Ftrans{\lambda}(\omega))^k
+        \end{equation}
+        --- безпосередній наслідок теореми згортки для перетворень Лапласа та Фур'є відповідно, а також застосування методу математичної індукції по $k$.
+    \end{remark}
+\end{proof}
