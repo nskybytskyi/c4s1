@@ -19,7 +19,7 @@
         Перший модуль пройде у п'ятницю <b class="text-danger">22&nbsp;листопада 2019&nbsp;р</b> на першій парі.
     </p>
     <p>
-        Питання і відповіді: [link](questions.md).
+        Питання і відповіді: <a href="questions.html">link</a>.
     </p>
 </div>
 
