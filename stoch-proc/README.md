@@ -18,6 +18,9 @@
     <p>
         Перший модуль пройде у п'ятницю <b class="text-danger">22&nbsp;листопада 2019&nbsp;р</b> на першій парі.
     </p>
+    <p>
+        Питання і відповіді: [link](questions.md).
+    </p>
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
