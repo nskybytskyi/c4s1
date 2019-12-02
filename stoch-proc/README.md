@@ -9,17 +9,18 @@
         Лекції у п'ятницю на першій парі в аудиторії 40 і (на непарних тижнях) у п'ятницю на третій парі в аудиторії 42.
     </p>
     <p>
-        Курс закінчуєтся заліком, який пройде <b class="text-danger">TBA о TBA, в ауд. TBA</b>.
+        Курс закінчуєтся заліком, який пройде <b class="text-danger">6 грудня о TBA, в ауд. 40</b>.
     </p>
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
     <h3 class="text-danger">Модулі</h3>
     <p>
-        Перший модуль пройде у п'ятницю <b class="text-danger">22&nbsp;листопада 2019&nbsp;р</b> на першій парі.
+        Перший модуль пройшов у п'ятницю <b>22&nbsp;листопада 2019&nbsp;р</b> на першій парі.
     </p>
     <p>
-        Питання і відповіді: <a href="questions.html">link</a>.
+        Орієнтовні запитання: <a href="exams/questions.html">link</a>.
+        Орієнтовні відповіді: <a href="exams/answers.pdf">.
     </p>
 </div>
 
@@ -32,13 +33,13 @@
         Ламперти, Джон &mdash; <i>Случайные процессы</i>. Вища школа, 1983&nbsp;г., 227&nbsp;с.: <a class="badge badge-success" href="books/Ламперти,-Джон-Случайные-процессы.-Обзор-математической-теории-Вища-школа-1983.djvu">Get djvu</a>
     </p>
     <p>
-        Булинский&nbsp;А.В., Ширяев&nbsp;А.Н. &mdash; <i>Теория случайных процессов</i>. Физматлит, 2005&nbsp;г., 402&nbsp;с.: <a class="badge badge-success" href="books/Булинский-А.В.,-Ширяев-А.Н.-Теория-случайных-процессов-Физматлит-2005.pdf">Get pdf</a>
+        Булинский&nbsp;А.В., Ширяев&nbsp;А.Н. &mdash; <i>Теория случайных процессов</i>. Физматлит, 2005&nbsp;г., 402&nbsp;с.: <a class="badge badge-success" href="books/Булинский-А.В.,-Ширяев-А.Н.-Теория-случайных-процессов-Физматлит-2005.pdf">GET</a>
     </p>
     <p>
-        Гихман&nbsp;И.И., Скороход&nbsp;А.В. &mdash; <i>Введение в теорию случайных процессов</i>. Физматлит, 1977&nbsp;г., 570&nbsp;с.: <a class="badge badge-success" href="books/Гихман-И.И.,-Скороход-А.В.-Введение-теорию-случайных-процессов-Физматлит-1977.pdf">Get pdf</a>
+        Гихман&nbsp;И.И., Скороход&nbsp;А.В. &mdash; <i>Введение в теорию случайных процессов</i>. Физматлит, 1977&nbsp;г., 570&nbsp;с.: <a class="badge badge-success" href="books/Гихман-И.И.,-Скороход-А.В.-Введение-теорию-случайных-процессов-Физматлит-1977.pdf">GET</a>
     </p>
     <p>
-        Скороход&nbsp;А.В. &mdash; <i>Лекції з теорії випадкових процесів</i>. Либідь, 1990&nbsp;г., 168&nbsp;с.: <a class="badge badge-success" href="books/Скороход-А.В.-Лекції-з-теорії-випадкових-процесів-Либідь-1990.pdf">Get pdf</a>
+        Скороход&nbsp;А.В. &mdash; <i>Лекції з теорії випадкових процесів</i>. Либідь, 1990&nbsp;г., 168&nbsp;с.: <a class="badge badge-success" href="books/Скороход-А.В.-Лекції-з-теорії-випадкових-процесів-Либідь-1990.pdf">GET</a>
     </p>
     <p>
         Розанов&nbsp;Ю.А. &mdash; <i>Случайные процессы</i>. Наука, 1979&nbsp;г., 185&nbsp;с.: <a class="badge badge-success" href="books/Розанов-Ю.А.-Случайные-процессы-Наука-1979.djvu">Get djvu</a>
@@ -79,10 +80,70 @@
     <p>
         Здесь будут мои решения задач (единственное, чего нет в бесплатной версии курса):
         <ol>
-            <li>Introduction &amp; Renewal theory. <a class="badge badge-success" href="hse/1_sol.pdf">Get pdf</a></li>
-            <li>Poisson processes &amp; Queueing theory. <a class="badge badge-success" href="hse/2_sol.pdf">Get pdf</a></li>
-            <li>Markov Chains. <a class="badge badge-success" href="hse/3_sol.pdf">Get pdf</a></li>
-            <li>Gaussian processes. <a class="badge badge-success" href="hse/4_sol.pdf">Get pdf</a></li>
+            <li>
+                Introduction &amp; Renewal theory 
+                <sup>
+                    <a class="badge badge-success" href="hse/1_sol.pdf">
+                        GET
+                    </a>
+                </sup>
+            </li>
+            <li>
+                Poisson processes &amp; Queueing theory 
+                <sup>
+                    <a class="badge badge-success" href="hse/2_sol.pdf">
+                        GET
+                    </a>
+                </sup>
+            </li>
+            <li>
+                Markov Chains 
+                <sup>
+                    <a class="badge badge-success" href="hse/3_sol.pdf">
+                        GET
+                    </a>
+                </sup>
+            </li>
+            <li>
+                Gaussian processes 
+                <sup>
+                    <a class="badge badge-success" href="hse/4_sol.pdf">
+                        GET
+                    </a>
+                </sup>
+            </li>
+            <li>
+                Stationarity and Linear filters 
+                <sup>
+                    <a class="badge badge-success" href="hse/5_sol.pdf">
+                        GET
+                    </a>
+                </sup>
+            </li>
+            <li>
+                Ergodicity, differentiability, continuity 
+                <sup>
+                    <a class="badge badge-success" href="hse/6_sol.pdf">
+                        GET
+                    </a>
+                </sup>
+            </li>
+            <li>
+                Stochastic integration &amp; Ito formula 
+                <sup>
+                    <a class="badge badge-success" href="hse/7_sol.pdf">
+                        GET
+                    </a>
+                </sup>
+            </li>
+            <li>
+                Ergodicity, differentiability, continuity 
+                <sup>
+                    <a class="badge badge-success" href="hse/8_sol.pdf">
+                        GET
+                    </a>
+                </sup>
+            </li>
         </ol>
     </p>
 </div>
