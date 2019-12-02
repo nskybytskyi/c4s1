@@ -65,7 +65,7 @@
     </p>
     <h4 class="text-primary">МФТИ</h4>
     <p>
-        Домашняя страница курса на лектории: <a href="https://lectoriy.mipt.ru/course/Maths-StochasticProcesses-15L">lссылкаink</a>
+        Домашняя страница курса на лектории: <a href="https://lectoriy.mipt.ru/course/Maths-StochasticProcesses-15L">ссылка</a>
     </p>
     <p>
         <i class="text-muted">15 лекций</i>
