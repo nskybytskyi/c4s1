@@ -54,7 +54,7 @@
         <!-- You can also download the compact archive: [7-zip](18-445-Introduction-to-Stochastic-Processes-Spring'15/all.7z) -->
     </p>
     <p>
-        <i class="text-muted">23 lectures (presentations), 5 problemsets (with solutions).</i>
+        <i class="text-muted">23 lectures (presentations), 5 problemsets (with solutions)</i>
     </p>
     <h4 class="text-primary">UT Austin</h4>
     <p>
@@ -65,18 +65,19 @@
     </p>
     <h4 class="text-primary">МФТИ</h4>
     <p>
-        Домашняя страница курса на лектории: <a href="https://lectoriy.mipt.ru/course/Maths-StochasticProcesses-15L">link</a>
+        Домашняя страница курса на лектории: <a href="https://lectoriy.mipt.ru/course/Maths-StochasticProcesses-15L">lссылкаink</a>
     </p>
     <p>
-        <i class="text-muted">15 лекций.</i>
+        <i class="text-muted">15 лекций</i>
     </p>
     <h4 class="text-primary">НИУ ВШЭ</h4>
     <p>
-        Домашняя страница курса на курсере: <a href="https://www.coursera.org/learn/stochasticprocesses/home/welcome">link</a>
+        Домашняя страница курса на курсере: <a href="https://www.coursera.org/learn/stochasticprocesses/home/welcome">ссылка</a>
     </p>
     <p>
-        <i class="text-muted">8 лекций, 8 домашних заданий, онлайн экзамен.</i>
+        <i class="text-muted">8 лекций, 8 домашних заданий, онлайн экзамен</i>
     </p>
+    <!--
     <p>
         Здесь будут мои решения задач (единственное, чего нет в бесплатной версии курса):
         <ol>
@@ -146,4 +147,5 @@
             </li>
         </ol>
     </p>
+    -->
 </div>
