@@ -13,7 +13,7 @@
     </p>
 </div>
 
-<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-danger rounded bg-white">
     <h3 class="text-danger">Модулі</h3>
     <p>
         Перший модуль пройшов у п'ятницю <b>22&nbsp;листопада 2019&nbsp;р</b> на першій парі.
@@ -46,9 +46,9 @@
     </p>
 </div>
 
-<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
-    <h3 class="text-primary">Зовнішні курси</h3>
-    <h4 class="text-primary">MIT</h4>
+<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-secondary rounded bg-white">
+    <h3 class="text-secondary">Зовнішні курси</h3>
+    <h4 class="text-secondary">MIT</h4>
     <p>
         Course's homepage on MIT OCW: <a href="https://ocw.mit.edu/courses/mathematics/18-445-introduction-to-stochastic-processes-spring-2015/">link</a>, <i>by Dr. Hao Wu</i>
         <!-- You can also download the compact archive: [7-zip](18-445-Introduction-to-Stochastic-Processes-Spring'15/all.7z) -->
@@ -56,21 +56,21 @@
     <p>
         <i class="text-muted">23 lectures (presentations), 5 problemsets (with solutions)</i>
     </p>
-    <h4 class="text-primary">UT Austin</h4>
+    <h4 class="text-secondary">UT Austin</h4>
     <p>
         Lecture notes: <a href="https://web.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf">link</a>, <i>by Gordan Žitković</i>
     </p>
     <p>
         <i class="text-muted">Some newer lectures also available via the following <a href="https://web.ma.utexas.edu/users/gordanz/lecture_notes_page.html">link</a></i>
     </p>
-    <h4 class="text-primary">МФТИ</h4>
+    <h4 class="text-secondary">МФТИ</h4>
     <p>
         Домашняя страница курса на лектории: <a href="https://lectoriy.mipt.ru/course/Maths-StochasticProcesses-15L">ссылка</a>
     </p>
     <p>
         <i class="text-muted">15 лекций</i>
     </p>
-    <h4 class="text-primary">НИУ ВШЭ</h4>
+    <h4 class="text-secondary">НИУ ВШЭ</h4>
     <p>
         Домашняя страница курса на курсере: <a href="https://www.coursera.org/learn/stochasticprocesses/home/welcome">ссылка</a>
     </p>
