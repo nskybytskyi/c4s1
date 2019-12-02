@@ -9,14 +9,14 @@
         Лекції у п'ятницю на першій парі в аудиторії 40 і (на непарних тижнях) у п'ятницю на третій парі в аудиторії 42.
     </p> -->
     <p>
-        Курс закінчуєтся заліком, який пройде <b class="text-danger">6 грудня о TBA, в ауд. 40</b>.
+        Курс закінчуєтся заліком, який пройде <b class="text-danger">6&nbsp;грудня 2019&nbsp;р. о TBA, в ауд. 40</b>.
     </p>
 </div>
 
 <div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-danger rounded bg-white">
     <h3 class="text-danger">Модулі</h3>
     <p>
-        Перший модуль пройшов у п'ятницю <b>22&nbsp;листопада 2019&nbsp;р</b> на першій парі.
+        Перший модуль пройшов у п'ятницю <b class="text-muted">22&nbsp;листопада 2019&nbsp;р.</b> на першій парі.
     </p>
     <p>
         Орієнтовні запитання <sup><a class="badge badge-success" href="exams/questions.pdf">GET</a></sup>
