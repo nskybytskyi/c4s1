@@ -61,7 +61,7 @@
         Lecture notes: <a href="https://web.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf">link</a>, <i>by Gordan Žitković</i>
     </p>
     <p>
-        Some newer lectures also available via the following <a href="https://web.ma.utexas.edu/users/gordanz/lecture_notes_page.html">link</a>
+        <i class="text-muted">Some newer lectures also available via the following <a href="https://web.ma.utexas.edu/users/gordanz/lecture_notes_page.html">link</a></i>
     </p>
     <h4 class="text-primary">МФТИ</h4>
     <p>
