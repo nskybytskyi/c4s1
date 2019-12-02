@@ -19,8 +19,10 @@
         Перший модуль пройшов у п'ятницю <b>22&nbsp;листопада 2019&nbsp;р</b> на першій парі.
     </p>
     <p>
-        Орієнтовні запитання: <a href="exams/questions.pdf">посилання</a>.
-        Орієнтовні відповіді: <a href="exams/answers.pdf">посилання</a>
+        Орієнтовні запитання <sup><a class="badge badge-success" href="exams/questions.pdf">GET</a></sup>
+    </p>
+    <p>
+        Орієнтовні відповіді <sup><a class="badge badge-success" href="exams/answers.pdf">GET</a></sup>
     </p>
 </div>
 
