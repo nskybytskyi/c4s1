@@ -1,114 +1,224 @@
 #!/usr/bin/env python
 import numpy as np
+import typing as tp
 import matplotlib.pyplot as plt
-from matplotlib import cm
-
-λ: float = 220.0
-c: float = 890.0
-ρ: float = 2_700.0
-α: float = λ / (c * ρ)
-γ: float = 300.0
-end_time: int = 3_600
-radius: float = 0.5
-environ_temperature: float = -20.0
-initial_temperature: float = +20.0
-
-N: int = 50
-M: int = end_time * 4
-h: float = radius / N
-τ: float = end_time / M
-σ: float = 0.5 - h ** 2 / (12 * τ)
-
-print(f"h = {h:.7f} (h^4 = {h ** 4:.7f})")
-print(f"τ = {τ:.7f} (τ^2 = {τ ** 2:.7f})")
-print(f"σ = {σ:.7f}")
-
-β_2: float = γ / (c * ρ)
-μ_2: float = γ * environ_temperature / (c * ρ)
-q: float = γ / (c * ρ)
-
-A_ = np.zeros((N + 1, N + 1))
-b_ = np.zeros(N + 1)
 
 
-def p_i(i: int):
-    return λ / (c * ρ) * (h * i - h / 2) ** 2 
+class PhysicalMaterial:
+    def __init__(self, λ: float, c: float, ρ: float, γ: float) -> None:
+        self.λ, self.c, self.ρ, self.γ = λ, c, ρ, γ
 
 
-def tilde_x(i: int):
-    if i == 0:
-        return h ** 2 / (2 * h)
-    elif i == N:
-        return (radius ** 2 - (radius - h) ** 2) / (2 * h)
-    else:
-        return ((h * (i + 1)) ** 2 - (h * (i - 1)) ** 2) / (4 * h)
+class PhysicalObject:
+    def __init__(self, material: PhysicalMaterial, r: float, m: int, u_0: float) -> None:
+        self.material, self.r, self._m, self.u_0 = material, r, m, u_0
+
+    @property
+    def λ(self):
+        return self.material.λ
+
+    @property
+    def c(self):
+        return self.material.c
+
+    @property
+    def ρ(self):
+        return self.material.ρ
+
+    @property
+    def γ(self):
+        return self.material.γ
+
+    @property
+    def a(self):
+        return np.sqrt(self.λ / (self.c * self.ρ))
 
 
-def phi_i(i: int, y: np.array):
-    if i == N + 1:
-        return (1 - σ) * τ / h * β_2 * h * N * y[N] - τ / h * μ_2 * h * N \
-            - 1 / 2 * tilde_x(N) * y[N] + (1 - σ) * τ / 2 * tilde_x(N) * q * y[N] \
-            + (1 - σ) * τ / h ** 2 * p_i(N) * (y[N] - y[N - 1])
-    else:
-        return - tilde_x(i - 1) * y[i - 1] \
-            - τ * (1 - σ) / h ** 2 * (p_i(i) * (y[i] - y[i-1]) - p_i(i - 1) * (y[i - 1] - y[i - 2])) \
-            + τ * (1 - σ) * tilde_x(i - 1) * q * y[i - 1]
+class PhysicalEnvironment:
+    def __init__(self, u_env: float) -> None:
+        self.u_env = u_env
 
 
-def d_i(i: int):
-    return σ * τ / h ** 2 * p_i(i - 1)
+class TimeRescaler:
+    def __init__(self, a: float, r: float) -> None:
+        self.a, self.r = a, r
+
+    def t_to_t1(self, t: float) -> float:
+        return self.a**2 * t / (self.r**2)
+
+    def t1_to_t(self, t1: float) -> float:
+        return self.r**2 * t1 / (self.a**2)
 
 
-def b_i(i: int):
-    return σ * τ / h ** 2 * p_i(i)
+class TemperatureRescaler:
+    def __init__(self, u_0: float, u_env: float) -> None:
+        self.u_0, self.u_env = u_0, u_env
+
+    def u_to_v(self, u: float) -> float:
+        return (u - self.u_0) / (self.u_env - self.u_0)
+
+    def v_to_u(self, v: float) -> float:
+        return v * (self.u_env - self.u_0) + self.u_0
 
 
-def c_i(i: int):
-    if i == N + 1:
-        return - σ * τ / h * β_2 * h * N - 1 / 2 * h * N \
-            - σ * τ / 2 * tilde_x(N) * q - d_i(N + 1)
-    else:
-        return - tilde_x(i - 1) * (1 + τ * σ * q) - (d_i(i) + b_i(i))
+class RadiusRescaler:
+    def __init__(self, r: float) -> None:
+        self.r = r
+
+    def x_to_x1(self, x: float) -> float:
+        return x / self.r
+
+    def x1_to_x(self, x1: float) -> float:
+        return x1 * self.r
 
 
-print(f"α * τ / h^2 < 1/2: {λ / (c * ρ) * τ / h ** 2:.7f}")
+class Plotter:
+    def __init__(self) -> None:
+        plt.figure(figsize=(20, 10))
+        plt.grid(True)
+        plt.xlabel("$x$")
+        plt.ylabel("$u$")
+
+    def plot(self, t: float, xs: np.array, us: np.array) -> None:
+        plt.plot(xs, us, label=f'$u(x, {t:.2f})$')
+
+    def show(self):
+        plt.legend(loc="best")
+        plt.show()
+    
+    def save(self):
+        plt.legend(loc="best")
+        plt.savefig("plots.png", bbox_inches='tight')
 
 
-def count_one_layer(v: np.array):
-    A_[0, 0] = 1
-    A_[0, 1] = -1
-    b_[0] = 0
-    for i in range(1, N):
-        b_[i] = phi_i(i + 1, v)
-        A_[i, i - 1] = d_i(i + 1)
-        A_[i, i] = c_i(i + 1)
-        A_[i, i + 1] = b_i(i + 1)
-    b_[N] = phi_i(N + 1, v)
-    A_[N, N - 1] = d_i(N + 1) 
-    A_[N, N] = c_i(N + 1)
-    return np.linalg.solve(A_, b_)
+class Solver:
+    def __init__(self, physical_object: PhysicalObject, physical_environment: PhysicalEnvironment) -> None:
+        self.γ1 = physical_object.γ * physical_object.r / physical_object.λ  # slower
+        self.k = physical_object.a
+
+        self.N = 100
+        self.h = 1 / self.N
+        self.τ = self.h**2 / (2 * self.k)  # faster
+        self.σ = .5 - self.h**2 / (12 * self.τ)
+
+        self.τ_h = self.τ / self.h
+        self.τ_h2 = self.τ / self.h**2
+
+        self.t1 = 0
+        self.x1s = np.linspace(0, 1, self.N + 1)
+        self.vs = np.zeros(self.N + 1)
+
+    def bar_p(self, i: int) -> float:
+        if i == 0:
+            return 0.0
+        elif i != self.N + 1:
+            return ((self.x1s[i - 1] + self.x1s[i]) / 2)**2 * self.k
+        else:
+            return 0.0
+
+    def bar_x2(self, i: int) -> float:
+        if i == 0:
+            return (self.x1s[i + 1]**3 - self.x1s[i]**3) / (3 * self.h)
+        elif i != self.N:
+            return (self.x1s[i + 1]**3 - self.x1s[i - 1]**3) / (6 * self.h)
+        else:
+            return (self.x1s[i]**3 - self.x1s[i - 1]**3) / (3 * self.h)
+
+    def a(self, i: int) -> float:
+        if i == 0:
+            return 0.0
+        elif i != self.N:
+            return self.σ * self.τ_h2 * self.bar_p(i)
+        else:
+            return self.σ * self.τ_h2 * self.bar_p(i)
+
+    def b(self, i: int) -> float:
+        if i == 0:
+            return -self.bar_x2(i) / 2 - self.c(i)
+        elif i != self.N:
+            return -self.bar_x2(i) - self.a(i) - self.c(i)
+        else:
+            return -self.σ * self.τ_h * self.γ1 * self.x1s[i]**2 - self.bar_x2(i) / 2 - self.a(i)
+
+    def c(self, i: int) -> float:
+        if i == 0:
+            return self.σ * self.τ_h2 * self.bar_p(i + 1)
+        elif i != self.N:
+            return self.σ * self.τ_h2 * self.bar_p(i + 1)
+        else:
+            return 0.0
+
+    def d(self, i: int) -> float:
+        if i == 0:
+            return -self.bar_x2(i) * self.vs[i] / 2 \
+                -(1 - self.σ) * self.τ_h2 * self.bar_p(i + 1) * (self.vs[i + 1] - self.vs[i])
+        elif i != self.N:
+            return -self.bar_x2(i) * self.vs[i] - (1 - self.σ) * self.τ_h2 \
+                * (self.bar_p(i + 1) * (self.vs[i + 1] - self.vs[i]) - self.bar_p(i) * (self.vs[i] - self.vs[i - 1])) 
+        else:
+            return (1 - self.σ) * self.τ_h * self.γ1 * self.x1s[i]**2 * self.vs[i] \
+                -self.τ_h * self.γ1 * self.x1s[i]**2 - self.bar_x2(i) * self.vs[i] / 2 \
+                + (1 - self.σ) * self.τ_h2 * self.bar_p(i) * (self.vs[i] - self.vs[i - 1])
+
+    def step(self) -> None:
+        lhs = np.zeros((self.N + 1, self.N + 1))
+        rhs = np.zeros(self.N + 1)
+
+        lhs[0, 0] = self.b(0)
+        lhs[0, 1] = self.c(0)
+        rhs[0] = self.d(0)
+
+        for i in range(1, self.N):
+            lhs[i, i - 1] = self.a(i)
+            lhs[i, i] = self.b(i)
+            lhs[i, i + 1] = self.c(i)
+            rhs[i] = self.d(i)
+
+        lhs[self.N, self.N - 1] = self.a(self.N)
+        lhs[self.N, self.N] = self.b(self.N)
+        rhs[self.N] = self.d(self.N)
+
+        self.vs = np.linalg.solve(lhs, rhs)
+
+        self.t1 += self.τ
 
 
-last_times = [M / 4, M / 3, M / 2, M]
-times_to_print = [0, 20, 50, M / 2, M]
+class Iterater:
+    def __init__(self, solver: Solver, plotter: Plotter, t_scaler: TimeRescaler,
+            u_scaler: TemperatureRescaler, x_scaler: RadiusRescaler) -> None:
+        self.solver, self.plotter = solver, plotter
+        self.t_scaler, self.u_scaler, self.x_scaler = t_scaler, u_scaler, x_scaler
+
+    def iterate(self, count_outer: int, count_inner: int) -> None:
+        for _ in range(count_outer):
+            self.solver.step()
+
+            if _ % count_inner == count_inner - 1:
+                t = self.t_scaler.t1_to_t(self.solver.t1)
+                xs = np.array([self.x_scaler.x1_to_x(x1) for x1 in self.solver.x1s])
+                us = np.array([self.u_scaler.v_to_u(v) for v in self.solver.vs])
+
+                self.plotter.plot(t, xs, us)
+
+                if us[1] > 373:
+                    break
+
+        # self.plotter.show()
+        self.plotter.save()
 
 
-def count_temperature():
-    v = np.ones(N + 1) * initial_temperature
-    for j in range(M):
-        if j % 100 == 0: 
-            plt.plot(np.linspace(0, radius, radius / h + 1), v)
-        v = count_one_layer(v)
-    print(f'y_0 = {v[0]}')
-    print(f'y_N = {v[N]}')
-    plt.plot(np.linspace(0, radius, radius / h + 1), v)
-    plt.xlabel('radius')
-    plt.ylabel('temperature')
-    plt.grid()
-    plt.title(f'Temperature in {end_time} seconds')
-    plt.show()
-    return v
+if __name__ == "__main__":
 
+    aluminum    = PhysicalMaterial(λ=220, c=890, ρ=2_700, γ=300)
+    sphere      = PhysicalObject(material=aluminum, r=0.01, m=2, u_0=273)
+    environment = PhysicalEnvironment(u_env=573)
 
-if __name__ == '__main__':
-    count_temperature()
+    t_scaler = TimeRescaler(a=sphere.a, r=sphere.r)
+    u_scaler = TemperatureRescaler(u_0=sphere.u_0, u_env=environment.u_env)
+    x_scaler = RadiusRescaler(r=sphere.r)
+
+    solver   = Solver(physical_object=sphere, physical_environment=environment)
+    plotter  = Plotter()
+    iterater = Iterater(solver=solver, plotter=plotter, t_scaler=t_scaler, u_scaler=u_scaler, x_scaler=x_scaler)
+
+    iterater.iterate(count_outer=100_000, count_inner=351)  # 1402 # 701 # 351 # 175
