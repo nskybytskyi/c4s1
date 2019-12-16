@@ -1,0 +1,174 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian, ukrainian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{euler}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\range}[2]{\ol{#1..#2}}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+
+\begin{document}
+
+\textbf{\S 16. Розв'язування одновимірного рівняння теплопровідності} \medskip
+
+\textbf{Постановка задачі.} В області $\ol Q_T = \{a \le x \le b, 0 \le t \le T\}$ знайти розв'язок одновимірного нестаціонарного рівняння теплопровідності
+\begin{equation}
+    \label{eq:16.1}
+    \frac{\partial u}{\partial t} = \frac{1}{x^m} \frac{\partial}{\partial x} \left( x^m k(x, t) \, \frac{\partial u}{\partial x} \right) - q(x, t) u + f(x, t), \quad x \in (a, b), \quad t > 0,
+\end{equation}
+яке задовольняє початкові умови
+\begin{equation}
+    \label{eq:16.2}
+    u(x, 0) = u_0(x), \quad x \in [a, b]
+\end{equation}
+і крайові умови
+\begin{equation}
+    \label{eq:16.3}
+    \begin{aligned}
+        \alpha_1 k(a, t) \, \frac{\partial u(a, t)}{\partial x} &= \beta_1 u(a, t) - \mu_1(t); \\
+        -\alpha_2 k(b, t) \, \frac{\partial u(b, t)}{\partial x} &= \beta_2 u(b, t) - \mu_2(t),
+    \end{aligned}
+\end{equation}
+де $k(x, t)$, $q(x, t)$, $f(x, t)$, $u_0(x)$, $\mu_1(t)$, $\mu_2(t)$ --- задані функції; $\alpha_k$, $\beta_k$ ($k=1,2$) --- задані невід'ємні сталі, причому виконуються нерівності $0 < k_0 \le k(x, t)$ ($k_0$ --- деяка стала), $q(x, t) \ge 0$, $\alpha_k^2 + \beta_k^2 \ne 0$ ($k=1,2$). \medskip
+
+\textbf{Методичні вказівки.} Розглянемо різницеві методи розв'язування задачі \eqref{eq:16.1}--\eqref{eq:16.3}. В області $\ol Q_T$ введемо сітку $\ol \omega_{h, \tau} = \ol \omega_h \times \ol \omega_\tau$, де $\ol \omega_h = \{x_i = a + i h, h = (b - a)/N, i = \range{0}{N}\}$; $\ol \omega_\tau = \{t_j = j \tau, \tau = T/M, j = \range{0}{M}\}$. Позначимо $y_i^j = y(x_i, t_j)$. \medskip
+
+За допомогою інтегро-інтерполяційного методу апроксимуємо задачу \eqref{eq:16.1}--\eqref{eq:16.3} різницевою схемою з ваговими коефіцієнтами:
+\begin{multline}
+    \label{eq:16.4}
+    \ol x_i^m y_{t, i}^j = \sigma \left( \ol p y_x^{j + 1} \right)_{x, i} - \sigma \, \ol x_i^m \ol q_i y_i^{j + 1} + (1 - \sigma) \left( \ol p y_x^j \right)_{x, i} - \\ - (1 - \sigma) \, \ol x_i^m \ol q_i y_i^j + \ol x_i^m \ol f_i, \quad i = \range{1}{N - 1}, \quad j = \range{1}{M},
+\end{multline}
+з початковими умовами
+\begin{equation*}
+    y_i^0 = u_0(x_i), \quad i = \range{0}{N},
+\end{equation*}
+та крайовими умовами
+\begin{multline}
+    \label{eq:16.5}
+    \sigma \, \alpha_1 \ol p_1 y_{\ol x, 0}^{j + 1} + (1 - \sigma) \, \alpha_1 \ol p_1 y_{\ol x, 0}^j = \sigma \, x_0^m \beta_1 y_0^{j + 1} + (1 - \sigma) \, \beta_1 x_0^m y_0^j - x_0^m \ol \mu_1 + \\ + \frac{h}{2} \, \alpha_1 \ol x_0^m y_0^j - \frac{h}{2} \, \alpha_1 \ol x_0^m \left( \ol f_0 - \sigma \, \ol q_0 y_0^{j + 1} + (1 - \sigma) \, \ol q_0 y_0^j \right);
+\end{multline}
+\begin{multline}
+    \label{eq:16.6}
+    -\sigma \, \alpha_2 \ol p_N y_{\ol x, N}^{j + 1} - (1 - \sigma) \, \alpha_2 \ol p_N y_{\ol x, N}^j = \sigma \, x_N^m \beta_2 y_N^{j + 1} + (1 - \sigma) \, \beta_2 x_N^m y_N^j - x_N^m \ol \mu_2 + \\ + \frac{h}{2} \, \alpha_2 \ol x_N^m y_N^j - \frac{h}{2} \, \alpha_2 \ol x_N^m \left( \ol f_N - \sigma \, \ol q_N y_N^{j + 1} - (1 - \sigma) \, \ol q_N y_N^j \right),
+\end{multline}
+де
+\begin{equation*}
+    \ol x_0^m = \frac{1}{h} \int_0^{x_1} x^m \diff x; \quad \ol x_N^m = \frac{1}{h} \int_{x_{N - 1}}^{x_N} x^m \diff x;
+\end{equation*}
+\begin{equation*}
+    \ol x_i^m = \frac{1}{2h} \int_{x_{i - 1}}^{x_{i + 1}} x^m \diff x, \quad i = \range{1}{N - 1};
+\end{equation*}
+\begin{equation*}
+    \ol p_i = x_{i - 1/2}^m \ol k_{i - 1/2}, \quad i = \range{1}{N}.
+\end{equation*}
+
+Покладаючи в \eqref{eq:16.4}--\eqref{eq:16.6} $\sigma = 0$, дістаємо явну схему; при $\sigma = 1$ --- схему з випередженням (повністю неявну схему); при $\sigma = 0.5$ --- симетричну схему Кранка---Ніколсона, яка записується на шаблоні з шести вузлів. \medskip
+
+У разі досить гладких вхідних даних різницева схема \eqref{eq:16.4}--\eqref{eq:16.6} стійка при $\sigma \ge 0.5$ і має місце рівномірна збіжність її зі швидкістю $O(h^2 + \tau^{m_\sigma})$, де
+\begin{equation*}
+    m_\sigma = \begin{cases}
+        2, & \text{при} \quad \sigma = 0.5; \\
+        1, & \text{при} \quad \sigma \ne 0.5.
+    \end{cases}
+\end{equation*}
+
+Різницева схема \eqref{eq:16.4}--\eqref{eq:16.6} при $\sigma \ne 0$ буде неявною, тому $y^{j + 1}$ знаходиться як розв'язок СЛАР з тридіагональною матрицею, а саме:
+\begin{equation}
+    \label{eq:16.7}
+    \begin{aligned}
+        c_0 v_0 + b_1 v_1 &= \phi_0, \\
+        d_{i - 1} v_{i - 1} + c_i v_i + b_{i + 1} v_{i + 1} &= \phi_i, \quad i = \range{1}{N - 1}, \\
+        d_{N - 1} v_{N - 1} + c_N v_N &= \phi_N, 
+    \end{aligned}
+\end{equation}
+де
+\begin{equation}
+    \label{eq:16.8.1}
+    \begin{aligned}
+        b_1 &= \frac{\sigma \tau}{h^2} \, \alpha_1 \ol p_1; \quad c_0 = -\frac{\sigma \tau}{h} \, \beta_1 x_o^m - \frac{\alpha_1}{2} \, \ol x_0^m - \frac{\sigma \tau}{2} \, \alpha_1 \ol x_0^m \ol q_0 - b_1; \\
+        \phi_0 &= \frac{(1 - \sigma) \tau}{h} \, \beta_1 x_0^m y_o^j - \frac{\tau}{h} \, x_0^m \ol \mu_1 - \frac{\alpha_1}{2} \, \ol x_0^m y_0^j - \frac{\tau}{2} \,\alpha_1 \ol x_o^m \ol f_0 + \\
+        &\quad + \frac{(1 - \sigma) \tau}{2} \, \alpha_1 \ol x_0^m \ol q_0 y_0^j - \frac{(1 - \sigma) \tau}{h^2} \, \alpha_1 \ol p_1 \left( y_1^j - y_0^j \right);
+    \end{aligned}
+\end{equation}
+а також
+\begin{equation}
+    \label{eq:16.8.2}
+    \begin{aligned}
+        d_{i - 1} &= \frac{\sigma \tau}{h^2} \, \ol p_i; \quad b_{i + 1} = \frac{\sigma \tau}{h^2} \, \ol p_{i + 1}; \quad c_i = - \ol x_i^m - \sigma \tau \ol x_i^m \ol q_i - (d_{i - 1} + b_{i + 1}); \\
+        \phi_i &= -\ol x_i^m y_i^j - \frac{(1 - \sigma) \tau}{h^2} \left( \ol p_{i + 1} \left( y_{i + 1}^j - y_i^j \right)  - \ol p_i \left( y_i^j - y_{i - 1}^j \right) \right) + \\
+        &\quad + (1 - \sigma) \, \tau \ol x_i^m \ol q_i y_i^j - \tau \ol f_i \ol x_i^m, \quad i = \range{1}{N - 1};
+    \end{aligned}
+\end{equation}
+і нарешті
+\begin{equation}
+    \label{eq:16.8.3}
+    \begin{aligned}
+        d_{N - 1} &= \frac{\sigma \tau}{h^2} \, \alpha_2 \ol p_N; \quad c_N = -\frac{\sigma \tau}{h} \, \beta_2 x_N^m - \frac{\alpha_2}{2} \, \ol x_N^m - \frac{\sigma \tau}{2} \, \alpha_2 \ol x_N^m \ol q_N - d_{N - 1}; \\
+        \phi_N &= \frac{(1 - \sigma) \tau}{h} \, \beta_2 x_N^m y_N^j - \frac{\tau}{h} \, x_N^m \ol \mu_2 - \frac{\alpha_2}{2} \, \ol x_N^m y_N^j - \frac{\tau}{2} \, \alpha_2 \ol x_N^m \ol f_N + \\
+        &\quad + \frac{(1 - \sigma) \tau}{2} \, \alpha_2 \ol x_N^m \ol q_N y_N^j + \frac{(1 - \sigma) \tau}{h^2} \, \alpha_2 \ol p_N \left( y_N^j - y_{N - 1}^j \right).
+    \end{aligned}
+\end{equation}
+
+Таким чином, розв'язавши СЛАР \eqref{eq:16.7}, знайдемо значення $y_i^{j + 1} = v_i$ ($i = \range{0}{N}$), якщо відомо розв'язок $y_i^j$ на $j$-му ярусі (на нульовому ярусі розв'язок задається виразом \eqref{eq:16.5}). \medskip
+
+Система лінійних алгебраїчних рівнянь \eqref{eq:16.7} розв'язується методом прогонки. Обчислювальна схема цього методу зводиться до виконання таких дій:
+\begin{enumerate}[label=\alph*)]
+    \item визначення коефіцієнтів $m_0$, $w_0$ за формулами
+    \begin{equation*}
+        m_0 = -\frac{b_1}{c_0}, \quad w_0 = \frac{\phi_0}{c_0}, \quad c_0 \ne 0;
+    \end{equation*}
+    \item визначення коефіцієнтів $m_i$, $w_i$ за формулами
+    \begin{equation*}
+        m_i = -\frac{b_{i + 1}}{c_i + d_{i - 1} m_{i - 1}}, \quad w_i = \frac{\phi_i - d_{i - 1} w_{i - 1}}{c_i + d_{i - 1} m_{i - 1}}, \quad i = \range{1}{N - 1};
+    \end{equation*}
+    \item обчислення $v_N$ за формулою
+    \begin{equation*}
+        v_N = \frac{\phi_N - d_{N - 1} w_{N - 1}}{c_N + d_{N - 1} m_{N - 1}};
+    \end{equation*}
+    \item визначення $v_i$ за формулою
+    \begin{equation*}
+        v_i = m_i v_{i + 1} + w_i, \quad i = \range{N - 1}{0}.
+    \end{equation*}
+\end{enumerate}
+
+З \eqref{eq:16.8.1}--\eqref{eq:16.8.3} випливає, що умова стійкості методу прогонки $|c_i| \ge |b_{i + 1}| + |d_{i - 1}|$ виконується. \medskip
+
+Задача \eqref{eq:16.1}--\eqref{eq:16.3} є математичною моделлю різних нестаціонарних процесів, наприклад теплопровідності, дифузії та ін. Так, процес поширення тепла в тілі може бути описаний диференціальним рівнянням
+\begin{equation}
+    \label{eq:16.9}
+    c \rho \, \frac{\partial u}{\partial t} = \frac{1}{x^m} \frac{\partial}{\partial x} \left( x^m \lambda \, \frac{\partial u}{\partial x} \right) - d (u - u_{\text{ср.}}) + F, \quad x \in (a, b), \quad t > 0,
+\end{equation}
+яке задовольняє такі початкові та крайові умови:
+\begin{equation}
+    \label{eq:16.10}
+    u(x, 0) = u_0(x), \quad x \in [a, b];
+\end{equation}
+\begin{equation}
+    \label{eq:16.11}
+    \begin{aligned}
+        \alpha_1 \lambda \, \frac{\partial u}{\partial x} &= \gamma_1 (u - u_{\text{ср.}}) \quad \text{при} \quad x = a; \\
+        -\alpha_2 \lambda \, \frac{\partial u}{\partial x} &= \gamma_2 (u - u_{\text{ср.}}) \quad \text{при} \quad x = b.
+    \end{aligned}
+\end{equation}
+
+Тут $c$ --- питома теплоємність; $\rho$ --- щільність; $\lambda$ ---  коефіцієнт теплопровідності; $d$ --- коефіцієнт теплообміну на поверхні тіла; $F$ --- щільність джерел тепла; $ u_{\text{ср.}}$ --- температура навколишнього середовища; $u_0$ --- початковий розподіл температури; $\gamma_k$ ($k = 1, 2$) --- коефіцієнт тепловіддачі на границі; $\alpha_k$ ($k = 1, 2$) --- деякі сталі величини, які дорівнюють нулю чи одиниці. \medskip
+
+Показник $m$ може дорівнювати 0, 1, або 2, що відповідає запису рівняння в декартових, циліндричних, або сферичних координатах. Якщо величини $c$ та $\rho$ сталі, то задачу \eqref{eq:16.9}--\eqref{eq:16.11} можна записати у вигляді \eqref{eq:16.1}--\eqref{eq:16.3}, де $k = \frac{\lambda}{c \rho}$, $q = \frac{d}{c \rho}$, $f = q u_{\text{ср.}} + \frac{F}{c \rho}$, $\beta_k = \frac{\gamma_k}{c \rho}$ $\mu_k = \frac{\gamma_k u_{\text{ср.}}}{c \rho}$. \medskip
+
+Співвідношення \eqref{eq:16.3} залежно від значень параметрів $\alpha_k$, $\beta_k$ ($k = 1, 2$) визначають різні фізичні умови на границі:
+\begin{enumerate}[label=\alph*)]
+    \item випадок $\alpha_k = 0$, $\beta_k > 0$ означає, що на границі задано температуру тіла (\textit{крайові умови першого роду});
+    \item випадок $\alpha_k > 0$, $\beta_k = 0$ свідчить про те, що на границі задано тепловий потік (\textit{крайові умови другого роду});
+    \item випадок $\alpha_k > 0$, $\beta_k > 0$ означає, що на границі задано теплообмін з навколишнім середовищем (\textit{крайові умови третього роду}).
+\end{enumerate}
+
+Зауважимо, що коли рівняння \eqref{eq:16.1} розглядається в циліндричних або сферичних координатах ($m = 1$ або $m = 2$) і $a = 0$, то в точці $x = 0$ має виконуватися умова регулярності, тобто $\lim\limits_{x \to 0} x^m k \, \frac{\partial u}{\partial x} = 0$.
+
+\end{document}
