@@ -1,0 +1,236 @@
+\chapter{Багатошарові та багатокрокові чисельні моделі}
+
+\shortLectureDescription{Багатошарові та багатокрокові чисельні моделі. Методи дослідження. Особливості подання початкових умов. Зведення їх до одношарових.}
+
+\section{Багатошарові чисельні моделі}
+
+Нехай крайова задача
+\begin{equation}
+    \label{eq:l4.1}
+    \frac{\partial \vec u(t)}{\partial t} = A \vec u, \quad t > 0
+\end{equation}
+апроксимується за допомогою $(q+1)$-шарової різницевої схеми
+\begin{equation}
+    \label{eq:l4.2}
+    B_q \vec u^{n + q} + B_{q - 1} \vec u^{n + q - 1} + \ldots + B_0 \vec u^n = 0,
+\end{equation}
+де $B_q, \ldots, B_0$ --- скінченно---різницеві оператори, а $\vec u^n$ --- деяка апроксимація $\vec u(n \Delta t)$. Припустимо, що рівняння \eqref{eq:l4.2} разом з відповідними граничними умовами має єдиний розв'язок відносно $\vec u^{n + q}$, залежний від $\vec u^{n + q - 1}, \ldots, \vec u^n$. Запишемо еквівалентне до \eqref{eq:l4.2} рівняння 
+\begin{equation}
+    \label{eq:l4.3}
+    \vec u^{n + q} = C_{q - 1} \vec u^{n + q - 1} + \ldots + C_0 \vec u^n
+\end{equation}
+де $C_i = C_i(\Delta t) = B_q^{-1} B_i$ --- лінійні обмежені оператори, а $\Delta x_j$ є заданими функціями від $\Delta t$. \medskip
+
+Уведемо нові залежні змінні: $\vec v^n = \vec u^{n - 1}$, $\vec w^n = \vec v^{n - 1}$ і так далі, тоді рівняння \eqref{eq:l4.3} замінено системою 
+\begin{equation}
+    \label{eq:l4.4}
+    \vec u^{n + 1} = C_{q - 1} \vec u^n + C_{q - 2} \vec v^n + C_{q - 3} \vec w^n + \ldots, \quad \vec v^{n + 1} = \vec u^n, \vec w^{n + 1} = \vec v^n, \ldots
+\end{equation}
+
+Якщо $\tilde B$ це простір, елементами якого є $q$-вимірні вектор-стовпчики
+\begin{equation*}
+    \vec{\tilde{\phi}} = \begin{pmatrix} \vec u^{n + q - 1} & \cdots & \vec u^n \end{pmatrix}^\intercal
+\end{equation*}
+з нормою введеною, наприклад, так:
+\begin{equation*}
+    \left\| \begin{pmatrix} \vec u & \vec v & \cdots & \end{pmatrix}^\intercal \right\| = \sqrt{\|\vec u\|^2 + \|\vec v\|^2 + \ldots}
+\end{equation*}
+і якщо покласти
+\begin{equation*}
+    \tilde C = \begin{pmatrix}
+        C_{q - 1} & C_{q - 2} & \cdots & \cdots & C_1 & C_0 \\
+        E & 0 & \cdots & \cdots & \cdots & 0 \\
+        0 & \ddots & \ddots & & & \vdots \\
+        \vdots & \ddots & \ddots & \ddots & & \vdots \\
+        \vdots & & \ddots & \ddots & \ddots & \vdots \\
+        0 & \cdots & \cdots & 0 & E & 0
+    \end{pmatrix},
+\end{equation*}
+де $E$ --- тотожний оператор, то рівняння \eqref{eq:l4.4} можна записати так:
+\begin{equation}
+    \label{eq:l4.5}
+    \vec{\tilde{\phi}}^{n + 1} = \tilde C(\Delta t) \vec{\tilde{\phi}}^n,
+\end{equation}
+де 
+\begin{equation}
+    \vec{\tilde{\phi}}^n = \begin{pmatrix} \vec u^{n + q} & \cdots & \vec u^n \end{pmatrix}^\intercal.
+\end{equation}
+
+Тут $\tilde C$ --- матриця, яка відповідає системі \eqref{eq:l4.4}. \medskip
+
+Тобто $(q + 1)$-шарова різницева задача \eqref{eq:l4.3} зводиться до системи двошарових схем.
+
+\section{Проблема постановки початкових умов для багатошарових різницевих схем}
+
+Початкові дані для диференціальної задачі задаються в момент часу $t_0$, а дані для різницевої задачі в точках сітки повинні бути визначені через початкові дані за допомогою апроксимації, яка дозволяє починати обчислення розв'язку за рівнянням \eqref{eq:l4.3}. Припустимо, що значення $\vec{\tilde{\phi}}$ обчислені точно, тобто 
+\begin{equation}
+    \vec{\tilde{\phi}} = \begin{pmatrix} E((q - 1)\Delta t) \vec u^0 & E((q - 2)\Delta t) \vec u^0 & \cdots & \vec u^0 \end{pmatrix}^\intercal,
+\end{equation}
+де $\vec u^0 \in B$, а $E(t)$ --- розв'язуючий оператор для \eqref{eq:l4.1}. Тоді 
+\begin{equation}
+    \tilde{\vec{u}}^0 = \begin{pmatrix} \vec u^0 & \cdots & \vec u^0 \end{pmatrix}^\intercal,
+\end{equation}
+а
+\begin{equation}
+    \tilde S = \begin{pmatrix}
+        E((q - 1) \Delta t) & 0 & \cdots & \cdots & 0 \\
+        0 & E((q - 2) \Delta t) & \ddots & & \vdots \\
+        \vdots & \ddots & \ddots & \ddots & \vdots \\
+        \vdots & & \ddots & \ddots & 0 \\
+        0 & \cdots & \cdots & 0 & E
+    \end{pmatrix}
+\end{equation}
+---	діагональна матриця. \medskip
+
+Отже, наближений розв'язок крайової задачі \eqref{eq:l4.1} визначається формулою 
+\begin{equation}
+    \vec{\tilde{\phi}} = \tilde C(\Delta t) \tilde S \tilde{\vec{u}}^0,
+\end{equation}
+яка є апроксимацією виразу
+\begin{equation}
+    \begin{pmatrix} \vec u ((n + q - 1) \Delta t) & \vec u ((n + q - 2) \Delta t) & \cdots & \vec u (n \Delta t) \end{pmatrix}^\intercal = E (n \Delta t) \tilde S \tilde{\vec{u}}^0.
+\end{equation}
+
+Порівняємо $\tilde C(\Delta t)^n \tilde S \tilde{\vec{u}}^0$ з $E (n \Delta t) \tilde S \tilde{\vec{u}}^0$. При $\Delta t \to 0$ приходимо до підпростору $\tilde B^0$ простору $\tilde B$, елементами якого є вектори, всі $q$ компонент яких рівні між собою. Тоді
+\begin{equation}
+    \begin{pmatrix} \vec u(t) & \cdots & \vec u(t) \end{pmatrix}^\intercal = E(t) \begin{pmatrix} \vec u^0 & \cdots & \vec u^0 \end{pmatrix}^\intercal
+\end{equation}
+
+До цієї ж границі прямує і $E (n \Delta t) \tilde S \tilde{\vec{u}}^0$ при $\Delta t \to 0$ ($\tilde S \to E$). Елементи $\vec u(t)$ і $\vec u^0$ належать простору $B^0$, але їх апроксимації --- ні, вони лежать поза цим простором. При практичних обчисленнях, початкові значення отримуємо не з допомогою обчислення $\vec{\tilde{\phi}}^0 = \tilde S \tilde{\vec{u}}^0$, а з допомогою апроксимації $\vec{\tilde{\phi}}^0 = \vec \psi$. Для того, щоб наближене значення розв'язку $\tilde{\vec{u}}^n$ збігалось до точного розв'язку, необхідно, щоб $\vec u^n \to \vec u(t)$, а $\vec{\tilde{\phi}}^0 = \vec \psi \to \vec u(0)$ при $\Delta t \to 0$ незалежно одне від одного. 
+
+\section{Властивості багатошарових різницевих схем}
+
+\begin{definition}
+    Багатошарову різницеву схему \eqref{eq:l4.5} називають \textit{стійкою}, якщо для деяко-го додатного $\tau$ при $0 < \Delta t < \tau$ і $0 \le n \Delta t \le T$ сім'я операторів $\tilde C^n(\Delta t)$ з \eqref{eq:l4.5} рівномірно обмежена $\forall n$.
+\end{definition}
+
+\begin{definition}
+    Важливу роль відіграють \textit{умови узгодженості}, які полягають в тому, що існує щільна в просторі $B$ множина $U^0$ можливих початкових елементів для точних розв'язків така, що якщо $\vec u^0 \in U^0$ та існує $\epsilon > 0$, таке що, якщо покласти 
+    \begin{equation}
+        \tilde{\vec{u}}^0 = \begin{pmatrix} E(t) \vec u^0 & \cdots E(t) \vec u^0 \end{pmatrix}
+    \end{equation}
+    то 
+    \begin{equation}
+        \label{eq:l4.6}
+        \| (\tilde C(\Delta t) - E(\Delta t) \tilde S) \vec{\tilde{u}}(t) \| < \epsilon \Delta t
+    \end{equation}
+    для достатньо малих $\Delta t$ і $0 \le t \le T$.
+\end{definition}
+
+\begin{definition}
+    Апроксимація є \textit{збіжною}, якщо для довільних послідовностей $\Delta_j t$ і $n_j$, таких що $\Delta_j t > 0$ і $n_j \Delta_j t \to t$ при $j \to \infty$, ($0 \le t \le T$) та $\forall \tilde{\vec{u}} \in \tilde B^0$ буде
+    \begin{equation}
+        \lim_{\substack{j \to \infty \\ \vec \psi \to \vec u^0}} \left\| \tilde C(\Delta_j t)^{n_j} \vec \psi - E(t) \vec{\tilde{u}}(t) \right\| = 0.
+    \end{equation}
+\end{definition}
+
+Порядок і похибка апроксимації багатошарових різницевих схем визначається звичайним чином. \medskip
+
+У [??] доводиться, що істинні такі твердження:
+\begin{proposition}
+    Якщо різницева схема стійка і її похибка апроксимації прямує до нуля при $\Delta t \to 0$, то умова узгодженості для цієї різницевої схеми виконується.
+\end{proposition}
+	
+\begin{proposition}
+    Для коректно поставленої крайової задачі і її багатошарової апроксимації, яка задовольняє умови узгодженості, стійкість є необхідною і достатньою умовою збіжності.
+\end{proposition}
+
+\section{Узгодженість і порядок точності}
+
+При дослідженні узгодженості і точності різницевих схем бажано різницеві рівняння подати їх у формі 
+\begin{equation}
+    B_q \vec u^{n + q} + B_{q - 1} \vec u^{n + q - 1} + \ldots + B_0 \vec u^n = 0,
+\end{equation}
+де рівняння не розв'язане відносно $\vec u^{n + q}$ Невизначеність внаслідок множення зліва на довільну не вироджену матрицю знімається тим припущенням, що для довільної достатньо гладкої функції $u(t)$ різницевий оператор в лівій частині апроксимує оператор $\frac{\partial}{\partial t} - A$, тобто
+\begin{equation}
+    B_q u(t + q \Delta t) + \ldots + B_0 u(t) - \left(\frac{\partial}{\partial t} - A \right) u(t) = o(1)
+\end{equation}
+при $\Delta t \to 0$. \medskip
+ 
+\begin{definition}
+    \textit{Порядок точності} різницевої схеми визначимо як найбільше дійсне число $\rho$, для якого 
+    \begin{equation}
+        \label{eq:l4.7}
+        \| B_q u(t + q \Delta t) + \ldots + B_0 u(t) \| = o((\Delta t)^\rho)
+    \end{equation}
+    при $\Delta t \to 0$ для всіх достатньо гладких точних розв'язків диференціального рівняння $\frac{\partial u}{\partial t} = A u$.
+\end{definition}
+
+\begin{definition}
+    Вираз у лівій частині \eqref{eq:l4.7} є \textit{похибкою апроксимації} багатошарової різницевої схеми.
+\end{definition}
+
+Встановимо зв'язок між узгодженістю та порядком точності різницевих схем. Для цього повернемось до рівняння \eqref{eq:l4.2} зі сталими коефіцієнтами і умови періодичності розв'язку. Розв'язок задачі виразимо через оператори $C_j = -B_q^{-1} B_j$. \medskip
+
+Виходячи з обмеженості операторів $C_1, \ldots, C_{q - 1}$ та з того, що виконується умова \eqref{eq:l4.7}, можна показати, що $B_q^{-1} = O(\Delta t)$. \medskip
+
+Отже у вектора $\tilde C(\Delta t) \tilde S \tilde u(t)$ відмінною від нуля є тільки перша компонента і нам потрібно показати, що при довільному $\epsilon > 0$:
+\begin{equation}
+    \| (C_{q - 1} E ( (q - 1) \Delta t) + \ldots + C_0 - E (q \Delta t) ) u_0(t) \| < \epsilon \Delta t
+\end{equation}
+для довільного елемента $u(0)$ з деякої щільної в $B$ множини $U^0$ і для всіх достатньо малих $\Delta t$. \medskip
+
+Нехай $B_m$ --- підпростір тригонометричних поліномів степеня $m$ з гільбертового простору $B$ періодичних функцій, а $u_0$ презентує деяку функцію $u_0(\vec x)$ з $B_m$. Якщо в рівності \eqref{eq:l4.7} покласти $u(t) = t u_0$, то 
+\begin{equation}
+    \label{eq:l4.8}
+    L u_0 = o(1), \quad \Delta t \to 0,
+\end{equation}
+де
+\begin{equation}
+    \label{eq:l4.9}
+    L = \Delta t ( q B_q + (q - 1) B_{q - 1} + \ldots + B_1 ) - E.
+\end{equation}
+
+Оскільки $B_m$ має скінчений базис, кожен елемент якого задовольняє співвідношення \eqref{eq:l4.8}, то для норми оператора $L$ в просторі $B_m$ маємо $\|L\|_m < \epsilon_1$ для достатньо малих $\Delta t$, де $\epsilon_1$ --- довільне додатне число. Тому оператор $E + L$ має обернений в цьому просторі, а саме
+\begin{equation*}
+    (E + L)^{-1} = E + M,
+\end{equation*}
+де
+\begin{equation*}
+    \|M\|_m < \epsilon_2 = \frac{\epsilon_1}{1 - \epsilon_1}.    
+\end{equation*}
+
+Таким чином
+\begin{equation*}
+    (q B_q + \ldots + B_1)^{-1} = \Delta t (E + M).
+\end{equation*}
+
+За визначенням $C_j = -B_q^{-1} B_j$, тому
+\begin{equation}
+    \label{eq:l4.10}
+    B_q^{-1} = (q E - (q - 1) C_{q - 1} - \ldots - C_1) \Delta t (E + M).
+\end{equation}
+
+Якщо $u_0 \in B_m$, а $A$ --- диференціальний оператор рівняння 
+\begin{equation}
+    \frac{\partial u}{\partial t} = A u
+\end{equation}
+із сталими коефіцієнтами, то $u(t) \in B_m$. Крім того, для цього розв'язку буде $\frac{\partial u}{\partial t} - A u = 0$, оскільки в силу \eqref{eq:l4.7} 
+\begin{equation}
+    \label{eq:l4.11}
+    \| (B_q E (q \Delta t) + B_{q - 1} E ((q - 1) \Delta t) + \ldots + B_0) u(t) \| < \epsilon_0
+\end{equation}
+для довільного $\epsilon_0 > 0$ та для всіх достатньо малих $\Delta t$. \medskip
+
+Помноживши \eqref{eq:l4.10} на \eqref{eq:l4.11}, одержимо
+\begin{equation}
+    \label{eq:l4.12}
+    \| ( E (q \Delta t) + C_{q - 1} E ((q - 1) \Delta t) + \ldots + C_0 ) u(t) \| < \epsilon_3 \Delta t,
+\end{equation}
+де 
+\begin{equation*}
+    \epsilon_3 = \epsilon_0 \|I + M\|_m \max_{0 < \Delta t < \tau} \| q E - (q - 1) C_{q - 1} - \ldots - C_0 \|.
+\end{equation*}
+
+Максимум, який входить в останню рівність існує, оскільки ми припустили, що різницеві рівняння стійкі. Звідси випливає, що оператори $C_{q - 1}(\Delta t), \ldots, C_1(\Delta t)$  рівномірно обмежені при $0 < \Delta t < \tau$. \medskip
+
+Нерівність вигляду \eqref{eq:l4.12} має місце для довільного розв'язку, який належить $B_m$. Якщо розглянути всі можливі підпростори $B_m$ з простору $B$, то можливі початкові елементи $u(0)$ для цих розв'язків утворять щільну множину в $B$. \medskip
+
+Отже, доведено: 
+\begin{theorem}
+    Якщо різницева схема стійка і похибка апроксимації прямує до нуля при $\Delta t \to 0$, то умова узгодженості \eqref{eq:l4.4} виконується. 
+\end{theorem}
+
+\section{Завдання для самостійної роботи}
+
+\shortHomeworkDescription{Побудувати та дослідити тришарові явні та неявні різницеві схеми для рівнянь параболічного та гіперболічного типів другого порядку}

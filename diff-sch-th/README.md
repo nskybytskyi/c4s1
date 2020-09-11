@@ -1,8 +1,8 @@
 <h2 class="text-primary">Теорія різницевих схем</h2>
 
-<i class="text-muted">Це сторінка спеціального курсу &laquo;Теорія різницевих схем&raquo;кафедри &laquo;Обчислювальної математики&raquo;. Станом на <b>2019-20 навчальний рік</b> курс читається у першому семестрі четвертого курсу спеціальності &laquo;Прикладна математика&raquo; факультету Комп'ютерних наук та кібернетики Київського національного університету імені Тараса Шевченка.</i>
+<i class="text-muted">Це сторінка спеціального курсу &laquo;Теорія різницевих схем&raquo;кафедри &laquo;Обчислювальної математики&raquo;. Станом на <b>2020-21 навчальний рік</b> курс читається у першому семестрі четвертого курсу спеціальності &laquo;Прикладна математика&raquo; факультету Комп'ютерних наук та кібернетики Київського національного університету імені Тараса Шевченка.</i>
 
-<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+<!-- <div class="mt-4 mb-4 pl-3 pr-3 pb-2 pt-3 border border-primary rounded bg-white">
     <h3 class="text-primary">Логістика</h3>
     <p>
         Викладач &mdash; кандидат фізико-математичних наук Оноцький В'ячеслав Валерійович, асистент кафедри &laquo;Обчислювальної математики&raquo;.
@@ -11,79 +11,117 @@
         Лекції на першій парі у четвер, <b>ауд. 33</b>.
     </p>
     <p>
-        Курс закінчуєтся екзаменом, який пройде <b class="text-danger">TBA&nbsp;грудня 2019&nbsp;р. о TBA:00, в ауд. TBA</b>.
+        Курс закінчуєтся екзаменом, який пройде <b class="text-danger">TBA&nbsp;грудня 2020&nbsp;р. о TBA:00, в ауд. TBA</b>.
     </p>
     <p>
         Автентичний сайт на якому лекції з'являються раніше: <a class="badge badge-primary" href="http://vingar.ho.ua/for_students/finite_diff/">vingar.ho.ua</a>
     </p>
-</div>
+</div> -->
 
-<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+<div class="mt-4 mb-4 pl-3 pr-3 pb-2 pt-3 border border-primary rounded bg-white">
     <h3 class="text-primary">Лекції</h3>
     <p>
-        Всі лекції: <a class="badge badge-success" href="lectures/Оноцький,%20всі%20лекції.pdf">Get pdf</a> 
+        Всі лекції
+        <sup><a class="badge badge-success" href="lectures/main.pdf">Завантажити</a></sup>
     </p>
-    <p>
-        Лекція <b>19&nbsp;вересня 2019&nbsp;р</b>: Мета, задачi i проблеми чисельного моделювання. Чисельне моделювання процесiв гiдродинамiки. <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2019.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/01.tex">Get LaTeX source</a> 
-    </p>
-    <p>
-        Лекція <b>26&nbsp;вересня 2019&nbsp;р</b>: Методи апроксимацiї диференцiальних операторiв. Основнi властивостi рiзницевих схем. <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2026.09.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/02.tex">Get LaTeX source</a> 
-    </p>
-    <p>
-        Лекція <b>3&nbsp;жовтня 2019&nbsp;р</b>: Точнi та узагальненi розв’язки диференцiальних та рiзницевих рiвнянь у банахових просторах. <a class="badge badge-success" href="lectures/Оноцький,%20лекція%203.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/03.tex">Get LaTeX source</a> 
-    </p>
-    <p>
-        Лекція <b>10&nbsp;жовтня 2019&nbsp;р</b>: Багатошаровi та багатокроковi чисельнi моделi. <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2010.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/04.tex">Get LaTeX source</a>
-    </p>
-    <p>
-        Лекція <b>17&nbsp;жовтня 2019&nbsp;р</b>: Поняття стiйкостi рiзницевих схем. <a class="badge badge-success" href="lectures/Оноцький,%20лекція%2017.10.pdf">Get pdf</a> <a class="badge badge-info" href="lectures/05.tex">Get LaTeX source</a>
-    </p> 
-    <p>
-        Лекція <b>24&nbsp;жовтня 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
-    </p> 
-    <p>
-        Лекція <b>31&nbsp;жовтня 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
-    </p> 
-    <p>
-        Лекція <b>7&nbsp;листопада 2019&nbsp;р</b>: <a class="badge badge-warning" href="#">No file :cry:</a>
-    </p>
-    <p>
-        <i class="text-muted">Note: you will probably need the whole source archive if you want to change many LaTeX sources. <a class="badge badge-info" href="lectures/all.zip">Get source zip</a></i>
-    </p>
+    <ol>
+        <li>
+            &laquo;Що таке теорія різницевих схем?&raquo; &mdash; вступ від Нікіти Скибицького:
+            <sup><a class="badge badge-success" href="pdf/intro.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Лекція №1:
+            <sup><a class="badge badge-success" href="pdf/lecture-01.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Лекція №2:
+            <sup><a class="badge badge-success" href="pdf/lecture-02.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Лекція №3:
+            <sup><a class="badge badge-success" href="pdf/lecture-03.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Лекція №4:
+            <sup><a class="badge badge-success" href="pdf/lecture-04.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Лекція №5:
+            <sup><a class="badge badge-success" href="pdf/lecture-05.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Лекція №6:
+            <sup><a class="badge badge-success" href="pdf/lecture-06.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Лекція №7:
+            <sup><a class="badge badge-success" href="pdf/lecture-07.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Лекція №9:
+            <sup><a class="badge badge-success" href="pdf/lecture-09.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Лекція №10:
+            <sup><a class="badge badge-success" href="pdf/lecture-10.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Контрольні запитання:
+            <sup><a class="badge badge-success" href="pdf/control.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Теми для рефератів:
+            <sup><a class="badge badge-success" href="pdf/referats.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Література:
+            <sup><a class="badge badge-success" href="pdf/literature.pdf">Завантажити</a></sup>
+        </li>
+    </ol>
 </div>
 
-<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+<!-- <div class="mt-4 mb-4 pl-3 pr-3 pb-2 pt-3 border border-primary rounded bg-white">
     <h3 class="text-danger">Контрольні роботи</h3>
     <p>
-        Перша контрольна пройде у четвер <b class="text-danger">14&nbsp;листопада 2019&nbsp;р</b> на першій парі.
+        Перша контрольна пройде <b class="text-danger">TBA&nbsp;грудня 2020&nbsp;р. о TBA:00, в ауд. TBA</b>.
     </p>
-</div>
+    <p>
+        Друга контрольна пройде <b class="text-danger">TBA&nbsp;грудня 2020&nbsp;р. о TBA:00, в ауд. TBA</b>.
+    </p>
+</div> -->
 
-<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+<div class="mt-4 mb-4 pl-3 pr-3 pb-2 pt-3 border border-primary rounded bg-white">
     <h3 class="text-primary">Реферати студентів</h3>
     <p>
-        2019 рік, Скибицький Нікіта: &laquo;Фазова похибка різницевих схем. Схема Лейта&raquo; <a class="badge badge-success" href="Оноцький,%20реферат.pdf">Get pdf</a>
+        2019 рік, Скибицький Нікіта: &laquo;Фазова похибка різницевих схем. Схема Лейта&raquo;
+        <sup><a class="badge badge-success" href="Оноцький,%20реферат.pdf">Завантажити</a></sup>
     </p>
 </div>
 
-<div class="mt-2 mb-2 pl-3 pr-3 pb-2 pt-2 border border-primary rounded bg-white">
+<div class="mt-4 mb-4 pl-3 pr-3 pb-2 pt-3 border border-primary rounded bg-white">
     <h3 class="text-primary">Література</h3>
     <p>
-        Роуч&nbsp;П. <i>Вычислительная гидродинамика</i> &mdash; Москва: "Мир", 1980. <a class="badge badge-success" href="books/Роуч%20-%20Вычислительная%20гидродинамика.djvu">Get djvu</a>
+        Роуч&nbsp;П. <i>Вычислительная гидродинамика</i> &mdash; Москва: "Мир", 1980.
+        <sup><a class="badge badge-success" href="books/Роуч%20-%20Вычислительная%20гидродинамика.djvu">Завантажити</a></sup>
     </p>
     <p>
-        Андерсон&nbsp;Д., Танненхилл&nbsp;Дж., Плетчер&nbsp;Р. <i>Вычислительная гидродинамика и теплообмен, том&nbsp;1, том&nbsp;2</i> &mdash; Москва: "Мир", 1990. <a class="badge badge-success" href="books/Андерсон,%20Таннехилл,%20Плетчер%20-%20Вычислительная%20гидродинамика%20и%20теплообмен.%20Том%201.djvu">Get vol. 1 djvu</a> <a class="badge badge-success" href="books/Андерсон,%20Таннехилл,%20Плетчер%20-%20Вычислительная%20гидродинамика%20и%20теплообмен.%20Том%202.djvu">Get vol. 2 djvu</a>
+        Андерсон&nbsp;Д., Танненхилл&nbsp;Дж., Плетчер&nbsp;Р. <i>Вычислительная гидродинамика и теплообмен, том&nbsp;1, том&nbsp;2</i> &mdash; Москва: "Мир", 1990.
+        <sup><a class="badge badge-success" href="books/Андерсон,%20Таннехилл,%20Плетчер%20-%20Вычислительная%20гидродинамика%20и%20теплообмен.%20Том%201.djvu">Завантажити том 1</a></sup>
+        <sup><a class="badge badge-success" href="books/Андерсон,%20Таннехилл,%20Плетчер%20-%20Вычислительная%20гидродинамика%20и%20теплообмен.%20Том%202.djvu">Завантажити том 2</a></sup>
     </p>
     <p>
-        Самарський&nbsp;А.А. <i>Теория разностных схем</i> &mdash; Москва: "Наука", 1989. <a class="badge badge-success" href="books/Самарский%20-%20Теория%20разностных%20схем.djvu">Get djvu</a>
+        Самарський&nbsp;А.А. <i>Теория разностных схем</i> &mdash; Москва: "Наука", 1989.
+        <sup><a class="badge badge-success" href="books/Самарский%20-%20Теория%20разностных%20схем.djvu">Завантажити</a></sup>
     </p>
     <p>
-        Грищенко&nbsp;О.Ю., Ляшко&nbsp;С.І. <i>Методи Фур'є та першого диференціального наближення в теорії різницевих схем</i> &mdash; Київ: "Київський університет", 2005. <span class="badge badge-warning">No file :cry:</span>
+        Грищенко&nbsp;О.Ю., Ляшко&nbsp;С.І. <i>Методи Фур'є та першого диференціального наближення в теорії різницевих схем</i> &mdash; Київ: "Київський університет", 2005.
     </p>
     <p>
-        Рихтмайер&nbsp;Р., Мортон&nbsp;К. <i>Разностные методы решения краевых задач</i> &mdash; Москва: "Мир", 1972. <a class="badge badge-success" href="books/Рихтмайер,%20Мортон%20-%20Разностные%20методы%20решения%20краевых%20задач.djvu">Get djvu</a>
+        Рихтмайер&nbsp;Р., Мортон&nbsp;К. <i>Разностные методы решения краевых задач</i> &mdash; Москва: "Мир", 1972.
+        <sup><a class="badge badge-success" href="books/Рихтмайер,%20Мортон%20-%20Разностные%20методы%20решения%20краевых%20задач.djvu">Завантажити</a></sup></p>
     </p>
     <p>
-        Коллатц&nbsp;Л. <i>Функциональный анализ и вычислительная математика</i> &mdash; Москва: "Мир", 1969. <a class="badge badge-success" href="books/Коллатц%20-%20Функциональный%20анализ%20и%20вычислительная%20математика.djvu">Get djvu</a>
+        Коллатц&nbsp;Л. <i>Функциональный анализ и вычислительная математика</i> &mdash; Москва: "Мир", 1969.
+        <sup><a class="badge badge-success" href="books/Коллатц%20-%20Функциональный%20анализ%20и%20вычислительная%20математика.djvu">Завантажити</a></sup>
     </p>
 </div>

@@ -1,0 +1,161 @@
+\chapter{ДС-алгоритми для моделювання процесів переносу, які описуються однорідними рівняннями}
+
+\section{Центрально-різницеві ДС-алгоритми для розв'язування по\-чат\-ко\-во-кра\-йо\-вих задач для рівнянь першого порядку}
+
+В області $G = \{(x^1, x^2, x^3, t) | 0 \le x^i \le 1, i = 1, 2, 3; t > t_0\}$, побудуємо розв'язок початково-крайової задачі для рівняння
+\begin{equation}
+    \label{eq:l11.1}
+    \frac{\partial u}{\partial t} + \sum_{i = 1}^3 k_i \frac{\partial u}{\partial x^i} = 0.
+\end{equation}
+
+\subsection{Одновимірна центрально-різницева задача}
+
+Розглянемо спочатку одновимірну задачу
+\begin{equation}
+    \label{eq:l11.2}
+    \frac{\partial u}{\partial t} = -k \frac{\partial u}{\partial x}, \quad G = \{(x, t) | 0 \le x \le 1, t > t_0\}
+\end{equation}
+при початкових $u(x, 0) = \phi(x)$ та крайових умовах $u(0, t) = \psi(t)$ при $k > 0$, (або $u(1, t) = \psi(t)$ при $k < 0$). \medskip
+
+Область зміни неперервних аргументів покриваємо сітковою областю
+\begin{equation*}
+    \Omega_{h,\tau} = \{(x_i, t_n)| x_i = i h, t_n = n \tau; i = \overline{0..M}; n = 0,1,2,\ldots; h = 1/M\}
+\end{equation*}
+яку розщеплюємо на дві підобласті
+\begin{align*}
+    \Omega_h^{(1,n)} &= \{(x_i, t_n)| x_i = i h; t_n = n \tau; i = \overline{0..M}; n = 0,1,2,\ldots; h=1/M; i + n = 2 k + 1 \}, \\
+    \Omega_h^{(2,n)} &= \{(x_i, t_n)| x_i = i h; t_n = n \tau; i = \overline{0..M}; n = 0,1,2,\ldots; h=1/M; i + n = 2 k \}.
+\end{align*}
+
+Нехай $k = \const$. На часовому кроці $2 n + 1$ точкам з підобласті $\Omega_h^{(1,2n+1)}$ ставимо у відповідність явні різницеві рівняння
+\begin{equation}
+    \label{eq:l11.3}
+    u_{2i}^{2n+1} = u_{2i}^{2n} - \frac{k \tau}{2 h} \left( u_{2i+1}^{2n} - u_{2i-1}^{2n} \right), \quad i = \overline{1..[(M-1)/2]},
+\end{equation}
+а вузлам області $\Omega_h^{(2,2n+1)}$ --- різницеві рівняння з вагою $\sigma \ge 0$:
+\begin{equation}
+ 	\label{eq:l11.4}
+ 	u_{2i+1}^{2n+1} = u_{2i+1}^{2n} - \frac{k \tau}{2 h} \left( \sigma \left( u_{2i+2}^{2n} - u_{2i}^{2n} \right) + (1 - \sigma) \left( u_{2i+3}^{2n+1} - u_{2i}^{2n+1} \right) \right), \quad i = \overline{1..[M/2]-1}.
+\end{equation}
+
+На кроці $2 n + 2$ у точках з $\Omega_h^{(1,2n+2)}$ записуємо рівняння
+\begin{equation}
+    \label{eq:l11.5}
+    u_{2i+1}^{2n+2} = u_{2i+1}^{2n+1} - \frac{k \tau}{2 h} \left( u_{2i+2}^{2n+1} - u_{2i}^{2n+1} \right), \quad i = \overline{1..[M/2]-1},
+\end{equation}
+а точкам з $\Omega_h^{(2,2n+2)}$ ---
+\begin{equation}
+    \label{eq:l11.6}
+ 	u_{2i+1}^{2n+2} = u_{2i+1}^{2n+1} - \frac{k \tau}{2 h} \left( \sigma \left( u_{2i+1}^{2n+1} - u_{2i}^{2n+1} \right) + (1 - \sigma) \left( u_{2i+1}^{2n+2} - u_{2i}^{2n+2} \right) \right), \quad i = \overline{1..[M/2]-1}.
+\end{equation}
+
+Обчислення розв'язку починаємо з точок області $\Omega_h^{(1,2n+1)}$ за явною різницевою схемою \eqref{eq:l11.3}. Після обходу всіх точок цієї множини значення функції $u_{2i}^{2n+1}$ будуть визначені. Тоді формально неявні різницеві схеми \eqref{eq:l11.4} дозволяють розв'язок у вузлах з $\Omega_h^{(2,2n+1)}$ знайти явно. Результати розрахунків, проведених за формулами \eqref{eq:l11.3}, \eqref{eq:l11.4}, сприймаються як допоміжні. На наступному часовому кроці виконаємо цикл розрахунків за формулами \eqref{eq:l11.5}, \eqref{eq:l11.6} і одержимо значення $u_i^{2n+2}$, які приймаємо за розв'язок задачі. Обчислення за формулами \eqref{eq:l11.3}--\eqref{eq:l11.6} проводяться в усіх внутрішніх вузлах сітки. 
+
+\subsection{Стійкість алгоритмів за початковими даними}
+
+Дослідження стійкості за початковими даними рівносильне визначенню умов, при яких справедлива нерівність $\|u^{2n}\|_{L_{2,h}} \le c \|u^0\|_{L_{2,h}}$ де $u_i^0$ --- початкове значення розв'язку; $\|\cdot\|_{L_{2,h}}$ --- дискретний аналог норми в просторі $L_2$; $c > 0$ --- обмежена додатна стала, незалежна від $h$, $\tau$ і $u_i^0$. Умова стійкості різницевої задачі Коші із сталими коефіцієнтами (умова фон Неймана [148]) стверджує, що для виконання умови стійкості необхідно, щоб спектр матриці переходу різницевого рівняння на наступний часовий шар повністю лежав в крузі комплексної площини з радіусом $1 + \tilde n_1 \tau$ (тобто, щоб модуль коефіцієнта переходу не перевищував $1 + O(\tau)$, а зростання збурення не перевищувало експоненційного). Якщо спектр не залежить від часу, то ця умова набуває вигляду $\max_m |g(m)| \le 1$, де $g(m)$ --- коефіцієнт переходу $m$-ї гармоніки точного розв'язку різницевої задачі.
+
+\section{Стійкість задачі із сталим коефіцієнтом}
+
+Покладемо для визначеності в задачі \eqref{eq:l11.2} $\psi = 0$. Для різницевої задачі \eqref{eq:l11.3}--\eqref{eq:l11.6} доведемо
+
+\begin{theorem}
+    Якщо величина $\tau$ стала або змінюється не частіше ніж через парне число часових кроків, а функція $u(x,0)=\phi(x)$ з умови може бути розвинена в абсолютно збіжний ряд Фур'є і \[u_i^0 = \phi(ih) = \sum_{m=-\infty}^\infty B_m e^{I\pi(ihm)},\] то при $\sigma=0$ ДС-схема \eqref{eq:l11.3}--\eqref{eq:l11.6} безумовно стійка за початковими даними, а при $\sigma > 0$  --- умовно стійка при \[\tau \le \frac{h \sqrt{2}}{|k| \sqrt{\sigma}}.\]
+\end{theorem}
+
+\begin{proof}
+    Припустимо, що функція дискретного аргументу $u_i^n$ розвивається в ряд [148]
+    \begin{equation}
+	    \label{eq:l11.8}
+        u_i^n = \sum_{k_1}^\infty C^{(s)} (n \tau) e^{I i h k_1}, \quad I = \sqrt{-1},
+    \end{equation}
+    де $B_m$ --- коефіцієнти розвинення в ряд Фур'є початкової умови $\phi(x)$, а $c(m)$ --- невідомі поки що коефіцієнти ($c(x) = c_1(x) c_2(x)$). Визначимо їх так, щоб ряд \eqref{eq:l11.8} був збіжний і був розв'язком задачі \eqref{eq:l11.3}--\eqref{eq:l11.6}. \medskip
+    
+	Нехай $(x_i, t_{2n+1}) \in \Omega_h^{(1,2n+1)}$. Гармоніки точного розв'язку явних різни-цевих схем \eqref{eq:l11.3},\eqref{eq:l11.5} позначимо \[\tilde u_{2i}^{2n+1} = B_m c_1^n(m) e^{I2\pi ihm},\] а неявних \eqref{eq:l11.4}, \eqref{eq:l11.6} відповідно \[\tilde u_{2i}^{2n+2} = B_m c_2^n(m) e^{I2\pi ihm}.\] Підставимо гармоніки $c_1(m)$ і $c_2(m)$ в рівняння \eqref{eq:l11.3} і \eqref{eq:l11.6}. Після нескладних перетворень з \eqref{eq:l11.3} дістанемо, що
+    \begin{equation}
+	 	\label{eq:l11.9}
+	 	c_1^{n+1}(m)=(1+Ik\tau h^{-1}\sin(mh)) c_2^n(m) \equiv g_1(m)c_2(m).
+    \end{equation}
+
+    Використавши неявну схему \eqref{eq:l11.6}, для переходу з кроку $2 n + 1$ на крок $2 n + 2$ при $\sigma = 0$  маємо
+    \begin{equation}
+	 	\label{eq:l11.10}
+	 	c_1^{n+1}(m)=(1-Ik\tau h^{-1}\sin(mh))^{-1} c_2^n(m) \equiv g_2(m)c_1(m).
+    \end{equation}
+
+    Отже
+    \begin{equation}
+	    \label{eq:l11.11}
+	    c^{n+1}(m) = g(m) c^n(m),
+    \end{equation}
+    де $g(m)$ --- множник переходу з кроку $2 n$ на крок $2 n + 2$, записаний у вигляді 
+    \begin{equation}
+	    \label{eq:l11.12}
+	    g(m) = g_1(m) g_2(m) = \frac{1+Ik\tau h^{-1}\sin(mh)}{1-Ik\tau h^{-1}\sin(mh)},
+    \end{equation}
+    а $c^0(m) \equiv 1$ (умова узгодженості початкових і граничних умов). \medskip
+
+    Для $(x_i,t_{2n+1}) \in \Omega_h^{(2,2n+1)}$ і $(x_i,t_{2n+2}) \in \Omega_h^{(1,2n+2)}$ гармоніки \eqref{eq:l11.8} подаємо відповідно так:
+    \begin{align*}
+        \tilde u_{2i+1}^{2n+1} &= B_m c_2^n(m) e^{I(2i+1)\pi hm}, \\
+        \tilde u_{2i+1}^{2n+2} &= B_m c_1^n(m) e^{I(2i+1)\pi hm}.
+    \end{align*}
+    
+    З рівнянь \eqref{eq:l11.4}, \eqref{eq:l11.5}, повторюючи попередні міркування, для коефіцієнта переходу одержуємо рівності \eqref{eq:l11.11} та \eqref{eq:l11.12}. Отже
+    \begin{equation*}
+        q = \max_m |g(m)| = 1.
+    \end{equation*}
+
+	Якщо $\sigma > 0$, то при переході з кроку $2n+1$ на крок $2n+2$ для розглянутих точок області одержимо
+    \begin{equation*}
+        c_2^{n+1}(m) = \hat g_2(m)c_1^n(m),
+    \end{equation*}
+    де\begin{equation*}
+        \hat g_2(m) = \frac{1+I\tau kh^{-1}\sigma\sin(mh)}{1+I\tau kh^{-1}(1+\sigma)\sin(mh)}.
+    \end{equation*}
+
+    Тобто,
+    \begin{equation*}
+        c^{n+1}(m) = \frac{(1 - IZ)(1 + I\sigma Z)}{(1 + I(1+\sigma)Z} c^n(m) = \hat g(m) c^n(m).
+    \end{equation*}
+
+    Тут
+    \begin{equation*}
+        \hat g(m) = \frac{(1-IZ)(1+I\sigma Z)}{1 + I(1+\sigma)Z},
+    \end{equation*}
+    а $Z = k \tau h^{-1} \sin (mh)$. З нерівності $q \equiv \max_m |\hat g(m)| \le 1$ випливає, що при $\sigma > 0$:
+    \begin{equation*}
+        \tau \le \frac{h \sqrt{2}}{|k| \sqrt{\sigma}}.
+    \end{equation*}
+
+	При виконанні останньої нерівності $q = 1$, а рівняння \eqref{eq:l11.3} і \eqref{eq:l11.6} та \eqref{eq:l11.4},\eqref{eq:l11.5} перетворюються на тотожність.  \medskip
+
+	Помножимо обидві частини \eqref{eq:l11.11} на $B(m) e^{I\pi mih}$ і підсумуємо одержану рівність за всіма $m$:
+	\begin{equation*}
+	    \sum_{m=-\infty}^\infty B_m c^{n+1}(m) e^{I\pi mih} = \sum_{m=-\infty}^\infty B_m g(m) c^n(m) e^{I\pi mih}.
+	\end{equation*}
+
+    Враховуючи, що $q = 1$, встановимо оцінку 
+    \begin{multline}
+	 	\label{eq:l11.13}
+        \left| \sum_{m=-\infty}^\infty B_m c^{n+1}(m) e^{I\pi mih} \right| \le \sum_{m=-\infty}^\infty |B_m| \cdot |g(m)| \cdot |c^n(m)| \le \\ \le \sum_{m=-\infty}^\infty |B_m| \cdot |g(m)|^{n + 1} \cdot |c^0(m)| \le q^{n+1} \sum_{m=-\infty}^\infty |B_m| \le \sum_{m=-\infty}^\infty |B_m|.
+    \end{multline}
+
+    З останньої нерівності в силу умови теореми випливає збіжність ряду \eqref{eq:l11.8} $\forall n = 1,2,\ldots$. \medskip
+
+	Оскільки: 
+	\begin{itemize}
+	    \item при $n > 0$ ряд \eqref{eq:l11.8} абсолютно збіжний; 
+        \item кожен член ряду \eqref{eq:l11.8}, а отже і його сума задовольняє рівняння \eqref{eq:l11.3}--\eqref{eq:l11.6}; 
+        \item при $n = 0$ ряд співпадає з рядом для $\phi(x)$ і задовольняє початкові умови, 
+	\end{itemize}
+    то сіткова функція \eqref{eq:l11.8} є точним розв'язком системи рівнянь \eqref{eq:l11.3}--\eqref{eq:l11.6}.  \medskip
+
+	Оскільки $\|u^n\|_{L_{2,h}}^2 = \sum_{i=1}^M |u_i^n|^2 h$ є дискретним аналогом норми в просторі $L_2([-\pi,\pi])$, то після нескладних перетворень і використання рівності Парсеваля, для точного розв'язку різницевої \eqref{eq:l11.3}--\eqref{eq:l11.6} задачі маємо 
+    \begin{multline}
+	 	\label{eq:l11.14}
+        \|u^{2n}\|_{L_{2,h}}^2 = \sum_{i=1}^M \left| \sum_{m=-\infty}^\infty B_m (c(m))^n e^{I\pi mih} \right|^2 h \le q^{2n} \sum_{i=1}^M \sum_{m=-\infty}^\infty \left|B_m e^{I\pi mih} \right|^2 h = \\ = q^{2n} \sum_{i=1}^M |u_i^0|^2 h = q^{2n} \|u^0\|_{L_{2,h}}^2.
+    \end{multline}
+
+    З оцінки \eqref{eq:l11.14} випливає стійкість алгоритму.
+\end{proof}

@@ -1,0 +1,217 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage[nameinlink,ukrainian]{cleveref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{float}
+
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\inv}{^{-1}}
+\newcommand{\conjugate}[1]{#1^\star}
+\newcommand{\dconjugate}[1]{#1^{\star\star}}
+\newcommand{\transpose}[1]{#1^\intercal}
+\newcommand{\weakto}{\rightharpoonup}
+\newcommand{\closure}[1]{\overline{#1}}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+
+\renewcommand{\emptyset}{\varnothing}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+
+\DeclareMathOperator{\sign}{sgn}
+\DeclareMathOperator{\spanning}{span}
+\DeclareMathOperator{\kernel}{ker}
+\DeclareMathOperator{\Closure}{cl}
+\DeclareMathOperator{\Interior}{int}
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator*{\Bigcup}{\bigcup}
+\DeclareMathOperator*{\Bigcap}{\bigcap}
+\DeclareMathOperator{\const}{const}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\shortLectureDescription}[1]{\small{\textit{#1}}\normalsize\medskip}
+\newcommand{\shortHomeworkDescription}[1]{\small{\textit{#1}}\normalsize\medskip}
+
+
+\makeatletter
+\let\oldvec\vec
+\renewcommand{\vec}[1]{\oldvec{#1}\@ifnextchar{^}{\,}{}}
+\makeatother
+
+
+\usepackage{amsthm}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
+
+\theoremstyle{definition}
+
+\mdfdefinestyle{mdbluebox}{%
+	roundcorner = 10pt,
+	linewidth=1pt,
+	skipabove=12pt,
+	innerbottommargin=9pt,
+	skipbelow=2pt,
+	nobreak=true,
+	linecolor=blue,
+	backgroundcolor=TealBlue!5,
+}
+
+\declaretheoremstyle[
+	headfont=\sffamily\bfseries\color{MidnightBlue},
+	mdframed={style=mdbluebox},
+	headpunct={\\[3pt]},
+	postheadspace={0pt}
+]{thmbluebox}
+
+\declaretheorem[style=thmbluebox,numberwithin=chapter,name=Теорема]{theorem}
+\declaretheorem[style=thmbluebox,sibling=theorem,name=Лема]{lemma}
+\declaretheorem[style=thmbluebox,sibling=theorem,name=Твердження]{proposition}
+\declaretheorem[style=thmbluebox,sibling=theorem,name=Формула]{th_formula}
+\declaretheorem[style=thmbluebox,sibling=theorem,name=Закон]{th_law}
+\declaretheorem[style=thmbluebox,sibling=theorem,name=Факт]{fact}
+\declaretheorem[style=thmbluebox,sibling=theorem,name=Наслідок]{corollary}
+
+\mdfdefinestyle{mdredbox}{%
+	linewidth=0.5pt,
+	skipabove=12pt,
+	frametitleaboveskip=5pt,
+	frametitlebelowskip=0pt,
+	skipbelow=2pt,
+	frametitlefont=\bfseries,
+	innertopmargin=4pt,
+	innerbottommargin=8pt,
+	nobreak=true,
+	linecolor=RawSienna,
+	backgroundcolor=Salmon!5,
+}
+
+\declaretheoremstyle[
+	headfont=\bfseries\color{RawSienna},
+	mdframed={style=mdredbox},
+	headpunct={\\[3pt]},
+	postheadspace={0pt},
+]{thmredbox}
+
+\declaretheorem[style=thmredbox,name=Приклад,sibling=theorem]{example}
+
+\mdfdefinestyle{mdgreenbox}{%
+	skipabove=8pt,
+	linewidth=2pt,
+	rightline=false,
+	leftline=true,
+	topline=false,
+	bottomline=false,
+	linecolor=ForestGreen,
+	backgroundcolor=ForestGreen!5,
+}
+
+\declaretheoremstyle[
+	headfont=\bfseries\sffamily\color{ForestGreen!70!black},
+	bodyfont=\normalfont,
+	spaceabove=2pt,
+	spacebelow=1pt,
+	mdframed={style=mdgreenbox},
+	headpunct={ --- },
+]{thmgreenbox}
+
+\declaretheorem[name=Зауваження,sibling=theorem,style=thmgreenbox]{remark}
+
+\mdfdefinestyle{mdblackbox}{%
+	skipabove=8pt,
+	linewidth=3pt,
+	rightline=false,
+	leftline=true,
+	topline=false,
+	bottomline=false,
+	linecolor=black,
+	backgroundcolor=RedViolet!5!gray!5,
+}
+
+\declaretheoremstyle[
+	headfont=\bfseries,
+	bodyfont=\normalfont\small,
+	spaceabove=0pt,
+	spacebelow=0pt,
+	mdframed={style=mdblackbox}
+]{thmblackbox}
+
+\declaretheorem[style=thmblackbox,numberwithin=chapter,name=Запитання]{ques}
+\declaretheorem[style=thmblackbox,numberwithin=chapter,name=Вправа]{exercise}
+\declaretheorem[style=thmblackbox,numberwithin=chapter,name=Означення]{definition}
+
+\usepackage[skip=\smallskipamount,indent=\parindent]{parskip}
+\usepackage[headsepline]{scrlayer-scrpage}
+\renewcommand{\headfont}{}
+\addtolength{\textheight}{3.14cm}
+\setlength{\footskip}{0.5in}
+\setlength{\headsep}{10pt}
+\automark[chapter]{chapter}
+\rohead{\footnotesize\thepage}
+\makeatletter
+\rehead{\footnotesize\textbf{\sffamily \@title}, \emph{\@author}}
+\makeatother
+\lehead{\footnotesize\thepage}
+\lohead{\footnotesize\leftmark}
+\chead{}
+\rofoot{}
+\refoot{}
+\lefoot{}
+\lofoot{}
+
+\makeatletter
+\usepackage{etoolbox}
+\pretocmd{\tableofcontents}{%
+  \if@openright\cleardoublepage\else\clearpage\fi
+  \pdfbookmark[0]{\contentsname}{toc}%
+}{}{}%
+\makeatother
+\setcounter{tocdepth}{1}
+\usepackage[tocindentauto]{tocstyle}
+\usetocstyle{KOMAlike}
+
+\usepackage[tight]{minitoc}
+\mtcsetfont{parttoc}{chapter}{\sffamily\bfseries}
+\mtcsetfont{parttoc}{section}{\footnotesize\rmfamily\upshape\mdseries}
+\mtcsetfont{parttoc}{subsection}{\footnotesize\rmfamily\upshape\mdseries}
+\setcounter{parttocdepth}{1}
+\renewcommand*{\partheadstartvskip}{\vspace*{20em}}
+\renewcommand*{\partheadendvskip}{}
+\renewcommand\beforeparttoc{\noindent{\bfseries \Large Частина \thepart: Зміст}}
+\doparttoc[n]
+
+\renewcommand*{\sectionformat}{\color{purple}\S\thesection\autodot\enskip}
+\renewcommand*{\subsectionformat}{\color{purple}\S\thesubsection\autodot\enskip}
+\renewcommand{\thesubsection}{\thesection.\roman{subsection}}
+
+\addtokomafont{chapterprefix}{\raggedleft}
+\RedeclareSectionCommand[beforeskip=0.5em]{chapter}
+\renewcommand*{\chapterformat}{%
+\mbox{\scalebox{1.5}{\chapappifchapterprefix{\nobreakspace}}%
+\scalebox{2.718}{\color{purple}\thechapter\autodot}\enskip}}
+
+\addtokomafont{partprefix}{\rmfamily}
+\renewcommand*{\partformat}{\color{purple}\scalebox{2.5}{\thepart}}
+
+\newcommand{\listhack}{$\empty$}
+\newcommand{\nothing}{$\left.\right.$}
