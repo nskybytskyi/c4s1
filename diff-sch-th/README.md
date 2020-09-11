@@ -22,7 +22,7 @@
     <h3 class="text-primary">Лекції</h3>
     <p>
         Всі лекції
-        <sup><a class="badge badge-success" href="lectures/main.pdf">Завантажити</a></sup>
+        <sup><a class="badge badge-success" href="pdf/main.pdf">Завантажити</a></sup>
     </p>
     <p>
         Кожна лекція окремо:
