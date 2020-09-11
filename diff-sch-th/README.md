@@ -24,60 +24,68 @@
         Всі лекції
         <sup><a class="badge badge-success" href="lectures/main.pdf">Завантажити</a></sup>
     </p>
-    <ol>
+    <p>
+        Кожна лекція окремо:
+    </p>
+    <ul>
         <li>
-            &laquo;Що таке теорія різницевих схем?&raquo; &mdash; вступ від Нікіти Скибицького:
-            <sup><a class="badge badge-success" href="pdf/intro.pdf">Завантажити</a></sup>
-        </li>
-        <li>
-            Лекція №1:
+            Лекція №1
             <sup><a class="badge badge-success" href="pdf/lecture-01.pdf">Завантажити</a></sup>
         </li>
         <li>
-            Лекція №2:
+            Лекція №2
             <sup><a class="badge badge-success" href="pdf/lecture-02.pdf">Завантажити</a></sup>
         </li>
         <li>
-            Лекція №3:
+            Лекція №3
             <sup><a class="badge badge-success" href="pdf/lecture-03.pdf">Завантажити</a></sup>
         </li>
         <li>
-            Лекція №4:
+            Лекція №4
             <sup><a class="badge badge-success" href="pdf/lecture-04.pdf">Завантажити</a></sup>
         </li>
         <li>
-            Лекція №5:
+            Лекція №5
             <sup><a class="badge badge-success" href="pdf/lecture-05.pdf">Завантажити</a></sup>
         </li>
         <li>
-            Лекція №6:
+            Лекція №6
             <sup><a class="badge badge-success" href="pdf/lecture-06.pdf">Завантажити</a></sup>
         </li>
         <li>
-            Лекція №7:
+            Лекція №7
             <sup><a class="badge badge-success" href="pdf/lecture-07.pdf">Завантажити</a></sup>
         </li>
         <li>
-            Лекція №9:
+            Лекція №9
             <sup><a class="badge badge-success" href="pdf/lecture-09.pdf">Завантажити</a></sup>
         </li>
         <li>
-            Лекція №10:
+            Лекція №10
             <sup><a class="badge badge-success" href="pdf/lecture-10.pdf">Завантажити</a></sup>
         </li>
+    </ul>
+    <p>
+        Додатки:
+    </p>
+    <ul>
         <li>
-            Контрольні запитання:
+            &laquo;Що таке теорія різницевих схем?&raquo; &mdash; вступ від Нікіти Скибицького
+            <sup><a class="badge badge-success" href="pdf/intro.pdf">Завантажити</a></sup>
+        </li>
+        <li>
+            Контрольні запитання
             <sup><a class="badge badge-success" href="pdf/control.pdf">Завантажити</a></sup>
         </li>
         <li>
-            Теми для рефератів:
+            Теми для рефератів
             <sup><a class="badge badge-success" href="pdf/referats.pdf">Завантажити</a></sup>
         </li>
         <li>
-            Література:
+            Література
             <sup><a class="badge badge-success" href="pdf/literature.pdf">Завантажити</a></sup>
         </li>
-    </ol>
+    </ul>
 </div>
 
 <!-- <div class="mt-4 mb-4 pl-3 pr-3 pb-2 pt-3 border border-primary rounded bg-white">
